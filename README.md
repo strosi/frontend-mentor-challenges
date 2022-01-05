@@ -1,2 +1,5 @@
-# frontend-mentor-challenges
-Collection of front-end development challenges I tried from frontendmentor.io
+# Frontend Mentor challenges
+Here is a list of the challenges I tried from frontendmentor.io...
+
+NEWBIE level
+
