@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
 * {
     margin: 0;
@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 18px;
     font-weight: 300;
     color: var(--main-font-color);
@@ -26,25 +26,19 @@ body {
 .card-container {
     margin: 2rem;
     padding: 1.7rem;
-
-    /* position: absolute;
-    max-width: 390px;
-    padding: 1.7rem;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%); */
-    background-color: var( --card-bg);
+    min-width: 250px;
+    background-color: var(--card-bg);
     border-radius: 20px;
 }
 
 .card-container .card-img {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 .card-container .card-img::before {
-    content: url('images/icon-view.svg');
+    content: url("images/icon-view.svg");
     position: absolute;
     left: 50%;
     top: 50%;
@@ -77,9 +71,12 @@ body {
 }
 
 .card-container .card-title {
-    font-size: 1.55rem;
+    display: block;
+    font-size: 1.5rem;
     font-weight: 600;
-    padding: 1.6rem 0;
+    text-decoration: none;
+    margin-top: 1.6rem;
+    margin-bottom: 1.3rem;
     color: var(--title-font-color);
 }
 
@@ -89,7 +86,7 @@ body {
 }
 
 .card-container .card-descr {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.7rem;
 }
 
@@ -108,14 +105,14 @@ body {
 .card-container .card-details .price::before {
     position: relative;
     top: 0.15rem;
-    content: url('images/icon-ethereum.svg');
+    content: url("images/icon-ethereum.svg");
     padding-right: 0.5rem;
 }
 
 .card-container .card-details .time-left::before {
     position: relative;
     top: 0.15rem;
-    content: url('images/icon-clock.svg');
+    content: url("images/icon-clock.svg");
     padding-right: 0.5rem;
 }
 
@@ -136,39 +133,43 @@ body {
     left: 17px;
 }
 
-.card-container .creator p span {
+.card-container .creator p a {
+    text-decoration: none;
     color: var(--title-font-color);
 }
 
-.card-container .creator p span:hover {
+.card-container .creator p a:hover {
     color: var(--accent-color);
     cursor: pointer;
 }
 
 .attribution {
-    position: absolute;
-    left: 50%;
-    bottom: 1rem;
-    transform: translateX(-50%);
     font-size: 11px;
     text-align: center;
     color: var(--main-font-color);
-  }
+}
 
-  .attribution a {
+.attribution a {
     color: var(--main-font-color);
-  }
+}
 
-  @media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
     .card-container {
         margin: 0;
         position: absolute;
-        max-width: 390px;
-        padding: 1.7rem;
+        max-width: 380px;
+        min-width: 330px;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        background-color: var( --card-bg);
+        background-color: var(--card-bg);
         border-radius: 20px;
     }
-  }
+
+    .attribution {
+        position: absolute;
+        left: 50%;
+        bottom: 1rem;
+        transform: translateX(-50%);
+    }
+}
