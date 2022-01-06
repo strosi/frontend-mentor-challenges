@@ -24,12 +24,15 @@ body {
 }
 
 .card-container {
-    position: absolute;
+    margin: 2rem;
+    padding: 1.7rem;
+
+    /* position: absolute;
     max-width: 390px;
     padding: 1.7rem;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); */
     background-color: var( --card-bg);
     border-radius: 20px;
 }
@@ -145,7 +148,7 @@ body {
 .attribution {
     position: absolute;
     left: 50%;
-    bottom: 3rem;
+    bottom: 1rem;
     transform: translateX(-50%);
     font-size: 11px;
     text-align: center;
@@ -154,4 +157,18 @@ body {
 
   .attribution a {
     color: var(--main-font-color);
+  }
+
+  @media only screen and (min-width: 480px) {
+    .card-container {
+        margin: 0;
+        position: absolute;
+        max-width: 390px;
+        padding: 1.7rem;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: var( --card-bg);
+        border-radius: 20px;
+    }
   }
