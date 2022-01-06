@@ -25,8 +25,8 @@ body {
 
 .card-container {
     margin: 2rem;
-    padding: 1.7rem;
-    min-width: 250px;
+    padding: 1.6rem;
+    min-width: 270px;
     background-color: var(--card-bg);
     border-radius: 20px;
 }
@@ -72,11 +72,11 @@ body {
 
 .card-container .card-title {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-decoration: none;
     margin-top: 1.6rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.1rem;
     color: var(--title-font-color);
 }
 
@@ -86,14 +86,14 @@ body {
 }
 
 .card-container .card-descr {
-    font-size: 1.3rem;
     line-height: 1.7rem;
 }
 
 .card-container .card-details {
     display: flex;
     justify-content: space-between;
-    padding: 1.6rem 0;
+    font-size: 1rem;
+    padding: 1.3rem 0;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -122,7 +122,7 @@ body {
 
 .card-container .creator img {
     float: left;
-    width: 36px;
+    width: 34px;
     border: 1px solid white;
     border-radius: 50%;
 }
@@ -131,6 +131,7 @@ body {
     position: relative;
     top: 6px;
     left: 17px;
+    font-size: 1rem;
 }
 
 .card-container .creator p a {
@@ -153,12 +154,11 @@ body {
     color: var(--main-font-color);
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 375px) {
     .card-container {
         margin: 0;
         position: absolute;
-        max-width: 390px;
-        min-width: 330px;
+        width: 350px;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
