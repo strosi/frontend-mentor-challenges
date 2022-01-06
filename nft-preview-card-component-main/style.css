@@ -86,7 +86,7 @@ body {
 }
 
 .card-container .card-descr {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.7rem;
 }
 
@@ -157,7 +157,7 @@ body {
     .card-container {
         margin: 0;
         position: absolute;
-        max-width: 380px;
+        max-width: 390px;
         min-width: 330px;
         left: 50%;
         top: 50%;
