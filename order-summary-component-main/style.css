@@ -25,7 +25,8 @@ body {
     height: 100vh;
     background-color: var(--main-bg);
     background-image: url('images/pattern-background-mobile.svg');
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* MAIN CONTENT */
