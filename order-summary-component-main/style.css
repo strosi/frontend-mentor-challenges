@@ -10,6 +10,7 @@
     --main-bg: hsl(225, 100%, 94%);
     --light-bg: hsl(225, 100%, 98%);
     --bright-bg: hsl(245, 75%, 52%);
+    --active-color: hsl(245, 75%, 65%);
     --fc-base: hsl(224, 23%, 55%);
     --fc-bold-dark: hsl(223, 47%, 23%);
     --ff: 'Red Hat Display', sans-serif;
@@ -107,6 +108,11 @@ main {
     color: var(--bright-bg);
 }
 
+.card-container .card-content .plan-container a:hover {
+    text-decoration: none;
+    color: var(--active-color);
+}
+
 button {
     display: block;
     width: 100%;
@@ -120,7 +126,12 @@ button {
     font-size: 0.95rem;
     font-weight: 700;
     box-shadow: 0 1em 2em rgb(56, 41, 224, 0.3);
+    transition: 0.3s ease;
+}
 
+button:hover {
+    background-color: var(--active-color);
+    cursor: pointer;
 }
 
 .card-container .card-content>a {
@@ -129,6 +140,10 @@ button {
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--fc-base);
+}
+
+.card-container .card-content>a:hover {
+    color: var(--fc-bold-dark);
 }
 
 .attribution { 
