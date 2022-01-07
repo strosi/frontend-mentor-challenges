@@ -23,10 +23,13 @@ body {
 }
 
 main {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .card-container {
@@ -116,4 +119,8 @@ main {
 
 .attribution a {
     color: var(--attribution-c);
+}
+
+@media screen and (min-width: 1440px) {
+    
 }
