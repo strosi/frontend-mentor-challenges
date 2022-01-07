@@ -22,8 +22,16 @@ body {
     background-color: var(--main-bg);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-container {
     min-width: 327px;
+    max-width: 372px;
     text-align: center;
     margin: 24px;
     border-radius: 10px;
@@ -103,6 +111,7 @@ body {
     font-size: 11px;
     text-align: center;
     color: var(--attribution-c);
+    padding-bottom: 1.5rem;
 }
 
 .attribution a {
