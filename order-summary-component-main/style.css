@@ -40,8 +40,7 @@ main {
 }
 
 .card-container {
-    min-width: 320px;
-    max-width: 450px;
+    width: 320px;
     height: fit-content;
     margin: 1.5rem;
     border-radius: 20px;
@@ -72,7 +71,7 @@ main {
     line-height: 1.6rem;
     margin-top: 1rem;
     margin-bottom: 1.2rem;
-    padding: 0 0.9rem;
+    padding: 0 0.5rem;
 }
 
 .card-container .card-content .plan-container {
@@ -159,6 +158,9 @@ button:hover {
 @media screen and (min-width: 650px) {
     body {
         background-image: url('images/pattern-background-desktop.svg');
+    }
+    .card-container {
+        width: 450px;
     }
     .card-container .card-content {
         font-size: 1rem;
