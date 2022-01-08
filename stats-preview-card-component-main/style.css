@@ -56,14 +56,6 @@ main {
     opacity: 0.75;
 }
 
-.card-container .card-header-img .blended-img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
-}
-
 .card-container .card-content {
     padding: 2.5rem 2rem;
 }
