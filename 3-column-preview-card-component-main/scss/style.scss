@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+// Custom variables
+$base-ff: "Lexend Deca", sans-serif;
+$primary-bg: hsl(0, 0%, 95%);
+$base-fc: hsla(0, 0%, 100%, 0.75);
+$section-01-bg: hsl(31, 77%, 52%);
+$section-02-bg: hsl(184, 100%, 22%);
+$section-03-bg: hsl(179, 100%, 13%);
+
+@mixin section-color-theme($color) {
+    background-color: $color;
+
+    button {
+        color: $color;
+    }
+}
+
+// Basic style settings
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $base-ff;
+    font-size: 15px;
+    font-weight: 400;
+    color: $base-fc;
+    line-height: 1.55rem;
+    background-color: $primary-bg;
+}
+
+main {
+    .card-container {
+        margin: 1.5rem;
+        border-radius: 10px;
+        overflow: hidden;
+
+        section {
+            padding: 3rem;
+
+            h1 {
+                font-family: "Big Shoulders Display", sans-serif;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                color: white;
+                margin-top: 2.5rem;
+                margin-bottom: 2.3rem;
+            }
+
+            button {
+                font-family: $base-ff;
+                font-size: 1em;
+                margin-top: 1.5rem;
+                padding: 0.8rem 1.9rem;
+                border: 2px solid white;
+                border-radius: 50px;
+                background-color: white;
+                transition: 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0);
+                }
+            }
+        }
+
+        .sedans {
+            @include section-color-theme($section-01-bg);
+        }
+        .suvs {
+            @include section-color-theme($section-02-bg);
+        }
+        .luxury {
+            @include section-color-theme($section-03-bg);
+        }
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}

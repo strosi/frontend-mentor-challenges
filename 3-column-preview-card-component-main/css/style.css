@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.55rem;
+  background-color: #f2f2f2;
+}
+
+main .card-container {
+  margin: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+main .card-container section {
+  padding: 3rem;
+}
+
+main .card-container section h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 2.5rem;
+  margin-bottom: 2.3rem;
+}
+
+main .card-container section button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1em;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.9rem;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: white;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .card-container section button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+main .card-container .sedans {
+  background-color: #e38826;
+}
+
+main .card-container .sedans button {
+  color: #e38826;
+}
+
+main .card-container .suvs {
+  background-color: #006970;
+}
+
+main .card-container .suvs button {
+  color: #006970;
+}
+
+main .card-container .luxury {
+  background-color: #004241;
+}
+
+main .card-container .luxury button {
+  color: #004241;
+}
+
+main .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+main .attribution a {
+  color: #3e52a3;
+}
