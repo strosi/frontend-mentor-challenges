@@ -23,13 +23,13 @@ main {
 main .card-container {
   width: fit-content;
   margin: 0 auto;
-  border-radius: 9px;
-  overflow: hidden;
 }
 
 @media (min-width: 800px) {
   main .card-container {
     max-width: 920px;
+    min-height: fit-content;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -86,11 +86,20 @@ main .card-container section button:hover {
 }
 
 main .card-container .sedans {
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
   background-color: #e38826;
 }
 
 main .card-container .sedans button {
   color: #e38826;
+}
+
+@media (min-width: 800px) {
+  main .card-container .sedans {
+    border-bottom-left-radius: 9px;
+    border-top-right-radius: 0;
+  }
 }
 
 main .card-container .suvs {
@@ -102,6 +111,8 @@ main .card-container .suvs button {
 }
 
 main .card-container .luxury {
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
   background-color: #004241;
 }
 
@@ -109,11 +120,18 @@ main .card-container .luxury button {
   color: #004241;
 }
 
+@media (min-width: 800px) {
+  main .card-container .luxury {
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 0;
+  }
+}
+
 main .attribution {
   font-size: 11px;
   text-align: center;
   color: #006970;
-  padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 main .attribution a {
@@ -125,7 +143,5 @@ main .attribution a {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }

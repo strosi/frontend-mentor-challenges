@@ -8,6 +8,8 @@ $section-01-bg: hsl(31, 77%, 52%);
 $section-02-bg: hsl(184, 100%, 22%);
 $section-03-bg: hsl(179, 100%, 13%);
 
+$round-corner: 9px;
+
 @mixin section-color-theme($color) {
     background-color: $color;
 
@@ -44,11 +46,11 @@ main {
     .card-container {
         width: fit-content;
         margin: 0 auto;
-        border-radius: 9px;
-        overflow: hidden;
 
         @include respond-desktop {
             max-width: 920px;
+            min-height: fit-content;
+            margin: auto;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -100,13 +102,27 @@ main {
         }
 
         .sedans {
+            border-top-left-radius: $round-corner;
+            border-top-right-radius: $round-corner;
             @include section-color-theme($section-01-bg);
+
+            @include respond-desktop {
+                border-bottom-left-radius: $round-corner;
+                border-top-right-radius: 0;
+            }
         }
         .suvs {
             @include section-color-theme($section-02-bg);
         }
         .luxury {
+            border-bottom-left-radius: $round-corner;
+            border-bottom-right-radius: $round-corner;
             @include section-color-theme($section-03-bg);
+
+            @include respond-desktop {
+                border-top-right-radius: $round-corner;
+                border-bottom-left-radius: 0;
+            }
         }
     }
 
@@ -114,7 +130,7 @@ main {
         font-size: 11px;
         text-align: center;
         color: $section-02-bg;
-        padding: 1rem;
+        padding-bottom: 2rem;
 
         a {
             color: $section-02-bg;
@@ -125,7 +141,5 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 }
