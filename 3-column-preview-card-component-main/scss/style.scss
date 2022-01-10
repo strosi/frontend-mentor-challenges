@@ -16,6 +16,10 @@ $section-03-bg: hsl(179, 100%, 13%);
     }
 }
 
+@mixin respond-desktop {
+    @media (min-width: 800px) { @content; }
+}
+
 // Basic style settings
 * {
     margin: 0;
@@ -24,6 +28,8 @@ $section-03-bg: hsl(179, 100%, 13%);
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     font-family: $base-ff;
     font-size: 15px;
     font-weight: 400;
@@ -33,19 +39,32 @@ body {
 }
 
 main {
+    margin: 1.5rem;
+
     .card-container {
-        margin: 1.5rem;
-        border-radius: 10px;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 9px;
         overflow: hidden;
 
+        @include respond-desktop {
+            max-width: 920px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
         section {
+            min-width: 250px;
+            max-width: 480px;
             padding: 3rem;
 
             h1 {
                 font-family: "Big Shoulders Display", sans-serif;
                 font-size: 2.5rem;
                 text-transform: uppercase;
-                color: white;
+                color: $primary-bg;
                 margin-top: 2.5rem;
                 margin-bottom: 2.3rem;
             }
@@ -53,18 +72,30 @@ main {
             button {
                 font-family: $base-ff;
                 font-size: 1em;
+                width: fit-content;
                 margin-top: 1.5rem;
                 padding: 0.8rem 1.9rem;
-                border: 2px solid white;
+                border: 2px solid $primary-bg;
                 border-radius: 50px;
-                background-color: white;
+                background-color: $primary-bg;
                 transition: 0.3s ease;
 
                 &:hover {
                     cursor: pointer;
-                    color: white;
+                    color: $base-fc;
                     background-color: rgba(255, 255, 255, 0);
                 }
+
+                @include respond-desktop {
+                    margin-top: 5.1rem;
+                }
+            }
+
+            @include respond-desktop {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 33.33%;
             }
         }
 
@@ -82,9 +113,19 @@ main {
     .attribution {
         font-size: 11px;
         text-align: center;
+        color: $section-02-bg;
+        padding: 1rem;
 
         a {
-            color: hsl(228, 45%, 44%);
+            color: $section-02-bg;
         }
+    }
+
+    @include respond-desktop {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
