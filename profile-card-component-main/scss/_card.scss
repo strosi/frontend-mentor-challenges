@@ -1,0 +1,74 @@
+@use 'vars' as *;
+
+.card {
+    margin: auto;
+    max-width: 350px;
+    text-align: center;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 13px;
+    box-shadow: 0 30px 100px 0 hsla(0, 0%, 0%, 0.3);
+
+    .card-avatar {
+        padding-top: 5.5rem;
+    }
+
+    .card-avatar img {
+        border: 5px solid white;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 0;
+
+        .personal-info__container {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        .personal-info__name {
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        .personal-info__age {
+            font-size: 1em;
+            color: $light-fc;
+            padding-left: 0.5rem;
+        }
+
+        .personal-info__city {
+            font-size: 0.8em;
+            color: $light-fc;
+            padding-top: 0.5rem;
+        }
+    }
+
+    .statistic {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1.7rem;
+        border-top: 1px solid lightgrey;
+
+        .statistic__item {
+            margin: auto;
+            padding: 1.4rem;
+        }
+    
+        .statistic__data {
+            font-weight: 700;
+        }
+    
+        .statistic__heading {
+            font-size: 0.6em;
+            letter-spacing: 0.05rem;
+            color: $light-fc;
+        }
+    }
+}
