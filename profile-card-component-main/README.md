@@ -11,7 +11,7 @@ This is the fifth challenge I finished from https://www.frontendmentor.io/
 
 ## Summary
 
-The aim of the challenge is to recreate the [given design](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) as close as possible with the aim of the front end technologies. Here it is a profile card component that I choose to practice my HTML and Sass coding skills and to improve code structuring abilities.
+The aim of the challenge is to recreate the given design as close as possible with the aid of the front end technologies. Here it is a profile card component that I chose to practice my HTML and Sass coding skills and to improve code structuring abilities.
 
 ## Technologies
 
