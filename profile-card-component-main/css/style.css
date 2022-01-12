@@ -52,6 +52,7 @@ main {
   border: 5px solid white;
   border-radius: 100%;
   overflow: hidden;
+  background-color: white;
 }
 .card .personal-info {
   display: flex;
