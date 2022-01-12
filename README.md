@@ -1,5 +1,6 @@
 # Frontend Mentor challenges
-In this repository are gathered all the challenges I tried from https://www.frontendmentor.io/ ...
+In this repository are gathered all the challenges I tried from https://www.frontendmentor.io/  
+Below in the list are the links to my solutions.
   
   
 ### NEWBIE level  
