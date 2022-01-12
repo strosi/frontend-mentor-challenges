@@ -1,7 +1,8 @@
 # Frontend Mentor challenges
 In this repository are gathered all the challenges I tried from https://www.frontendmentor.io/ ...
-
-## NEWBIE level  
+  
+  
+### NEWBIE level  
 --01-- HTML | CSS   https://strosi.github.io/frontend-mentor-challenges/nft-preview-card-component-main  
 --02-- HTML | CSS   https://strosi.github.io/frontend-mentor-challenges/order-summary-component-main  
 --03-- HTML | CSS   https://strosi.github.io/frontend-mentor-challenges/stats-preview-card-component-main  
