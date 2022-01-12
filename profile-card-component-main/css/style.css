@@ -10,6 +10,9 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
   color: #2d3248;
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 52vw bottom 36vh, left 48vw top 52vh;
   background-color: #19a2ae;
 }
 
@@ -19,15 +22,28 @@ main {
   flex-direction: column;
 }
 
-.card {
+.card-container {
   margin: auto;
+  padding-top: 4rem;
   max-width: 350px;
+  width: 100%;
+  min-width: 300px;
+}
+
+.card {
+  margin: 0.8rem;
   text-align: center;
   background-image: url("../images/bg-pattern-card.svg");
+  background-position-x: center;
   background-repeat: no-repeat;
   background-color: white;
   border-radius: 13px;
-  box-shadow: 0 30px 100px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 50px 70px 0 rgba(45, 50, 72, 0.3);
+}
+@media (min-width: 400px) {
+  .card {
+    margin: 0;
+  }
 }
 .card .card-avatar {
   padding-top: 5.5rem;
@@ -40,7 +56,8 @@ main {
 .card .personal-info {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 0;
+  padding-bottom: 1.5rem;
+  padding-top: 0.9rem;
 }
 .card .personal-info .personal-info__container {
   margin: auto;
@@ -65,18 +82,32 @@ main {
 .card .statistic {
   display: flex;
   flex-direction: row;
-  padding: 0 1.7rem;
+  justify-content: space-between;
+  padding: 0 1.5rem;
   border-top: 1px solid lightgrey;
 }
 .card .statistic .statistic__item {
   margin: auto;
-  padding: 1.4rem;
+  padding: 1.5rem 0.7rem;
 }
 .card .statistic .statistic__data {
   font-weight: 700;
+  letter-spacing: 0.01rem;
 }
 .card .statistic .statistic__heading {
   font-size: 0.6em;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.06rem;
   color: #6a6f81;
+  padding-top: 0.1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  min-width: 300px;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: #2d3248;
 }

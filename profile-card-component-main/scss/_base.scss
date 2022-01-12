@@ -12,6 +12,9 @@ body {
     font-family: $base-ff;
     font-size: 18px;
     color: $dark-fc;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right 52vw bottom 36vh, left 48vw top 52vh;
     background-color: $base-bg;
 }
 

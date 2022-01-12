@@ -1,14 +1,27 @@
 @use 'vars' as *;
+@use 'mixins' as *;
+
+.card-container {
+    margin: auto;
+    padding-top: 4rem;
+    max-width: 350px;
+    width: 100%;
+    min-width: 300px;
+}
 
 .card {
-    margin: auto;
-    max-width: 350px;
+    margin: 0.8rem;
     text-align: center;
     background-image: url('../images/bg-pattern-card.svg');
+    background-position-x: center;
     background-repeat: no-repeat;
     background-color: white;
     border-radius: 13px;
-    box-shadow: 0 30px 100px 0 hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 50px 70px 0 hsla(229, 23%, 23%, 0.3);
+
+    @include respond-middle {
+        margin: 0;
+    }
 
     .card-avatar {
         padding-top: 5.5rem;
@@ -23,7 +36,8 @@
     .personal-info {
         display: flex;
         flex-direction: column;
-        padding: 1.5rem 0;
+        padding-bottom: 1.5rem;
+        padding-top: 0.9rem;
 
         .personal-info__container {
             margin: auto;
@@ -53,22 +67,25 @@
     .statistic {
         display: flex;
         flex-direction: row;
-        padding: 0 1.7rem;
+        justify-content: space-between;
+        padding: 0 1.5rem;
         border-top: 1px solid lightgrey;
 
         .statistic__item {
             margin: auto;
-            padding: 1.4rem;
+            padding: 1.5rem 0.7rem;
         }
     
         .statistic__data {
             font-weight: 700;
+            letter-spacing: 0.01rem;
         }
     
         .statistic__heading {
             font-size: 0.6em;
-            letter-spacing: 0.05rem;
+            letter-spacing: 0.06rem;
             color: $light-fc;
+            padding-top: 0.1rem;
         }
     }
 }

@@ -9,57 +9,47 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
 
+  <title>Frontend Mentor | Profile card component</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <title>Frontend Mentor | Profile card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <main>
 
-    <div class="card">
+    <div class="card-container">
+      <div class="card">
 
-      <div class="card-avatar">
-        <img src="images/image-victor.jpg" alt="Card avatar">
+        <div class="card-avatar">
+          <img src="images/image-victor.jpg" alt="Card avatar">
+        </div>
+  
+        <div class="personal-info">
+          <div class="personal-info__container">
+            <h1 class="personal-info__name">Victor Crest</h1>
+            <p class="personal-info__age">26</p>
+          </div>
+          <p class="personal-info__city">London</p>
+        </div>
+  
+        <div class="statistic">
+          <div class="statistic__item">
+            <p class="statistic__data">80K</p>
+            <p class="statistic__heading">Followers</p>
+          </div>
+          <div class="statistic__item">
+            <p class="statistic__data">803K</p>
+            <p class="statistic__heading">Likes</p>
+          </div>
+          <div class="statistic__item">
+            <p class="statistic__data">1.4K</p>
+            <p class="statistic__heading">Photos</p>
+          </div>
+        </div>
+  
       </div>
-
-      <div class="personal-info">
-        <div class="personal-info__container">
-          <h1 class="personal-info__name">Victor Crest</h1>
-          <p class="personal-info__age">26</p>
-        </div>
-        <p class="personal-info__city">London</p>
-      </div>
-
-      <div class="statistic">
-        <div class="statistic__item">
-          <p class="statistic__data">80K</p>
-          <p class="statistic__heading">Followers</p>
-        </div>
-        <div class="statistic__item">
-          <p class="statistic__data">803K</p>
-          <p class="statistic__heading">Likes</p>
-        </div>
-        <div class="statistic__item">
-          <p class="statistic__data">1.4K</p>
-          <p class="statistic__heading">Photos</p>
-        </div>
-      </div>
-
     </div>
 
     <div class="attribution">

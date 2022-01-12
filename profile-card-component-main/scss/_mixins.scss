@@ -1,0 +1,3 @@
+@mixin respond-middle {
+    @media (min-width: 400px) { @content; }
+}
