@@ -1,3 +1,4 @@
+@use 'vars' as *;
 @use 'mixins' as *;
 
 .card-container {
@@ -6,6 +7,9 @@
     padding: 0 1.5rem;
 
     @include respond-medium {
+        max-width: $card-max-w;
+        width: 100%;
+        margin: auto;
         padding: 0;
     }
 }

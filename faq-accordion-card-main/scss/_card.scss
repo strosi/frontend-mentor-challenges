@@ -4,7 +4,7 @@
 .card {
     min-width: 300px;
     width: 100%;
-    max-width: 920px;
+    max-width: $card-max-w;
     display: flex;
     flex-direction: column;
     color: $fc-regular;
@@ -17,23 +17,55 @@
     }
 
     .img-section {
-            position: relative;
-            height: 108px;
-            background-image: url(../images/bg-pattern-mobile.svg);
-            background-repeat: no-repeat;
-            background-position: center bottom;
+        position: relative;
+        height: 108px;
+        background-image: url('../images/bg-pattern-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
 
-        img {
+        @include respond-medium {
+            flex-basis: 50%;
+            height: auto;
+            background-image: url('../images/illustration-woman-online-desktop.svg'), url('../images/bg-pattern-desktop.svg');
+            background-position: top 70px left -84px, top -295px left -577px;
+        }
+
+        &>img {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             bottom: 35px;
             width: 237px;
         }
+
+        @include respond-medium {
+            &>img {
+                display: none;
+            }
+        }
+
+        .box-img {
+            display: none;
+        }
+
+        @include respond-medium {
+            &>.box-img {
+                position: absolute;
+                top: 205px;
+                left: -93px;
+                display: block;
+            }
+        }
     }
 
     .accord-section {
         padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+        @include respond-medium {
+            flex-basis: 50%;
+            // max-width: $card-max-w / 2;
+            padding: 4rem 6rem 5.2rem 1rem;
+        }
         
         // The accordion itself is in separate file (_accordion.scss)
     }

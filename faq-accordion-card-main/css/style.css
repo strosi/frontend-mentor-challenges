@@ -14,7 +14,6 @@ body {
 }
 
 main {
-  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,8 +24,11 @@ main {
   margin-top: 148px;
   padding: 0 1.5rem;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   .card-container {
+    max-width: 920px;
+    width: 100%;
+    margin: auto;
     padding: 0;
   }
 }
@@ -42,7 +44,7 @@ main {
   border-radius: 25px;
   box-shadow: 0 25px 50px 0 rgba(29, 30, 53, 0.4);
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   .card {
     flex-direction: row;
   }
@@ -50,19 +52,49 @@ main {
 .card .img-section {
   position: relative;
   height: 108px;
-  background-image: url(../images/bg-pattern-mobile.svg);
+  background-image: url("../images/bg-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-.card .img-section img {
+@media only screen and (min-width: 800px) {
+  .card .img-section {
+    flex-basis: 50%;
+    height: auto;
+    background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
+    background-position: top 70px left -84px, top -295px left -577px;
+  }
+}
+.card .img-section > img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 35px;
   width: 237px;
 }
+@media only screen and (min-width: 800px) {
+  .card .img-section > img {
+    display: none;
+  }
+}
+.card .img-section .box-img {
+  display: none;
+}
+@media only screen and (min-width: 800px) {
+  .card .img-section > .box-img {
+    position: absolute;
+    top: 205px;
+    left: -93px;
+    display: block;
+  }
+}
 .card .accord-section {
   padding: 1.5rem 1.5rem 3rem 1.5rem;
+}
+@media only screen and (min-width: 800px) {
+  .card .accord-section {
+    flex-basis: 50%;
+    padding: 4rem 6rem 5.2rem 1rem;
+  }
 }
 
 h1 {
@@ -70,6 +102,12 @@ h1 {
   text-align: center;
   color: #1d1e35;
   padding-bottom: 1rem;
+}
+@media only screen and (min-width: 800px) {
+  h1 {
+    text-align: left;
+    padding-bottom: 1.3rem;
+  }
 }
 
 ul {
@@ -86,8 +124,8 @@ input[type=checkbox] {
 }
 
 h2 {
-  padding: 1.05rem 0;
   font-size: 1.1em;
+  padding: 1.05rem 0;
   font-weight: 400;
 }
 h2:hover {
@@ -98,6 +136,15 @@ h2::after {
   position: absolute;
   right: 0;
   transition: 0.3s ease-in-out;
+}
+@media only screen and (min-width: 800px) {
+  h2 {
+    font-size: 1.18em;
+    padding: 1rem 0;
+  }
+  h2::after {
+    right: 0.9rem;
+  }
 }
 
 input[type=checkbox]:checked ~ .faq__question > h2 {
@@ -116,17 +163,18 @@ input[type=checkbox]:checked ~ .faq__question > h2::after {
   color: #787887;
   padding-right: 1.5rem;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
 }
 
 input[type=checkbox]:checked ~ .faq__answer {
   max-height: 100vh;
   padding-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
 }
 
 .faq__answer > p {
   opacity: 0.1;
-  transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.5s ease;
 }
 
 input[type=checkbox]:checked ~ .faq__answer > p {

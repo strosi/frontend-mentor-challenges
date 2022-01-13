@@ -1,10 +1,16 @@
 @use 'vars' as *;
+@use 'mixins' as *;
 
 h1 {
     font-size: 2.6em;
     text-align: center;
     color: #1d1e35;
     padding-bottom: 1rem;
+
+    @include respond-medium {
+        text-align: left;
+        padding-bottom: 1.3rem;
+    }
 }
 
 ul {
@@ -21,8 +27,8 @@ input[type="checkbox"] {
 }
 
 h2 {
-    padding: 1.05rem 0;
     font-size: 1.1em;
+    padding: 1.05rem 0;
     font-weight: 400;
 
     &:hover {
@@ -34,6 +40,15 @@ h2 {
         position: absolute;
         right: 0;
         transition: 0.3s ease-in-out;
+    }
+
+    @include respond-medium {
+        font-size: 1.18em;
+        padding: 1.0rem 0;
+
+        &::after {
+            right: 0.9rem;
+        }
     }
 }
 
@@ -55,17 +70,20 @@ input[type="checkbox"]:checked ~ .faq__question>h2 {
     color: $fc-paragraph;
     padding-right: 1.5rem;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+
+    
 }
 
 input[type="checkbox"]:checked ~ .faq__answer {
     max-height: 100vh;
     padding-bottom: 1rem;
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
 }
 
 .faq__answer > p {
     opacity: 0.1;
-    transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.5s ease;
 }
 
 input[type="checkbox"]:checked ~ .faq__answer > p {
