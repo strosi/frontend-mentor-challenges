@@ -1,40 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+  <main>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+    <div class="card-container">
+      <div class="accordion-card">
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+        <div class="card-img">
+          <div class="box-img"></div>
+        </div>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        <div class="content">
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <h1>FAQ</h1>
+
+          <ul class="faq">
+
+            <li class="faq__item">
+              <!-- Header -->
+              <input type="checkbox" id="q01" name="question01" value="question01">
+              <label for="q01" class="faq__question">
+                <h2>How many team members can I invite?</h2>
+              </label>
+
+              <!-- Pannel -->
+              <div class="faq__answer">
+                <p>
+                  You can invite up to 2 additional users on the Free plan. There is no limit on
+                  team members for the Premium plan.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <!-- Header -->
+              <input type="checkbox" id="q02" name="question02" value="question02">
+              <label for="q02" class="faq__question">
+                <h2>What is the maximum file upload size?</h2>
+              </label>
+
+              <!-- Pannel -->
+              <div class="faq__answer">
+                <p>
+                  No more than 2GB. All files in your account must fit your allotted storage space.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <!-- Header -->
+              <input type="checkbox" id="q03" name="question03" value="question03">
+              <label for="q03" class="faq__question">
+                <h2>How do I reset my password?</h2>
+              </label>
+
+              <!-- Pannel -->
+              <div class="faq__answer">
+                <p>
+                  Click “Forgot password” from the login page or “Change password” from your profile page.
+                  A reset link will be emailed to you.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <!-- Header -->
+              <input type="checkbox" id="q04" name="question04" value="question04">
+                <label for="q04" class="faq__question">
+                  <h2>Can I cancel my subscription?</h2>
+                </label>
+
+              <!-- Pannel -->
+              <div class="faq__answer">
+                <p>
+                  Yes! Send us a message and we’ll process your request no questions asked.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <!-- Header -->
+              <input type="checkbox" id="q05" name="question05" value="question05">
+              <label for="q05" class="faq__question">
+                <h2>Do you provide additional support?</h2>
+              </label>
+
+              <!-- Pannel -->
+              <div class="faq__answer">
+                <p>
+                  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="#">Rosi</a>.</p>
+    </div>
+  </main>
+
 </body>
+
 </html>

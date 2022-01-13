@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  background: linear-gradient(#af67e9, #6565e7) fixed;
+  background-repeat: no-repeat;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  margin: auto;
+  padding: 1.5rem;
+}
+@media only screen and (min-width: 600px) {
+  .card-container {
+    padding: 0;
+  }
+}
+
+.accordion-card {
+  min-width: 300px;
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  color: #4a4b5e;
+  background-color: white;
+  border-radius: 25px;
+}
+@media only screen and (min-width: 600px) {
+  .accordion-card {
+    flex-direction: row;
+  }
+}
+.accordion-card .content {
+  padding: 3rem 1.5rem;
+}
+.accordion-card .content h1 {
+  font-size: 2.6em;
+  text-align: center;
+  color: #1d1e35;
+  padding: 1rem;
+}
+.accordion-card .content ul {
+  list-style: none;
+}
+.accordion-card .content .faq__item {
+  position: relative;
+  border-bottom: 1px solid #e7e7e9;
+}
+.accordion-card .content input[type=checkbox] {
+  display: none;
+}
+.accordion-card .content h2 {
+  padding: 1.05rem 0;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.accordion-card .content h2:hover {
+  color: #f47c57;
+}
+.accordion-card .content h2::after {
+  content: url("../images/icon-arrow-down.svg");
+  position: absolute;
+  right: 0;
+  transition: 0.3s ease-in-out;
+}
+.accordion-card .content input[type=checkbox]:checked ~ .faq__question > h2 {
+  font-weight: 700;
+  color: #1d1e35;
+  padding-bottom: 0.7rem;
+}
+.accordion-card .content input[type=checkbox]:checked ~ .faq__question > h2::after {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+.accordion-card .content .faq__answer {
+  max-height: 0;
+  line-height: 1.14rem;
+  color: #787887;
+  padding-right: 1.5rem;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.accordion-card .content input[type=checkbox]:checked ~ .faq__answer {
+  max-height: 100vh;
+  padding-bottom: 1rem;
+}
+.accordion-card .content .faq__answer > p {
+  opacity: 0.1;
+  transition: opacity 0.7s ease-in-out;
+}
+.accordion-card .content input[type=checkbox]:checked ~ .faq__answer > p {
+  opacity: 1;
+}
+
+.attribution {
+  min-width: 270px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
