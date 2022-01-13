@@ -2,7 +2,8 @@
 
 .card-container {
     margin: auto;
-    padding: 1.5rem;
+    margin-top: 148px;
+    padding: 0 1.5rem;
 
     @include respond-medium {
         padding: 0;

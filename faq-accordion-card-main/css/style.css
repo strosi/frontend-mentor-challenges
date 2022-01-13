@@ -22,15 +22,16 @@ main {
 
 .card-container {
   margin: auto;
-  padding: 1.5rem;
+  margin-top: 148px;
+  padding: 0 1.5rem;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .card-container {
     padding: 0;
   }
 }
 
-.accordion-card {
+.card {
   min-width: 300px;
   width: 100%;
   max-width: 920px;
@@ -39,55 +40,77 @@ main {
   color: #4a4b5e;
   background-color: white;
   border-radius: 25px;
+  box-shadow: 0 25px 50px 0 rgba(29, 30, 53, 0.4);
 }
-@media only screen and (min-width: 600px) {
-  .accordion-card {
+@media only screen and (min-width: 700px) {
+  .card {
     flex-direction: row;
   }
 }
-.accordion-card .content {
-  padding: 3rem 1.5rem;
+.card .img-section {
+  position: relative;
+  height: 108px;
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
-.accordion-card .content h1 {
+.card .img-section img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 35px;
+  width: 237px;
+}
+.card .accord-section {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+}
+
+h1 {
   font-size: 2.6em;
   text-align: center;
   color: #1d1e35;
-  padding: 1rem;
+  padding-bottom: 1rem;
 }
-.accordion-card .content ul {
+
+ul {
   list-style: none;
 }
-.accordion-card .content .faq__item {
+
+.faq__item {
   position: relative;
   border-bottom: 1px solid #e7e7e9;
 }
-.accordion-card .content input[type=checkbox] {
+
+input[type=checkbox] {
   display: none;
 }
-.accordion-card .content h2 {
+
+h2 {
   padding: 1.05rem 0;
   font-size: 1.1em;
   font-weight: 400;
 }
-.accordion-card .content h2:hover {
+h2:hover {
   color: #f47c57;
 }
-.accordion-card .content h2::after {
+h2::after {
   content: url("../images/icon-arrow-down.svg");
   position: absolute;
   right: 0;
   transition: 0.3s ease-in-out;
 }
-.accordion-card .content input[type=checkbox]:checked ~ .faq__question > h2 {
+
+input[type=checkbox]:checked ~ .faq__question > h2 {
   font-weight: 700;
   color: #1d1e35;
   padding-bottom: 0.7rem;
 }
-.accordion-card .content input[type=checkbox]:checked ~ .faq__question > h2::after {
+input[type=checkbox]:checked ~ .faq__question > h2::after {
   transform: rotate(180deg);
   transform-origin: center;
 }
-.accordion-card .content .faq__answer {
+
+.faq__answer {
   max-height: 0;
   line-height: 1.14rem;
   color: #787887;
@@ -95,24 +118,29 @@ main {
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
-.accordion-card .content input[type=checkbox]:checked ~ .faq__answer {
+
+input[type=checkbox]:checked ~ .faq__answer {
   max-height: 100vh;
   padding-bottom: 1rem;
 }
-.accordion-card .content .faq__answer > p {
+
+.faq__answer > p {
   opacity: 0.1;
   transition: opacity 0.7s ease-in-out;
 }
-.accordion-card .content input[type=checkbox]:checked ~ .faq__answer > p {
+
+input[type=checkbox]:checked ~ .faq__answer > p {
   opacity: 1;
 }
 
 .attribution {
-  min-width: 270px;
+  min-width: 350px;
   font-size: 11px;
   text-align: center;
+  color: #1d1e35;
+  padding: 1rem 0;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #1d1e35;
 }
