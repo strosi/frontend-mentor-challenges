@@ -54,6 +54,7 @@
                 top: 205px;
                 left: -93px;
                 display: block;
+                transition: transform 0.5s ease-in-out;
             }
         }
     }
@@ -64,7 +65,7 @@
         @include respond-medium {
             flex-basis: 50%;
             // max-width: $card-max-w / 2;
-            padding: 4rem 6rem 5.2rem 1rem;
+            padding: 4rem 2rem 5.2rem 1rem;
         }
         
         // The accordion itself is in separate file (_accordion.scss)

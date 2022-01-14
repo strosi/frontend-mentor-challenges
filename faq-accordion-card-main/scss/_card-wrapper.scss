@@ -10,6 +10,7 @@
         max-width: $card-max-w;
         width: 100%;
         margin: auto;
-        padding: 0;
+        padding: 0 50px;
+        box-sizing: content-box;
     }
 }
