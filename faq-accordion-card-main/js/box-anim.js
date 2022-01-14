@@ -7,7 +7,7 @@
  */
 
 let box = document.querySelector(".box-img");
-let questHeader = document.querySelectorAll(".faq__question>h2");
+let questHeader = document.querySelectorAll(".faq__question");
 
 let mediaQueryMedium = window.matchMedia('(min-width: 960px)');
 

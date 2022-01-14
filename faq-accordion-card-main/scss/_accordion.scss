@@ -31,16 +31,22 @@ input[type="checkbox"] {
     display: none;
 }
 
-h2 {
-    font-size: 1.1em;
-    padding: 1.05rem 0;
-    font-weight: 400;
+h2.faq__question {
+    font-size: 1em;
 
-    &:hover {
+    label {
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: 400;
+        padding: 1.05rem 0;
+    }
+
+    &:hover label {
         color: $fc-accent;
     }
 
-    &::after {
+    label::after {
         content: url('../images/icon-arrow-down.svg');
         position: absolute;
         right: 0;
@@ -48,16 +54,18 @@ h2 {
     }
 
     @include respond-medium {
-        font-size: 1.18em;
-        padding: 1.0rem 0;
+        label {
+            font-size: 1.18em;
+            padding: 1.0rem 0;
+        }
 
-        &::after {
+        label::after {
             right: 0.9rem;
         }
     }
 }
 
-input[type="checkbox"]:checked ~ .faq__question>h2 {
+input[type="checkbox"]:checked ~ .faq__question>label {
     font-weight: 700;
     color: $fc-heading-bold;
     padding-bottom: 0.7rem;
@@ -70,14 +78,11 @@ input[type="checkbox"]:checked ~ .faq__question>h2 {
 
 .faq__answer {
     max-height: 0;
-    // font-size: 1em;
     line-height: 1.14rem;
     color: $fc-paragraph;
     padding-right: 1.5rem;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
-
-    
 }
 
 input[type="checkbox"]:checked ~ .faq__answer {
