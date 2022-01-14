@@ -14,6 +14,9 @@
 
     @include respond-medium {
         flex-direction: row;
+
+        // The margin-top below is to align the card vertically when the .attribution element is present.
+        margin-top: 3.75rem;
     }
 
     .img-section {
@@ -48,7 +51,7 @@
             display: none;
         }
 
-        @include respond-medium {
+        @include respond-desktop {
             &>.box-img {
                 position: absolute;
                 top: 205px;
@@ -64,7 +67,6 @@
 
         @include respond-medium {
             flex-basis: 50%;
-            // max-width: $card-max-w / 2;
             padding: 4rem 2rem 5.2rem 1rem;
         }
         

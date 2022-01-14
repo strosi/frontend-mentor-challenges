@@ -9,14 +9,16 @@
 let box = document.querySelector(".box-img");
 let questHeader = document.querySelectorAll(".faq__question>h2");
 
-let mediaQueryMedium = window.matchMedia('(min-width: 800px)');
+let mediaQueryMedium = window.matchMedia('(min-width: 960px)');
 
 // Use media query check to prevent adding listeners in mobile view
 // because then the box image is removed from the view.
 
-function handleWidthChange(e) {
+
+
+handleWidthChange = (e) => {
     if (e.matches) {
-        console.log('Listener is added!');
+        console.log('Listeners are added!');
     
         questHeader.forEach(header => {
             header.addEventListener("mouseover", () => {
@@ -30,7 +32,31 @@ function handleWidthChange(e) {
     }
 }
 
-mediaQueryMedium.addListener(handleWidthChange);
+mediaQueryMedium.onchange = handleWidthChange;
 
 // Initial check
 handleWidthChange(mediaQueryMedium);
+
+
+// addListener is depricated
+
+// function handleWidthChange(e) {
+//     if (e.matches) {
+//         console.log('Listener is added!');
+    
+//         questHeader.forEach(header => {
+//             header.addEventListener("mouseover", () => {
+//                 box.classList.add("move");
+//             });
+//             header.addEventListener("mouseout", () => {
+//                 box.classList.remove("move");
+        
+//             })
+//         });
+//     }
+// }
+
+// mediaQueryMedium.addListener(handleWidthChange);
+
+// // Initial check
+// handleWidthChange(mediaQueryMedium);

@@ -7,10 +7,13 @@
     padding: 0 1.5rem;
 
     @include respond-medium {
-        max-width: $card-max-w;
-        width: 100%;
         margin: auto;
-        padding: 0 50px;
-        box-sizing: content-box;
+        max-width: 920px;
+        width: 100%;
+    }
+    
+    @include respond-desktop {
+        max-width: 1096px;
+        padding: 0 5.5rem;
     }
 }

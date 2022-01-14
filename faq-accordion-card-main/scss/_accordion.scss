@@ -15,7 +15,11 @@ h1 {
 
 ul {
     list-style: none;
-    max-width: 350px;
+    max-width: 450px;
+
+    @include respond-medium {
+        max-width: 350px;
+    }
 }
 
 .faq__item {

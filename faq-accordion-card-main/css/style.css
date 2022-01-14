@@ -26,11 +26,15 @@ main {
 }
 @media only screen and (min-width: 800px) {
   .card-container {
+    margin: auto;
     max-width: 920px;
     width: 100%;
-    margin: auto;
-    padding: 0 50px;
-    box-sizing: content-box;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .card-container {
+    max-width: 1096px;
+    padding: 0 5.5rem;
   }
 }
 
@@ -48,6 +52,7 @@ main {
 @media only screen and (min-width: 800px) {
   .card {
     flex-direction: row;
+    margin-top: 3.75rem;
   }
 }
 .card .img-section {
@@ -80,7 +85,7 @@ main {
 .card .img-section .box-img {
   display: none;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 960px) {
   .card .img-section > .box-img {
     position: absolute;
     top: 205px;
@@ -114,7 +119,12 @@ h1 {
 
 ul {
   list-style: none;
-  max-width: 350px;
+  max-width: 450px;
+}
+@media only screen and (min-width: 800px) {
+  ul {
+    max-width: 350px;
+  }
 }
 
 .faq__item {
