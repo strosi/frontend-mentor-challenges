@@ -10,3 +10,4 @@ Below in the list are the links to my solutions.
 --04-- HTML | SASS  https://strosi.github.io/frontend-mentor-challenges/3-column-preview-card-component-main  
 --05-- HTML | SASS  https://strosi.github.io/frontend-mentor-challenges/profile-card-component-main  
 --06-- HTML | SASS  https://strosi.github.io/frontend-mentor-challenges/faq-accordion-card-main  
+--07-- HTML | SASS  https://strosi.github.io/frontend-mentor-challenges/social-proof-section-master  
