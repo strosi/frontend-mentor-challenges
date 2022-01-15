@@ -9,14 +9,146 @@ body {
   width: 100%;
   height: 100vh;
   font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin: auto;
+}
+
+.container {
+  max-width: 626px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5rem 1.5rem;
+}
+@media only screen and (min-width: 760px) {
+  .container {
+    flex-direction: row;
+    max-width: 1110px;
+  }
 }
 
 /* || UTILITIES */
+.intro {
+  background-color: palegoldenrod;
+  text-align: center;
+}
+@media only screen and (min-width: 760px) {
+  .intro {
+    flex-basis: 50%;
+    text-align: left;
+  }
+}
+
+.intro__title {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.9rem;
+  color: #502050;
+}
+
+.intro__info {
+  padding-top: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.03rem;
+  color: #937b92;
+}
+
+.rates {
+  background-color: palegreen;
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 760px) {
+  .rates {
+    flex-basis: 50%;
+  }
+}
+
+.rates-content__rate {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 700;
+  color: #502050;
+  background-color: #f7f2f7;
+  border-radius: 10px;
+}
+
+.rates-content__stars {
+  padding-bottom: 0.5rem;
+}
+
+.rates-content__stars img {
+  padding: 0 0.2rem;
+}
+
+.testimonials {
+  background-color: paleturquoise;
+}
+@media only screen and (min-width: 760px) {
+  .testimonials {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.testimon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 2rem 1.5rem;
+  font-size: 0.9em;
+  line-height: 1.4rem;
+  background-color: #502050;
+  border-radius: 10px;
+}
+
+.testimon__avatar {
+  width: 40px;
+  border-radius: 100%;
+}
+
+.testimon__author-info {
+  padding-left: 1.5rem;
+}
+
+.testimon__author {
+  font-weight: 500;
+  color: white;
+}
+
+.testimon__appointment {
+  color: #ee68a4;
+}
+
+.testimon__quote {
+  flex-grow: 2;
+  color: white;
+  padding-top: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 1rem 0;
+  color: #502050;
 }
 
-.attribution a {
-  color: #3e52a3;
+.attribution__link {
+  color: #502050;
 }

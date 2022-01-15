@@ -1,0 +1,49 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.testimonials {
+    background-color: paleturquoise;
+    
+    @include respond-desktop {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.testimon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding: 2rem 1.5rem;
+    font-size: $fs-small;
+    line-height: 1.4rem;
+    background-color: $dark-bold-color;
+    border-radius: $round-corners;
+}
+
+.testimon__avatar {
+    width: 40px;
+    border-radius: 100%;
+}
+
+.testimon__author-info {
+    padding-left: 1.5rem;
+}
+
+.testimon__author {
+    font-weight: 500;
+    color: $fc-quote;
+}
+
+.testimon__appointment {
+    color: $accent-color;
+}
+
+.testimon__quote {
+    flex-grow: 2;
+    color: $fc-quote;
+    padding-top: 2rem;
+}

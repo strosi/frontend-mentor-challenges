@@ -1,0 +1,28 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.intro {
+    background-color: palegoldenrod;
+
+    text-align: center;
+
+    @include respond-desktop {
+        flex-basis: 50%;
+        text-align: left;
+    }
+}
+
+.intro__title {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.9rem;
+    color: $dark-bold-color;
+}
+
+.intro__info {
+    padding-top: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: -0.03rem;
+    color: $fc-light;
+}

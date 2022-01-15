@@ -1,8 +1,12 @@
+@use 'vars' as *;
+
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 1rem 0;
+    color: $dark-bold-color;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.attribution__link {
+    color: $dark-bold-color;
 }
