@@ -6,6 +6,7 @@
 
     @include respond-desktop {
         flex-basis: 50%;
+        padding-right: 6rem;
         text-align: left;
     }
 }
@@ -15,6 +16,12 @@
     font-weight: 700;
     line-height: 2rem;
     color: $dark-bold-color;
+
+    @include respond-desktop {
+        font-size: 3.3em;
+        line-height: 3rem;
+        letter-spacing: -0.17rem;
+    }
 }
 
 .intro__info {
@@ -23,4 +30,8 @@
     line-height: 1.55rem;
     letter-spacing: -0.03rem;
     color: $fc-light;
+
+    @include respond-desktop {
+        padding-top: 1rem;
+    }
 }

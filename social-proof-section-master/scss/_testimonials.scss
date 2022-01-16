@@ -6,6 +6,10 @@
         flex-grow: 2;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 297px;
+        margin: 3.4rem 0;
     }
 }
 
@@ -20,6 +24,21 @@
     line-height: 1.4rem;
     background-color: $dark-bold-color;
     border-radius: $round-corners;
+
+    @include respond-desktop {
+        max-width: 350px;
+        min-height: 235px;
+        margin: 1rem 0;
+        padding-top: 2rem;
+
+        &:first-child {
+            align-self: flex-start;
+        }
+
+        &:last-child {
+            align-self: flex-end;
+        }
+    }
 }
 
 .testimon__avatar {
@@ -47,6 +66,10 @@
     letter-spacing: -0.025rem;
     word-spacing: 0.08rem;
     color: $fc-quote;
+
+    @include respond-desktop {
+        padding-top: 0.8rem;
+    }
 }
 
 q::before {

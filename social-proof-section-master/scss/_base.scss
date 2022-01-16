@@ -20,6 +20,11 @@ body {
     background-repeat: no-repeat;
     background-position: top left, bottom right;
     background-size: contain, 100%;
+
+    @include respond-desktop {
+        background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+        background-size: contain;
+    }
 }
 
 main {
@@ -43,6 +48,7 @@ main {
     @include respond-desktop {
         flex-direction: row;
         max-width: 1110px;
+        padding: 8.1rem 0 0 0;
     }
 }
 
