@@ -38,13 +38,12 @@ main {
 }
 
 .container {
-    // max-width: 626px;
     max-width: $max-container;
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 5.1rem 1.5rem;
+    padding: 5.1rem 1.5rem 2.35rem 1.5rem;
 
     @include respond-desktop {
         flex-direction: row;

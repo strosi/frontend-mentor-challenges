@@ -14,7 +14,7 @@ body {
   background-position: top left, bottom right;
   background-size: contain, 100%;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   body {
     background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
     background-size: auto;
@@ -32,14 +32,14 @@ main {
 }
 
 .container {
-  max-width: 910px;
+  max-width: 890px;
   width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 5.1rem 1.5rem;
+  padding: 5.1rem 1.5rem 2.35rem 1.5rem;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .container {
     flex-direction: row;
     max-width: 1110px;
@@ -52,7 +52,7 @@ main {
 .intro {
   text-align: center;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .intro {
     flex-basis: 50%;
     padding-right: 6rem;
@@ -66,7 +66,7 @@ main {
   line-height: 2rem;
   color: #502050;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .intro__title {
     font-size: 3.3em;
     line-height: 3rem;
@@ -81,7 +81,7 @@ main {
   letter-spacing: -0.03rem;
   color: #937b92;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .intro__info {
     padding-top: 1rem;
   }
@@ -91,14 +91,14 @@ main {
   padding-top: 1.5rem;
   padding-bottom: 1.25rem;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .rates {
     flex-basis: 50%;
     padding: 0;
   }
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .rates-content {
     display: flex;
     flex-direction: column;
@@ -118,11 +118,11 @@ main {
   background-color: #f7f2f7;
   border-radius: 10px;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .rates-content__rate {
     display: flex;
     flex-direction: row;
-    width: calc($max-container/2);
+    width: calc(890px / 2);
     margin: 0.45rem 0;
     padding: 1.35rem 1rem 1rem 1.6rem;
   }
@@ -137,7 +137,7 @@ main {
 .rates-content__stars {
   padding-bottom: 0.745rem;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .rates-content__stars {
     padding: 0;
     padding-right: 1.9rem;
@@ -148,7 +148,7 @@ main {
   padding: 0 0.15rem;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .testimonials {
     flex-grow: 2;
     display: flex;
@@ -156,7 +156,8 @@ main {
     justify-content: space-between;
     align-items: center;
     min-height: 297px;
-    margin: 3.4rem 0;
+    margin-top: 3.4rem;
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -172,7 +173,7 @@ main {
   background-color: #502050;
   border-radius: 10px;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .testimon {
     max-width: 350px;
     min-height: 235px;
@@ -213,7 +214,7 @@ main {
   word-spacing: 0.08rem;
   color: white;
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 910px) {
   .testimon__quote {
     padding-top: 0.8rem;
   }
