@@ -23,7 +23,7 @@ body {
 
     @include respond-desktop {
         background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
-        background-size: contain;
+        background-size: auto;
     }
 }
 
@@ -38,7 +38,8 @@ main {
 }
 
 .container {
-    max-width: 626px;
+    // max-width: 626px;
+    max-width: $max-container;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -48,6 +49,7 @@ main {
     @include respond-desktop {
         flex-direction: row;
         max-width: 1110px;
+        margin: 0 2rem;
         padding: 8.1rem 0 0 0;
     }
 }

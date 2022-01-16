@@ -17,7 +17,7 @@ body {
 @media only screen and (min-width: 760px) {
   body {
     background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-    background-size: contain;
+    background-size: auto;
   }
 }
 
@@ -32,7 +32,7 @@ main {
 }
 
 .container {
-  max-width: 626px;
+  max-width: 910px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,7 @@ main {
   .container {
     flex-direction: row;
     max-width: 1110px;
+    margin: 0 2rem;
     padding: 8.1rem 0 0 0;
   }
 }
@@ -121,7 +122,7 @@ main {
   .rates-content__rate {
     display: flex;
     flex-direction: row;
-    width: 445px;
+    width: calc($max-container/2);
     margin: 0.45rem 0;
     padding: 1.35rem 1rem 1rem 1.6rem;
   }

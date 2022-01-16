@@ -34,7 +34,8 @@
     @include respond-desktop {
         display: flex;
         flex-direction: row;
-        width: 445px;
+        // width: 445px;
+        width: calc($max-container/2);
         margin: 0.45rem 0;
         padding: 1.35rem 1rem 1rem 1.6rem;
 
