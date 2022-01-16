@@ -19,7 +19,7 @@ body {
     background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
     background-repeat: no-repeat;
     background-position: top left, bottom right;
-    background-size: contain;
+    background-size: contain, 100%;
 }
 
 main {
