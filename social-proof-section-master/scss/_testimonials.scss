@@ -1,9 +1,7 @@
 @use 'vars' as *;
 @use 'mixins' as *;
 
-.testimonials {
-    background-color: paleturquoise;
-    
+.testimonials {    
     @include respond-desktop {
         flex-grow: 2;
         display: flex;
@@ -46,7 +44,7 @@
 .testimon__quote {
     flex-grow: 2;
     padding-top: 1.5rem;
-    letter-spacing: -0.03rem;
+    letter-spacing: -0.025rem;
     word-spacing: 0.08rem;
     color: $fc-quote;
 }

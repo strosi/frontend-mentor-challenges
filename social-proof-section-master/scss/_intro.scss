@@ -2,8 +2,6 @@
 @use 'mixins' as *;
 
 .intro {
-    background-color: palegoldenrod;
-
     text-align: center;
 
     @include respond-desktop {

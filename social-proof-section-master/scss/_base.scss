@@ -14,6 +14,9 @@ body {
     height: 100vh;
     font-size: 15px;
     font-family: $ff;
+    background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
 }
 
 main {
@@ -33,7 +36,7 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 5rem 1.5rem;
+    padding: 5.1rem 1.5rem;
 
     @include respond-desktop {
         flex-direction: row;

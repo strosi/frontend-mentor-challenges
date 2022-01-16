@@ -1,10 +1,9 @@
 @use 'vars' as *;
 @use 'mixins' as *;
 
-.rates {
-    background-color: palegreen;
-    
-    padding: 1.5rem 0;
+.rates {    
+    padding-top: 1.5rem;
+    padding-bottom: 1.25rem;
 
     @include respond-desktop {
         flex-basis: 50%;
@@ -28,7 +27,7 @@
 }
 
 .rates-content__stars {
-    padding-bottom: 0.62rem;
+    padding-bottom: 0.745rem;
 
     @include respond-desktop {
         padding: 0;
@@ -37,8 +36,4 @@
 
 .rates-content__stars img {
     padding: 0 0.15rem;
-}
-
-.rates-content__title {
-    letter-spacing: -0.02rem;
 }
