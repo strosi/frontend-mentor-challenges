@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .testimonials {    
-    @include respond-desktop {
+    @include respond-medium {
         flex-grow: 2;
         display: flex;
         flex-direction: row;
@@ -26,7 +26,7 @@
     background-color: $dark-bold-color;
     border-radius: $round-corners;
 
-    @include respond-desktop {
+    @include respond-medium {
         width: 32%;
         max-width: 350px;
         min-height: 235px;
@@ -69,7 +69,7 @@
     word-spacing: 0.08rem;
     color: $fc-quote;
 
-    @include respond-desktop {
+    @include respond-medium {
         padding-top: 0.8rem;
     }
 }

@@ -4,7 +4,7 @@
 .intro {
     text-align: center;
 
-    @include respond-desktop {
+    @include respond-medium {
         flex-basis: 50%;
         padding-right: 5rem;
         text-align: left;
@@ -17,7 +17,7 @@
     line-height: 2rem;
     color: $dark-bold-color;
 
-    @include respond-desktop {
+    @include respond-medium {
         max-width: $intro-max-w;
         font-size: 3.3em;
         line-height: 3rem;
@@ -32,7 +32,7 @@
     letter-spacing: -0.03rem;
     color: $fc-light;
 
-    @include respond-desktop {
+    @include respond-medium {
         max-width: $intro-max-w;
         padding-top: 1rem;
     }

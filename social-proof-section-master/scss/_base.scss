@@ -21,7 +21,8 @@ body {
     background-position: top left, bottom right;
     background-size: contain, 100%;
 
-    @include respond-desktop {
+    @include respond-medium {
+        height: 100vh;
         background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
         background-size: auto;
     }
@@ -31,10 +32,22 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @include respond-medium {
+        height: 100%;
+    }
 }
 
 .wrapper {
     margin: auto;
+
+    @include respond-tablet {
+        padding: 0 2rem;
+    }
+
+    @include respond-desktop {
+        padding: 0;
+    }
 }
 
 .container {
@@ -45,10 +58,9 @@ main {
     flex-wrap: wrap;
     padding: 5.1rem 1.5rem 2.35rem 1.5rem;
 
-    @include respond-desktop {
+    @include respond-medium {
         flex-direction: row;
         max-width: 1110px;
-        margin: 0 2rem;
         padding: 8.1rem 0 0 0;
     }
 }

@@ -16,6 +16,7 @@ body {
 }
 @media only screen and (min-width: 910px) {
   body {
+    height: 100vh;
     background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
     background-size: auto;
   }
@@ -26,9 +27,24 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width: 910px) {
+  main {
+    height: 100%;
+  }
+}
 
 .wrapper {
   margin: auto;
+}
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    padding: 0 2rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .wrapper {
+    padding: 0;
+  }
 }
 
 .container {
@@ -43,7 +59,6 @@ main {
   .container {
     flex-direction: row;
     max-width: 1110px;
-    margin: 0 2rem;
     padding: 8.1rem 0 0 0;
   }
 }
@@ -124,7 +139,8 @@ main {
   .rates-content__rate {
     display: flex;
     flex-direction: row;
-    width: calc(890px / 2);
+    max-width: calc(890px / 2);
+    width: 100%;
     margin: 0.45rem 0;
     padding: 1.35rem 1rem 1rem 1.6rem;
   }
@@ -234,7 +250,7 @@ q::after {
 .attribution {
   font-size: 11px;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   color: #502050;
 }
 

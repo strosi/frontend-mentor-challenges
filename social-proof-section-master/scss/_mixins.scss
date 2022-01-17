@@ -1,7 +1,22 @@
 // Media queries
 
-@mixin respond-desktop {
+// -- to add space on both sides of the page (padding in the wrapper)
+@mixin respond-tablet {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+// -- for thransition from mobile to desktop view
+@mixin respond-medium {
     @media only screen and (min-width: 910px) {
+        @content;
+    }
+}
+
+// -- to remove the space on both sides of the page (padding in the wrapper)
+@mixin respond-desktop {
+    @media only screen and (min-width: 1180px) {
         @content;
     }
 }
