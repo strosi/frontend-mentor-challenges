@@ -182,11 +182,10 @@ main {
 
 .testimon {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 1rem 0;
-  padding: 2.5rem 2rem 1.9rem 2rem;
+  padding: 2rem;
   font-size: 0.87em;
   line-height: 1.4rem;
   background-color: #502050;
@@ -197,8 +196,6 @@ main {
     width: 32%;
     max-width: 350px;
     min-height: 235px;
-    margin: 1rem 0;
-    padding-top: 2rem;
   }
   .testimon:first-child {
     align-self: flex-start;
@@ -208,35 +205,44 @@ main {
   }
 }
 
+.testimon__author-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+  max-height: 60px;
+  line-height: 1.3rem;
+}
+
 .testimon__avatar {
+  flex-grow: 2;
   width: 40px;
   border-radius: 100%;
 }
 
-.testimon__author-info {
-  padding-left: 1.4rem;
-  line-height: 1.3rem;
-}
-
 .testimon__author {
+  flex-basis: 50%;
+  padding-left: 1.4rem;
   font-weight: 700;
   color: white;
 }
 
 .testimon__appointment {
+  flex-basis: 50%;
+  padding-left: 1.4rem;
   color: #ee68a4;
 }
 
 .testimon__quote {
   flex-grow: 2;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   letter-spacing: -0.025rem;
   word-spacing: 0.08rem;
   color: white;
 }
 @media only screen and (min-width: 910px) {
   .testimon__quote {
-    padding-top: 0.8rem;
+    padding-top: 1.05rem;
   }
 }
 
