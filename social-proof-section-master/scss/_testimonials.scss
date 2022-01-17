@@ -74,10 +74,10 @@
     }
 }
 
-q::before {
-    padding-right: 0.2rem;
+.testimon__text::before {
+    content: '\201C';
 }
 
-q::after {
-    padding-left: 0.2rem;
+.testimon__text::after {
+    content: '\201D';
 }
