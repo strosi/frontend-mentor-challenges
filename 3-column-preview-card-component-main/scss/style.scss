@@ -38,6 +38,18 @@ body {
     background-color: $primary-bg;
 }
 
+// Hidden content accessible for screen readers.
+// https://www.a11yproject.com/posts/how-to-hide-content/
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 main {
     margin: 1.5rem;
 
@@ -60,7 +72,7 @@ main {
             max-width: 480px;
             padding: 3rem;
 
-            h1 {
+            h2 {
                 font-family: "Big Shoulders Display", sans-serif;
                 font-size: 2.5rem;
                 text-transform: uppercase;

@@ -15,15 +15,23 @@ body {
   background-color: #f2f2f2;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 main {
   margin: 1.5rem;
 }
-
 main .card-container {
   width: fit-content;
   margin: 0 auto;
 }
-
 @media (min-width: 800px) {
   main .card-container {
     max-width: 920px;
@@ -35,14 +43,12 @@ main .card-container {
     align-items: stretch;
   }
 }
-
 main .card-container section {
   min-width: 250px;
   max-width: 480px;
   padding: 3rem;
 }
-
-main .card-container section h1 {
+main .card-container section h2 {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -50,7 +56,6 @@ main .card-container section h1 {
   margin-top: 2.5rem;
   margin-bottom: 2.3rem;
 }
-
 main .card-container section a {
   display: block;
   font-family: "Lexend Deca", sans-serif;
@@ -64,19 +69,16 @@ main .card-container section a {
   background-color: #f2f2f2;
   transition: 0.3s ease;
 }
-
 main .card-container section a:hover {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.75);
   background-color: rgba(255, 255, 255, 0);
 }
-
 @media (min-width: 800px) {
   main .card-container section a {
     margin-top: 5.1rem;
   }
 }
-
 @media (min-width: 800px) {
   main .card-container section {
     display: flex;
@@ -85,60 +87,49 @@ main .card-container section a:hover {
     width: 33.33%;
   }
 }
-
 main .card-container .sedans {
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   background-color: #e38826;
 }
-
 main .card-container .sedans a {
   color: #e38826;
 }
-
 @media (min-width: 800px) {
   main .card-container .sedans {
     border-bottom-left-radius: 9px;
     border-top-right-radius: 0;
   }
 }
-
 main .card-container .suvs {
   background-color: #006970;
 }
-
 main .card-container .suvs a {
   color: #006970;
 }
-
 main .card-container .luxury {
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
   background-color: #004241;
 }
-
 main .card-container .luxury a {
   color: #004241;
 }
-
 @media (min-width: 800px) {
   main .card-container .luxury {
     border-top-right-radius: 9px;
     border-bottom-left-radius: 0;
   }
 }
-
 main .attribution {
   font-size: 11px;
   text-align: center;
   color: #006970;
   padding-bottom: 1rem;
 }
-
 main .attribution a {
   color: #006970;
 }
-
 @media (min-width: 800px) {
   main {
     height: 100vh;
