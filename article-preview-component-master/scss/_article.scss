@@ -1,35 +1,47 @@
 @use 'vars' as *;
-
+@use 'mixins' as *;
 
 .article-container {
     width: 100%;
+    max-width: 465px;
     background-color: white;
     border-radius: $round-corners;
     box-shadow: 0 2rem 2rem 0 hsla(217, 19%, 35%, 0.1);
 
-    // desktop max-width
-    // max-width: 730px;
+    @include respond-desktop {
+        max-width: 730px;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .article-img {
     width: 100%;
-    max-height: 200px;
-    overflow: hidden;
-    border-top-left-radius: $round-corners;
-    border-top-right-radius: $round-corners;
-}
+    height: 200px;
+    background-image: url(../images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
-.article-img__item {
-    transform: translateY(-1rem);
-    display: block;
-    width: 100%;
+    @include respond-desktop {
+        flex-basis: 39%;
+        min-width: 285px;
+        height: auto;
+        background-position: 0rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
 }
 
 .article-content {
-    padding: 2.4rem 2rem 0 2rem;
+    padding: 2.25rem 2rem 0 2rem;
 
-    // desktop content padding
-    // padding: 3.25rem 2rem 2rem 2.5rem;
+    @include respond-desktop {
+        flex-basis: 61%;
+        padding: 3.25rem 2rem 2rem 2.5rem;
+    }
 }
 
 .article-content__title {
@@ -39,6 +51,8 @@
 
 .article-content__text {
     padding: 0.8rem 0;
+    line-height: 1.25rem;
+    letter-spacing: 0.01rem;
     color: $fc-light;
 }
 

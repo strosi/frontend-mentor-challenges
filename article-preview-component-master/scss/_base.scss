@@ -7,6 +7,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     font-family: $ff;
     font-size: 13px;
     color: $fc-main;
@@ -14,11 +16,12 @@ body {
 }
 
 main {
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .wrapper {
+    margin: auto;
     padding: 1.5rem;
-
 }
