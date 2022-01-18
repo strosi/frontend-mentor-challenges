@@ -1,0 +1,24 @@
+@use 'vars' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff;
+    font-size: 13px;
+    color: $fc-main;
+    background-color: $bg-main;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    padding: 1.5rem;
+
+}
