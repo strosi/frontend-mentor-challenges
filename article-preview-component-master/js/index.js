@@ -67,8 +67,9 @@ const toggleTooltip = () => {
 window.onresize = () => {
     const isOpen = isTooltipOpen();
 
-    // While resizing only on window width<650px the author would be hidden and
-    // the footer's padding-bottom would be reduced.
+    // Only if window width < 650px the author would be hidden 
+    // and the footer's padding-bottom would be reduced
+    // while resizing the screen.
     if(isOpen) {
         if(window.innerWidth > mqMaxWidth) {
             moveFooterBox(isOpen);
