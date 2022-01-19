@@ -91,6 +91,11 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
+Links I used while googling about accessible tooltip:
+- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role
+- https://www.sarasoueidan.com/blog/accessible-tooltips/
+- https://codepen.io/emoyal4/pen/vYJWjKv
+
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
