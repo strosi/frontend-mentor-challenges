@@ -15,8 +15,6 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -28,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./solution screenshots/desktop-design-comparison.jpg)
-![](./solution screenshots/desktop-active-design-comparison.jpg)
+![image](/solution screenshots/desktop-design-comparison.jpg)
+![image](/solution screenshots/desktop-active-design-comparison.jpg)
 
 ### Links
 
