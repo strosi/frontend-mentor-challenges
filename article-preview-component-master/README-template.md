@@ -26,9 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Comparison of the desktop view of the solution with the original.](./solution-screenshots/desktop-design-comparison.jpg | width=100)
-![Comparison of the desktop view of the solution with the original.]<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="100" />
-![Comparison of the desktop active view of the solution with the original.](./solution-screenshots/desktop-active-design-comparison.jpg)
+![Comparison of the desktop view of the solution with the original.]<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="400" />
+![Comparison of the desktop active view of the solution with the original.]<img src="./solution-screenshots/desktop-active-design-comparison.jpg" alt="" width="400" />
 
 ### Links
 
