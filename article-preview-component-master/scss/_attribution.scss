@@ -1,0 +1,11 @@
+@use 'vars' as *;
+
+.attribution {
+    padding: 1rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: $fc-light;
+}

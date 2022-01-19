@@ -41,7 +41,7 @@
 
     @include respond-desktop {
         flex-basis: 61%;
-        padding: 2.05rem 2rem 1.4rem 2.5rem;
+        padding: 2.05rem 2.5rem 1.4rem 2.5rem;
     }
 }
 
@@ -84,24 +84,22 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    max-height: 50px;
+    justify-content: flex-start;
 }
 
 .article-content__avatar {
+    margin-right: 1rem;
     width: 40px;
     border-radius: 100%;
 }
 
 .article-content__author-name {
     font-size: 1em;
-    padding-left: 1rem;
-    padding-right: 2rem;
+    margin-right: 2rem;
 }
 
 .article-content__date {
     padding-top: 0.15rem;
-    padding-left: 1rem;
     color: $bg-light;
 }
 
@@ -130,8 +128,7 @@
 .article-content__tooltip {
     opacity: 0;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -144,11 +141,11 @@
     transition: 0.5s ease;
 
     @include respond-desktop {
-        width: auto;
+        width: fit-content;
         border-radius: $round-corners;
-        left: auto;
-        right: -207px;
+        right: -68px;
         bottom: 93px;
+        padding: 1.1rem 1.25rem 0.9rem 2.25rem;
 
         &::after {
             content: "";
@@ -165,7 +162,7 @@
 
 .article-content__tooltip-title {
     padding-top: 0.07rem;
-    padding-right: 0.5rem;
+    padding-right: 1.2rem;
     font-size: 1em;
     font-weight: 500;
     letter-spacing: 0.3rem;
@@ -175,5 +172,5 @@
 
 .article-content__tooltip-links a {
     text-decoration: none;
-    padding: 0.55rem;
+    padding-right: 0.85rem;
 }
