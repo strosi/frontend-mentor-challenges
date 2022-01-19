@@ -1,0 +1,52 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.article-content__tooltip {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.25rem 2rem;
+    width: 100%;
+    background-color: $fc-main;
+    border-bottom-left-radius: $round-corners;
+    border-bottom-right-radius: $round-corners;
+    transition: 0.5s ease;
+
+    @include respond-desktop {
+        width: fit-content;
+        border-radius: $round-corners;
+        right: -68px;
+        bottom: 96px;
+        padding: 1.1rem 1.25rem 0.9rem 2.25rem;
+
+        &::after {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            background-color: $fc-main;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: rotate(45deg) translateY(75%);
+        }
+    }
+}
+
+.article-content__tooltip-title {
+    padding-top: 0.07rem;
+    padding-right: 1.2rem;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: $bg-light;
+}
+
+.article-content__tooltip-links a {
+    text-decoration: none;
+    padding-right: 0.85rem;
+}

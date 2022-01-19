@@ -25,6 +25,7 @@ main {
 }
 
 .article-container {
+  margin-top: 47px;
   position: relative;
   width: 100%;
   max-width: 465px;
