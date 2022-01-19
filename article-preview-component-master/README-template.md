@@ -26,8 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![image](/solution screenshots/desktop-design-comparison.jpg)
-![image](/solution screenshots/desktop-active-design-comparison.jpg)
+<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/desktop-active-design-comparison.jpg" alt="" width="500" />
 
 ### Links
 
