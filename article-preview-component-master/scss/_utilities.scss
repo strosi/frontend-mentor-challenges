@@ -1,0 +1,22 @@
+@use 'vars' as *;
+
+.open {
+    opacity: 1;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.dark-btn {
+    background-color: $fc-light;
+    cursor: pointer;
+
+    path {
+        fill: white;
+    }
+}
+
+.move-footer {
+    padding-bottom: 0.75rem;
+}

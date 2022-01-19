@@ -39,10 +39,29 @@
           <footer class="article-content__footer">
             <div class="article-content__author-info">
               <img class="article-content__avatar" src="images/avatar-michelle.jpg" alt="">
-              <h2 class="article-content__author-name">Michelle Appleton</h2>
-              <p class="article-content__date">28 Jun 2020</p>
+              <div class="article-content__name-date">
+                <h2 class="article-content__author-name">Michelle Appleton</h2>
+                <p class="article-content__date">28 Jun 2020</p>
+              </div>
             </div>
-            <div class="article-content__share-btn">Share</div>
+            <button class="article-content__share-btn" aria-describedby="sharelinks" id="tooltipbtn" onclick="toggleTooltip()">
+              <!-- <img src="images/icon-share.svg" alt="Share button"> -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            </button>
+            <div class="article-content__tooltip" role="tooltip" id="sharelinks">
+              <h2 class="article-content__tooltip-title">Share</h2>
+              <div class="article-content__tooltip-links">
+                <a href="#">
+                  <img src="images/icon-facebook.svg" alt="Facebook">
+                </a>
+                <a href="#">
+                  <img src="images/icon-twitter.svg" alt="Twitter">
+                </a>
+                <a href="#">
+                  <img src="images/icon-pinterest.svg" alt="Pinterest">
+                </a>
+              </div>
+            </div>
           </footer>
         </article>
 
@@ -56,5 +75,7 @@
       </p>
     </div>
   </main>
+
+  <script src="js/index.js"></script>
 </body>
 </html>

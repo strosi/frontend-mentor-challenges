@@ -2,6 +2,7 @@
 @use 'mixins' as *;
 
 .article-container {
+    position: relative;
     width: 100%;
     max-width: 465px;
     background-color: white;
@@ -69,7 +70,7 @@
 .article-content__footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 0;
@@ -81,14 +82,13 @@
 
 .article-content__author-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     max-height: 50px;
 }
 
 .article-content__avatar {
-    flex-grow: 2;
     width: 40px;
     border-radius: 100%;
 }
@@ -96,10 +96,84 @@
 .article-content__author-name {
     font-size: 1em;
     padding-left: 1rem;
+    padding-right: 2rem;
 }
 
 .article-content__date {
     padding-top: 0.15rem;
     padding-left: 1rem;
     color: $bg-light;
+}
+
+.article-content__share-btn {
+    padding: 0.5rem;
+    background-color: $bg-main;
+    border: none;
+    border-radius: 100%;
+    z-index: 10;
+    transition: 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    // &:hover, &:focus {
+    //     background-color: $fc-light;
+    //     cursor: pointer;
+    // }
+
+    // &:hover path, &:focus path {
+    //     fill: white;
+    // }
+}
+
+.article-content__tooltip {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.25rem 2rem;
+    width: 100%;
+    background-color: $fc-main;
+    border-bottom-left-radius: $round-corners;
+    border-bottom-right-radius: $round-corners;
+    transition: 0.5s ease;
+
+    @include respond-desktop {
+        width: auto;
+        border-radius: $round-corners;
+        left: auto;
+        right: -207px;
+        bottom: 93px;
+
+        &::after {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            background-color: $fc-main;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: rotate(45deg) translateY(75%);
+        }
+    }
+}
+
+.article-content__tooltip-title {
+    padding-top: 0.07rem;
+    padding-right: 0.5rem;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: $bg-light;
+}
+
+.article-content__tooltip-links a {
+    text-decoration: none;
+    padding: 0.55rem;
 }
