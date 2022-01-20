@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/mobile-design-comparison.jpg" alt="" width="500" />
+<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="600" /><img src="./solution-screenshots/mobile-design-comparison.jpg" alt="" width="400" />
 
 ### Links
 
