@@ -64,6 +64,9 @@ main {
 }
 
 .header__text {
+
+    margin: 0 auto;
+    max-width: 540px;
     padding-top: 1rem;
     padding-bottom: 4rem;
     font-size: 1.25em;
@@ -71,13 +74,12 @@ main {
     color: $fc-light;
 
     @include respond-desktop {
-        margin: 0 auto;
+
         padding-top: 1.1rem;
         padding-bottom: 3.1rem;
         font-size: 0.85em;
         line-height: 1.5rem;
         letter-spacing: -0.005rem;
-        max-width: 540px;
     }
 }
 
@@ -98,68 +100,5 @@ main {
     @include respond-desktop {
         flex-basis: 33.3%;
         justify-content: center;
-    }
-}
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 0.75rem;
-    padding: 1.66rem 1.3rem 1.35rem 1.8rem;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 11px 25px -4px hsl(214deg 51% 48% / 24%);
-
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 4px;
-        background-color: grey;
-    }
-
-    @include respond-desktop {
-        margin: 0.92rem;
-        padding: 1.97rem 2rem 1.6rem 1.95rem;
-        max-width: 350px;
-    }
-}
-
-.card__title {
-    font-size: 1.3em;
-
-    @include respond-desktop {
-        font-size: 1.25rem;
-    }
-}
-
-.card__text {
-    margin-top: 0.3rem;
-    margin-bottom: 2rem;
-    font-size: 0.88em;
-    line-height: 1.4rem;
-    color: $fc-light;
-
-    @include respond-desktop {
-        margin-top: 0.55rem;
-        margin-bottom: 2.45rem;
-    }
-}
-
-.card__img {
-    align-self: flex-end;
-
-    img {
-        width: 90%;
-    }
-
-    @include respond-desktop {
-        img {
-            width: 100%;
-        }
     }
 }
