@@ -27,24 +27,33 @@ main {
 }
 
 .section-container {
-  margin-top: 49px;
+  margin-top: 4rem;
   max-width: 685px;
 }
 @media only screen and (min-width: 900px) {
   .section-container {
+    margin-top: 60px;
     max-width: max-content;
   }
 }
 
 .header {
-  padding: 0 1.5rem;
-  font-size: 0.8em;
+  padding: 0 1rem;
+  font-size: 0.81em;
   text-align: center;
 }
 @media only screen and (min-width: 900px) {
   .header {
     margin: 0 auto;
     max-width: 610px;
+    font-size: 1.2em;
+    letter-spacing: 0.015rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .header__title {
+    line-height: 3.2rem;
   }
 }
 
@@ -54,9 +63,21 @@ main {
 
 .header__text {
   padding-top: 1rem;
-  padding-bottom: 2.5rem;
-  font-size: 1.3em;
+  padding-bottom: 4rem;
+  font-size: 1.25em;
+  line-height: 1.5rem;
   color: #a3a5ae;
+}
+@media only screen and (min-width: 900px) {
+  .header__text {
+    margin: 0 auto;
+    padding-top: 1.1rem;
+    padding-bottom: 3.1rem;
+    font-size: 0.85em;
+    line-height: 1.5rem;
+    letter-spacing: -0.005rem;
+    max-width: 540px;
+  }
 }
 
 .cards-container {
@@ -86,7 +107,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0.75rem;
-  padding: 2rem 1.75rem 1.75rem 2rem;
+  padding: 1.66rem 1.3rem 1.35rem 1.8rem;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -103,6 +124,8 @@ main {
 }
 @media only screen and (min-width: 900px) {
   .card {
+    margin: 0.92rem;
+    padding: 1.97rem 2rem 1.6rem 1.95rem;
     max-width: 350px;
   }
 }
@@ -110,13 +133,24 @@ main {
 .card__title {
   font-size: 1.3em;
 }
+@media only screen and (min-width: 900px) {
+  .card__title {
+    font-size: 1.25rem;
+  }
+}
 
 .card__text {
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
   margin-bottom: 2rem;
-  font-size: 0.9em;
+  font-size: 0.88em;
   line-height: 1.4rem;
   color: #a3a5ae;
+}
+@media only screen and (min-width: 900px) {
+  .card__text {
+    margin-top: 0.55rem;
+    margin-bottom: 2.45rem;
+  }
 }
 
 .card__img {
@@ -124,6 +158,11 @@ main {
 }
 .card__img img {
   width: 90%;
+}
+@media only screen and (min-width: 900px) {
+  .card__img img {
+    width: 100%;
+  }
 }
 
 .attribution {
