@@ -1,0 +1,22 @@
+@use 'mixins' as *;
+
+.card {
+    @include respond-desktop {
+        z-index: 1;
+
+        &::before {
+            transform: scaleY(1);
+            transition: transform 0.3s ease-in-out;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: scaleY(30);
+        }
+
+        &:hover .card__title {
+            font-weight: 400;
+            color: white;
+        }
+    }
+}

@@ -190,3 +190,21 @@ main {
 .attribution a {
   color: #3e52a3;
 }
+
+@media only screen and (min-width: 800px) {
+  .card {
+    z-index: 1;
+  }
+  .card::before {
+    transform: scaleY(1);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+  .card:hover::before {
+    transform: scaleY(30);
+  }
+  .card:hover .card__title {
+    font-weight: 400;
+    color: white;
+  }
+}
