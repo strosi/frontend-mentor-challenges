@@ -40,6 +40,8 @@ This was build with base front-end technologies and approaches including:
 - Mobile-first workflow
 - BEM methodology for styles
 
+Time to complete - about 3h and 30min.
+
 ### What I learned
 
 The task was more for practicing what was already learned in the previous challenges. I tried to add a little animation on card hovering and the interesting for me was pseudo element stack order.
