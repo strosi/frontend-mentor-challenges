@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #4c4e61;
+  background-color: #fafafa;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+  height: 100%;
+}
+
+.wrapper {
+  margin: auto;
+  padding: 1.25rem;
+}
+
+.section-container {
+  margin-top: 49px;
+  max-width: 685px;
+}
+@media only screen and (min-width: 900px) {
+  .section-container {
+    max-width: max-content;
+  }
+}
+
+.header {
+  padding: 0 1.5rem;
+  font-size: 0.8em;
+  text-align: center;
+}
+@media only screen and (min-width: 900px) {
+  .header {
+    margin: 0 auto;
+    max-width: 610px;
+  }
+}
+
+.header__title span {
+  font-weight: 200;
+}
+
+.header__text {
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  font-size: 1.3em;
+  color: #a3a5ae;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 900px) {
+  .cards-container {
+    flex-direction: row;
+  }
+}
+
+.cards-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 900px) {
+  .cards-item {
+    flex-basis: 33.3%;
+    justify-content: center;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem;
+  padding: 2rem 1.75rem 1.75rem 2rem;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 11px 25px -4px rgba(60, 114, 185, 0.24);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background-color: grey;
+}
+@media only screen and (min-width: 900px) {
+  .card {
+    max-width: 350px;
+  }
+}
+
+.card__title {
+  font-size: 1.3em;
+}
+
+.card__text {
+  margin-top: 0.4rem;
+  margin-bottom: 2rem;
+  font-size: 0.9em;
+  line-height: 1.4rem;
+  color: #a3a5ae;
+}
+
+.card__img {
+  align-self: flex-end;
+}
+.card__img img {
+  width: 90%;
+}
+
+.attribution {
+  padding: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
