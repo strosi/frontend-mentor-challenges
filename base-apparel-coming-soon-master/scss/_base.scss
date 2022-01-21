@@ -27,13 +27,16 @@ img {
 }
 
 .master-page {
+    margin: 0 auto;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-
+    
     @include respond-desktop {
         flex-wrap: wrap;
+        max-width: 2560px;
+        min-height: 700px;
     }
 }
 
