@@ -41,24 +41,27 @@ img {
 }
 
 .logo {
-    padding: 2rem;
-    border: 1px solid grey;
+    padding: 1.96rem 1.97rem;
+    // border: 1px solid grey;
 
-    & img {
-        max-width: 158px;
-        width: 30%;
+    img {
+        width: 6.25rem;
     }
-
+    
     @include respond-desktop {
         flex-grow: 1;
         padding-top: 4rem;
         padding-left: 10.3rem;
         width: 57.64%;
+
+        img {
+            width: 158px;
+        }
     }
 }
 
-.master-img {
-    border: 1px solid grey;
+.hero-img {
+    // border: 1px solid grey;
     height: 100%;
     background-image: url('../images/hero-mobile.jpg');
     background-repeat: no-repeat;
@@ -85,9 +88,9 @@ img {
 }
 
 .content {
-    border: 1px solid grey;
+    // border: 1px solid grey;
     margin: 0 auto;
-    padding: 3rem 2rem;
+    padding: 4.125rem 2rem 1.43rem 2rem;
     max-width: 640px;
     text-align: center;
 
@@ -103,7 +106,7 @@ img {
 .content__title {
     font-size: 2.5em;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.65rem;
     line-height: 2.6rem;
 
     & span {
@@ -121,7 +124,8 @@ img {
 .content__text {
     padding: 1rem 0;
     font-size: 0.9em;
-    line-height: 1.3rem;
+    line-height: 1.35rem;
+    letter-spacing: -0.01rem;
     color: $fc-light;
 
     @include respond-desktop {
@@ -137,14 +141,14 @@ img {
 
 .content__email-field {
     width: 100%;
-    padding: 1rem;
-    padding-right: 4.5rem;
+    padding: 0.94rem 4.5rem 1rem 1.5rem;
     color: $fc-light;
     background: transparent;
     border: 1px solid hsla(0, 36%, 70%, 0.50);
     border-radius: 50px;
 
     &::placeholder {
+        font-size: 0.9rem;
         font-family: $ff;
         color: hsla(0, 36%, 70%, 0.50);
     }
@@ -158,8 +162,8 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.8rem 1.7rem;
-    background: linear-gradient($btn-grad-from, $btn-grad-to);
+    padding: 0.87rem 1.5rem 0.87rem 1.7rem;
+    background: linear-gradient(135deg, $btn-grad-from, $btn-grad-to);
     border: none;
     border-radius: 50px;
     box-shadow: 0 14px 20px 0 hsla(0, 36%, 70%, 0.50);

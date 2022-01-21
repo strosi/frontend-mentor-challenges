@@ -40,12 +40,10 @@ img {
 }
 
 .logo {
-  padding: 2rem;
-  border: 1px solid grey;
+  padding: 1.96rem 1.97rem;
 }
 .logo img {
-  max-width: 158px;
-  width: 30%;
+  width: 6.25rem;
 }
 @media only screen and (min-width: 800px) {
   .logo {
@@ -54,21 +52,23 @@ img {
     padding-left: 10.3rem;
     width: 57.64%;
   }
+  .logo img {
+    width: 158px;
+  }
 }
 
-.master-img {
-  border: 1px solid grey;
+.hero-img {
   height: 100%;
   background-image: url("../images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
 }
-.master-img img {
+.hero-img img {
   width: 100%;
 }
 @media only screen and (min-width: 800px) {
-  .master-img {
+  .hero-img {
     order: 3;
     flex-grow: 2;
     align-self: flex-end;
@@ -79,9 +79,8 @@ img {
 }
 
 .content {
-  border: 1px solid grey;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 4.125rem 2rem 1.43rem 2rem;
   max-width: 640px;
   text-align: center;
 }
@@ -98,7 +97,7 @@ img {
 .content__title {
   font-size: 2.5em;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.65rem;
   line-height: 2.6rem;
 }
 .content__title span {
@@ -116,7 +115,8 @@ img {
 .content__text {
   padding: 1rem 0;
   font-size: 0.9em;
-  line-height: 1.3rem;
+  line-height: 1.35rem;
+  letter-spacing: -0.01rem;
   color: #ce9797;
 }
 @media only screen and (min-width: 800px) {
@@ -133,14 +133,14 @@ img {
 
 .content__email-field {
   width: 100%;
-  padding: 1rem;
-  padding-right: 4.5rem;
+  padding: 0.94rem 4.5rem 1rem 1.5rem;
   color: #ce9797;
   background: transparent;
   border: 1px solid rgba(206, 151, 151, 0.5);
   border-radius: 50px;
 }
 .content__email-field::placeholder {
+  font-size: 0.9rem;
   font-family: "Josefin Sans", sans-serif;
   color: rgba(206, 151, 151, 0.5);
 }
@@ -154,8 +154,8 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.8rem 1.7rem;
-  background: linear-gradient(#f8bfbf, #ee8c8c);
+  padding: 0.87rem 1.5rem 0.87rem 1.7rem;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
   border-radius: 50px;
   box-shadow: 0 14px 20px 0 rgba(206, 151, 151, 0.5);
