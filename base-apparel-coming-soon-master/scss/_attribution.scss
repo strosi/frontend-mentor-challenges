@@ -1,0 +1,17 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem 0;
+
+    @include respond-desktop {
+        text-align: left;
+        padding-left: 10.3rem;
+    }
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

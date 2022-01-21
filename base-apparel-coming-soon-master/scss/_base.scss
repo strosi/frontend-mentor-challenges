@@ -1,0 +1,167 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: $ff;
+    font-size: 16px;
+    color: $fc-dark;
+    background: linear-gradient($bg-grad-from, $bg-grad-to);
+
+    @include respond-desktop {
+        background-image: url('../images/bg-pattern-desktop.svg'), linear-gradient(135deg, $bg-grad-from, $bg-grad-to);
+        background-repeat: no-repeat;
+        background-size: 57.64% 100%;
+    }
+}
+
+img {
+    display: block;
+}
+
+.master-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-desktop {
+        flex-wrap: wrap;
+    }
+}
+
+.logo {
+    padding: 2rem;
+    border: 1px solid grey;
+
+    & img {
+        max-width: 158px;
+        width: 30%;
+    }
+
+    @include respond-desktop {
+        flex-grow: 1;
+        padding-top: 4rem;
+        padding-left: 10.3rem;
+        width: 57.64%;
+    }
+}
+
+.master-img {
+    border: 1px solid grey;
+    height: 100%;
+    background-image: url('../images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+    img {
+        width: 100%;
+    }
+
+    @include respond-desktop {
+        order: 3;
+        flex-grow: 2;
+        align-self: flex-end;
+        width: 42.36%;
+        overflow: hidden;
+        background-image: url('../images/hero-desktop.jpg');
+
+        img {
+            // width: auto;
+            // height: 100vh;
+        }
+    }
+}
+
+.content {
+    border: 1px solid grey;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    max-width: 640px;
+    text-align: center;
+
+    @include respond-desktop {
+        margin: 0;
+        padding-left: 10.3rem;
+        flex-grow: 1;
+        width: 57.64%;
+        text-align: left;
+    }
+}
+
+.content__title {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    line-height: 2.6rem;
+
+    & span {
+        font-weight: 300;
+        color: $fc-light;
+    }
+
+    @include respond-desktop {
+        font-size: 4em;
+        letter-spacing: 0.7rem;
+        line-height: 4.3rem;
+    }
+}
+
+.content__text {
+    padding: 1rem 0;
+    font-size: 0.9em;
+    line-height: 1.3rem;
+    color: $fc-light;
+
+    @include respond-desktop {
+        font-size: 1em;
+        line-height: 1.5rem;
+    }
+}
+
+.content__send-form {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.content__email-field {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 4.5rem;
+    color: $fc-light;
+    background: transparent;
+    border: 1px solid hsla(0, 36%, 70%, 0.50);
+    border-radius: 50px;
+
+    &::placeholder {
+        font-family: $ff;
+        color: hsla(0, 36%, 70%, 0.50);
+    }
+
+    @include respond-desktop {
+        font-size: 1em;
+    }
+}
+
+.content__send-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.8rem 1.7rem;
+    background: linear-gradient($btn-grad-from, $btn-grad-to);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 14px 20px 0 hsla(0, 36%, 70%, 0.50);
+
+    @include respond-desktop {
+        padding: 0.9rem 2rem;
+    }
+}
