@@ -185,7 +185,9 @@ img {
     transition: opacity 0.3s ease;
 
     &:hover {
-        opacity: 0.5;
+        // opacity: 0.5;
+    background: linear-gradient(135deg, hsla(0, 80%, 86%, 0.5), hsla(0, 74%, 74%, 0.5));
+
     }
 
     @include respond-desktop {

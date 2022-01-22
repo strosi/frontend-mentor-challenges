@@ -191,7 +191,7 @@ img {
   transition: opacity 0.3s ease;
 }
 .content__send-btn:hover {
-  opacity: 0.5;
+  background: linear-gradient(135deg, rgba(248, 191, 191, 0.5), rgba(238, 140, 140, 0.5));
 }
 @media only screen and (min-width: 800px) {
   .content__send-btn {
@@ -228,7 +228,7 @@ img {
   position: absolute;
   top: 4.3rem;
   left: 2rem;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #f96262;
 }
 .error::after {
