@@ -1,0 +1,26 @@
+@use 'vars' as *;
+
+.invalid {
+    border: 2px solid $bg-bright;
+}
+
+.error {
+    position: relative;
+
+    &::before {
+        content: 'Please provide a valid email!';
+        position: absolute;
+        top: 4.3rem;
+        left: 2rem;
+        font-size: 0.9em;
+        color: $bg-bright;
+    }
+
+    &::after {
+        content: url('../images/icon-error.svg');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 7rem;
+    }
+}

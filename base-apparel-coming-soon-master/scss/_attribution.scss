@@ -2,9 +2,10 @@
 @use 'mixins' as *;
 
 .attribution {
+    padding: 1rem 0;
     font-size: 11px;
     text-align: center;
-    padding: 1rem 0;
+    color: $fc-light;
 
     @include respond-desktop {
         text-align: left;
@@ -13,5 +14,5 @@
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: $fc-light;
 }

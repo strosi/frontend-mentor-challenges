@@ -49,6 +49,7 @@ img {
   .logo {
     flex-grow: 1;
     padding-top: 4rem;
+    padding-bottom: 1.5rem;
     padding-left: 10.3rem;
     width: 57.64%;
   }
@@ -87,6 +88,7 @@ img {
 @media only screen and (min-width: 800px) {
   .content {
     margin: 0;
+    padding-top: 1.9rem;
     padding-left: 10.3rem;
     flex-grow: 1;
     width: 57.64%;
@@ -97,8 +99,8 @@ img {
 .content__title {
   font-size: 2.5em;
   text-transform: uppercase;
-  letter-spacing: 0.65rem;
-  line-height: 2.6rem;
+  letter-spacing: 0.68rem;
+  line-height: 2.62rem;
 }
 .content__title span {
   font-weight: 300;
@@ -107,7 +109,7 @@ img {
 @media only screen and (min-width: 800px) {
   .content__title {
     font-size: 4em;
-    letter-spacing: 0.7rem;
+    letter-spacing: 1.08rem;
     line-height: 4.3rem;
   }
 }
@@ -116,13 +118,16 @@ img {
   padding: 1rem 0;
   font-size: 0.9em;
   line-height: 1.35rem;
-  letter-spacing: -0.01rem;
+  letter-spacing: -0.008rem;
   color: #ce9797;
 }
 @media only screen and (min-width: 800px) {
   .content__text {
     font-size: 1em;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.004rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -139,13 +144,36 @@ img {
   border: 1px solid rgba(206, 151, 151, 0.5);
   border-radius: 50px;
 }
-.content__email-field::placeholder {
-  font-size: 0.9rem;
+.content__email-field::-moz-placeholder {
+  font-size: 0.85rem;
   font-family: "Josefin Sans", sans-serif;
   color: rgba(206, 151, 151, 0.5);
 }
+.content__email-field:-ms-input-placeholder {
+  font-size: 0.85rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgba(206, 151, 151, 0.5);
+}
+.content__email-field::placeholder {
+  font-size: 0.85rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgba(206, 151, 151, 0.5);
+}
+.content__email-field:focus {
+  outline: none;
+}
 @media only screen and (min-width: 800px) {
   .content__email-field {
+    font-size: 1em;
+    padding: 1.15rem 7rem 1.15rem 1.8rem;
+  }
+  .content__email-field::-moz-placeholder {
+    font-size: 1em;
+  }
+  .content__email-field:-ms-input-placeholder {
+    font-size: 1em;
+  }
+  .content__email-field::placeholder {
     font-size: 1em;
   }
 }
@@ -159,17 +187,23 @@ img {
   border: none;
   border-radius: 50px;
   box-shadow: 0 14px 20px 0 rgba(206, 151, 151, 0.5);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.content__send-btn:hover {
+  opacity: 0.5;
 }
 @media only screen and (min-width: 800px) {
   .content__send-btn {
-    padding: 0.9rem 2rem;
+    padding: 1.1rem 2.65rem;
   }
 }
 
 .attribution {
+  padding: 1rem 0;
   font-size: 11px;
   text-align: center;
-  padding: 1rem 0;
+  color: #ce9797;
 }
 @media only screen and (min-width: 800px) {
   .attribution {
@@ -179,5 +213,28 @@ img {
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #ce9797;
+}
+
+.invalid {
+  border: 2px solid #f96262;
+}
+
+.error {
+  position: relative;
+}
+.error::before {
+  content: "Please provide a valid email!";
+  position: absolute;
+  top: 4.3rem;
+  left: 2rem;
+  font-size: 0.9em;
+  color: #f96262;
+}
+.error::after {
+  content: url("../images/icon-error.svg");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7rem;
 }

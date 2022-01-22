@@ -51,6 +51,7 @@ img {
     @include respond-desktop {
         flex-grow: 1;
         padding-top: 4rem;
+        padding-bottom: 1.5rem;
         padding-left: 10.3rem;
         width: 57.64%;
 
@@ -96,6 +97,7 @@ img {
 
     @include respond-desktop {
         margin: 0;
+        padding-top: 1.9rem;
         padding-left: 10.3rem;
         flex-grow: 1;
         width: 57.64%;
@@ -106,8 +108,8 @@ img {
 .content__title {
     font-size: 2.5em;
     text-transform: uppercase;
-    letter-spacing: 0.65rem;
-    line-height: 2.6rem;
+    letter-spacing: 0.68rem;
+    line-height: 2.62rem;
 
     & span {
         font-weight: 300;
@@ -116,7 +118,7 @@ img {
 
     @include respond-desktop {
         font-size: 4em;
-        letter-spacing: 0.7rem;
+        letter-spacing: 1.08rem;
         line-height: 4.3rem;
     }
 }
@@ -125,12 +127,15 @@ img {
     padding: 1rem 0;
     font-size: 0.9em;
     line-height: 1.35rem;
-    letter-spacing: -0.01rem;
+    letter-spacing: -0.008rem;
     color: $fc-light;
 
     @include respond-desktop {
         font-size: 1em;
-        line-height: 1.5rem;
+        line-height: 1.7rem;
+        letter-spacing: 0.004rem;
+        padding-top: 1.4rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -148,13 +153,22 @@ img {
     border-radius: 50px;
 
     &::placeholder {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-family: $ff;
         color: hsla(0, 36%, 70%, 0.50);
     }
 
+    &:focus {
+        outline: none;
+    }
+
     @include respond-desktop {
         font-size: 1em;
+        padding: 1.15rem 7rem 1.15rem 1.8rem;
+
+        &::placeholder {
+            font-size: 1em;
+        }
     }
 }
 
@@ -167,8 +181,14 @@ img {
     border: none;
     border-radius: 50px;
     box-shadow: 0 14px 20px 0 hsla(0, 36%, 70%, 0.50);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.5;
+    }
 
     @include respond-desktop {
-        padding: 0.9rem 2rem;
+        padding: 1.1rem 2.65rem;
     }
 }
