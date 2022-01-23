@@ -12,7 +12,7 @@ body {
   color: #413a3a;
   background: linear-gradient(white, #fff5f5);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   body {
     background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, white, #fff5f5);
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .master-page {
     flex-wrap: wrap;
     max-width: 2560px;
@@ -45,7 +45,7 @@ img {
 .logo img {
   width: 6.25rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .logo {
     flex-grow: 1;
     padding-top: 4rem;
@@ -65,7 +65,7 @@ img {
   background-size: cover;
   background-position: center top;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .hero-img {
     order: 3;
     flex-grow: 2;
@@ -82,7 +82,7 @@ img {
   max-width: 640px;
   text-align: center;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .content {
     margin: 0;
     padding-top: 1.9rem;
@@ -103,7 +103,7 @@ img {
   font-weight: 300;
   color: #ce9797;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .content__title {
     font-size: 4em;
     letter-spacing: 1.08rem;
@@ -118,7 +118,7 @@ img {
   letter-spacing: -0.008rem;
   color: #ce9797;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .content__text {
     font-size: 1em;
     line-height: 1.7rem;
@@ -161,7 +161,7 @@ img {
 .content__email-field:focus {
   outline: none;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .content__email-field {
     font-size: 1em;
     height: 57px;
@@ -193,7 +193,7 @@ img {
 .content__send-btn:hover {
   background: linear-gradient(135deg, #fdd3d3, #f0a3a3);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .content__send-btn {
     padding: 1.15rem 2.65rem;
   }
@@ -205,7 +205,7 @@ img {
   text-align: center;
   color: #ce9797;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .attribution {
     text-align: left;
     padding-left: 10.3rem;
@@ -241,7 +241,7 @@ img {
   left: 0;
   transform: translateY(-0.1rem);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .error::after {
     left: auto;
     top: 50%;
