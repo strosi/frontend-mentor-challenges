@@ -1,5 +1,5 @@
 @mixin respond-desktop {
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 1024px) {
         @content;
     }
 }

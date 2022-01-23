@@ -12,7 +12,7 @@ body {
   color: #413a3a;
   background: linear-gradient(white, #fff5f5);
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   body {
     background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, white, #fff5f5);
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .master-page {
     flex-wrap: wrap;
     max-width: 2560px;
@@ -45,7 +45,7 @@ img {
 .logo img {
   width: 6.25rem;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .logo {
     flex-grow: 1;
     padding-top: 4rem;
@@ -65,10 +65,7 @@ img {
   background-size: cover;
   background-position: center top;
 }
-.hero-img img {
-  width: 100%;
-}
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .hero-img {
     order: 3;
     flex-grow: 2;
@@ -81,11 +78,11 @@ img {
 
 .content {
   margin: 0 auto;
-  padding: 4.125rem 2rem 1.43rem 2rem;
+  padding: 4.125rem 2rem 2.2rem 2rem;
   max-width: 640px;
   text-align: center;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .content {
     margin: 0;
     padding-top: 1.9rem;
@@ -106,7 +103,7 @@ img {
   font-weight: 300;
   color: #ce9797;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .content__title {
     font-size: 4em;
     letter-spacing: 1.08rem;
@@ -121,7 +118,7 @@ img {
   letter-spacing: -0.008rem;
   color: #ce9797;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .content__text {
     font-size: 1em;
     line-height: 1.7rem;
@@ -138,7 +135,9 @@ img {
 
 .content__email-field {
   width: 100%;
-  padding: 0.94rem 4.5rem 1rem 1.5rem;
+  height: 47px;
+  padding-left: 1.5rem;
+  padding-right: 4.5rem;
   color: #ce9797;
   background: transparent;
   border: 1px solid rgba(206, 151, 151, 0.5);
@@ -162,10 +161,12 @@ img {
 .content__email-field:focus {
   outline: none;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .content__email-field {
     font-size: 1em;
-    padding: 1.15rem 7rem 1.15rem 1.8rem;
+    height: 57px;
+    padding-left: 1.8rem;
+    padding-right: 7rem;
   }
   .content__email-field::-moz-placeholder {
     font-size: 1em;
@@ -188,14 +189,13 @@ img {
   border-radius: 50px;
   box-shadow: 0 14px 20px 0 rgba(206, 151, 151, 0.5);
   cursor: pointer;
-  transition: opacity 0.3s ease;
 }
 .content__send-btn:hover {
-  background: linear-gradient(135deg, rgba(248, 191, 191, 0.5), rgba(238, 140, 140, 0.5));
+  background: linear-gradient(135deg, #fdd3d3, #f0a3a3);
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .content__send-btn {
-    padding: 1.1rem 2.65rem;
+    padding: 1.15rem 2.65rem;
   }
 }
 
@@ -205,7 +205,7 @@ img {
   text-align: center;
   color: #ce9797;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .attribution {
     text-align: left;
     padding-left: 10.3rem;
@@ -232,9 +232,20 @@ img {
   color: #f96262;
 }
 .error::after {
-  content: url("../images/icon-error.svg");
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 7rem;
+  left: 0;
+  transform: translateY(-0.1rem);
+}
+@media only screen and (min-width: 1024px) {
+  .error::after {
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7rem;
+  }
 }

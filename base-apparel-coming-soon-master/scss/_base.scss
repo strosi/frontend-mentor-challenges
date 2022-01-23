@@ -42,7 +42,6 @@ img {
 
 .logo {
     padding: 1.96rem 1.97rem;
-    // border: 1px solid grey;
 
     img {
         width: 6.25rem;
@@ -62,16 +61,11 @@ img {
 }
 
 .hero-img {
-    // border: 1px solid grey;
     height: 100%;
     background-image: url('../images/hero-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-
-    img {
-        width: 100%;
-    }
 
     @include respond-desktop {
         order: 3;
@@ -80,18 +74,12 @@ img {
         width: 42.36%;
         overflow: hidden;
         background-image: url('../images/hero-desktop.jpg');
-
-        img {
-            // width: auto;
-            // height: 100vh;
-        }
     }
 }
 
 .content {
-    // border: 1px solid grey;
     margin: 0 auto;
-    padding: 4.125rem 2rem 1.43rem 2rem;
+    padding: 4.125rem 2rem 2.2rem 2rem;
     max-width: 640px;
     text-align: center;
 
@@ -146,7 +134,9 @@ img {
 
 .content__email-field {
     width: 100%;
-    padding: 0.94rem 4.5rem 1rem 1.5rem;
+    height: 47px;
+    padding-left: 1.5rem;
+    padding-right: 4.5rem;
     color: $fc-light;
     background: transparent;
     border: 1px solid hsla(0, 36%, 70%, 0.50);
@@ -164,7 +154,9 @@ img {
 
     @include respond-desktop {
         font-size: 1em;
-        padding: 1.15rem 7rem 1.15rem 1.8rem;
+        height: 57px;
+        padding-left: 1.8rem;
+        padding-right: 7rem;
 
         &::placeholder {
             font-size: 1em;
@@ -182,15 +174,12 @@ img {
     border-radius: 50px;
     box-shadow: 0 14px 20px 0 hsla(0, 36%, 70%, 0.50);
     cursor: pointer;
-    transition: opacity 0.3s ease;
 
     &:hover {
-        // opacity: 0.5;
-    background: linear-gradient(135deg, hsla(0, 80%, 86%, 0.5), hsla(0, 74%, 74%, 0.5));
-
+        background: linear-gradient(135deg, hsl(0, 91%, 91%), hsl(0, 72%, 79%));
     }
 
     @include respond-desktop {
-        padding: 1.1rem 2.65rem;
+        padding: 1.15rem 2.65rem;
     }
 }
