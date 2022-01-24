@@ -12,7 +12,7 @@ body {
   color: #413a3a;
   background: linear-gradient(white, #fff5f5);
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   body {
     background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, white, #fff5f5);
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .master-page {
     flex-wrap: wrap;
     max-width: 2560px;
@@ -45,7 +45,7 @@ img {
 .logo img {
   width: 6.25rem;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .logo {
     flex-grow: 1;
     padding-top: 4rem;
@@ -60,12 +60,13 @@ img {
 
 .hero-img {
   height: 100%;
+  min-height: 200px;
   background-image: url("../images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .hero-img {
     order: 3;
     flex-grow: 2;
@@ -79,15 +80,16 @@ img {
 .content {
   margin: 0 auto;
   padding: 4.125rem 2rem 2.2rem 2rem;
-  max-width: 640px;
+  max-width: 510px;
   text-align: center;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .content {
     margin: 0;
-    padding-top: 1.9rem;
+    padding-top: 2.7rem;
     padding-left: 10.3rem;
     flex-grow: 1;
+    max-width: 640px;
     width: 57.64%;
     text-align: left;
   }
@@ -103,7 +105,7 @@ img {
   font-weight: 300;
   color: #ce9797;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .content__title {
     font-size: 4em;
     letter-spacing: 1.08rem;
@@ -118,7 +120,7 @@ img {
   letter-spacing: -0.008rem;
   color: #ce9797;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .content__text {
     font-size: 1em;
     line-height: 1.7rem;
@@ -143,16 +145,6 @@ img {
   border: 1px solid rgba(206, 151, 151, 0.5);
   border-radius: 50px;
 }
-.content__email-field::-moz-placeholder {
-  font-size: 0.85rem;
-  font-family: "Josefin Sans", sans-serif;
-  color: rgba(206, 151, 151, 0.5);
-}
-.content__email-field:-ms-input-placeholder {
-  font-size: 0.85rem;
-  font-family: "Josefin Sans", sans-serif;
-  color: rgba(206, 151, 151, 0.5);
-}
 .content__email-field::placeholder {
   font-size: 0.85rem;
   font-family: "Josefin Sans", sans-serif;
@@ -161,28 +153,27 @@ img {
 .content__email-field:focus {
   outline: none;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .content__email-field {
     font-size: 1em;
     height: 57px;
     padding-left: 1.8rem;
     padding-right: 7rem;
   }
-  .content__email-field::-moz-placeholder {
-    font-size: 1em;
-  }
-  .content__email-field:-ms-input-placeholder {
-    font-size: 1em;
-  }
   .content__email-field::placeholder {
     font-size: 1em;
   }
 }
 
-.content__send-btn {
+.content__btn-container {
   position: absolute;
   top: 0;
   right: 0;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.content__send-btn {
   padding: 0.87rem 1.5rem 0.87rem 1.7rem;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
@@ -191,11 +182,11 @@ img {
   cursor: pointer;
 }
 .content__send-btn:hover {
-  background: linear-gradient(135deg, #fdd3d3, #f0a3a3);
+  opacity: 0.5;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .content__send-btn {
-    padding: 1.15rem 2.65rem;
+    padding: 1.155rem 2.65rem;
   }
 }
 
@@ -205,7 +196,7 @@ img {
   text-align: center;
   color: #ce9797;
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .attribution {
     text-align: left;
     padding-left: 10.3rem;
@@ -241,7 +232,7 @@ img {
   left: 0;
   transform: translateY(-0.1rem);
 }
-@media only screen and (min-width: 1024px), (orientation: landscape) {
+@media only screen and (min-width: 961px) {
   .error::after {
     left: auto;
     top: 50%;

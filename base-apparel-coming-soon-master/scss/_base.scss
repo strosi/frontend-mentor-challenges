@@ -62,6 +62,7 @@ img {
 
 .hero-img {
     height: 100%;
+    min-height: 200px;
     background-image: url('../images/hero-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,14 +81,15 @@ img {
 .content {
     margin: 0 auto;
     padding: 4.125rem 2rem 2.2rem 2rem;
-    max-width: 640px;
+    max-width: 510px;
     text-align: center;
 
     @include respond-desktop {
         margin: 0;
-        padding-top: 1.9rem;
+        padding-top: 2.7rem;
         padding-left: 10.3rem;
         flex-grow: 1;
+        max-width: 640px;
         width: 57.64%;
         text-align: left;
     }
@@ -164,10 +166,15 @@ img {
     }
 }
 
-.content__send-btn {
+.content__btn-container {
     position: absolute;
     top: 0;
     right: 0;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.content__send-btn {
     padding: 0.87rem 1.5rem 0.87rem 1.7rem;
     background: linear-gradient(135deg, $btn-grad-from, $btn-grad-to);
     border: none;
@@ -176,10 +183,10 @@ img {
     cursor: pointer;
 
     &:hover {
-        background: linear-gradient(135deg, hsl(0, 91%, 91%), hsl(0, 72%, 79%));
+        opacity: 0.5;
     }
 
     @include respond-desktop {
-        padding: 1.15rem 2.65rem;
+        padding: 1.155rem 2.65rem;
     }
 }
