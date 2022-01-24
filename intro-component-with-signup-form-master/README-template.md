@@ -94,6 +94,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
+- https://falkus.co/2017/05/using-lighten-and-darken-in-sass/ - lighten and darken in Sass...
+
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
