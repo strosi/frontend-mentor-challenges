@@ -50,7 +50,7 @@ Users should be able to:
 
 This challenge was especially useful for practising how to position hero image that takes the whole width in mobile and the whole height in desktop view. There's need to research more about that...
 
-It was as well useful for refreshing the knoledge of html form and input elements and trying some basic form validation with JS.
+It was as well useful for refreshing my knoledge of html form and input elements and trying some basic form validation with JS.
 
 ### Useful resources
 
