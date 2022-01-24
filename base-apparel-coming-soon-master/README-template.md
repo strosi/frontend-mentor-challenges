@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-<img url="../solution-screenshots/mobile-view-comparison.jpg">
-<img url="../solution-screenshots/desktop-view-comparison.jpg">
+<img url="./solution-screenshots/mobile-view-comparison.jpg">
+<img url="./solution-screenshots/desktop-view-comparison.jpg">
 
 ### Links
 
@@ -58,4 +58,4 @@ It was as well useful for refreshing the knoledge of html form and input element
 
 While building my solution I found very useful:
 - [Email form validation with JS](https://dev.to/javascriptacademy/form-validation-using-javascript-34je) - got some ideas from here.
-- [Introduction to `input` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) - used it for recollecting how to use input field.
+- [Introduction to `input` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) - refered to it for recollecting how to use input field.
