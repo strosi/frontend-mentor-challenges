@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-<img url="./solution-screenshots/mobile-view-comparison.jpg">
-<img url="./solution-screenshots/desktop-view-comparison.jpg">
+<img src="./solution-screenshots/mobile-view-comparison.jpg">
+<img src="./solution-screenshots/desktop-view-comparison.jpg">
 
 ### Links
 
