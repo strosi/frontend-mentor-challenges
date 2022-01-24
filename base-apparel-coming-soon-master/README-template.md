@@ -13,8 +13,6 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -34,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Landing page for comming soon - code] (https://github.com/strosi/frontend-mentor-challenges/tree/main/base-apparel-coming-soon-master)
+- Solution URL: [Landing page for comming soon - code](https://github.com/strosi/frontend-mentor-challenges/tree/main/base-apparel-coming-soon-master)
 - Live Site URL: [Landing page for comming soon - live site](https://strosi.github.io/frontend-mentor-challenges/base-apparel-coming-soon-master/)
 
 ## My process
