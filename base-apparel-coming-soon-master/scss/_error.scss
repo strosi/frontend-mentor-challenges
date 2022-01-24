@@ -36,4 +36,10 @@
             right: 7rem;
         }
     }
+
+    @include respond-tiny-width {
+        &::before, &::after {
+            transform: translateY(-6rem);
+        }
+    }
 }
