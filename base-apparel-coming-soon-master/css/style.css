@@ -94,6 +94,11 @@ img {
     text-align: left;
   }
 }
+@media only screen and (max-width: 300px) {
+  .content {
+    padding: 3rem 2rem;
+  }
+}
 
 .content__title {
   font-size: 2.5em;
@@ -110,6 +115,13 @@ img {
     font-size: 4em;
     letter-spacing: 1.08rem;
     line-height: 4.3rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .content__title {
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+    line-height: 2.4rem;
   }
 }
 
@@ -171,6 +183,13 @@ img {
   right: 0;
   background-color: white;
   border-radius: 50px;
+}
+@media only screen and (max-width: 300px) {
+  .content__btn-container {
+    top: 3.3rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 .content__send-btn {
