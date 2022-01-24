@@ -10,7 +10,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   color: #413a3a;
-  background: linear-gradient(white, #fff5f5);
+  background: linear-gradient(white, #fff5f5) fixed;
 }
 @media only screen and (min-width: 961px) {
   body {

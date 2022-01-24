@@ -13,7 +13,7 @@ body {
     font-family: $ff;
     font-size: 16px;
     color: $fc-dark;
-    background: linear-gradient($bg-grad-from, $bg-grad-to);
+    background: linear-gradient($bg-grad-from, $bg-grad-to) fixed;
 
     @include respond-desktop {
         background-image: url('../images/bg-pattern-desktop.svg'), linear-gradient(135deg, $bg-grad-from, $bg-grad-to);
