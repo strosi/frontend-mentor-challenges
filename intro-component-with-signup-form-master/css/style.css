@@ -46,6 +46,7 @@ main {
 }
 @media only screen and (min-width: 961px) {
   .intro {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -78,6 +79,13 @@ main {
   max-width: 450px;
   padding: 1.5rem;
 }
+@media only screen and (min-width: 961px) {
+  .membership {
+    flex-basis: 50%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .offer {
   padding: 1.5rem;
@@ -98,9 +106,16 @@ main {
   background: white;
   border-radius: 10px;
 }
+@media only screen and (min-width: 961px) {
+  .signup {
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
 
 .signup__field {
   width: 100%;
+  height: 3.5rem;
   margin-bottom: 1rem;
   padding: 1rem;
   font-family: "Poppins", sans-serif;
@@ -111,28 +126,6 @@ main {
 }
 .signup__field:focus {
   border: 1px solid #9a96c0;
-}
-
-.signup__field {
-  color: #ff7a7a;
-  border: 2px solid #ff7a7a;
-}
-.signup__field:focus {
-  border: 2px solid #ff7a7a;
-}
-
-.signup__wrapper {
-  position: relative;
-}
-.signup__wrapper::before {
-  content: "";
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  top: 0;
-  right: 0;
-  background-image: url("../images/icon-error.svg");
-  background-repeat: no-repeat;
 }
 
 .signup__btn {
@@ -175,4 +168,39 @@ main {
 
 .attribution a {
   color: white;
+}
+
+.invalid {
+  color: #ff7a7a;
+  border: 2px solid #ff7a7a;
+}
+.invalid:autofill {
+  color: #ff7a7a !important;
+}
+
+.error {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: right;
+  color: #ff7a7a;
+}
+.error::before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 50%;
+  transform: translateY(-23%);
+  right: 1.5rem;
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+}
+
+.error-m {
+  transform: translateY(-0.5rem);
+}
+
+.hide-placeholder::placeholder {
+  color: transparent;
 }

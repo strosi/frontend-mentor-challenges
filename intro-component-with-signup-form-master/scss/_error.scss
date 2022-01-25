@@ -1,0 +1,50 @@
+@use 'vars' as *;
+
+// On error...
+
+// - invalid input field style
+.invalid {
+    color: $accent;
+    border: 2px solid $accent;
+
+    &:focus {
+        // border: 2px solid $accent;
+    }
+
+    &:autofill {
+        color: $accent !important;
+    }
+}
+
+// - field wrapper on invalid input, error icon
+.error {
+    position: relative;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: right;
+    color: $accent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        bottom: 50%;
+        transform: translateY(-23%);
+        right: 1.5rem;
+        background-image: url('../images/icon-error.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+// - error message position
+.error-m {
+    transform: translateY(-0.5rem);
+}
+
+// - hide field placeholder
+.hide-placeholder {
+    &::placeholder {
+        color: transparent;
+    }
+}
