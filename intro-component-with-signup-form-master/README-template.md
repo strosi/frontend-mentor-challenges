@@ -96,11 +96,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - https://falkus.co/2017/05/using-lighten-and-darken-in-sass/ - lighten() and darken() functions in Sass... (Read more about built-in modules in Sass)
 - https://stackoverflow.com/questions/4574912/css-content-generation-before-or-after-input-elements - `input` element have no content and can not be used with `::after` and `::before` pseudo elements...
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/ - validate form with multiple input fields. Took from here the base of my form validation and added clear errors method...
+- https://stackoverflow.com/questions/36999220/checking-classlist-with-contains-if-a-class-exists-before-add-or-remove - relied on this reply for deciding wether there is need to use `classList.contain` before `classList.remove`... But have to check it. Are methos `add()` and `remove()` really check automatically if class name is in the list?
 
 ## Author
 
