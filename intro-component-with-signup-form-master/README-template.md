@@ -94,7 +94,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- https://falkus.co/2017/05/using-lighten-and-darken-in-sass/ - lighten and darken in Sass...
+- https://falkus.co/2017/05/using-lighten-and-darken-in-sass/ - lighten() and darken() functions in Sass... (Read more about built-in modules in Sass)
+- https://stackoverflow.com/questions/4574912/css-content-generation-before-or-after-input-elements - `input` element have no content and can not be used with `::after` and `::before` pseudo elements...
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
