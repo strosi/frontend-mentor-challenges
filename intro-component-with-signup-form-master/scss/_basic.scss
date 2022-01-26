@@ -16,10 +16,11 @@ body {
     background-image: url('../images/bg-intro-mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 
-    @include respond-desktop {
+    @include respond-medium {
         background-image: url('../images/bg-intro-desktop.png');
+        background-size: auto 100%;
+        background-position: center;
     }
 }
 
@@ -27,21 +28,22 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-
-    @include respond-desktop {
-        padding-top: 49px; // Subtracting the height of the attribution (the footer) from the overall height.
-    }
+    padding-top: 49px; // Subtracting the height of the attribution (the footer) from the overall height.
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin: auto;
 
-    @include respond-desktop {
+    @include respond-medium {
         flex-direction: row;
         justify-content: space-between;
         max-width: 1110px;
+        margin: auto 4.5rem;
+    }
+
+    @include respond-desktop {
+        margin: auto;
     }
 }
 
@@ -50,7 +52,7 @@ main {
     text-align: center;
     color: white;
 
-    @include respond-desktop {
+    @include respond-medium {
         flex-basis: 50%;
         display: flex;
         flex-direction: column;
@@ -61,42 +63,65 @@ main {
 
 .intro-content {
     margin: auto;
+    max-width: 550px;
+
+    @include respond-medium {
+        padding-top: 0.4rem;
+        padding-right: 3.5rem;
+    }
 }
 
 .intro-content__title {
-    font-size: 1.7em;
+    font-size: 1.75em;
     font-weight: 600;
-    line-height: 2.2rem;
+    letter-spacing: 0.005rem;
+    word-spacing: -0.05rem;
+    line-height: 2.23rem;
+
+    @include respond-medium {
+        font-size: 2.7em;
+        line-height: 3rem;
+        letter-spacing: 0.025rem;
+        word-spacing: -0.2rem;
+    }
 
     @include respond-desktop {
-        font-size: 3em;
-        line-height: 3rem;
+        font-size: 3.1em;
+        line-height: 3.5rem;
     }
 }
 
 .intro-content__descr {
-    margin-top: 1.5rem;
+    margin-top: 1.4rem;
     line-height: 1.62rem;
-    letter-spacing: 0.005rem;
+    letter-spacing: 0.01rem;
+    word-spacing: -0.05rem;
+
+    @include respond-medium {
+        margin-top: 1.7rem;
+        line-height: 1.6rem;
+    }
 }
 
 .membership {
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 540px;
     padding: 1.2rem 1.5rem;
 
-    @include respond-desktop {
+    @include respond-medium {
         flex-basis: 50%;
         margin: 0;
         padding: 0;
-        max-width: 540px;
+        // max-width: 540px;
     }
 }
 
 .offer {
-    padding: 1.2rem 3rem;
+    padding: 1.25rem 3rem 0.825rem 3rem;
     font-weight: 300;
     text-align: center;
+    letter-spacing: -0.01rem;
+    line-height: 1.66rem;
     color: white;
     background-color: $bg-offer;
     border-radius: 10px;
@@ -104,6 +129,10 @@ main {
 
     span {
         font-weight: 600;
+    }
+
+    @include respond-medium {
+        letter-spacing: -0.017rem;
     }
 }
 
@@ -114,7 +143,7 @@ main {
     border-radius: 10px;
     box-shadow: $transp-shadow;
 
-    @include respond-desktop {
+    @include respond-medium {
         padding: 2.5rem;
     }
 }
@@ -123,7 +152,7 @@ main {
     width: 100%;
     height: 3.5rem;
     margin-bottom: 1rem;
-    padding: 1.1rem 3rem 0.9rem 1.1rem;
+    padding: 1.2rem 3rem 0.8rem 1.1rem;
     font-family: $ff;
     font-size: 0.9em;
     font-weight: 600;
@@ -131,51 +160,63 @@ main {
     border: 1px solid lighten($fc-light, 10%);
     border-radius: 5px;
 
-    // &::placeholder {
-    //     font-family: $ff;
-    //     font-weight: 600;
-    // }
-
     &:focus {
-        border: 1px solid darken($fc-light, 10%);
+        border: 1px solid darken($fc-light, 20%);
     }
 
-    @include respond-desktop {
+    @include respond-medium {
         margin-bottom: 1.25rem;
+        padding: 1rem 3rem 1rem 1.85rem;
     }
 }
 
 .signup__btn {
     width: 100%;
-    padding: 1.2rem 1rem 0.6rem 1rem;
+    padding: 1.2rem 1rem 0.7rem 1rem;
     font-family: $ff;
-    font-size: 0.93em;
+    font-size: 0.92em;
     font-weight: 500;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.065rem;
     text-transform: uppercase;
     color: white;
     background-color: $bg-btn;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 5px 0 0 darken($bg-btn, 5%);
+    box-shadow: 0 6px 0 0 darken($bg-btn, 5%);
     transition: all 0.3s ease;
     cursor: pointer;
 
     &:hover {
         background-color: lighten($bg-btn, 15%);
-        box-shadow: 0 5px 0 0 lighten($bg-btn, 5%);
+        box-shadow: 0 6px 0 0 lighten($bg-btn, 5%);
+    }
+
+    @include respond-medium {
+        padding-bottom: 0.75rem;
+        box-shadow: 0 4px 0 0 darken($bg-btn, 5%);
+
+        &:hover {
+            box-shadow: 0 4px 0 0 lighten($bg-btn, 5%);
+        }
     }
 }
 
 .signup__terms {
-    margin: 1rem 1rem 0 1rem;
+    margin: 0.93rem 1rem 0 1rem;
     font-size: 0.7em;
+    word-spacing: -0.03rem;
     text-align: center;
     line-height: 1.2rem;
     color: $fc-light;
 
     span {
+        font-size: 1em;
         font-weight: 600;
         color: $accent;
+    }
+
+    @include respond-medium {
+        margin-top: 1.05rem;
+        margin-bottom: 0.12rem;
     }
 }

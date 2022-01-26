@@ -13,11 +13,12 @@ body {
   background-image: url("../images/bg-intro-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   body {
     background-image: url("../images/bg-intro-desktop.png");
+    background-size: auto 100%;
+    background-position: center;
   }
 }
 
@@ -25,23 +26,24 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-@media only screen and (min-width: 961px) {
-  main {
-    padding-top: 49px;
-  }
+  padding-top: 49px;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: auto;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   .wrapper {
     flex-direction: row;
     justify-content: space-between;
     max-width: 1110px;
+    margin: auto 4.5rem;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .wrapper {
+    margin: auto;
   }
 }
 
@@ -50,7 +52,7 @@ main {
   text-align: center;
   color: white;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   .intro {
     flex-basis: 50%;
     display: flex;
@@ -62,44 +64,69 @@ main {
 
 .intro-content {
   margin: auto;
+  max-width: 550px;
+}
+@media only screen and (min-width: 800px) {
+  .intro-content {
+    padding-top: 0.4rem;
+    padding-right: 3.5rem;
+  }
 }
 
 .intro-content__title {
-  font-size: 1.7em;
+  font-size: 1.75em;
   font-weight: 600;
-  line-height: 2.2rem;
+  letter-spacing: 0.005rem;
+  word-spacing: -0.05rem;
+  line-height: 2.23rem;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   .intro-content__title {
-    font-size: 3em;
+    font-size: 2.7em;
     line-height: 3rem;
+    letter-spacing: 0.025rem;
+    word-spacing: -0.2rem;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .intro-content__title {
+    font-size: 3.1em;
+    line-height: 3.5rem;
   }
 }
 
 .intro-content__descr {
-  margin-top: 1.5rem;
+  margin-top: 1.4rem;
   line-height: 1.62rem;
-  letter-spacing: 0.005rem;
+  letter-spacing: 0.01rem;
+  word-spacing: -0.05rem;
+}
+@media only screen and (min-width: 800px) {
+  .intro-content__descr {
+    margin-top: 1.7rem;
+    line-height: 1.6rem;
+  }
 }
 
 .membership {
   margin: 0 auto;
-  max-width: 450px;
+  max-width: 540px;
   padding: 1.2rem 1.5rem;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   .membership {
     flex-basis: 50%;
     margin: 0;
     padding: 0;
-    max-width: 540px;
   }
 }
 
 .offer {
-  padding: 1.2rem 3rem;
+  padding: 1.25rem 3rem 0.825rem 3rem;
   font-weight: 300;
   text-align: center;
+  letter-spacing: -0.01rem;
+  line-height: 1.66rem;
   color: white;
   background-color: #6055a5;
   border-radius: 10px;
@@ -107,6 +134,11 @@ main {
 }
 .offer span {
   font-weight: 600;
+}
+@media only screen and (min-width: 800px) {
+  .offer {
+    letter-spacing: -0.017rem;
+  }
 }
 
 .signup {
@@ -116,7 +148,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.15);
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   .signup {
     padding: 2.5rem;
   }
@@ -126,7 +158,7 @@ main {
   width: 100%;
   height: 3.5rem;
   margin-bottom: 1rem;
-  padding: 1.1rem 3rem 0.9rem 1.1rem;
+  padding: 1.2rem 3rem 0.8rem 1.1rem;
   font-family: "Poppins", sans-serif;
   font-size: 0.9em;
   font-weight: 600;
@@ -135,45 +167,63 @@ main {
   border-radius: 5px;
 }
 .signup__field:focus {
-  border: 1px solid #9a96c0;
+  border: 1px solid #7b76ad;
 }
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 800px) {
   .signup__field {
     margin-bottom: 1.25rem;
+    padding: 1rem 3rem 1rem 1.85rem;
   }
 }
 
 .signup__btn {
   width: 100%;
-  padding: 1.2rem 1rem 0.6rem 1rem;
+  padding: 1.2rem 1rem 0.7rem 1rem;
   font-family: "Poppins", sans-serif;
-  font-size: 0.93em;
+  font-size: 0.92em;
   font-weight: 500;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.065rem;
   text-transform: uppercase;
   color: white;
   background-color: #38cc8c;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 5px 0 0 #30bb7f;
+  box-shadow: 0 6px 0 0 #30bb7f;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 .signup__btn:hover {
   background-color: #75dbaf;
-  box-shadow: 0 5px 0 0 #4dd198;
+  box-shadow: 0 6px 0 0 #4dd198;
+}
+@media only screen and (min-width: 800px) {
+  .signup__btn {
+    padding-bottom: 0.75rem;
+    box-shadow: 0 4px 0 0 #30bb7f;
+  }
+  .signup__btn:hover {
+    box-shadow: 0 4px 0 0 #4dd198;
+  }
 }
 
 .signup__terms {
-  margin: 1rem 1rem 0 1rem;
+  margin: 0.93rem 1rem 0 1rem;
   font-size: 0.7em;
+  word-spacing: -0.03rem;
   text-align: center;
   line-height: 1.2rem;
   color: #b9b6d3;
 }
 .signup__terms span {
+  font-size: 1em;
   font-weight: 600;
   color: #ff7a7a;
+}
+@media only screen and (min-width: 800px) {
+  .signup__terms {
+    margin-top: 1.05rem;
+    margin-bottom: 0.12rem;
+  }
 }
 
 .attribution {
