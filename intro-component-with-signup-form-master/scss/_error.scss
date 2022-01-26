@@ -4,15 +4,11 @@
 
 // - invalid input field style
 .invalid {
-    color: $accent;
     border: 2px solid $accent;
+    color: $accent;
 
-    &:focus {
-        // border: 2px solid $accent;
-    }
-
-    &:autofill {
-        color: $accent !important;
+    &:-webkit-autofill {
+        -webkit-text-fill-color: $accent !important;
     }
 }
 

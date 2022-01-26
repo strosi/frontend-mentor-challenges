@@ -7,3 +7,6 @@ $fc-light: hsl(246, 25%, 77%);
 
 // Fonts
 $ff: 'Poppins', sans-serif;
+
+// Transparent shadow
+$transp-shadow: 0 8px 0 0 darken(hsla(248, 32%, 49%, 0.15), 50%);

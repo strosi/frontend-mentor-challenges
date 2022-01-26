@@ -33,6 +33,10 @@ const checkFirstName = () => {
         hideError(firstNameEl);
     }
 
+    firstNameEl.addEventListener("focus", () => {
+        hideError(firstNameEl);
+    });
+
     return isValid;
 }
 
@@ -48,6 +52,10 @@ const checkLastName = () => {
         isValid = true;
         hideError(lastNameEl);
     }
+
+    lastNameEl.addEventListener("focus", () => {
+        hideError(lastNameEl);
+    });
 
     return isValid;
 }
@@ -65,6 +73,10 @@ const checkEmail = () => {
         hideError(emailEl);
     }
 
+    emailEl.addEventListener("focus", () => {
+        hideError(emailEl);
+    });
+
     return isValid;
 }
 
@@ -80,6 +92,10 @@ const checkPass = () => {
         isValid = true;
         hideError(passwEl);
     }
+
+    passwEl.addEventListener("focus", () => {
+        hideError(passwEl);
+    });
 
     return isValid;
 }
@@ -116,6 +132,7 @@ const hideError = (inputEl) => {
 
     inputEl.classList.remove("hide-placeholder");
     inputEl.classList.remove("invalid");
+    inputEl.classList.remove('on-focus');
     formField.classList.remove("error");
     errorMessage.textContent = "";
 }
