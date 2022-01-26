@@ -19,7 +19,7 @@ body {
 
     @include respond-medium {
         background-image: url('../images/bg-intro-desktop.png');
-        background-size: auto 100%;
+        background-size: cover;
         background-position: center;
     }
 }
