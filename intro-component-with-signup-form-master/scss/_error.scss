@@ -26,8 +26,8 @@
         width: 1.5rem;
         height: 1.5rem;
         bottom: 50%;
-        transform: translateY(-23%);
-        right: 1.5rem;
+        transform: translateY(-30%);
+        right: 1.6rem;
         background-image: url('../images/icon-error.svg');
         background-repeat: no-repeat;
     }
@@ -35,7 +35,12 @@
 
 // - error message position
 .error-m {
-    transform: translateY(-0.5rem);
+    transform: translateY(-1rem);
+    margin-bottom: 0.15rem;
+
+    small {
+        font-size: 0.8em;
+    }
 }
 
 // - hide field placeholder
