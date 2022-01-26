@@ -15,3 +15,4 @@ Below in the list are the links to my solutions.
 --09-- HTML | SASS ----- https://strosi.github.io/frontend-mentor-challenges/four-card-feature-section-master  
 --10-- HTML | SASS | JS  https://strosi.github.io/frontend-mentor-challenges/base-apparel-coming-soon-master  
 --11-- HTML | SASS | JS  https://strosi.github.io/frontend-mentor-challenges/intro-component-with-signup-form-master  
+--12-- HTML | SASS | JS  https://strosi.github.io/frontend-mentor-challenges/single-price-grid-component-master  
