@@ -70,6 +70,7 @@ main {
   .intro-content {
     padding-top: 0.4rem;
     padding-right: 3.5rem;
+    max-width: initial;
   }
 }
 
@@ -172,7 +173,7 @@ main {
 @media only screen and (min-width: 800px) {
   .signup__field {
     margin-bottom: 1.25rem;
-    padding: 1rem 3rem 1rem 1.85rem;
+    padding: 1.1rem 3rem 0.9rem 1.88rem;
   }
 }
 
