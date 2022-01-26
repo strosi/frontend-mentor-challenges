@@ -32,83 +32,34 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<img src="./solution-screenshots/signup-page-mobile-view-comparison.jpg">
+<img src="./solution-screenshots/signup-page-desktop-view-comparison.jpg">
+<img src="./solution-screenshots/signup-page-desktop-active-view-comparison.jpg">
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View Intro component with signup form - code](https://github.com/strosi/frontend-mentor-challenges/tree/main/intro-component-with-signup-form-master)
+- Live Site URL: [View Intro component with signup form - in action](https://strosi.github.io/frontend-mentor-challenges/intro-component-with-signup-form-master/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass preprocessor
 - Flexbox
-- CSS Grid
+- JavaScript
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- BEM methodology for organising styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+The challenge was requiring more research about JS validation of form with multiple fields. I learned about some of the built-in modules in Sass and cleared some questions about JS classList methods...
 
 ### Useful resources
 
-- https://falkus.co/2017/05/using-lighten-and-darken-in-sass/ - lighten() and darken() functions in Sass... (Read more about built-in modules in Sass)
+- https://falkus.co/2017/05/using-lighten-and-darken-in-sass/ - `lighten()` and `darken()` functions in Sass... (Read more about built-in modules in Sass)
 - https://stackoverflow.com/questions/4574912/css-content-generation-before-or-after-input-elements - `input` element have no content and can not be used with `::after` and `::before` pseudo elements...
-- https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/ - validate form with multiple input fields. Took from here the base of my form validation and added clear errors method...
+- https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/ - validate form with multiple input fields. Took the base of my form validation from here and added clear errors method...
 - https://stackoverflow.com/questions/36999220/checking-classlist-with-contains-if-a-class-exists-before-add-or-remove - relied on this reply for deciding wether there is need to use `classList.contain` before `classList.remove`... But have to check it. Are methos `add()` and `remove()` really check automatically if class name is in the list?
 
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
