@@ -265,12 +265,11 @@ main {
   background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
 }
-
-.error-m {
+.error p {
   transform: translateY(-1rem);
   margin-bottom: 0.15rem;
 }
-.error-m small {
+.error p small {
   font-size: 0.8em;
 }
 

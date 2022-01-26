@@ -31,15 +31,15 @@
         background-image: url('../images/icon-error.svg');
         background-repeat: no-repeat;
     }
-}
 
-// - error message position
-.error-m {
-    transform: translateY(-1rem);
-    margin-bottom: 0.15rem;
+    // - error message position
+    p {
+        transform: translateY(-1rem);
+        margin-bottom: 0.15rem;
 
-    small {
-        font-size: 0.8em;
+        small {
+            font-size: 0.8em;
+        }
     }
 }
 
