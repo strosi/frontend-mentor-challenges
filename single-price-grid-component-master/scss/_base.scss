@@ -1,0 +1,143 @@
+@use 'vars' as *;
+@use 'utilities' as *;
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    padding-bottom: 1.07rem;
+}
+
+p {
+    font-size: 0.85rem;
+    letter-spacing: 0.002rem;
+    line-height: 1.63rem;
+}
+
+ul {
+    list-style: none;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: $ff;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: $bg;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    margin: auto;
+}
+
+.card {
+    max-width: 635px;
+    margin: 2rem;
+    box-shadow: 0 10px 30px 0 shadow-clr($bg, $percent: -0.7%);
+
+    @include respond-medium {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.present {
+    padding: $content-p;
+    background-color: white;
+    color: text-clr(white);
+
+    @include respond-medium {
+        flex-grow: 2;
+    }
+}
+
+.present__title {
+    padding-top: 0.25rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.2em;
+    letter-spacing: 0.01rem;
+    color: $primary;
+}
+
+.present__sub-t {
+    font-size: 0.94rem;
+    letter-spacing: -0.012rem;
+    line-height: 1.25rem;
+    color: $accent;
+}
+
+.present__text {
+    padding-bottom: 0.44rem;
+}
+
+.payment {
+    padding: $content-p;
+    background-color: $primary;
+    color: text-clr($primary);
+
+    @include respond-medium {
+        flex-basis: 50%;
+    }
+}
+
+.payment__price {
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    
+    span {
+        display: inline-block;
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: $primary-lighter;
+        transform: translateX(0.3rem) translateY(-0.3rem);
+    }
+}
+
+.payment__text {
+    padding-bottom: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.payment__btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-family: $ff;
+    font-size: 1rem;
+    background-color: $accent;
+    color: text-clr($accent);
+    border: none;
+    border-radius: $b-rad;
+    box-shadow: 0 7px 10px 3px shadow-clr($primary, $percent: -0.85%);
+}
+
+.why-us {
+    padding: $content-p;
+    background-color: $primary-light;
+    color: text-clr($primary-light);
+
+    @include respond-medium {
+        flex-basis: 50%;
+    }
+}
+
+.why-us__adv {
+    color: $primary-lighter-x;
+}

@@ -1,0 +1,22 @@
+@use 'sass:color';
+
+// Colors
+$primary: hsl(179, 62%, 43%);
+$accent: hsl(71, 73%, 54%);
+$fc-greyish: hsl(218, 22%, 67%);
+$bg: hsl(204, 43%, 93%);
+
+$primary-light: color.scale(color.scale($primary, $lightness: 15%), $saturation: -20%);
+$primary-lighter: color.scale(color.scale($primary, $lightness: 50%), $saturation: -20%);
+$primary-lighter-x: color.scale(color.scale($primary, $lightness: 80%), $saturation: -20%);
+
+
+
+// Fonts
+$ff: 'Karla', sans-serif;
+
+// Content padding
+$content-p: 1.5rem;
+
+// Border radius
+$b-rad: 5px;

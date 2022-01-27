@@ -1,0 +1,14 @@
+@use 'vars' as *;
+@use 'sass:color';
+
+@function text-clr($bg) {
+    @if ($bg == white) {
+        @return $fc-greyish;
+    } @else {
+        @return white;
+    }
+}
+
+@function shadow-clr($bg, $percent) {
+    @return color.adjust($bg, $lightness: -50%, $alpha: $percent);
+}

@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Frontend Mentor | Single Price Grid Component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  Join our community
+  <main>
+    <div class="wrapper">
 
-  30-day, hassle-free money back guarantee
+      <div class="card">
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
-
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
+        <div class="present">
+          <h1 class="present__title">Join our community</h1>
+          <h2 class="present__sub-t">30-day, hassle-free money back guarantee</h2>
+          <p class="present__text">
+            Gain access to our full library of tutorials along with expert code reviews.
+            Perfect for any developers who are serious about honing their skills.
+          </p>
+        </div>
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+        <div class="payment">
+          <h2 class="payment__sub-t">Monthly Subscription</h2>
+          <p class="payment__price">&dollar;29 <span>per month</span></p>
+          <p class="payment__text">Full access for less than &dollar;1 a day</p>
+          <button class="payment__btn">Sign Up</button>
+        </div>
+  
+        <div class="why-us">
+          <h2 class="why-us__sub-t">Why Us</h2>
+          <ul class="why-us__adv">
+            <li class="why-us__item">Tutorials by industry experts</li>
+            <li class="why-us__item">Peer &amp; expert code review</li>
+            <li class="why-us__item">Coding exercises</li>
+            <li class="why-us__item">Access to our GitHub repos</li>
+            <li class="why-us__item">Community forum</li>
+            <li class="why-us__item">Flashcard decks</li>
+            <li class="why-us__item">New videos every week</li>
+          </ul>
+        </div>
+  
+      </div>
+
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Rosi</a>.
+      </p>
+    </footer>
+    
+  </main>
 </body>
+
 </html>
