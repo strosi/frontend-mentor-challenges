@@ -6,6 +6,8 @@
 
 h2 {
   padding-bottom: 1.07rem;
+  font-size: 1.12rem;
+  letter-spacing: -0.012rem;
 }
 
 p {
@@ -18,7 +20,8 @@ ul {
   list-style: none;
   font-size: 0.85rem;
   font-weight: 300;
-  line-height: 1.3rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.25rem;
 }
 
 body {
@@ -55,22 +58,28 @@ main {
 }
 
 .present {
-  padding: 1.5rem;
+  padding: 1.56rem 1.52rem 1.55rem 1.52rem;
   background-color: white;
   color: #98a6bd;
 }
 @media only screen and (min-width: 600px) {
   .present {
     flex-grow: 2;
+    padding: 2.5rem;
   }
 }
 
 .present__title {
-  padding-top: 0.25rem;
+  padding-top: 0.2rem;
   padding-bottom: 1.5rem;
   font-size: 1.2em;
   letter-spacing: 0.01rem;
   color: #2ab2af;
+}
+@media only screen and (min-width: 600px) {
+  .present__title {
+    font-size: 1.44rem;
+  }
 }
 
 .present__sub-t {
@@ -79,39 +88,49 @@ main {
   line-height: 1.25rem;
   color: #c0df34;
 }
+@media only screen and (min-width: 600px) {
+  .present__sub-t {
+    font-size: 1.11rem;
+  }
+}
 
 .present__text {
-  padding-bottom: 0.44rem;
+  padding-bottom: 0.36rem;
 }
 
 .payment {
-  padding: 1.5rem;
+  padding: 1.56rem 1.52rem 1.55rem 1.52rem;
   background-color: #2ab2af;
   color: white;
 }
 @media only screen and (min-width: 600px) {
   .payment {
     flex-basis: 50%;
+    padding: 2.5rem;
   }
 }
 
 .payment__price {
-  padding: 0.5rem 0;
+  padding-top: 0.36rem;
+  padding-bottom: 0.25rem;
   font-size: 2rem;
   font-weight: 700;
+  letter-spacing: -0.02rem;
 }
 .payment__price span {
   display: inline-block;
   font-size: 0.95rem;
   font-weight: 400;
+  letter-spacing: 0.01rem;
   color: #92dad9;
   transform: translateX(0.3rem) translateY(-0.3rem);
 }
 
 .payment__text {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.6rem;
   font-size: 0.95rem;
   font-weight: 300;
+  letter-spacing: 0.02rem;
 }
 
 .payment__btn {
@@ -127,13 +146,14 @@ main {
 }
 
 .why-us {
-  padding: 1.5rem;
+  padding: 1.56rem 1.52rem 1.55rem 1.52rem;
   background-color: #46c1bf;
   color: white;
 }
 @media only screen and (min-width: 600px) {
   .why-us {
     flex-basis: 50%;
+    padding: 2.5rem;
   }
 }
 

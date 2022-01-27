@@ -16,7 +16,8 @@ $primary-lighter-x: color.scale(color.scale($primary, $lightness: 80%), $saturat
 $ff: 'Karla', sans-serif;
 
 // Content padding
-$content-p: 1.5rem;
+$content-p: 1.56rem 1.52rem 1.55rem 1.52rem;
+$content-p-d: 2.5rem;
 
 // Border radius
 $b-rad: 5px;

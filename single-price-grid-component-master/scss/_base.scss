@@ -10,6 +10,8 @@
 
 h2 {
     padding-bottom: 1.07rem;
+    font-size: 1.12rem;
+    letter-spacing: -0.012rem;
 }
 
 p {
@@ -22,7 +24,8 @@ ul {
     list-style: none;
     font-size: 0.85rem;
     font-weight: 300;
-    line-height: 1.3rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.25rem;
 }
 
 body {
@@ -64,15 +67,20 @@ main {
 
     @include respond-medium {
         flex-grow: 2;
+        padding: $content-p-d;
     }
 }
 
 .present__title {
-    padding-top: 0.25rem;
+    padding-top: 0.2rem;
     padding-bottom: 1.5rem;
     font-size: 1.2em;
     letter-spacing: 0.01rem;
     color: $primary;
+
+    @include respond-medium {
+        font-size: 1.44rem;
+    }
 }
 
 .present__sub-t {
@@ -80,10 +88,14 @@ main {
     letter-spacing: -0.012rem;
     line-height: 1.25rem;
     color: $accent;
+
+    @include respond-medium {
+        font-size: 1.11rem;
+    }
 }
 
 .present__text {
-    padding-bottom: 0.44rem;
+    padding-bottom: 0.36rem;
 }
 
 .payment {
@@ -93,27 +105,32 @@ main {
 
     @include respond-medium {
         flex-basis: 50%;
+        padding: $content-p-d;
     }
 }
 
 .payment__price {
-    padding: 0.5rem 0;
+    padding-top: 0.36rem;
+    padding-bottom: 0.25rem;
     font-size: 2rem;
     font-weight: 700;
+    letter-spacing: -0.02rem;
     
     span {
         display: inline-block;
         font-size: 0.95rem;
         font-weight: 400;
+        letter-spacing: 0.01rem;
         color: $primary-lighter;
         transform: translateX(0.3rem) translateY(-0.3rem);
     }
 }
 
 .payment__text {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.6rem;
     font-size: 0.95rem;
     font-weight: 300;
+    letter-spacing: 0.02rem;
 }
 
 .payment__btn {
@@ -135,6 +152,7 @@ main {
 
     @include respond-medium {
         flex-basis: 50%;
+        padding: $content-p-d;
     }
 }
 
