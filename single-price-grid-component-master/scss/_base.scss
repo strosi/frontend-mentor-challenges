@@ -57,12 +57,12 @@ main {
     margin: 2rem;
     box-shadow: 0 10px 30px 0 shadow-clr($bg, $percent: -0.7%);
     border-radius: 7px;
+    margin-top: 5.63rem; // Subtracting the height of the footer
 
     @include respond-medium {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 5.63rem; // Subtracting the height of the footer
     }
 }
 

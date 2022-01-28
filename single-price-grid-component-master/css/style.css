@@ -54,13 +54,13 @@ main {
   margin: 2rem;
   box-shadow: 0 10px 30px 0 rgba(63, 119, 157, 0.3);
   border-radius: 7px;
+  margin-top: 5.63rem;
 }
 @media only screen and (min-width: 600px) {
   .card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 5.63rem;
   }
 }
 
