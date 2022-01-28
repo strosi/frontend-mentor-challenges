@@ -12,6 +12,10 @@ h2 {
     padding-bottom: 1.07rem;
     font-size: 1.12rem;
     letter-spacing: -0.012rem;
+
+    @include respond-medium {
+        padding-top: 0.24rem;
+    }
 }
 
 p {
@@ -79,6 +83,7 @@ main {
     color: $primary;
 
     @include respond-medium {
+        padding-bottom: 1.36rem;
         font-size: 1.44rem;
     }
 }
@@ -90,12 +95,20 @@ main {
     color: $accent;
 
     @include respond-medium {
+        padding-bottom: 0.64rem;
         font-size: 1.11rem;
+        letter-spacing: -0.007rem;
     }
 }
 
 .present__text {
     padding-bottom: 0.36rem;
+
+    @include respond-medium {
+        padding-bottom: 0.14rem;
+        font-size: 1rem;
+        letter-spacing: -0.011rem;
+    }
 }
 
 .payment {
@@ -143,6 +156,11 @@ main {
     border: none;
     border-radius: $b-rad;
     box-shadow: 0 7px 10px 3px shadow-clr($primary, $percent: -0.85%);
+
+    &:hover {
+        cursor: pointer;
+        // background-color: $btn-hover;
+    }
 }
 
 .why-us {
