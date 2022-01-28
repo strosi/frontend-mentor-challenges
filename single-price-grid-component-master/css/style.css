@@ -53,12 +53,14 @@ main {
   max-width: 635px;
   margin: 2rem;
   box-shadow: 0 10px 30px 0 rgba(63, 119, 157, 0.3);
+  border-radius: 7px;
 }
 @media only screen and (min-width: 600px) {
   .card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 5.63rem;
   }
 }
 
@@ -66,11 +68,22 @@ main {
   padding: 1.56rem 1.52rem 1.55rem 1.52rem;
   background-color: white;
   color: #98a6bd;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 @media only screen and (min-width: 600px) {
   .present {
     flex-grow: 2;
     padding: 2.35rem 2.55rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .present {
+    transition: all 0.3s ease;
+  }
+  .present:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(0, 56, 52, 0.1);
   }
 }
 
@@ -122,6 +135,16 @@ main {
   .payment {
     flex-basis: 50%;
     padding: 2.35rem 2.55rem;
+    border-bottom-left-radius: 7px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .payment {
+    transition: all 0.3s ease;
+  }
+  .payment:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(0, 56, 52, 0.1);
   }
 }
 
@@ -161,17 +184,32 @@ main {
 }
 .payment__btn:hover {
   cursor: pointer;
+  background-color: #d4f0f0;
+  color: #2ab2af;
+  transition: all 0.3s ease;
 }
 
 .why-us {
   padding: 1.56rem 1.52rem 1.55rem 1.52rem;
   background-color: #46c1bf;
   color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 @media only screen and (min-width: 600px) {
   .why-us {
     flex-basis: 50%;
     padding: 2.35rem 2.55rem;
+    border-bottom-left-radius: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .why-us {
+    transition: all 0.3s ease;
+  }
+  .why-us:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(0, 56, 52, 0.1);
   }
 }
 
@@ -180,6 +218,7 @@ main {
 }
 
 .attribution {
+  padding: 1rem;
   font-size: 11px;
   text-align: center;
   color: #2ab2af;

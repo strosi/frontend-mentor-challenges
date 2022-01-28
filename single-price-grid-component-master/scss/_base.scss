@@ -56,11 +56,13 @@ main {
     max-width: 635px;
     margin: 2rem;
     box-shadow: 0 10px 30px 0 shadow-clr($bg, $percent: -0.7%);
+    border-radius: 7px;
 
     @include respond-medium {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: 5.63rem; // Subtracting the height of the footer
     }
 }
 
@@ -68,10 +70,20 @@ main {
     padding: $content-p;
     background-color: white;
     color: text-clr(white);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 
     @include respond-medium {
         flex-grow: 2;
         padding: $content-p-d;
+    }
+
+    @include respond-desktop {
+        transition: all 0.3s ease;
+
+        &:hover {
+            @include zoom-in;
+        }
     }
 }
 
@@ -119,6 +131,15 @@ main {
     @include respond-medium {
         flex-basis: 50%;
         padding: $content-p-d;
+        border-bottom-left-radius: 7px;
+    }
+
+    @include respond-desktop {
+        transition: all 0.3s ease;
+
+        &:hover {
+            @include zoom-in;
+        }
     }
 }
 
@@ -154,12 +175,14 @@ main {
     background-color: $accent;
     color: text-clr($accent);
     border: none;
-    border-radius: $b-rad;
+    border-radius: 5px;
     box-shadow: 0 7px 10px 3px shadow-clr($primary, $percent: -0.85%);
 
     &:hover {
         cursor: pointer;
-        // background-color: $btn-hover;
+        background-color: $primary-lighter-x;
+        color: $primary;
+        transition: all 0.3s ease;
     }
 }
 
@@ -167,10 +190,21 @@ main {
     padding: $content-p;
     background-color: $primary-light;
     color: text-clr($primary-light);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 
     @include respond-medium {
         flex-basis: 50%;
         padding: $content-p-d;
+        border-bottom-left-radius: 0;
+    }
+
+    @include respond-desktop {
+        transition: all 0.3s ease;
+
+        &:hover {
+            @include zoom-in;
+        }
     }
 }
 
