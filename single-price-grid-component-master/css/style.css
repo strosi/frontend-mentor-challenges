@@ -83,6 +83,7 @@ main {
   }
   .present:hover {
     transform: scale(1.05);
+    border-radius: 7px;
     box-shadow: 0 0 20px 5px rgba(0, 56, 52, 0.1);
   }
 }
@@ -144,6 +145,7 @@ main {
   }
   .payment:hover {
     transform: scale(1.05);
+    border-radius: 7px;
     box-shadow: 0 0 20px 5px rgba(0, 56, 52, 0.1);
   }
 }
@@ -209,6 +211,7 @@ main {
   }
   .why-us:hover {
     transform: scale(1.05);
+    border-radius: 7px;
     box-shadow: 0 0 20px 5px rgba(0, 56, 52, 0.1);
   }
 }
