@@ -96,6 +96,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [min(), max(), and clamp() are CSS magic!](https://www.youtube.com/watch?v=U9VF-4euyRo), [CSS-tricks notes on the video](https://css-tricks.com/min-max-and-clamp-are-css-magic/) - I really needed this to make text more flexible on resizse.
+- [Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/) - Made me rethink how to reset my styles...
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
