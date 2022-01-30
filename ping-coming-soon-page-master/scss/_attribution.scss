@@ -1,10 +1,13 @@
+@use 'vars' as *;
+
 .attribution {
+    padding: 0.7rem;
     font-size: 11px;
     text-align: center;
-    padding: 1rem;
+    color: $neutral;
     border-top: 1px solid lightgrey;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: $primary;
 }

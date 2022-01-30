@@ -1,5 +1,6 @@
-@use "vars" as *;
-@use "mixins" as *;
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'sass:color';
 
 /*
     BASIC STYLES
@@ -14,18 +15,19 @@ body {
     text-align: center;
 }
 
-p,
-input,
-button {
-    font-size: clamp(0.74rem, 3vw, 1.25rem);
-}
-
 input,
 button {
     width: 100%;
     margin: 0.35rem 0;
     padding: 0.7rem 2rem 0.55rem 2rem;
+    font-size: clamp(0.74rem, 3vw, 1rem);
     border-radius: 30px;
+
+    @include respond-medium {
+        margin: 0.65rem 0;
+        padding-top: 1rem;
+        padding-bottom: 0.95rem;
+    }
 }
 
 /* Hidden content accessible for screen readers.
@@ -67,18 +69,18 @@ a {
     padding-left: min(1.8rem, 8%);
     padding-right: min(1.8rem, 8%);
     max-width: 72rem;
-    
+
     @include respond-medium {
         max-width: 640px;
     }
 }
 
 .logo {
-    width: clamp(3.375rem, 14%, 5.4rem);
+    width: clamp(3.375rem, 15%, 5.4rem);
 }
 
 .header__title {
-    padding-top: clamp(2.5rem, 5%, 3.625rem);
+    padding-top: clamp(2.5rem, 8%, 3.625rem);
     font-size: clamp(1rem, 5.85vw, 3rem);
     line-height: 1.1;
 
@@ -89,13 +91,20 @@ a {
 }
 
 .header__text {
-    padding-top: clamp(1rem, 6%, 1.5rem);
+    padding-top: 1.19rem;
+    font-size: clamp(0.74rem, 3vw, 1.25rem);
     font-weight: 600;
 }
 
 .notify {
     margin: 1.45rem auto;
-    width: max(88%, 7rem);
+    width: clamp(7rem, 88%, 26.3rem);
+
+    @include respond-medium {
+        display: flex;
+        flex-direction: row;
+        width: 40rem;
+    }
 }
 
 .notify__field {
@@ -103,6 +112,11 @@ a {
 
     &::placeholder {
         color: $secondary-light;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $primary;
     }
 }
 
@@ -112,15 +126,31 @@ a {
     background-color: $primary;
     border: none;
     box-shadow: 0 0.25rem 0.4rem 0.2rem hsl(223deg 87% 63% / 25%);
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.scale($primary, $lightness: 15%);
+    }
+
+    @include respond-medium {
+        margin-left: 1rem;
+        width: 45%;
+    }
 }
 
 .illustr {
     margin-top: 4rem;
     margin-bottom: 6.5rem;
+    max-width: 40rem;
+
+    @include respond-medium {
+        margin-top: 4.8rem;
+        margin-bottom: 3.4rem;
+    }
 }
 
 .footer__socials {
-    padding: 1.06rem;
+    padding: 1.05rem;
 }
 
 .footer__soc-i {
@@ -133,7 +163,7 @@ a {
     border-radius: 20px;
     transition: all 0.2s ease;
 
-    &>.icon {
+    & > .icon {
         fill: $primary;
         transform: scale(0.7);
     }
@@ -151,4 +181,12 @@ a {
 
 .footer__cpyr {
     padding: 0.45rem;
+    padding-bottom: 0.7rem;
+    font-size: 0.7rem;
+    color: $neutral;
+
+    @include respond-medium {
+        padding-top: 0.2rem;
+        font-size: 0.77rem;
+    }
 }
