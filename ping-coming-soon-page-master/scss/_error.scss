@@ -1,27 +1,52 @@
-@use "vars" as *;
+@use 'vars' as *;
+@use 'mixins' as *;
 
 // On invalid field value...
 .invalid {
     border-color: $accent;
-    color: $accent;
     
     &::placeholder {
         color: transparent;
-    }
-
-    &:-webkit-autofill {
-        -webkit-text-fill-color: $accent !important;
     }
 }
 
 // Error message style
 .error-m {
+    width: fit-content;
     position: absolute;
-    bottom: 0;
-    left: 32px;
-    transform: translateY(1rem);
-    font-size: 0.8rem;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0rem);
+    font-size: clamp(0.65rem, 2vw, 0.77rem);
     font-style: italic;
     color: $accent;
-    transition: transform 0.5s ease;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+
+    @include respond-medium {
+        left: 2rem;
+        transform: translateX(0) translateY(0rem);
+    }
+}
+
+.emerge {
+    transform: translateX(-50%) translateY(1.4rem);
+    opacity: 1;
+
+    @include respond-medium {
+        transform: translateX(0) translateY(3.2rem);
+    }
+}
+
+// Move button down
+.move-btn-down {
+    transform: translateY(2rem);
+
+    @include respond-medium {
+        transform: translateY(0);
+    }
+}
+
+.scale-onclick {
+    transform: scale(1.1);
 }

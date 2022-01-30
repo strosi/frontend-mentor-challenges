@@ -67,10 +67,8 @@ h6 {
   *,
 *::before,
 *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -109,8 +107,7 @@ button {
 */
 .visually-hidden {
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -166,7 +163,6 @@ a {
 .header__text {
   padding-top: 1.19rem;
   font-size: clamp(0.74rem, 3vw, 1.25rem);
-  font-weight: 600;
 }
 
 .notify {
@@ -185,24 +181,12 @@ a {
 .notify__field {
   border: 1px solid #c2d3ff;
 }
-.notify__field::-moz-placeholder {
-  color: #c2d3ff;
-}
-.notify__field:-ms-input-placeholder {
-  color: #c2d3ff;
-}
 .notify__field::placeholder {
   color: #c2d3ff;
 }
 .notify__field:focus {
   outline: none;
   border-color: #4f7df3;
-}
-.notify__field:focus::-moz-placeholder {
-  color: transparent;
-}
-.notify__field:focus:-ms-input-placeholder {
-  color: transparent;
 }
 .notify__field:focus::placeholder {
   color: transparent;
@@ -214,6 +198,7 @@ a {
   background-color: #4f7df3;
   border: none;
   box-shadow: 0 0.25rem 0.4rem 0.2rem rgba(79, 125, 243, 0.25);
+  transition: transform 0.3s ease-in-out;
 }
 .notify__btn:hover {
   cursor: pointer;
@@ -292,28 +277,49 @@ a {
 
 .invalid {
   border-color: #ff5263;
-  color: #ff5263;
-}
-.invalid::-moz-placeholder {
-  color: transparent;
-}
-.invalid:-ms-input-placeholder {
-  color: transparent;
 }
 .invalid::placeholder {
   color: transparent;
 }
-.invalid:-webkit-autofill {
-  -webkit-text-fill-color: #ff5263 !important;
-}
 
 .error-m {
+  width: fit-content;
   position: absolute;
-  bottom: 0;
-  left: 32px;
-  transform: translateY(1rem);
-  font-size: 0.8rem;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0rem);
+  font-size: clamp(0.65rem, 2vw, 0.77rem);
   font-style: italic;
   color: #ff5263;
-  transition: transform 0.5s ease;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+@media only screen and (min-width: 800px) {
+  .error-m {
+    left: 2rem;
+    transform: translateX(0) translateY(0rem);
+  }
+}
+
+.emerge {
+  transform: translateX(-50%) translateY(1.4rem);
+  opacity: 1;
+}
+@media only screen and (min-width: 800px) {
+  .emerge {
+    transform: translateX(0) translateY(3.2rem);
+  }
+}
+
+.move-btn-down {
+  transform: translateY(2rem);
+}
+@media only screen and (min-width: 800px) {
+  .move-btn-down {
+    transform: translateY(0);
+  }
+}
+
+.scale-onclick {
+  transform: scale(1.1);
 }

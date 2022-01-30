@@ -1,6 +1,7 @@
 const formEl = document.querySelector(".notify");
 const emailEl = document.querySelector(".notify__field");
 const errorMessageEl = document.querySelector(".error-m");
+const btnEl = document.querySelector(".notify__btn");
 
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,9 +18,9 @@ const checkEmail = () => {
     const email = emailEl.value.trim();
 
     if(isInputValEmpty(email)) {
-        showError(errorMessageEl, "Email cannot be empty");
+        showError(emailEl, "Email cannot be empty");
     } else if(!isEmailValid(email)) {
-        showError(errorMessageEl, "Please provide a valid email address");
+        showError(emailEl, "Please provide a valid email address");
     } else {
         isValid = true;
         hideError(emailEl);
@@ -41,12 +42,16 @@ const isEmailValid = (email) => {
 
 const showError = (inputEl, message) => {
     inputEl.classList.add("invalid");
+    errorMessageEl.classList.add("emerge");
     errorMessageEl.textContent = message;
+    btnEl.classList.add("move-btn-down");
 }
 
 const hideError = (inputEl) => {
     inputEl.classList.remove("invalid");
+    errorMessageEl.classList.remove("emerge");
     errorMessageEl.textContent = "";
+    btnEl.classList.remove("move-btn-down");
 }
 
 const clearField = (inputEl) => {

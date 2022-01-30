@@ -93,7 +93,6 @@ a {
 .header__text {
     padding-top: 1.19rem;
     font-size: clamp(0.74rem, 3vw, 1.25rem);
-    font-weight: 600;
 }
 
 .notify {
@@ -131,6 +130,7 @@ a {
     background-color: $primary;
     border: none;
     box-shadow: 0 0.25rem 0.4rem 0.2rem hsl(223deg 87% 63% / 25%);
+    transition: transform 0.3s ease-in-out;
 
     &:hover {
         cursor: pointer;
