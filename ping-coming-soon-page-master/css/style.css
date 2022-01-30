@@ -170,6 +170,7 @@ a {
 }
 
 .notify {
+  position: relative;
   margin: 1.45rem auto;
   width: clamp(7rem, 88%, 26.3rem);
 }
@@ -196,6 +197,15 @@ a {
 .notify__field:focus {
   outline: none;
   border-color: #4f7df3;
+}
+.notify__field:focus::-moz-placeholder {
+  color: transparent;
+}
+.notify__field:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.notify__field:focus::placeholder {
+  color: transparent;
 }
 
 .notify__btn {
@@ -278,4 +288,32 @@ a {
 
 .attribution a {
   color: #4f7df3;
+}
+
+.invalid {
+  border-color: #ff5263;
+  color: #ff5263;
+}
+.invalid::-moz-placeholder {
+  color: transparent;
+}
+.invalid:-ms-input-placeholder {
+  color: transparent;
+}
+.invalid::placeholder {
+  color: transparent;
+}
+.invalid:-webkit-autofill {
+  -webkit-text-fill-color: #ff5263 !important;
+}
+
+.error-m {
+  position: absolute;
+  bottom: 0;
+  left: 32px;
+  transform: translateY(1rem);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #ff5263;
+  transition: transform 0.5s ease;
 }

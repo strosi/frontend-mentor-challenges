@@ -97,6 +97,7 @@ a {
 }
 
 .notify {
+    position: relative;
     margin: 1.45rem auto;
     width: clamp(7rem, 88%, 26.3rem);
 
@@ -117,6 +118,10 @@ a {
     &:focus {
         outline: none;
         border-color: $primary;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
     }
 }
 
