@@ -17,13 +17,14 @@ body {
 p,
 input,
 button {
-    font-size: clamp(0.8rem, 3vw, 1.25rem);
+    font-size: clamp(0.74rem, 3vw, 1.25rem);
 }
 
 input,
 button {
-    margin: 0.5rem 0.4rem;
-    padding: 0.8rem 2rem;
+    width: 100%;
+    margin: 0.35rem 0;
+    padding: 0.7rem 2rem 0.55rem 2rem;
     border-radius: 30px;
 }
 
@@ -49,7 +50,7 @@ a {
     width: 1em;
     height: 1em;
     stroke-width: 0;
-    stroke: currentColor;
+    // stroke: currentColor;
     fill: currentColor;
 }
 
@@ -63,8 +64,8 @@ a {
     align-items: center;
     padding-top: clamp(5.31rem, 5%, 5.44rem);
     padding-bottom: 50px;
-    padding-left: min(1rem, 5%);
-    padding-right: min(1rem, 5%);
+    padding-left: min(1.8rem, 8%);
+    padding-right: min(1.8rem, 8%);
     max-width: 72rem;
     
     @include respond-medium {
@@ -73,12 +74,12 @@ a {
 }
 
 .logo {
-    width: clamp(3.375rem, 20%, 5.4rem);
+    width: clamp(3.375rem, 14%, 5.4rem);
 }
 
 .header__title {
-    padding-top: clamp(2.69rem, 5%, 3.625rem);
-    font-size: clamp(1rem, 6vw, 3rem);
+    padding-top: clamp(2.5rem, 5%, 3.625rem);
+    font-size: clamp(1rem, 5.85vw, 3rem);
     line-height: 1.1;
 
     span {
@@ -88,16 +89,17 @@ a {
 }
 
 .header__text {
-    padding-top: clamp(1.31rem, 5%, 1.5rem);
+    padding-top: clamp(1rem, 6%, 1.5rem);
+    font-weight: 600;
 }
 
 .notify {
-    margin: 1.5rem 0;
+    margin: 1.45rem auto;
+    width: max(88%, 7rem);
 }
 
 .notify__field {
-    width: 100%;
-    border: 2px solid $secondary-light;
+    border: 1px solid $secondary-light;
 
     &::placeholder {
         color: $secondary-light;
@@ -109,12 +111,44 @@ a {
     color: white;
     background-color: $primary;
     border: none;
+    box-shadow: 0 0.25rem 0.4rem 0.2rem hsl(223deg 87% 63% / 25%);
 }
 
-.icon {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.5rem;
-    fill: $primary;
-    border: 1px solid black;
+.illustr {
+    margin-top: 4rem;
+    margin-bottom: 6.5rem;
+}
+
+.footer__socials {
+    padding: 1.06rem;
+}
+
+.footer__soc-i {
+    display: inline-block;
+    margin: 0 0.22rem;
+    padding-top: 0.2rem;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $secondary-light;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+
+    &>.icon {
+        fill: $primary;
+        transform: scale(0.7);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $primary;
+        border-color: transparent;
+    }
+
+    &:hover svg {
+        fill: white;
+    }
+}
+
+.footer__cpyr {
+    padding: 0.45rem;
 }
