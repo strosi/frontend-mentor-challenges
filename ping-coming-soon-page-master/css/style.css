@@ -209,6 +209,9 @@ a {
     margin-left: 1rem;
     width: 45%;
   }
+  .notify__btn:active {
+    transform: scale(0.9);
+  }
 }
 
 .illustr {
@@ -287,7 +290,7 @@ a {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translateX(-50%) translateY(0rem);
+  transform: translateX(-50%) translateY(0.3rem);
   font-size: clamp(0.65rem, 2vw, 0.77rem);
   font-style: italic;
   color: #ff5263;
@@ -297,7 +300,7 @@ a {
 @media only screen and (min-width: 800px) {
   .error-m {
     left: 2rem;
-    transform: translateX(0) translateY(0rem);
+    transform: translateX(0) translateY(2rem);
   }
 }
 
@@ -311,6 +314,8 @@ a {
   }
 }
 
+/* Button animations */
+/* - Move button down on showing the message in mobile view */
 .move-btn-down {
   transform: translateY(2rem);
 }
@@ -318,8 +323,4 @@ a {
   .move-btn-down {
     transform: translateY(0);
   }
-}
-
-.scale-onclick {
-  transform: scale(1.1);
 }

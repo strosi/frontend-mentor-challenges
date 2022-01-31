@@ -140,6 +140,10 @@ a {
     @include respond-medium {
         margin-left: 1rem;
         width: 45%;
+
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }
 

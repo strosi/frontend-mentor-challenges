@@ -16,7 +16,7 @@
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translateX(-50%) translateY(0rem);
+    transform: translateX(-50%) translateY(0.3rem);
     font-size: clamp(0.65rem, 2vw, 0.77rem);
     font-style: italic;
     color: $accent;
@@ -25,7 +25,7 @@
 
     @include respond-medium {
         left: 2rem;
-        transform: translateX(0) translateY(0rem);
+        transform: translateX(0) translateY(2rem);
     }
 }
 
@@ -38,15 +38,12 @@
     }
 }
 
-// Move button down
+/* Button animations */
+/* - Move button down on showing the message in mobile view */
 .move-btn-down {
     transform: translateY(2rem);
 
     @include respond-medium {
         transform: translateY(0);
     }
-}
-
-.scale-onclick {
-    transform: scale(1.1);
 }
