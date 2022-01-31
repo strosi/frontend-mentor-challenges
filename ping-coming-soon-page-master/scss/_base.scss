@@ -131,6 +131,7 @@ a {
 .notify__form {
     position: relative;
     margin: 1.45rem auto;
+    margin-bottom: 0; // remove margin-bottom because parent is flex...
     width: clamp(7rem, 88%, 26.3rem);
     transition: all 0.3s ease-in-out;
 
@@ -158,6 +159,12 @@ a {
     }
 }
 
+/*
+    With more than one button in the page 
+    arised the need of common button style
+    so this one was moved at the beginning 
+    with selector 'button'
+*/
 // .notify__btn {
 //     font-weight: 600;
 //     color: white;

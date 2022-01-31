@@ -6,6 +6,7 @@
 .sbm-success {
     position: absolute;
     margin: 1.45rem auto;
+    margin-bottom: 0; // remove margin-bottom because parent is flex...
     width: clamp(7rem, 75%, 26.3rem);
     transform: translateY(-2rem);
     opacity: 0;

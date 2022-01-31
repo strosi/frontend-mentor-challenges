@@ -199,6 +199,7 @@ a {
 .notify__form {
   position: relative;
   margin: 1.45rem auto;
+  margin-bottom: 0;
   width: clamp(7rem, 88%, 26.3rem);
   transition: all 0.3s ease-in-out;
 }
@@ -224,6 +225,12 @@ a {
   color: transparent;
 }
 
+/*
+    With more than one button in the page 
+    arised the need of common button style
+    so this one was moved at the beginning 
+    with selector 'button'
+*/
 .illustr {
   margin-top: 4rem;
   margin-bottom: 6.5rem;
@@ -340,6 +347,7 @@ a {
 .sbm-success {
   position: absolute;
   margin: 1.45rem auto;
+  margin-bottom: 0;
   width: clamp(7rem, 75%, 26.3rem);
   transform: translateY(-2rem);
   opacity: 0;

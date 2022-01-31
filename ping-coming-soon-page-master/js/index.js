@@ -19,7 +19,6 @@ formEl.addEventListener("submit", (e) => {
 
 // Hide the success message and show the notify form again
 successBtnEl.addEventListener("click", () => {
-    console.log("clicked");
     successEl.classList.remove("show");
     setTimeout(() => {
         formEl.classList.remove("success");
