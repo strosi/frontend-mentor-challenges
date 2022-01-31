@@ -85,6 +85,10 @@ body {
   text-align: center;
 }
 
+*:focus {
+  outline: none;
+}
+
 input,
 button {
   width: 100%;
