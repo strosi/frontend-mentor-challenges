@@ -1,0 +1,59 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'sass:color';
+
+/* Success styles */
+.sbm-success {
+    position: absolute;
+    margin: 1.45rem auto;
+    width: clamp(7rem, 75%, 26.3rem);
+    transform: translateY(-2rem);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.3s;
+   
+
+    @include respond-medium {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        width: 40rem;
+    }
+}
+
+.sbm-success__m {
+    width: 100%;
+    margin: 0.35rem 0;
+    padding: 0.7rem 2rem 0.55rem 2rem;
+    font-size: clamp(0.74rem, 3vw, 1rem);
+    font-weight: 600;
+    color: $primary;
+    background-color: color.scale($secondary-light, $lightness: 50%);
+    border-radius: 30px;
+
+    @include respond-medium {
+        margin: 0.65rem 0;
+        padding-top: 1rem;
+        padding-bottom: 0.95rem;
+    }
+}
+
+/* Hide the form */
+.success {
+    transform: translateY(-2rem);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+/* Show success */
+.show {
+    transform: translateY(0);
+    opacity: 1;
+
+    @include respond-medium {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+}

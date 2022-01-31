@@ -1,7 +1,7 @@
 @use 'vars' as *;
 @use 'mixins' as *;
 
-// On invalid field value...
+/* On invalid field value... */
 .invalid {
     border-color: $accent;
     
@@ -10,7 +10,7 @@
     }
 }
 
-// Error message style
+/* Error message style */
 .error-m {
     width: fit-content;
     position: absolute;
@@ -38,7 +38,6 @@
     }
 }
 
-/* Button animations */
 /* - Move button down on showing the message in mobile view */
 .move-btn-down {
     transform: translateY(2rem);

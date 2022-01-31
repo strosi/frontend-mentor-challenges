@@ -1,18 +1,32 @@
-const formEl = document.querySelector(".notify");
+const formEl = document.querySelector(".notify__form");
 const emailEl = document.querySelector(".notify__field");
 const errorMessageEl = document.querySelector(".error-m");
 const btnEl = document.querySelector(".notify__btn");
+const successEl = document.querySelector(".sbm-success");
+const successBtnEl = document.querySelector(".sbm-success__btn");
 
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if(checkEmail()) {
         clearField(emailEl);
+        e.target.classList.add("success");
+        successEl.classList.add("show");
 
         // Submit form...
     }
 });
 
+// Hide the success message and show the notify form again
+successBtnEl.addEventListener("click", () => {
+    console.log("clicked");
+    successEl.classList.remove("show");
+    setTimeout(() => {
+        formEl.classList.remove("success");
+    }, 600);
+})
+
+// Methods for validating form inputs...
 const checkEmail = () => {
     let isValid = false;
     const email = emailEl.value.trim();

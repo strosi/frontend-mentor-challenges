@@ -106,6 +106,28 @@ button {
   }
 }
 
+button {
+  font-weight: 600;
+  color: white;
+  background-color: #4f7df3;
+  border: none;
+  box-shadow: 0 0.25rem 0.4rem 0.2rem rgba(79, 125, 243, 0.25);
+  transition: transform 0.3s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #6991f5;
+}
+@media only screen and (min-width: 800px) {
+  button {
+    margin-left: 1rem;
+    width: 45%;
+  }
+  button:active {
+    transform: scale(0.9);
+  }
+}
+
 /* Hidden content accessible for screen readers.
    https://www.a11yproject.com/posts/how-to-hide-content/
 */
@@ -170,12 +192,18 @@ a {
 }
 
 .notify {
+  display: flex;
+  justify-content: center;
+}
+
+.notify__form {
   position: relative;
   margin: 1.45rem auto;
   width: clamp(7rem, 88%, 26.3rem);
+  transition: all 0.3s ease-in-out;
 }
 @media only screen and (min-width: 800px) {
-  .notify {
+  .notify__form {
     display: flex;
     flex-direction: row;
     width: 40rem;
@@ -194,28 +222,6 @@ a {
 }
 .notify__field:focus::placeholder {
   color: transparent;
-}
-
-.notify__btn {
-  font-weight: 600;
-  color: white;
-  background-color: #4f7df3;
-  border: none;
-  box-shadow: 0 0.25rem 0.4rem 0.2rem rgba(79, 125, 243, 0.25);
-  transition: transform 0.3s ease-in-out;
-}
-.notify__btn:hover {
-  cursor: pointer;
-  background-color: #6991f5;
-}
-@media only screen and (min-width: 800px) {
-  .notify__btn {
-    margin-left: 1rem;
-    width: 45%;
-  }
-  .notify__btn:active {
-    transform: scale(0.9);
-  }
 }
 
 .illustr {
@@ -282,6 +288,7 @@ a {
   color: #4f7df3;
 }
 
+/* On invalid field value... */
 .invalid {
   border-color: #ff5263;
 }
@@ -289,6 +296,7 @@ a {
   color: transparent;
 }
 
+/* Error message style */
 .error-m {
   width: fit-content;
   position: absolute;
@@ -318,7 +326,6 @@ a {
   }
 }
 
-/* Button animations */
 /* - Move button down on showing the message in mobile view */
 .move-btn-down {
   transform: translateY(2rem);
@@ -326,5 +333,63 @@ a {
 @media only screen and (min-width: 800px) {
   .move-btn-down {
     transform: translateY(0);
+  }
+}
+
+/* Success styles */
+.sbm-success {
+  position: absolute;
+  margin: 1.45rem auto;
+  width: clamp(7rem, 75%, 26.3rem);
+  transform: translateY(-2rem);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+@media only screen and (min-width: 800px) {
+  .sbm-success {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 40rem;
+  }
+}
+
+.sbm-success__m {
+  width: 100%;
+  margin: 0.35rem 0;
+  padding: 0.7rem 2rem 0.55rem 2rem;
+  font-size: clamp(0.74rem, 3vw, 1rem);
+  font-weight: 600;
+  color: #4f7df3;
+  background-color: #e0e9ff;
+  border-radius: 30px;
+}
+@media only screen and (min-width: 800px) {
+  .sbm-success__m {
+    margin: 0.65rem 0;
+    padding-top: 1rem;
+    padding-bottom: 0.95rem;
+  }
+}
+
+/* Hide the form */
+.success {
+  transform: translateY(-2rem);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+/* Show success */
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media only screen and (min-width: 800px) {
+  .show {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
   }
 }
