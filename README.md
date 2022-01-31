@@ -17,4 +17,4 @@ Below in the list are the links to my solutions.
 --11-- HTML | SASS | JS - [Intro component with sign up form](https://strosi.github.io/frontend-mentor-challenges/intro-component-with-signup-form-master)  
 --12-- HTML | SASS ------ [Single price grid component](https://strosi.github.io/frontend-mentor-challenges/single-price-grid-component-master)  
 --13-- HTML | SASS | JS - [Ping coming soon page](https://strosi.github.io/frontend-mentor-challenges/ping-coming-soon-page-master)  
-
+--14-- HTML | SASS | JS - [Ping coming soon page](https://strosi.github.io/frontend-mentor-challenges/huddle-landing-page-with-single-introductory-section-master)  
