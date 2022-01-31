@@ -73,7 +73,7 @@ h6 {
     scroll-behavior: auto !important;
   }
 }
-/*
+/* --------------
     BASIC STYLES
 */
 body {
@@ -153,7 +153,7 @@ a {
   fill: currentColor;
 }
 
-/*
+/* ----------------
     CONTENT STYLES
 */
 .wrapper {
@@ -228,7 +228,7 @@ a {
 
 /*
     With more than one button in the page 
-    arised the need of common button style
+    arose the need of common button style
     so this one was moved at the beginning 
     with selector 'button'
 */
@@ -382,7 +382,7 @@ a {
   }
 }
 
-/* Hide the form */
+/* Hide the notify form */
 .success {
   transform: translateY(-2rem);
   opacity: 0;

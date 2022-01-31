@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 @use 'sass:color';
 
-/*
+/* --------------
     BASIC STYLES
 */
 
@@ -83,7 +83,7 @@ a {
     fill: currentColor;
 }
 
-/*
+/* ----------------
     CONTENT STYLES
 */
 
@@ -123,7 +123,6 @@ a {
 }
 
 .notify {
-    // position: relative;
     display: flex;
     justify-content: center;
 }
@@ -162,7 +161,7 @@ a {
 
 /*
     With more than one button in the page 
-    arised the need of common button style
+    arose the need of common button style
     so this one was moved at the beginning 
     with selector 'button'
 */
