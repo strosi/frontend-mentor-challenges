@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-I found in this challenge good opporunity to learn and try:
+I found in this challenge good opporunity to read about and try:
 - CSS methods min(), max() and clamp(),
 - CSS reset.
 
