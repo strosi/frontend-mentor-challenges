@@ -147,6 +147,7 @@ a {
 
     &::placeholder {
         color: $secondary-light;
+        opacity: 1; // Firefox adds some opacity to placeholders...
     }
 
     &:focus {

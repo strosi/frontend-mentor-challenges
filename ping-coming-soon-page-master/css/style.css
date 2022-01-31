@@ -216,6 +216,7 @@ a {
 }
 .notify__field::placeholder {
   color: #c2d3ff;
+  opacity: 1;
 }
 .notify__field:focus {
   outline: none;
