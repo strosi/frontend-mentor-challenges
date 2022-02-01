@@ -1,5 +1,6 @@
 @use 'vars' as *;
 @use 'mixins' as *;
+@use 'sass:color';
 
 /* --------------
     BASIC STYLES
@@ -10,6 +11,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    padding: 0 clamp(2.25rem, 5%, 5rem);
     font-family: $ff-p;
     text-align: center;
     color: white;
@@ -51,6 +53,7 @@ a {
 
 .logo {
     width: clamp(7.2rem, 35vw, 15rem);
+    padding: 3.7rem 0;
 }
 
 .intro {
@@ -72,6 +75,7 @@ a {
     @include respond-medium {
         flex-basis: 45.6%;
         padding: 3rem;
+        padding-right: 0;
     }
 }
 
@@ -88,9 +92,20 @@ a {
     text-align: center;
     background-color: white;
     border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0.3rem 0.5rem 0.2rem color.adjust($primary, $lightness: -50%, $alpha: -0.7);
+
+    &:hover {
+        color: white;
+        background-color: $accent;
+    }
 
     @include respond-medium {
         margin: 0;
+
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }
 
@@ -102,6 +117,27 @@ a {
     }
 }
 
-// .icon {
-//     fill: white;
-// }
+.soc-i {
+    display: inline-block;
+    margin: 0 0.4rem;
+    padding-top: 0.6rem;
+    padding-left: 0.7rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+
+    & > .icon {
+        transform: scale(1.2);
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-color: $accent;
+    }
+
+    &:hover svg {
+        fill: $accent;
+    }
+}
