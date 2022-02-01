@@ -143,6 +143,7 @@ a {
 
 .notify__field {
     border: 1px solid $secondary-light;
+    z-index: 1;
 
     &::placeholder {
         color: $secondary-light;

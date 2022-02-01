@@ -213,6 +213,7 @@ a {
 
 .notify__field {
   border: 1px solid #c2d3ff;
+  z-index: 1;
 }
 .notify__field::placeholder {
   color: #c2d3ff;

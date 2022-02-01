@@ -1,0 +1,38 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+/* --------------
+    BASIC STYLES
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: $ff-p;
+    text-align: center;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    fill: currentColor;
+}
+
+/* ----------------
+    CONTENT STYLES
+*/
+
+.intro-img {
+    max-width: 696px;
+}
