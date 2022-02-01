@@ -8,8 +8,6 @@
 
 body {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
     padding: 0 clamp(2.25rem, 5%, 5rem);
     font-family: $ff-p;
@@ -18,11 +16,12 @@ body {
     background-color: $primary;
     background-image: url('../images/bg-mobile.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 
     @include respond-medium {
         text-align: left;
         background-image: url('../images/bg-desktop.svg');
+        background-size: auto 100%;
     }
 }
 
@@ -32,10 +31,6 @@ h1, a {
 
 *:focus {
     outline: none;
-}
-
-a {
-    text-decoration: none;
 }
 
 .icon {
@@ -50,10 +45,27 @@ a {
 /* ----------------
     CONTENT STYLES
 */
+.wrapper {
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    
+    @include respond-medium {
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1680px;
+    }
+}
 
-.logo {
-    width: clamp(7.2rem, 35vw, 15rem);
-    padding: 3.7rem 0;
+.logo__img {
+    width: clamp(7.7rem, 15vw, 15rem);
+    padding-top: 2rem;
+    padding-bottom: 3.8rem;
+    
+    @include respond-medium {
+        padding-top: 3.3rem;
+        padding-bottom: 4.5rem;
+    }
 }
 
 .intro {
@@ -64,32 +76,47 @@ a {
 }
 
 .intro-img {
-    max-width: 696px;
 
     @include respond-medium {
-        flex-basis: 54.4%;
+        flex-basis: 55.2%;
     }
 }
 
 .intro-content {
     @include respond-medium {
         flex-basis: 45.6%;
-        padding: 3rem;
-        padding-right: 0;
+        padding: 2.7rem 1rem 3.3rem 3.3rem;
+    }
+}
+
+.intro-content__title {
+    padding-top: 3.7rem;
+    font-size: clamp(1.5rem, 2.76vw, 3.5rem);
+
+    @include respond-medium {
+        padding-top: 0;
     }
 }
 
 .intro-content__text {
-    padding-top: 1.5rem;
+    padding-top: 0.9rem;
     padding-bottom: 1.5rem;
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    font-weight: 400;
+
+    @include respond-medium {
+        padding-top: 1.3rem;
+    }
 }
 
 .intro-content__btn {
     display: block;
-    width: clamp(11.9rem, 35vw, 12.5rem);
+    width: clamp(12.5rem, 35vw, 12.5rem);
     margin: 0 auto;
-    padding: 0.7rem 2rem;
+    padding: 0.65rem 3rem;
+    font-size: clamp(0.8rem, 1.25vw, 1.5rem);
     text-align: center;
+    text-decoration: none;
     background-color: white;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
@@ -102,6 +129,7 @@ a {
 
     @include respond-medium {
         margin: 0;
+        padding: 0.9rem 3rem;
 
         &:active {
             transform: scale(0.9);
@@ -110,10 +138,12 @@ a {
 }
 
 .socials {
+    
 
     @include respond-medium {
         display: flex;
         justify-content: end;
+        padding-top: 0.6rem;
     }
 }
 
@@ -121,7 +151,6 @@ a {
     display: inline-block;
     margin: 0 0.4rem;
     padding-top: 0.6rem;
-    padding-left: 0.7rem;
     width: 2.5rem;
     height: 2.5rem;
     border: 1px solid white;
@@ -139,5 +168,11 @@ a {
 
     &:hover svg {
         fill: $accent;
+    }
+
+    @include respond-medium {
+        margin: 0 0.5rem;
+        padding-top: 0.6rem;
+        padding-left: 0.7rem;
     }
 }
