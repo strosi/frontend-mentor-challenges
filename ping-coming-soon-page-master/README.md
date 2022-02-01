@@ -55,7 +55,7 @@ I found in this challenge good opporunity to read about and try:
 
 ### Continued development
 
-I tried to add approvement when form is submitted successfully and found it difficult to include new functionality... There is need to read more about writing scalable code.
+I tried to add confirmation when form is submitted successfully and found it difficult to include new functionality... There is need to read more about writing scalable code.
 
 ### Useful resources
 
