@@ -1,10 +1,13 @@
 @use 'vars' as *;
+@use 'sass:color';
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 1rem;
+    color: $accent;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: color.scale($accent, $lightness: 30%);
 }
