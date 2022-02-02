@@ -49,6 +49,8 @@ h1, a {
     border: 1px solid pink;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 585px;
     
     @include respond-medium {
         justify-content: space-between;
@@ -85,16 +87,19 @@ h1, a {
 .intro-content {
     @include respond-medium {
         flex-basis: 45.6%;
-        padding: 2.7rem 1rem 3.3rem 3.3rem;
+        padding: 0 1rem 3.3rem 3.3rem;
+        padding-left: 4.2%;
     }
 }
 
 .intro-content__title {
     padding-top: 3.7rem;
-    font-size: clamp(1.5rem, 2.76vw, 3.5rem);
+    font-size: clamp(1.5rem, 4.9vw, 2.3rem);
 
     @include respond-medium {
-        padding-top: 0;
+        // padding-top: 2.7rem;
+        padding-top: 8.5%;
+        font-size: clamp(1.7rem, 2.76vw, 3.5rem);
     }
 }
 
@@ -111,10 +116,10 @@ h1, a {
 
 .intro-content__btn {
     display: block;
-    width: clamp(12.5rem, 35vw, 12.5rem);
+    width: 12.5rem;
     margin: 0 auto;
     padding: 0.65rem 3rem;
-    font-size: clamp(0.8rem, 1.25vw, 1.5rem);
+    font-size: clamp(0.8rem, 2vw, 1rem);
     text-align: center;
     text-decoration: none;
     background-color: white;
@@ -130,6 +135,7 @@ h1, a {
     @include respond-medium {
         margin: 0;
         padding: 0.9rem 3rem;
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
 
         &:active {
             transform: scale(0.9);
