@@ -247,6 +247,10 @@ h1, a {
   width: clamp(7.36rem, 24vw, 10.5rem);
 }
 
+.icon .ring {
+  stroke: white;
+}
+
 .soc-i {
   display: inline-block;
   margin: 0 0.4rem;
@@ -254,8 +258,7 @@ h1, a {
 .soc-i > .icon {
   transition: all 0.3s ease;
 }
-.soc-i > .icon .ring {
-  stroke: white;
+.soc-i > .icon circle {
   transition: all 0.3s ease;
 }
 .soc-i:hover {
@@ -264,7 +267,7 @@ h1, a {
 .soc-i:hover svg {
   fill: #e882e8;
 }
-.soc-i:hover svg .ring {
+.soc-i:hover svg circle {
   stroke: #e882e8;
 }
 @media only screen and (min-width: 800px) {
