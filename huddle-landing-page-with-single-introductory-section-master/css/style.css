@@ -302,6 +302,8 @@ h1, a {
 
 .btn-scale {
   transform: scale(0);
+  visibility: hidden;
+  opacity: 0;
 }
 
 .btn-text-hidden {
