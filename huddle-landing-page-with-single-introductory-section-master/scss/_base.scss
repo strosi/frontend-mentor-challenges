@@ -35,9 +35,9 @@ h1, a {
 
 .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
+    // width: 2.5em;
+    // height: 2.5em;
+    // stroke-width: 0;
     fill: white;
     // fill: currentColor;
 }
@@ -66,7 +66,7 @@ h1, a {
     
     @include respond-medium {
         padding-top: 3.3rem;
-        padding-bottom: 4.5rem;
+        padding-bottom: 5.34rem;
     }
 }
 
@@ -85,9 +85,12 @@ h1, a {
 }
 
 .intro-content {
+    padding-bottom: 4rem;
+
     @include respond-medium {
         flex-basis: 45.6%;
-        padding: 0 1rem 3.3rem 3.3rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
         padding-left: 4.2%;
     }
 }
@@ -116,9 +119,9 @@ h1, a {
 
 .intro-content__btn {
     display: block;
-    width: 12.5rem;
+    width: min(12.5rem, 90%);
     margin: 0 auto;
-    padding: 0.65rem 3rem;
+    padding: 0.65rem 2rem;
     font-size: clamp(0.8rem, 2vw, 1rem);
     text-align: center;
     text-decoration: none;
@@ -144,41 +147,55 @@ h1, a {
 }
 
 .socials {
-    
+    display: flex;
+    justify-content: center;
 
     @include respond-medium {
-        display: flex;
         justify-content: end;
-        padding-top: 0.6rem;
+        padding-top: 1.3rem;
     }
+}
+
+.socials__icons {
+    display: flex;
+    width: clamp(7.36rem, 24vw, 10.5rem);
 }
 
 .soc-i {
     display: inline-block;
     margin: 0 0.4rem;
-    padding-top: 0.6rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid white;
-    border-radius: 20px;
-    transition: all 0.2s ease;
-
+    // padding-top: 0.6rem;
+    // width: 2.5rem;
+    // height: 2.5rem;
+    // border: 1px solid white;
+    // border-radius: 20px;
+    
     & > .icon {
-        transform: scale(1.2);
+        transition: all 0.3s ease;
+        // transform: scale(1.2);
+
+        circle {
+            stroke: white;
+            transition: all 0.3s ease;
+        }
     }
 
     &:hover {
         cursor: pointer;
-        border-color: $accent;
+        // border-color: $accent;
     }
 
     &:hover svg {
         fill: $accent;
+        
+        circle {
+            stroke: $accent;
+        }
     }
 
     @include respond-medium {
         margin: 0 0.5rem;
-        padding-top: 0.6rem;
-        padding-left: 0.7rem;
+        // padding-top: 0.6rem;
+        // padding-left: 0.7rem;
     }
 }

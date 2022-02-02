@@ -1,13 +1,15 @@
 @use 'vars' as *;
 @use 'sass:color';
 
+$fc: color.adjust(white, $alpha: -0.5%);
+
 .attribution {
     font-size: 11px;
     text-align: center;
     padding: 0.7rem;
-    color: $accent;
+    color: $fc;
 }
 
 .attribution a {
-    color: color.scale($accent, $lightness: 30%);
+    color: $fc;
 }
