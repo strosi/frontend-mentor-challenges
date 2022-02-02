@@ -247,10 +247,6 @@ h1, a {
   width: clamp(7.36rem, 24vw, 10.5rem);
 }
 
-.icon .ring {
-  stroke: white;
-}
-
 .soc-i {
   display: inline-block;
   margin: 0 0.4rem;
@@ -259,6 +255,7 @@ h1, a {
   transition: all 0.3s ease;
 }
 .soc-i > .icon circle {
+  stroke: white;
   transition: all 0.3s ease;
 }
 .soc-i:hover {
