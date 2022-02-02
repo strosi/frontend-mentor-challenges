@@ -144,7 +144,7 @@ h1, a {
     background-color: white;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 0.3rem 0.5rem 0.2rem color.adjust($primary, $lightness: -50%, $alpha: -0.7);
+    box-shadow: 0 0.15rem 0.4rem 0 color.adjust($primary, $lightness: -50%, $alpha: -0.7);
     z-index: 1;
 
     &:hover {
@@ -156,10 +156,7 @@ h1, a {
         margin: 0;
         padding: 0.9rem 3rem;
         font-size: clamp(1rem, 1.25vw, 1.5rem);
-
-        // &:active {
-        //     transform: scale(0.9);
-        // }
+        box-shadow: 0 0.3rem 0.5rem 0.2rem color.adjust($primary, $lightness: -50%, $alpha: -0.7);
     }
 }
 
