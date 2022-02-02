@@ -126,7 +126,7 @@ h1, a {
 
     @include respond-medium {
         margin: 0;
-        
+
         &:active {
             transform: scale(0.9);
         }
@@ -140,6 +140,7 @@ h1, a {
     padding: 0.65rem 2rem;
     font-size: clamp(0.8rem, 2vw, 1rem);
     text-decoration: none;
+    color: $primary;
     background-color: white;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
@@ -184,7 +185,7 @@ h1, a {
     & > .icon {
         transition: all 0.3s ease;
 
-        circle {
+        .ring {
             stroke: white;
             transition: all 0.3s ease;
         }
@@ -197,7 +198,7 @@ h1, a {
     &:hover svg {
         fill: $accent;
         
-        circle {
+        .ring {
             stroke: $accent;
         }
     }
