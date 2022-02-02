@@ -1,0 +1,21 @@
+.animation {
+    transition: transform 0.6s ease-in, opacity 0.6s ease-in;
+}
+
+.hidden {
+    transform: translateY(40%);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn-anim {
+    width: 3rem;
+}
+
+.btn-scale {
+    transform: scale(0);
+}
+
+.btn-text-hidden {
+    opacity: 0;
+}

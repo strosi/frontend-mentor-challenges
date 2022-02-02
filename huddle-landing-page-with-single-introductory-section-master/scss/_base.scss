@@ -46,7 +46,6 @@ h1, a {
     CONTENT STYLES
 */
 .wrapper {
-    border: 1px solid pink;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -60,9 +59,9 @@ h1, a {
 }
 
 .logo__img {
-    width: clamp(7.7rem, 15vw, 15rem);
+    width: clamp(7.9rem, 15vw, 15rem);
     padding-top: 2rem;
-    padding-bottom: 3.8rem;
+    padding-bottom: 3.7rem;
     
     @include respond-medium {
         padding-top: 3.3rem;
@@ -118,17 +117,34 @@ h1, a {
 }
 
 .intro-content__btn {
-    display: block;
+    margin: 0 auto;
     width: min(12.5rem, 90%);
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.7s;
+
+    @include respond-medium {
+        margin: 0;
+        
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}
+
+.intro-content__btn-link {
+    display: block;
+    width: 100%;
     margin: 0 auto;
     padding: 0.65rem 2rem;
     font-size: clamp(0.8rem, 2vw, 1rem);
-    text-align: center;
     text-decoration: none;
     background-color: white;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0.3rem 0.5rem 0.2rem color.adjust($primary, $lightness: -50%, $alpha: -0.7);
+    z-index: 1;
 
     &:hover {
         color: white;
@@ -140,9 +156,9 @@ h1, a {
         padding: 0.9rem 3rem;
         font-size: clamp(1rem, 1.25vw, 1.5rem);
 
-        &:active {
-            transform: scale(0.9);
-        }
+        // &:active {
+        //     transform: scale(0.9);
+        // }
     }
 }
 
@@ -164,15 +180,9 @@ h1, a {
 .soc-i {
     display: inline-block;
     margin: 0 0.4rem;
-    // padding-top: 0.6rem;
-    // width: 2.5rem;
-    // height: 2.5rem;
-    // border: 1px solid white;
-    // border-radius: 20px;
     
     & > .icon {
         transition: all 0.3s ease;
-        // transform: scale(1.2);
 
         circle {
             stroke: white;
@@ -182,7 +192,6 @@ h1, a {
 
     &:hover {
         cursor: pointer;
-        // border-color: $accent;
     }
 
     &:hover svg {
@@ -195,7 +204,5 @@ h1, a {
 
     @include respond-medium {
         margin: 0 0.5rem;
-        // padding-top: 0.6rem;
-        // padding-left: 0.7rem;
     }
 }

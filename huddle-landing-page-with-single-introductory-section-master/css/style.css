@@ -115,7 +115,6 @@ h1, a {
     CONTENT STYLES
 */
 .wrapper {
-  border: 1px solid pink;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -130,9 +129,9 @@ h1, a {
 }
 
 .logo__img {
-  width: clamp(7.7rem, 15vw, 15rem);
+  width: clamp(7.9rem, 15vw, 15rem);
   padding-top: 2rem;
-  padding-bottom: 3.8rem;
+  padding-bottom: 3.7rem;
 }
 @media only screen and (min-width: 800px) {
   .logo__img {
@@ -190,30 +189,44 @@ h1, a {
 }
 
 .intro-content__btn {
-  display: block;
+  margin: 0 auto;
   width: min(12.5rem, 90%);
+  text-align: center;
+  background-color: white;
+  border-radius: 30px;
+  transition: all 0.7s;
+}
+@media only screen and (min-width: 800px) {
+  .intro-content__btn {
+    margin: 0;
+  }
+  .intro-content__btn:active {
+    transform: scale(0.9);
+  }
+}
+
+.intro-content__btn-link {
+  display: block;
+  width: 100%;
   margin: 0 auto;
   padding: 0.65rem 2rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
-  text-align: center;
   text-decoration: none;
   background-color: white;
   border-radius: 30px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0.3rem 0.5rem 0.2rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
-.intro-content__btn:hover {
+.intro-content__btn-link:hover {
   color: white;
   background-color: #e882e8;
 }
 @media only screen and (min-width: 800px) {
-  .intro-content__btn {
+  .intro-content__btn-link {
     margin: 0;
     padding: 0.9rem 3rem;
     font-size: clamp(1rem, 1.25vw, 1.5rem);
-  }
-  .intro-content__btn:active {
-    transform: scale(0.9);
   }
 }
 
@@ -262,10 +275,33 @@ h1, a {
 .attribution {
   font-size: 11px;
   text-align: center;
-  padding: 0.7rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.7rem;
   color: rgba(255, 255, 255, 0.5);
 }
 
 .attribution a {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.animation {
+  transition: transform 0.6s ease-in, opacity 0.6s ease-in;
+}
+
+.hidden {
+  transform: translateY(40%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn-anim {
+  width: 3rem;
+}
+
+.btn-scale {
+  transform: scale(0);
+}
+
+.btn-text-hidden {
+  opacity: 0;
 }
