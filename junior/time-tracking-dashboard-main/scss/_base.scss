@@ -1,0 +1,139 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+body {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: $ff;
+    font-size: $fs;
+    color: white;
+    background-color: $base-bg;
+}
+
+.report {
+    display: grid;
+    gap: clamp(1.5rem, 1.5%, 1.875rem);
+    padding: $main-cont-pad;
+    max-width: 1110px;
+}
+
+/* REPORT SUBJECT */
+.report-subject {
+    background-color: $neutral-bg;
+    border-radius: $roundness;
+}
+
+.person {
+    padding: $item-cont-pad;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-person;
+    border-radius: $roundness;
+}
+
+.person__avatar {
+    width: clamp(3rem, 27%, 6rem);
+
+    &>img {
+        background-color: white;
+        border: 3px solid white;
+        border-radius: 100px;
+    }
+}
+
+.person__name {
+    font-size: clamp(0.8rem, 4vw, 1.5rem);
+    font-weight: 300;
+    color: $neutral-fc;
+
+    &>span {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        color: white;
+    }
+}
+
+.timeframes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.timeframes__item {
+    padding: $main-cont-pad;
+    color: $neutral-bg-light;
+
+    &>input {
+        display: none;
+    }
+
+    &>input:checked + label {
+        color: white;
+    }
+}
+
+
+
+/* REPORT ENTITIES */
+.statistic {
+    padding-top: 2.3rem;
+    border-radius: $roundness;
+}
+
+.statistic_work-theme {
+    background-color: $primary-work;
+}
+
+.statistic_play-theme {
+    background-color: $primary-play;
+}
+
+.statistic_study-theme {
+    background-color: $primary-study;
+}
+
+.statistic_exercise-theme {
+    background-color: $primary-exercise;
+}
+
+.statistic_social-theme {
+    background-color: $primary-social;
+}
+
+.statistic_selfcare-theme {
+    background-color: $primary-selfcare;
+}
+
+.stat-content {
+    padding: 1.5rem;
+    background-color: $neutral-bg;
+    border-radius: $roundness;
+    border: 1px solid skyblue;
+}
+
+.stat-content__title {
+    font-size: clamp(1rem, 4.8vw, 1.5rem);
+    font-weight: 400;
+}
+
+.stat-content__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-content__current {
+    font-size: clamp(1.8rem, 8.2vw, 2.5rem);
+    font-weight: 300;
+}
+
+.stat-content__prev {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: $neutral-fc;
+}

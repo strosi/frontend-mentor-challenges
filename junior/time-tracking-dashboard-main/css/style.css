@@ -1,0 +1,222 @@
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow percentage-based heights in the application.
+   (On adding height: 100% to the html selector the beginning of the page is cutted if justify-content: center is set.)
+*/
+body {
+  min-height: 100vh;
+}
+
+/* Typographic tweaks!
+   - Add accessible line-height
+   - Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* Remove built-in form typography styles. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll 
+   for people that prefer not to see them.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* COLORS */
+/* Primary */
+/* Neutral */
+/* FONTS */
+/* Font size (card titles e.g. Work, Play) */
+/* Font family */
+/* MEASURES */
+/* Padding */
+/* Round corners */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: #0f1424;
+}
+
+.report {
+  display: grid;
+  gap: clamp(1.5rem, 1.5%, 1.875rem);
+  padding: 1.5rem;
+  max-width: 1110px;
+}
+
+/* REPORT SUBJECT */
+.report-subject {
+  background-color: #1c1f4a;
+  border-radius: 1rem;
+}
+
+.person {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5847eb;
+  border-radius: 1rem;
+}
+
+.person__avatar {
+  width: clamp(3rem, 27%, 6rem);
+}
+.person__avatar > img {
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 100px;
+}
+
+.person__name {
+  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  font-weight: 300;
+  color: #bdc1ff;
+}
+.person__name > span {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: white;
+}
+
+.timeframes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.timeframes__item {
+  padding: 1.5rem;
+  color: #6f76c8;
+}
+.timeframes__item > input {
+  display: none;
+}
+.timeframes__item > input:checked + label {
+  color: white;
+}
+
+/* REPORT ENTITIES */
+.statistic {
+  padding-top: 2.3rem;
+  border-radius: 1rem;
+}
+
+.statistic_work-theme {
+  background-color: #ff8c66;
+}
+
+.statistic_play-theme {
+  background-color: #56c2e6;
+}
+
+.statistic_study-theme {
+  background-color: #ff5c7c;
+}
+
+.statistic_exercise-theme {
+  background-color: #4acf81;
+}
+
+.statistic_social-theme {
+  background-color: #7536d3;
+}
+
+.statistic_selfcare-theme {
+  background-color: #f1c65b;
+}
+
+.stat-content {
+  padding: 1.5rem;
+  background-color: #1c1f4a;
+  border-radius: 1rem;
+  border: 1px solid skyblue;
+}
+
+.stat-content__title {
+  font-size: clamp(1rem, 4.8vw, 1.5rem);
+  font-weight: 400;
+}
+
+.stat-content__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-content__current {
+  font-size: clamp(1.8rem, 8.2vw, 2.5rem);
+  font-weight: 300;
+}
+
+.stat-content__prev {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #bdc1ff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
