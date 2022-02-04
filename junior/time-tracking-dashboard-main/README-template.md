@@ -50,15 +50,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass preprocessor
 - Flexbox
 - CSS Grid
+- Vanilla JS
+- Fetch API
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -92,10 +89,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Learn Fetch API In 6 Minutes](https://www.youtube.com/watch?v=cuEtnrL9-H0) - Some basics of fetch API - video
+- [How to Use the JavaScript Fetch API to Get Data?](https://www.geeksforgeeks.org/how-to-use-the-javascript-fetch-api-to-get-data/) - Example of fetch API usage
+- [Learn CSS Grid the easy way](https://www.youtube.com/watch?v=rg7Fvvl3taU) - Basics of using Grids
 
 ## Author
 
