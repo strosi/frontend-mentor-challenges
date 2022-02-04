@@ -85,6 +85,7 @@ h6 {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   font-family: "Rubik", sans-serif;
@@ -99,50 +100,91 @@ body {
   padding: 1.5rem;
   max-width: 1110px;
 }
+@media only screen and (min-width: 685px) {
+  .report {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 920px) {
+  .report {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 /* REPORT SUBJECT */
 .report-subject {
   background-color: #1c1f4a;
   border-radius: 1rem;
 }
+@media only screen and (min-width: 685px) {
+  .report-subject {
+    grid-row: span 3;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .report-subject {
+    grid-row: span 2;
+  }
+}
 
 .person {
-  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
   background-color: #5847eb;
   border-radius: 1rem;
 }
+@media only screen and (min-width: 685px) {
+  .person {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .person__avatar {
-  width: clamp(3rem, 27%, 6rem);
+  width: clamp(3rem, 44%, 6rem);
 }
 .person__avatar > img {
   background-color: white;
   border: 3px solid white;
   border-radius: 100px;
 }
+@media only screen and (min-width: 685px) {
+  .person__avatar {
+    padding-bottom: 1rem;
+  }
+}
 
 .person__name {
-  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   font-weight: 300;
   color: #bdc1ff;
 }
 .person__name > span {
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: white;
+}
+@media only screen and (min-width: 685px) {
+  .person__name {
+    line-height: 2.3rem;
+  }
 }
 
 .timeframes {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+@media only screen and (min-width: 685px) {
+  .timeframes {
+    flex-direction: column;
+  }
 }
 
 .timeframes__item {
-  padding: 1.5rem;
   color: #6f76c8;
 }
 .timeframes__item > input {
@@ -151,9 +193,17 @@ body {
 .timeframes__item > input:checked + label {
   color: white;
 }
+@media only screen and (min-width: 685px) {
+  .timeframes__item {
+    padding-bottom: 0.5rem;
+  }
+}
 
 /* REPORT ENTITIES */
 .statistic {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding-top: 2.3rem;
   border-radius: 1rem;
 }
@@ -183,6 +233,7 @@ body {
 }
 
 .stat-content {
+  width: 100%;
   padding: 1.5rem;
   background-color: #1c1f4a;
   border-radius: 1rem;
@@ -199,6 +250,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (min-width: 685px) {
+  .stat-content__data {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .stat-content__current {

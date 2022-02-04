@@ -4,7 +4,7 @@
 body {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
     width: 100%;
     font-family: $ff;
@@ -18,53 +18,86 @@ body {
     gap: clamp(1.5rem, 1.5%, 1.875rem);
     padding: $main-cont-pad;
     max-width: 1110px;
+
+    @include respond-medium {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond-desktop {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* REPORT SUBJECT */
 .report-subject {
     background-color: $neutral-bg;
     border-radius: $roundness;
+
+    @include respond-medium {
+        grid-row: span 3;
+    }
+
+    @include respond-desktop {
+        grid-row: span 2;
+    }
 }
 
 .person {
-    padding: $item-cont-pad;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: $item-cont-pad;
     background-color: $primary-person;
     border-radius: $roundness;
+
+    @include respond-medium {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .person__avatar {
-    width: clamp(3rem, 27%, 6rem);
+    width: clamp(3rem, 44%, 6rem);
 
     &>img {
         background-color: white;
         border: 3px solid white;
         border-radius: 100px;
     }
+
+    @include respond-medium {
+        padding-bottom: 1rem;
+    }
 }
 
 .person__name {
-    font-size: clamp(0.8rem, 4vw, 1.5rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 300;
     color: $neutral-fc;
 
     &>span {
-        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
         color: white;
+    }
+
+    @include respond-medium {
+        line-height: 2.3rem;
     }
 }
 
 .timeframes {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: $main-cont-pad;
+
+    @include respond-medium {
+        flex-direction: column;
+    }
 }
 
 .timeframes__item {
-    padding: $main-cont-pad;
     color: $neutral-bg-light;
 
     &>input {
@@ -74,12 +107,19 @@ body {
     &>input:checked + label {
         color: white;
     }
+
+    @include respond-medium {
+        padding-bottom: 0.5rem;
+    }
 }
 
 
 
 /* REPORT ENTITIES */
 .statistic {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding-top: 2.3rem;
     border-radius: $roundness;
 }
@@ -109,6 +149,7 @@ body {
 }
 
 .stat-content {
+    width: 100%;
     padding: 1.5rem;
     background-color: $neutral-bg;
     border-radius: $roundness;
@@ -125,6 +166,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include respond-medium {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .stat-content__current {
