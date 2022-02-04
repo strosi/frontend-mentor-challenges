@@ -92,6 +92,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Learn Fetch API In 6 Minutes](https://www.youtube.com/watch?v=cuEtnrL9-H0) - Some basics of fetch API - video
 - [How to Use the JavaScript Fetch API to Get Data?](https://www.geeksforgeeks.org/how-to-use-the-javascript-fetch-api-to-get-data/) - Example of fetch API usage
 - [Learn CSS Grid the easy way](https://www.youtube.com/watch?v=rg7Fvvl3taU) - Basics of using Grids
+- [<input type="radio">](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) - How radio buttons work
 
 ## Author
 
