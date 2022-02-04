@@ -113,6 +113,9 @@ body {
 
 /* REPORT SUBJECT */
 .report-subject {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #1c1f4a;
   border-radius: 1rem;
 }
@@ -138,13 +141,15 @@ body {
 }
 @media only screen and (min-width: 685px) {
   .person {
+    flex-basis: 65%;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
   }
 }
 
 .person__avatar {
-  width: clamp(3rem, 44%, 6rem);
+  width: clamp(4rem, 27%, 5rem);
 }
 .person__avatar > img {
   background-color: white;
@@ -154,6 +159,7 @@ body {
 @media only screen and (min-width: 685px) {
   .person__avatar {
     padding-bottom: 1rem;
+    width: clamp(4.5rem, 53%, 5.3rem);
   }
 }
 
