@@ -114,6 +114,10 @@ body {
         color: white;
     }
 
+    &:hover label {
+        cursor: pointer;
+    }
+
     @include respond-medium {
         padding-bottom: 0.5rem;
     }

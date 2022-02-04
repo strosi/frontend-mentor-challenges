@@ -199,6 +199,9 @@ body {
 .timeframes__item > input:checked + label {
   color: white;
 }
+.timeframes__item:hover label {
+  cursor: pointer;
+}
 @media only screen and (min-width: 685px) {
   .timeframes__item {
     padding-bottom: 0.5rem;
