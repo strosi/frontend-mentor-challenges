@@ -48,7 +48,7 @@ body {
 .person {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     padding: $item-cont-pad;
     background-color: $primary-person;
@@ -60,10 +60,16 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+    @include respond-tiny-width {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .person__avatar {
-    width: clamp(4rem, 27%, 5rem);
+    margin-right: 1rem;
+    width: clamp(4rem, 26%, 5rem);
 
     &>img {
         background-color: white;
@@ -75,10 +81,15 @@ body {
         padding-bottom: 1rem;
         width: clamp(4.5rem, 53%, 5.3rem);
     }
+
+    @include respond-tiny-width {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 .person__name {
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 300;
     color: $neutral-fc;
 
@@ -90,6 +101,10 @@ body {
     @include respond-medium {
         line-height: 2.3rem;
     }
+
+    @include respond-tiny-width {
+        text-align: center;
+    }
 }
 
 .timeframes {
@@ -100,6 +115,11 @@ body {
 
     @include respond-medium {
         flex-direction: column;
+    }
+
+    @include respond-tiny-width {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -180,6 +200,11 @@ body {
     @include respond-medium {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    @include respond-tiny-width {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

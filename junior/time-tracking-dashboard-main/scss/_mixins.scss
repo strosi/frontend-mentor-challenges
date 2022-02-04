@@ -9,3 +9,9 @@
         @content;
     }
 }
+
+@mixin respond-tiny-width {
+    @media only screen and (max-width: 335px) {
+        @content;
+    }
+}
