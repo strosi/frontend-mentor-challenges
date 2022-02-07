@@ -93,6 +93,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [How to Use the JavaScript Fetch API to Get Data?](https://www.geeksforgeeks.org/how-to-use-the-javascript-fetch-api-to-get-data/) - Example of fetch API usage
 - [Learn CSS Grid the easy way](https://www.youtube.com/watch?v=rg7Fvvl3taU) - Basics of using Grids
 - [The input element - type=radio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) - How radio buttons work
+- [Building Accessible Menu Systems](https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/) - I found this helpful for creating the three dot menu...
 
 ## Author
 
