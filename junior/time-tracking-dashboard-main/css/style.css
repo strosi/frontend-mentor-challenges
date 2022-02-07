@@ -67,8 +67,10 @@ h6 {
   *,
 *::before,
 *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -100,6 +102,11 @@ body {
   padding: 1.5rem;
   max-width: 1110px;
 }
+@media only screen and (min-width: 468px) {
+  .report {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media only screen and (min-width: 685px) {
   .report {
     grid-template-columns: repeat(3, 1fr);
@@ -119,9 +126,15 @@ body {
   background-color: #1c1f4a;
   border-radius: 1rem;
 }
+@media only screen and (min-width: 468px) {
+  .report-subject {
+    grid-column: span 2;
+  }
+}
 @media only screen and (min-width: 685px) {
   .report-subject {
     grid-row: span 3;
+    grid-column: initial;
   }
 }
 @media only screen and (min-width: 920px) {
@@ -283,7 +296,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (min-width: 685px) {
+@media only screen and (min-width: 468px) {
   .stat-content__data {
     flex-direction: column;
     align-items: flex-start;

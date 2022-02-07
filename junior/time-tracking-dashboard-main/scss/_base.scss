@@ -19,6 +19,10 @@ body {
     padding: $main-cont-pad;
     max-width: 1110px;
 
+    @include respond-wide-mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     @include respond-medium {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -36,8 +40,13 @@ body {
     background-color: $neutral-bg;
     border-radius: $roundness;
 
+    @include respond-wide-mobile {
+        grid-column: span 2;
+    }
+
     @include respond-medium {
         grid-row: span 3;
+        grid-column: initial;
     }
 
     @include respond-desktop {
@@ -197,9 +206,14 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    @include respond-medium {
+    @include respond-wide-mobile {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    @include respond-medium {
+        // flex-direction: column;
+        // align-items: flex-start;
     }
 
     @include respond-tiny-width {

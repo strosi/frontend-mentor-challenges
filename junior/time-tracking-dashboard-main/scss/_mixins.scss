@@ -1,3 +1,15 @@
+@mixin respond-tiny-width {
+    @media only screen and (max-width: 335px) {
+        @content;
+    }
+}
+
+@mixin respond-wide-mobile {
+    @media only screen and (min-width: 468px) {
+        @content;
+    }
+}
+
 @mixin respond-medium {
     @media only screen and (min-width: 685px) {
         @content;
@@ -6,12 +18,6 @@
 
 @mixin respond-desktop {
     @media only screen and (min-width: 920px) {
-        @content;
-    }
-}
-
-@mixin respond-tiny-width {
-    @media only screen and (max-width: 335px) {
         @content;
     }
 }
