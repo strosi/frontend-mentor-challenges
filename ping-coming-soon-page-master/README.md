@@ -60,4 +60,5 @@ I tried to add confirmation when form is submitted successfully and found it dif
 ### Useful resources
 
 - [min(), max(), and clamp() are CSS magic!](https://www.youtube.com/watch?v=U9VF-4euyRo), [CSS-tricks notes on the video](https://css-tricks.com/min-max-and-clamp-are-css-magic/) - I really needed this to make text more flexible on resizse.
+- [Compiling clamp(), min(), and max() with sass](https://hellogreg.org/min-max-clamp-with-sass/) - Here is mentioned the problem with Sass and the clamp(), min() and max() methods. From my experience the problem doesn't exist anymore but it was interesting reading.
 - [Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/) - Made me rethink how to reset my styles...
