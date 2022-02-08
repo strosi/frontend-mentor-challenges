@@ -1,0 +1,42 @@
+.stat-content__tog-btn {
+    position: relative;
+    width: 21px;
+    height: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.stat-content__tog-btn[aria-expanded='true'] {
+    width: 16px;
+    height: 16px;
+}
+
+.stat-content__btn-el {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+
+.stat-content__btn-el:first-child {
+    transform: translateX(calc(-8px - 50%)) translateY(-50%);
+}
+
+.stat-content__btn-el:last-child {
+    transform: translateX(calc(8px - 50%)) translateY(-50%);
+}
+
+.stat-content__btn-el:nth-child(2) {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.stat-content__btn-el:nth-child(3) {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}

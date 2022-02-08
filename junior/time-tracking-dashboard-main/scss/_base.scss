@@ -195,6 +195,12 @@ body {
     border: 1px solid skyblue;
 }
 
+.stat-content__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .stat-content__title {
     font-size: clamp(1rem, 4.8vw, 1.5rem);
     font-weight: 400;
