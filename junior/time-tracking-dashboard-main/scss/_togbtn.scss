@@ -1,3 +1,6 @@
+/*  -------------------------------
+    Options menu button base styles
+*/
 .stat-content__tog-btn {
     position: relative;
     width: 21px;
@@ -39,4 +42,17 @@
 
 .stat-content__btn-el:nth-child(3) {
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+/*  -------------------------------
+    On click state...
+*/
+.stat-content__btn-el_close:first-child,
+.stat-content__btn-el_close:last-child {
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.stat-content__btn-el_close:nth-child(2),
+.stat-content__btn-el_close:nth-child(3) {
+  width: 20px;  
 }

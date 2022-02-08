@@ -160,31 +160,39 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 2.3rem;
+    background-repeat: no-repeat;
+    background-position: top -1rem right 1rem;
     border-radius: $roundness;
 }
 
 .statistic_work-theme {
     background-color: $primary-work;
+    background-image: url('../images/icon-work.svg');
 }
 
 .statistic_play-theme {
     background-color: $primary-play;
+    background-image: url('../images/icon-play.svg');
 }
 
 .statistic_study-theme {
     background-color: $primary-study;
+    background-image: url('../images/icon-study.svg');
 }
 
 .statistic_exercise-theme {
     background-color: $primary-exercise;
+    background-image: url('../images/icon-exercise.svg');
 }
 
 .statistic_social-theme {
     background-color: $primary-social;
+    background-image: url('../images/icon-social.svg');
 }
 
 .statistic_selfcare-theme {
     background-color: $primary-selfcare;
+    background-image: url('../images/icon-self-care.svg');
 }
 
 .stat-content {
@@ -198,12 +206,20 @@ body {
 .stat-content__header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
 .stat-content__title {
     font-size: clamp(1rem, 4.8vw, 1.5rem);
     font-weight: 400;
+}
+
+.stat-content__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
 }
 
 .stat-content__data {

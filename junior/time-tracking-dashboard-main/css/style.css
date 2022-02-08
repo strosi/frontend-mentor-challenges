@@ -248,31 +248,39 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 2.3rem;
+  background-repeat: no-repeat;
+  background-position: top -1rem right 1rem;
   border-radius: 1rem;
 }
 
 .statistic_work-theme {
   background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
 }
 
 .statistic_play-theme {
   background-color: #56c2e6;
+  background-image: url("../images/icon-play.svg");
 }
 
 .statistic_study-theme {
   background-color: #ff5c7c;
+  background-image: url("../images/icon-study.svg");
 }
 
 .statistic_exercise-theme {
   background-color: #4acf81;
+  background-image: url("../images/icon-exercise.svg");
 }
 
 .statistic_social-theme {
   background-color: #7536d3;
+  background-image: url("../images/icon-social.svg");
 }
 
 .statistic_selfcare-theme {
   background-color: #f1c65b;
+  background-image: url("../images/icon-self-care.svg");
 }
 
 .stat-content {
@@ -286,12 +294,20 @@ body {
 .stat-content__header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 .stat-content__title {
   font-size: clamp(1rem, 4.8vw, 1.5rem);
   font-weight: 400;
+}
+
+.stat-content__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
 }
 
 .stat-content__data {
@@ -324,6 +340,9 @@ body {
   color: #bdc1ff;
 }
 
+/*  -------------------------------
+    Options menu button base styles
+*/
 .stat-content__tog-btn {
   position: relative;
   width: 21px;
@@ -365,6 +384,19 @@ body {
 
 .stat-content__btn-el:nth-child(3) {
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+/*  -------------------------------
+    On click state...
+*/
+.stat-content__btn-el_close:first-child,
+.stat-content__btn-el_close:last-child {
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.stat-content__btn-el_close:nth-child(2),
+.stat-content__btn-el_close:nth-child(3) {
+  width: 20px;
 }
 
 .attribution {

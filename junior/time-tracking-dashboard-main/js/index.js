@@ -37,6 +37,7 @@ const createStatistic = (title, timeframe, timefrName) => {
     togBtn.classList.add('stat-content__tog-btn');
     togBtn.setAttribute('aria-haspopup', true);
     togBtn.setAttribute('aria-expanded', false);
+    togBtn.setAttribute('onclick', 'showOptions(this)')
     // -- Button elements
     for(let i=0; i<4; i++) {
         const btnEl = document.createElement('span');
