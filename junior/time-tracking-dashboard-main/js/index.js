@@ -18,7 +18,9 @@ window.onload = () => {
                 });
             })
 
-            const optRadButtonsGroups = Array.from(document.querySelectorAll('.stat-content')).map(el => el.id + '-time');
+            const optRadButtonsGroups = Array.from(
+                document.querySelectorAll('.stat-content'))
+                .map(el => el.id + '-time');
             for(const name of optRadButtonsGroups) {
                 const rBtnsOptions = document.querySelectorAll('input[name=' + name + ']');
                 rBtnsOptions.forEach(rb => {
@@ -126,7 +128,7 @@ const createOptionsMenu = (groupId) => {
         optRadBtn.setAttribute('id', rBtnId);
         optRadBtn.setAttribute('name', groupName);
         optRadBtn.setAttribute('value', rBtnId);
-        if (timeUnits[i] == 'hours') optRadBtn.setAttribute('checked', '');
+        if (timeUnits[i] == 'hours') optRadBtn.setAttribute('checked', true);
 
         var label = document.createElement('label')
         label.setAttribute('for', rBtnId);
@@ -151,6 +153,9 @@ const createOptionsMenu = (groupId) => {
 const handleClick = (e, data) => {
     const currentTimefr = e.target.id;
     changeTimeFrame(data, currentTimefr);
+
+    const optBtns = document.querySelectorAll('[id$=-hours]');
+    resetOptionsButtons(optBtns);
 }
 
 /*  ---------------------------------------------------
@@ -184,7 +189,7 @@ const changeTimeFrame = (data, btnId) => {
     Change statistical data of an entity.
  */
 const changeStatistic = (title, timeframe, timefrName) => {
-    const id = title.toLowerCase().replace(/\s/g, "");
+    const id = title.toLowerCase().replace(/\s/g, '');
     const statContent = document.getElementById(id);
     const statPrevLabel = getPrevStatLabel(timefrName);
 
@@ -264,4 +269,8 @@ const changeTimeUnit = (enData, tUnit, enDataHolder, timefrName) => {
 
     enDataHolder.firstChild.innerHTML = newCurrData + tUnitAbbr;
     enDataHolder.lastChild.innerHTML = statPrevLabel + newPrevData + tUnitAbbr;
+}
+
+const resetOptionsButtons = (btns) => {
+    btns.forEach(btn => {btn.checked = true});
 }
