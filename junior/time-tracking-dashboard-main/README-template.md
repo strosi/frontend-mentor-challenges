@@ -59,6 +59,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+I learned to pay more attention to the 'name' attribute of radio buttons of different groups and to be careful to what element an event listener is attached. I've got a lot of truble with that...
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
