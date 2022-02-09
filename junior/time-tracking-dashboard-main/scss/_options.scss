@@ -1,0 +1,61 @@
+@use 'vars' as *;
+
+/*  ------------------------
+    Options menu base styles
+*/
+.opt-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    opacity: 0;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: $neutral-fc;
+    background-color: $hover-bg;
+    border-radius: $roundness;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.opt-menu_scale {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.opt-menu_hidden {
+    display: none;
+    z-index: -1;
+}
+
+/*  ------------------------
+    Options menu content
+*/
+.opt-menu__text {
+    padding-bottom: 0.5rem;
+}
+
+.opt-menu__time-unit {
+    & label {
+        padding-left: 0.5rem;
+        text-transform: capitalize;
+    }
+
+    & label:hover {
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+    & input:checked ~ label {
+        color: white;
+    }
+}

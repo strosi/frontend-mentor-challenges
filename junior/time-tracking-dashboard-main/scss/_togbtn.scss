@@ -1,3 +1,5 @@
+@use 'vars' as *;
+
 /*  -------------------------------
     Options menu button base styles
 */
@@ -8,11 +10,17 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    &:hover span,
+    &:focus span {
+        background-color: white;
+    }
 }
 
 .stat-content__tog-btn[aria-expanded='true'] {
     width: 16px;
     height: 16px;
+    z-index: 10;
 }
 
 .stat-content__btn-el {
@@ -23,7 +31,7 @@
     transform: translateX(-50%) translateY(-50%);
     width: 5px;
     height: 5px;
-    background-color: white;
+    background-color: $neutral-fc;
     border-radius: 10px;
     transition: all 0.2s ease-out;
 }

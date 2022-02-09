@@ -234,7 +234,9 @@ body {
   color: white;
 }
 .timeframes__item:hover label {
+  color: white;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 @media only screen and (min-width: 685px) {
   .timeframes__item {
@@ -261,6 +263,7 @@ body {
 .statistic_play-theme {
   background-color: #56c2e6;
   background-image: url("../images/icon-play.svg");
+  background-position: top -0.5rem right 1rem;
 }
 
 .statistic_study-theme {
@@ -271,6 +274,7 @@ body {
 .statistic_exercise-theme {
   background-color: #4acf81;
   background-image: url("../images/icon-exercise.svg");
+  background-position: top 0rem right 1rem;
 }
 
 .statistic_social-theme {
@@ -284,11 +288,16 @@ body {
 }
 
 .stat-content {
+  position: relative;
   width: 100%;
   padding: 1.5rem;
   background-color: #1c1f4a;
   border-radius: 1rem;
   border: 1px solid skyblue;
+  transition: 0.2s ease-in;
+}
+.stat-content:hover {
+  background-color: #292f70;
 }
 
 .stat-content__header {
@@ -351,10 +360,14 @@ body {
   border: none;
   cursor: pointer;
 }
+.stat-content__tog-btn:hover span, .stat-content__tog-btn:focus span {
+  background-color: white;
+}
 
 .stat-content__tog-btn[aria-expanded=true] {
   width: 16px;
   height: 16px;
+  z-index: 10;
 }
 
 .stat-content__btn-el {
@@ -365,7 +378,7 @@ body {
   transform: translateX(-50%) translateY(-50%);
   width: 5px;
   height: 5px;
-  background-color: white;
+  background-color: #bdc1ff;
   border-radius: 10px;
   transition: all 0.2s ease-out;
 }
@@ -397,6 +410,61 @@ body {
 .stat-content__btn-el_close:nth-child(2),
 .stat-content__btn-el_close:nth-child(3) {
   width: 20px;
+}
+
+/*  ------------------------
+    Options menu base styles
+*/
+.opt-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.1);
+  opacity: 0;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #bdc1ff;
+  background-color: #292f70;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.opt-menu_scale {
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+.opt-menu_hidden {
+  display: none;
+  z-index: -1;
+}
+
+/*  ------------------------
+    Options menu content
+*/
+.opt-menu__text {
+  padding-bottom: 0.5rem;
+}
+
+.opt-menu__time-unit label {
+  padding-left: 0.5rem;
+  text-transform: capitalize;
+}
+.opt-menu__time-unit label:hover {
+  cursor: pointer;
+}
+.opt-menu__time-unit:hover {
+  color: white;
+}
+.opt-menu__time-unit input:checked ~ label {
+  color: white;
 }
 
 .attribution {

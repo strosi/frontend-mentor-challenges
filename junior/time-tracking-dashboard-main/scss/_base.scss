@@ -144,7 +144,9 @@ body {
     }
 
     &:hover label {
+        color: white;
         cursor: pointer;
+        transition: 0.3s ease;
     }
 
     @include respond-medium {
@@ -173,6 +175,7 @@ body {
 .statistic_play-theme {
     background-color: $primary-play;
     background-image: url('../images/icon-play.svg');
+    background-position: top -0.5rem right 1rem;
 }
 
 .statistic_study-theme {
@@ -183,6 +186,7 @@ body {
 .statistic_exercise-theme {
     background-color: $primary-exercise;
     background-image: url('../images/icon-exercise.svg');
+    background-position: top 0rem right 1rem;
 }
 
 .statistic_social-theme {
@@ -196,11 +200,17 @@ body {
 }
 
 .stat-content {
+    position: relative;
     width: 100%;
     padding: 1.5rem;
     background-color: $neutral-bg;
     border-radius: $roundness;
     border: 1px solid skyblue;
+    transition: 0.2s ease-in;
+
+    &:hover {
+        background-color: $hover-bg;
+    }
 }
 
 .stat-content__header {

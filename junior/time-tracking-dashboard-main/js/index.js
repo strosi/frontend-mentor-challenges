@@ -3,19 +3,30 @@ window.onload = () => {
         .then(res => res.json())
         .then(data => {
             const reportContainer = document.querySelector('.report');
-            let checkedTimefr = document.querySelector('input[checked]').id;
+            let checkedTimefr = document.querySelector('input[name=timeframe][checked]').id;
 
             data.forEach(d => {
                 reportContainer.appendChild(
                     createStatistic(d.title, getCurrentTimefr(d, checkedTimefr), checkedTimefr));
             });
 
-            const rButtons = document.querySelectorAll('input[type=radio]');
+            const rButtons = document.querySelectorAll('input[name=timeframe]');
             rButtons.forEach(rb => {
                 rb.addEventListener('click', (e) => {
                     handleClick(e, data);
-                })
+                    checkedTimefr = e.target.id;
+                });
             })
+
+            const optRadButtonsGroups = Array.from(document.querySelectorAll('.stat-content')).map(el => el.id + '-time');
+            for(const name of optRadButtonsGroups) {
+                const rBtnsOptions = document.querySelectorAll('input[name=' + name + ']');
+                rBtnsOptions.forEach(rb => {
+                    rb.addEventListener('click', (e) => {
+                        handleOptionClick(e, data, checkedTimefr);
+                    });
+                })
+            }
         }).catch(err => console.log(err));
 }
 
@@ -37,23 +48,13 @@ const createStatistic = (title, timeframe, timefrName) => {
     togBtn.classList.add('stat-content__tog-btn');
     togBtn.setAttribute('aria-haspopup', true);
     togBtn.setAttribute('aria-expanded', false);
-    togBtn.setAttribute('onclick', 'showOptions(this)')
+    togBtn.setAttribute('onclick', 'openMenu(this)')
     // -- Button elements
-    for(let i=0; i<4; i++) {
+    for (let i = 0; i < 4; i++) {
         const btnEl = document.createElement('span');
         btnEl.classList.add('stat-content__btn-el');
         togBtn.append(btnEl);
     }
-    // const btnEl01 = document.createElement('span');
-    // btnEl01.classList.add('stat-content__btn-el');
-    // const btnEl02 = document.createElement('span');
-    // btnEl02.classList.add('stat-content__btn-el');
-    // const btnEl03 = document.createElement('span');
-    // btnEl03.classList.add('stat-content__btn-el');
-    // const btnEl04 = document.createElement('span');
-    // btnEl04.classList.add('stat-content__btn-el');
-
-    // togBtn.append(btnEl01, btnEl02, btnEl03, btnEl04);
 
     const statMenu = document.createElement('div');
     statMenu.classList.add('stat-content__menu');
@@ -91,6 +92,7 @@ const createStatistic = (title, timeframe, timefrName) => {
     statContentContainer.id = title.toLowerCase().replace(/\s/g, "");
     statContentContainer.appendChild(statHeadContainer);
     statContentContainer.appendChild(statDataContainer);
+    statContentContainer.appendChild(createOptionsMenu(statContentContainer.id));
 
     const themeClassName = 'statistic_' + statContentContainer.id + '-theme'
     const container = document.createElement('div');
@@ -101,11 +103,71 @@ const createStatistic = (title, timeframe, timefrName) => {
 }
 
 /*  ---------------------------------------------------
+    Create the initial HTML structure 
+    for the entity options menu.
+ */
+const createOptionsMenu = (groupId) => {
+    const optIntroText = document.createElement('p');
+    const text = document.createTextNode('Show data in:');
+    optIntroText.appendChild(text);
+    optIntroText.classList.add('opt-menu__text');
+
+    const optHolder = document.createElement('div');
+    optHolder.classList.add('opt-menu', 'opt-menu_hidden');
+    optHolder.appendChild(optIntroText);
+
+    const timeUnits = ['minutes', 'hours', 'days'];
+
+    for (let i = 0; i < timeUnits.length; i++) {
+        const rBtnId = groupId + '-' + timeUnits[i];
+        const groupName = groupId + '-time';
+        const optRadBtn = document.createElement('input');
+        optRadBtn.setAttribute('type', 'radio');
+        optRadBtn.setAttribute('id', rBtnId);
+        optRadBtn.setAttribute('name', groupName);
+        optRadBtn.setAttribute('value', rBtnId);
+        if (timeUnits[i] == 'hours') optRadBtn.setAttribute('checked', '');
+
+        var label = document.createElement('label')
+        label.setAttribute('for', rBtnId);
+
+        var description = document.createTextNode(timeUnits[i]);
+        label.appendChild(description);
+
+        var timeUnitCont = document.createElement('div');
+        timeUnitCont.classList.add('opt-menu__time-unit');
+        timeUnitCont.appendChild(optRadBtn);
+        timeUnitCont.appendChild(label);
+
+        optHolder.appendChild(timeUnitCont);
+    }
+
+    return optHolder;
+}
+
+/*  ---------------------------------------------------
     Handle checked event of the time frame radio button.
  */
 const handleClick = (e, data) => {
     const currentTimefr = e.target.id;
     changeTimeFrame(data, currentTimefr);
+}
+
+/*  ---------------------------------------------------
+    Handle checked event of the option radio button 
+    (from the options menu).
+ */
+const handleOptionClick = (e, data, checkedTimefr) => {
+    const [enId, tUnit] = e.target.id.split('-');
+    const enTitle = document
+        .querySelector('#' + enId)
+        .querySelector('h2').innerHTML;
+    const enData = data.filter(d => d.title === enTitle)[0]["timeframes"][checkedTimefr];
+    const enDataHolder = document
+        .querySelector('#' + enId)
+        .querySelector('.stat-content__data');
+
+    changeTimeUnit(enData, tUnit, enDataHolder, checkedTimefr);
 }
 
 /*  ---------------------------------------------------
@@ -171,4 +233,35 @@ const getPrevStatLabel = (checkedTimefr) => {
     }
 
     return label;
+}
+
+/*  ---------------------------------------------------
+    Change data time unit of an entity.
+ */
+const changeTimeUnit = (enData, tUnit, enDataHolder, timefrName) => {
+    const statPrevLabel = getPrevStatLabel(timefrName);
+    let newCurrData = enData.current;
+    let newPrevData = enData.previous;
+    let tUnitAbbr = '';
+
+    switch (tUnit) {
+        case 'minutes':
+            newCurrData = newCurrData * 60;
+            newPrevData = newPrevData * 60;
+            tUnitAbbr = 'min';
+            break;
+        case 'hours':
+            tUnitAbbr = 'hrs';
+            break;
+        case 'days':
+            newCurrData = Math.floor(newCurrData / 24);
+            newPrevData = Math.floor(newPrevData / 24);
+            tUnitAbbr = 'dys';
+            break;
+        default:
+            tUnitAbbr = 'hrs';
+    }
+
+    enDataHolder.firstChild.innerHTML = newCurrData + tUnitAbbr;
+    enDataHolder.lastChild.innerHTML = statPrevLabel + newPrevData + tUnitAbbr;
 }

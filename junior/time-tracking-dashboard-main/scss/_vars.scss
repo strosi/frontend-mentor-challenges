@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 /* COLORS */
 /* Primary */
 $primary-person: hsl(246, 80%, 60%);
@@ -13,6 +15,7 @@ $base-bg: hsl(226, 43%, 10%);
 $neutral-bg: hsl(235, 46%, 20%);
 $neutral-bg-light: hsl(235, 45%, 61%);
 $neutral-fc: hsl(236, 100%, 87%);
+$hover-bg: color.adjust($neutral-bg, $lightness: 10%);
 
 /* FONTS */
 /* Font size (card titles e.g. Work, Play) */
