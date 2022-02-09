@@ -5,11 +5,13 @@ window.onload = () => {
             const reportContainer = document.querySelector('.report');
             let checkedTimefr = document.querySelector('input[name=timeframe][checked]').id;
 
+            // Create the initial HTML content...
             data.forEach(d => {
                 reportContainer.appendChild(
                     createStatistic(d.title, getCurrentTimefr(d, checkedTimefr), checkedTimefr));
             });
 
+            // Set listeners to the time frame buttons
             const rButtons = document.querySelectorAll('input[name=timeframe]');
             rButtons.forEach(rb => {
                 rb.addEventListener('click', (e) => {
@@ -18,6 +20,7 @@ window.onload = () => {
                 });
             })
 
+            // Set listeners to the options buttons
             const optRadButtonsGroups = Array.from(
                 document.querySelectorAll('.stat-content'))
                 .map(el => el.id + '-time');
@@ -29,6 +32,22 @@ window.onload = () => {
                     });
                 })
             }
+
+            // Close opened options menu on click outside...
+            const optMenus = document.querySelectorAll('.opt-menu');
+            document.addEventListener('click', (e) => {
+                for(const menu of optMenus) {
+                    if(!menu.classList.contains('opt-menu_hidden')) {
+                        const menuBtn = menu.parentElement.childNodes[0].childNodes[1];
+                        if(!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+                            menuBtn.childNodes[0].setAttribute('aria-expanded', false);
+                            Array.from(menuBtn.childNodes[0].children).forEach(el => el.classList.remove('stat-content__btn-el_close'));
+                            hideOptions(menu);
+                        }
+                    }
+                }
+            })
+
         }).catch(err => console.log(err));
 }
 

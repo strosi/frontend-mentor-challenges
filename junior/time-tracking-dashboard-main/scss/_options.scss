@@ -42,8 +42,16 @@
 }
 
 .opt-menu__time-unit {
+    &:hover {
+        color: white;
+    }
+
+    & input {
+        display: none;
+    }
+
     & label {
-        padding-left: 0.5rem;
+        padding-left: 0.7rem;
         text-transform: capitalize;
     }
 
@@ -51,11 +59,20 @@
         cursor: pointer;
     }
 
-    &:hover {
-        color: white;
-    }
-
     & input:checked ~ label {
+        position: relative;
         color: white;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            content: '';
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-radius: 10px;
+        }
     }
 }

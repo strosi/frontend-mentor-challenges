@@ -453,18 +453,33 @@ body {
   padding-bottom: 0.5rem;
 }
 
+.opt-menu__time-unit:hover {
+  color: white;
+}
+.opt-menu__time-unit input {
+  display: none;
+}
 .opt-menu__time-unit label {
-  padding-left: 0.5rem;
+  padding-left: 0.7rem;
   text-transform: capitalize;
 }
 .opt-menu__time-unit label:hover {
   cursor: pointer;
 }
-.opt-menu__time-unit:hover {
+.opt-menu__time-unit input:checked ~ label {
+  position: relative;
   color: white;
 }
-.opt-menu__time-unit input:checked ~ label {
-  color: white;
+.opt-menu__time-unit input:checked ~ label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .attribution {
