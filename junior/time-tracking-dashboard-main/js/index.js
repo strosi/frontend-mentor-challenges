@@ -143,6 +143,7 @@ const createOptionsMenu = (groupId) => {
         const rBtnId = groupId + '-' + timeUnits[i];
         const groupName = groupId + '-time';
         const optRadBtn = document.createElement('input');
+        optRadBtn.classList.add('vh');
         optRadBtn.setAttribute('type', 'radio');
         optRadBtn.setAttribute('id', rBtnId);
         optRadBtn.setAttribute('name', groupName);

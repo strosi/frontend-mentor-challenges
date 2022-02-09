@@ -135,10 +135,6 @@ body {
 .timeframes__item {
     color: $neutral-bg-light;
 
-    &>input {
-        display: none;
-    }
-
     &>input:checked + label {
         color: white;
     }

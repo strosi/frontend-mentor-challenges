@@ -227,9 +227,6 @@ body {
 .timeframes__item {
   color: #6f76c8;
 }
-.timeframes__item > input {
-  display: none;
-}
 .timeframes__item > input:checked + label {
   color: white;
 }
@@ -456,9 +453,6 @@ body {
 .opt-menu__time-unit:hover {
   color: white;
 }
-.opt-menu__time-unit input {
-  display: none;
-}
 .opt-menu__time-unit label {
   padding-left: 0.7rem;
   text-transform: capitalize;
@@ -480,6 +474,17 @@ body {
   height: 5px;
   background-color: white;
   border-radius: 10px;
+}
+
+/* Used to hide radio button and being accessible */
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .attribution {
