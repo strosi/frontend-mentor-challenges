@@ -97,17 +97,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [The input element - type=radio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) - How radio buttons work
 - [Building Accessible Menu Systems](https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/) - I found this helpful for creating the three dot menu...
 - [Close menu on click outside - Vanilla JS](https://stackoverflow.com/questions/61168579/close-menu-on-click-outside-vanilla-js) - Took an idea from here how to close options menu on click outside it.
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- [Text reveal animation - Codepen](https://codepen.io/michielvandewalle/pen/KaGoyq?editors=1100) - Took an idea for the numbers animation.
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Always thankful to all good people in the net for creating their work (articles, solutions to different problems and answers)!
