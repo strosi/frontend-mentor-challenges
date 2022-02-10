@@ -96,8 +96,8 @@ body {
 
 .report {
   display: grid;
-  gap: clamp(1.5rem, 1.5%, 1.875rem);
-  padding: 1.5rem;
+  gap: clamp(1.5rem, 3%, 1.875rem);
+  margin: 1.5rem;
   max-width: 1110px;
 }
 @media only screen and (min-width: 468px) {
@@ -246,9 +246,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 2.3rem;
+  padding-top: 2.8rem;
   background-repeat: no-repeat;
-  background-position: top -1rem right 1rem;
+  background-position: top -0.7rem right 1rem;
   border-radius: 1rem;
 }
 
@@ -287,7 +287,8 @@ body {
 .stat-content {
   position: relative;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.8rem;
+  padding-bottom: 2rem;
   background-color: #1c1f4a;
   border-radius: 1rem;
   border: 1px solid skyblue;
@@ -305,7 +306,7 @@ body {
 }
 
 .stat-content__title {
-  font-size: clamp(1rem, 4.8vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 400;
 }
 
@@ -326,6 +327,12 @@ body {
   .stat-content__data {
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 0.5rem;
+  }
+}
+@media only screen and (min-width: 685px) {
+  .stat-content__data {
+    padding-top: 0.6rem;
   }
 }
 @media only screen and (max-width: 335px) {
@@ -336,13 +343,14 @@ body {
 }
 
 .stat-content__current {
-  font-size: clamp(1.8rem, 8.2vw, 2.5rem);
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
   font-weight: 300;
 }
 
 .stat-content__prev {
   font-size: 0.95rem;
   font-weight: 300;
+  line-height: 1rem;
   color: #bdc1ff;
 }
 
