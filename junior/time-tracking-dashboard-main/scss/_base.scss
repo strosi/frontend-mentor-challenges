@@ -15,7 +15,8 @@ body {
 
 .report {
     display: grid;
-    gap: clamp(1.5rem, 3%, 1.875rem);
+    column-gap: clamp(1.5rem, 5rem, 1.875rem);
+    row-gap: clamp(1.5rem, 5vw, 1.75rem);
     margin: $main-cont-space;
     max-width: 1110px;
 
@@ -34,6 +35,7 @@ body {
 
 /* REPORT SUBJECT */
 .report-subject {
+    border: 1px solid lightblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,7 +61,7 @@ body {
     flex-direction: row;
     // justify-content: space-between;
     align-items: center;
-    padding: $item-cont-space;
+    padding: 2rem 1.8rem;;
     background-color: $primary-person;
     border-radius: $roundness;
 
@@ -100,6 +102,7 @@ body {
 .person__name {
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 300;
+    line-height: 1.65rem;
     color: $neutral-fc;
 
     &>span {
@@ -119,8 +122,12 @@ body {
 .timeframes {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: $main-cont-space;
+    justify-content: space-between;
+    padding: 1.4rem 2rem 1.1rem 2rem;
+
+    @include respond-wide-mobile {
+        justify-content: space-around;
+    }
 
     @include respond-medium {
         flex-direction: column;
@@ -157,10 +164,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-top: 2.8rem;
+    padding-top: 2.3rem;
     background-repeat: no-repeat;
     background-position: top -0.7rem right 1rem;
     border-radius: $roundness;
+
+    @include respond-medium {
+        padding-top: 2.8rem;
+    }
 }
 
 .statistic_work-theme {
@@ -198,8 +209,7 @@ body {
 .stat-content {
     position: relative;
     width: 100%;
-    padding: 1.8rem;
-    padding-bottom: 2rem;
+    padding: 1.6rem 1.45rem 1.35rem 1.45rem;
     background-color: $neutral-bg;
     border-radius: $roundness;
     border: 1px solid skyblue;
@@ -207,6 +217,11 @@ body {
 
     &:hover {
         background-color: $hover-bg;
+    }
+
+    @include respond-medium {
+        padding: 1.8rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -218,7 +233,7 @@ body {
 }
 
 .stat-content__title {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -252,7 +267,7 @@ body {
 }
 
 .stat-content__current {
-    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-size: clamp(1.9rem, 5vw, 3.5rem);
     font-weight: 300;
 }
 

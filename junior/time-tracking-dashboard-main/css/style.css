@@ -96,7 +96,8 @@ body {
 
 .report {
   display: grid;
-  gap: clamp(1.5rem, 3%, 1.875rem);
+  column-gap: clamp(1.5rem, 5rem, 1.875rem);
+  row-gap: clamp(1.5rem, 5vw, 1.75rem);
   margin: 1.5rem;
   max-width: 1110px;
 }
@@ -118,6 +119,7 @@ body {
 
 /* REPORT SUBJECT */
 .report-subject {
+  border: 1px solid lightblue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -145,7 +147,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 1.8rem;
   background-color: #5847eb;
   border-radius: 1rem;
 }
@@ -189,6 +191,7 @@ body {
 .person__name {
   font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 300;
+  line-height: 1.65rem;
   color: #bdc1ff;
 }
 .person__name > span {
@@ -209,8 +212,13 @@ body {
 .timeframes {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  padding: 1.5rem;
+  justify-content: space-between;
+  padding: 1.4rem 2rem 1.1rem 2rem;
+}
+@media only screen and (min-width: 468px) {
+  .timeframes {
+    justify-content: space-around;
+  }
 }
 @media only screen and (min-width: 685px) {
   .timeframes {
@@ -246,10 +254,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 2.8rem;
+  padding-top: 2.3rem;
   background-repeat: no-repeat;
   background-position: top -0.7rem right 1rem;
   border-radius: 1rem;
+}
+@media only screen and (min-width: 685px) {
+  .statistic {
+    padding-top: 2.8rem;
+  }
 }
 
 .statistic_work-theme {
@@ -287,8 +300,7 @@ body {
 .stat-content {
   position: relative;
   width: 100%;
-  padding: 1.8rem;
-  padding-bottom: 2rem;
+  padding: 1.6rem 1.45rem 1.35rem 1.45rem;
   background-color: #1c1f4a;
   border-radius: 1rem;
   border: 1px solid skyblue;
@@ -296,6 +308,12 @@ body {
 }
 .stat-content:hover {
   background-color: #292f70;
+}
+@media only screen and (min-width: 685px) {
+  .stat-content {
+    padding: 1.8rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .stat-content__header {
@@ -306,7 +324,7 @@ body {
 }
 
 .stat-content__title {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -343,7 +361,7 @@ body {
 }
 
 .stat-content__current {
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-size: clamp(1.9rem, 5vw, 3.5rem);
   font-weight: 300;
 }
 
