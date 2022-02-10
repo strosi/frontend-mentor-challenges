@@ -546,3 +546,32 @@ body {
 .attribution a {
   color: #6f76c8;
 }
+
+@keyframes revealName {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1);
+    opacity: 1;
+  }
+}
+@keyframes revealStatCont {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes revealDig {
+  0% {
+    transform: translate(0, 70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
