@@ -277,7 +277,7 @@ body {
 .statistic_play-theme {
   background-color: #56c2e6;
   background-image: url("../images/icon-play.svg");
-  background-position: top -0.5rem right 1rem;
+  background-position: top -0.3rem right 1.5rem;
 }
 
 .statistic_study-theme {
@@ -366,8 +366,23 @@ body {
 .stat-content__current {
   font-size: clamp(1.9rem, 5vw, 3.5rem);
   font-weight: 300;
+  overflow: hidden;
+}
+.stat-content__current span {
+  display: inline-block;
+  animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+@keyframes reveal {
+  0% {
+    transform: translate(0, 70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 .stat-content__prev {
   font-size: 0.95rem;
   font-weight: 300;

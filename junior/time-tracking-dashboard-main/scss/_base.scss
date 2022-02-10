@@ -187,7 +187,7 @@ body {
 .statistic_play-theme {
     background-color: $primary-play;
     background-image: url('../images/icon-play.svg');
-    background-position: top -0.5rem right 1rem;
+    background-position: top -0.3rem right 1.5rem;
 }
 
 .statistic_study-theme {
@@ -273,6 +273,23 @@ body {
 .stat-content__current {
     font-size: clamp(1.9rem, 5vw, 3.5rem);
     font-weight: 300;
+    overflow: hidden;
+
+    & span {
+        display: inline-block;
+        animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        transform: translate(0, 70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }
 
 .stat-content__prev {

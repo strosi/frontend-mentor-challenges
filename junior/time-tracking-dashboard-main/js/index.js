@@ -89,8 +89,13 @@ const createStatistic = (title, timeframe, timefrName) => {
 
     // Report statistic data -------------------------|
     // - Current...
+    const statNum = document.createElement('span');
+    const currentStatNum = document.createTextNode(timeframe.current);
+    statNum.appendChild(currentStatNum);
+
     const statCurr = document.createElement('p');
-    const currentStat = document.createTextNode(timeframe.current + 'hrs');
+    const currentStat = document.createTextNode('hrs');
+    statCurr.appendChild(statNum);
     statCurr.appendChild(currentStat);
     statCurr.classList.add('stat-content__current');
 
@@ -213,7 +218,16 @@ const changeStatistic = (title, timeframe, timefrName) => {
     const statContent = document.getElementById(id);
     const statPrevLabel = getPrevStatLabel(timefrName);
 
-    statContent.childNodes[1].firstChild.innerHTML = timeframe.current + 'hrs';
+    // Adding <span>currNumb</span> trigger the number animation again...
+    statContent.childNodes[1].firstChild.innerHTML = '';
+    const newCurrNum = document.createElement('span');
+    const num = document.createTextNode(timeframe.current);
+    newCurrNum.appendChild(num);
+    const currentStat = document.createTextNode('hrs');
+    statContent.childNodes[1].firstChild.appendChild(newCurrNum);
+    statContent.childNodes[1].firstChild.appendChild(currentStat);
+
+    // statContent.childNodes[1].firstChild.innerHTML = timeframe.current + 'hrs';
     statContent.childNodes[1].lastChild.innerHTML = statPrevLabel + timeframe.previous + 'hrs';
 }
 
