@@ -70,6 +70,7 @@ const createStatistic = (title, timeframe, timefrName) => {
     togBtn.setAttribute('aria-haspopup', true);
     togBtn.setAttribute('aria-expanded', false);
     togBtn.setAttribute('onclick', 'openMenu(this)')
+    togBtn.setAttribute('aria-label', 'Options')
     // -- Button elements
     for (let i = 0; i < 4; i++) {
         const btnEl = document.createElement('span');
@@ -153,7 +154,7 @@ const createOptionsMenu = (groupId) => {
         optRadBtn.setAttribute('id', rBtnId);
         optRadBtn.setAttribute('name', groupName);
         optRadBtn.setAttribute('value', rBtnId);
-        if (timeUnits[i] == 'hours') optRadBtn.setAttribute('checked', true);
+        if (timeUnits[i] == 'hours') optRadBtn.setAttribute('checked', '');
 
         var label = document.createElement('label')
         label.setAttribute('for', rBtnId);
