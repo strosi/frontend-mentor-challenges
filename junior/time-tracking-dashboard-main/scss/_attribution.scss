@@ -3,8 +3,10 @@
 .attribution {
     font-size: 11px;
     text-align: center;
+    color: $neutral-bg-light;
+    font-weight: 300;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: $neutral-bg-light;
 }

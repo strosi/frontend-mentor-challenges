@@ -17,8 +17,9 @@ body {
     display: grid;
     column-gap: clamp(1.5rem, 5rem, 1.875rem);
     row-gap: clamp(1.5rem, 5vw, 1.75rem);
-    margin: $main-cont-space;
+    margin: 1.5rem auto;
     max-width: 1110px;
+    width: 87%;
 
     @include respond-wide-mobile {
         grid-template-columns: repeat(2, 1fr);
@@ -112,6 +113,8 @@ body {
 
     @include respond-medium {
         line-height: 2.3rem;
+        padding-top: 1rem;
+        padding-bottom: 2.9rem;
     }
 
     @include respond-tiny-width {
@@ -131,6 +134,7 @@ body {
 
     @include respond-medium {
         flex-direction: column;
+        padding: 0.5rem 2rem 1.85rem 2rem;
     }
 
     @include respond-tiny-width {
@@ -153,7 +157,7 @@ body {
     }
 
     @include respond-medium {
-        padding-bottom: 0.5rem;
+        padding-top: 0.9rem;
     }
 }
 
@@ -220,8 +224,7 @@ body {
     }
 
     @include respond-medium {
-        padding: 1.8rem;
-        padding-bottom: 2rem;
+        padding: 1.6rem 1.8rem 2.2rem 1.8rem;
     }
 }
 

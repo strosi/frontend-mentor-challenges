@@ -80,7 +80,6 @@ h6 {
 /* Font size (card titles e.g. Work, Play) */
 /* Font family */
 /* MEASURES */
-/* Padding */
 /* Round corners */
 body {
   display: flex;
@@ -98,8 +97,9 @@ body {
   display: grid;
   column-gap: clamp(1.5rem, 5rem, 1.875rem);
   row-gap: clamp(1.5rem, 5vw, 1.75rem);
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   max-width: 1110px;
+  width: 87%;
 }
 @media only screen and (min-width: 468px) {
   .report {
@@ -201,6 +201,8 @@ body {
 @media only screen and (min-width: 685px) {
   .person__name {
     line-height: 2.3rem;
+    padding-top: 1rem;
+    padding-bottom: 2.9rem;
   }
 }
 @media only screen and (max-width: 335px) {
@@ -223,6 +225,7 @@ body {
 @media only screen and (min-width: 685px) {
   .timeframes {
     flex-direction: column;
+    padding: 0.5rem 2rem 1.85rem 2rem;
   }
 }
 @media only screen and (max-width: 335px) {
@@ -245,7 +248,7 @@ body {
 }
 @media only screen and (min-width: 685px) {
   .timeframes__item {
-    padding-bottom: 0.5rem;
+    padding-top: 0.9rem;
   }
 }
 
@@ -311,8 +314,7 @@ body {
 }
 @media only screen and (min-width: 685px) {
   .stat-content {
-    padding: 1.8rem;
-    padding-bottom: 2rem;
+    padding: 1.6rem 1.8rem 2.2rem 1.8rem;
   }
 }
 
@@ -516,8 +518,10 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: #6f76c8;
+  font-weight: 300;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #6f76c8;
 }
