@@ -18,6 +18,7 @@ body {
     column-gap: clamp(1.5rem, 5rem, 1.875rem);
     row-gap: clamp(1.5rem, 5vw, 1.75rem);
     margin: 1.5rem auto;
+    margin-top: 4.5rem;
     max-width: 1110px;
     width: 87%;
 
@@ -27,7 +28,7 @@ body {
 
     @include respond-medium {
         grid-template-columns: repeat(3, 1fr);
-        width: 90%;
+        width: 95%;
     }
 
     @include respond-desktop {
@@ -37,7 +38,6 @@ body {
 
 /* REPORT SUBJECT */
 .report-subject {
-    border: 1px solid lightblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,7 +61,6 @@ body {
 .person {
     display: flex;
     flex-direction: row;
-    // justify-content: space-between;
     align-items: center;
     padding: 2rem 1.8rem;;
     background-color: $primary-person;
@@ -113,9 +112,15 @@ body {
     }
 
     @include respond-medium {
-        line-height: 2.3rem;
-        padding-top: 1rem;
+        line-height: 1.7rem;
+        padding-top: 1.1rem;
         padding-bottom: 2.9rem;
+
+        &>span {
+            display: inline-block;
+            line-height: 3rem;
+            animation: revealName 0.3s ease-in;
+        }
     }
 
     @include respond-tiny-width {
@@ -173,6 +178,8 @@ body {
     background-repeat: no-repeat;
     background-position: top -0.7rem right 1rem;
     border-radius: $roundness;
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
 
     @include respond-medium {
         padding-top: 2.8rem;
@@ -217,7 +224,6 @@ body {
     padding: 1.6rem 1.45rem 1.35rem 1.45rem;
     background-color: $neutral-bg;
     border-radius: $roundness;
-    border: 1px solid skyblue;
     transition: 0.2s ease-in;
 
     &:hover {
@@ -262,6 +268,7 @@ body {
 
     @include respond-medium {
         padding-top: 0.6rem;
+        animation: revealStatCont 1s ease-in;
     }
 
     @include respond-tiny-width {
@@ -277,18 +284,7 @@ body {
 
     & span {
         display: inline-block;
-        animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    }
-}
-
-@keyframes reveal {
-    0% {
-        transform: translate(0, 70%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
+        animation: revealDig 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     }
 }
 

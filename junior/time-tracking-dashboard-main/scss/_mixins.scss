@@ -17,7 +17,7 @@
 }
 
 @mixin respond-desktop {
-    @media only screen and (min-width: 920px) {
+    @media only screen and (min-width: 1000px) {
         @content;
     }
 }
