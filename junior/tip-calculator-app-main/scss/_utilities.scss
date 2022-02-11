@@ -1,0 +1,33 @@
+@use "sass:color";
+
+/* COLORS */
+/* Primary */
+$primary-strong: hsl(172, 67%, 45%);
+
+/* Neutral */
+$neutral-dark-bg: hsl(183, 100%, 15%);
+$neutral-dark-43: hsl(186, 14%, 43%);
+$neutral-dark-56: hsl(184, 14%, 56%);
+
+$neutral-light: hsl(185, 41%, 84%);
+$neutral-very-light: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+/* FONTS */
+/* Font size (form inputs) */
+$fs: 24px;
+
+/* Font family */
+$ff: "Space Mono", sans-serif;
+
+/* MEASURES */
+$roundness: 0.3rem;
+
+/* FUNCTIONS */
+@function fc($bg) {
+    @if ($bg == hsl(183, 100%, 15%)) {
+        @return $white;
+    } @else {
+        @return $neutral-dark-43;
+    }
+}

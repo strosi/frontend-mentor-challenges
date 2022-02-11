@@ -1,0 +1,99 @@
+@use "utilities" as *;
+@use "mixins" as *;
+
+body {
+    width: 100%;
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: 700;
+    color: $neutral-dark-43;
+    background-color: $neutral-light;
+}
+
+input,
+button {
+    display: block;
+    width: 100%;
+    padding: 0.3rem 1.5rem;
+    font-family: $ff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: $roundness;
+}
+
+input {
+    text-align: right;
+    color: $neutral-dark-bg;
+    background-color: $neutral-very-light;
+}
+
+/* Used to hide the calculator description title */
+.vh {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/* ---------------------------------
+   CALCULATOR STYLES
+ */
+.title {
+    padding: 2rem 0;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.65rem;
+    color: $neutral-dark-bg;
+}
+
+.calc {
+    padding: 1.5rem 2rem;
+    background-color: $white;
+    border-radius: 1.5rem;
+}
+
+.calc__label {
+    font-size: 0.95rem;
+}
+
+/* Calculator input part */
+.calc__label--in-theme {
+    color: fc(white);
+}
+
+.calc__tips-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.calc__tip-btn {
+    color: fc($neutral-dark-bg);
+    background-color: $neutral-dark-bg;
+}
+
+/* Calculator output part */
+.calc__output {
+    margin: 2rem 0;
+    padding: 2.5rem 1.5rem;
+    background-color: $neutral-dark-bg;
+    border-radius: 1rem;
+}
+
+.calc__label--out-theme {
+    padding-bottom: 1.5rem;
+    color: fc($neutral-dark-bg);
+}
+
+
+.calc__reset {
+    text-transform: uppercase;
+    color: $neutral-dark-bg ;
+    background-color: $neutral-dark-43;
+}

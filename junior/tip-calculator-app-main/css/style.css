@@ -1,0 +1,187 @@
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow percentage-based heights in the application.
+   (On adding height: 100% to the html selector the beginning of the page is cutted if justify-content: center is set.)
+*/
+body {
+  min-height: 100vh;
+}
+
+/* Typographic tweaks!
+   - Add accessible line-height
+   - Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* Remove built-in form typography styles. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll 
+   for people that prefer not to see them.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* COLORS */
+/* Primary */
+/* Neutral */
+/* FONTS */
+/* Font size (form inputs) */
+/* Font family */
+/* MEASURES */
+/* FUNCTIONS */
+body {
+  width: 100%;
+  font-family: "Space Mono", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #5e7a7d;
+  background-color: #c5e4e7;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 1.5rem;
+  font-family: "Space Mono", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+input {
+  text-align: right;
+  color: #00494d;
+  background-color: #f4fafa;
+}
+
+/* Used to hide the calculator description title */
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* ---------------------------------
+   CALCULATOR STYLES
+ */
+.title {
+  padding: 2rem 0;
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.65rem;
+  color: #00494d;
+}
+
+.calc {
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+
+.calc__label {
+  font-size: 0.95rem;
+}
+
+/* Calculator input part */
+.calc__label--in-theme {
+  color: #5e7a7d;
+}
+
+.calc__tips-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.calc__tip-btn {
+  color: white;
+  background-color: #00494d;
+}
+
+/* Calculator output part */
+.calc__output {
+  margin: 2rem 0;
+  padding: 2.5rem 1.5rem;
+  background-color: #00494d;
+  border-radius: 1rem;
+}
+
+.calc__label--out-theme {
+  padding-bottom: 1.5rem;
+  color: white;
+}
+
+.calc__reset {
+  text-transform: uppercase;
+  color: #00494d;
+  background-color: #5e7a7d;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
