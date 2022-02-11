@@ -51,7 +51,7 @@ Users should be able to:
 In this challenge I tried to:
 - use the fetch API to get data from JSON file;
 - show dynamic content on the page;
-- work with different radio buttons groups;
+- work with multiple radio buttons groups;
 - attach listneres to radio buttons;
 - use CSS animation.
 
