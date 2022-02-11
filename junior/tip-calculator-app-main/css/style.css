@@ -94,7 +94,7 @@ input,
 button {
   display: block;
   width: 100%;
-  padding: 0.3rem 1.5rem;
+  padding: 0.3rem 1rem;
   font-family: "Space Mono", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -107,6 +107,24 @@ input {
   text-align: right;
   color: #00494d;
   background-color: #f4fafa;
+}
+input:hover, input:focus {
+  outline: 2px solid #26c0ab;
+}
+
+button:hover {
+  color: #00494d;
+  background-color: #9de2d9;
+}
+button:active, button:focus {
+  color: #00494d;
+  background-color: #26c0ab;
+}
+
+/* Used to change reset button colors when there is change in the fields */
+.active-btn {
+  color: #00494d;
+  background-color: #26c0ab;
 }
 
 /* Used to hide the calculator description title */
@@ -124,16 +142,13 @@ input {
    CALCULATOR STYLES
  */
 .title {
-  padding: 2rem 0;
-  font-size: 0.75rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.65rem;
-  color: #00494d;
+  width: 5rem;
+  margin: 0 auto;
+  padding: 2.5rem 0;
 }
 
 .calc {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.5rem;
   background-color: white;
   border-radius: 1.5rem;
 }
@@ -143,12 +158,23 @@ input {
 }
 
 /* Calculator input part */
+.calc__input {
+  padding: 0 0.5rem;
+}
+
 .calc__label--in-theme {
   color: #5e7a7d;
 }
 
+.calc__in-bill {
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: center left 1rem;
+}
+
 .calc__tips-btns {
   display: grid;
+  padding: 1rem 0;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
@@ -161,20 +187,41 @@ input {
 /* Calculator output part */
 .calc__output {
   margin: 2rem 0;
-  padding: 2.5rem 1.5rem;
+  padding: 1.3rem;
   background-color: #00494d;
   border-radius: 1rem;
 }
 
-.calc__label--out-theme {
+.calc__results {
+  padding: 1rem 0;
+}
+
+.calc__results-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 1.5rem;
+}
+
+.calc__label--out-theme {
   color: white;
+}
+.calc__label--out-theme span {
+  font-size: 0.8rem;
+  color: #7f9c9f;
+}
+
+.calc__result {
+  font-size: 2rem;
+  color: #26c0ab;
 }
 
 .calc__reset {
+  font-size: 1.25rem;
   text-transform: uppercase;
   color: #00494d;
-  background-color: #5e7a7d;
+  background-color: #006166;
 }
 
 .attribution {

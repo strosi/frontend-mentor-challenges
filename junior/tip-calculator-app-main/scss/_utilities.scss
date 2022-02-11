@@ -3,9 +3,11 @@
 /* COLORS */
 /* Primary */
 $primary-strong: hsl(172, 67%, 45%);
+$primary-light: color.adjust(color.adjust($primary-strong, $lightness: 20%), $whiteness: 20%);
 
 /* Neutral */
 $neutral-dark-bg: hsl(183, 100%, 15%);
+$neutral-dark-bg-bright: color.adjust($neutral-dark-bg, $lightness: 5%);
 $neutral-dark-43: hsl(186, 14%, 43%);
 $neutral-dark-56: hsl(184, 14%, 56%);
 
@@ -24,10 +26,24 @@ $ff: "Space Mono", sans-serif;
 $roundness: 0.3rem;
 
 /* FUNCTIONS */
-@function fc($bg) {
-    @if ($bg == hsl(183, 100%, 15%)) {
+@function label-fc($bg) {
+    @if ($bg == $neutral-dark-bg) {
         @return $white;
     } @else {
         @return $neutral-dark-43;
     }
+}
+
+@function btn-fc($bg) {
+    @if ($bg == $primary-strong or $bg == $primary-light or $bg == $neutral-dark-bg-bright) {
+        @return $neutral-dark-bg;
+    } @else {
+        @return $white;
+    }
+}
+
+
+@mixin btn-theme($bg) {
+    color: btn-fc($bg);
+    background-color: $bg;
 }
