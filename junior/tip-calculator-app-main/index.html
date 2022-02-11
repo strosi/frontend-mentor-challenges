@@ -28,36 +28,46 @@
       <div class="calc__input">
         <form action="">
           <label for="bill" class="calc__label calc__label--in-theme">Bill</label>
-          <input type="number" class="calc__in-bill" id="bill" name="bill" value="0">
+          <input type="number" class="calc__in-bill" id="bill" name="bill" placeholder="0">
+          <p class="error"></p>
         </form>
         <div class="calc__tips">
           <p class="calc__label calc__label--in-theme">Select Tip %</p>
           <div class="calc__tips-btns">
-            <button class="calc__tip-btn">5%</button>
-            <button class="calc__tip-btn">10%</button>
-            <button class="calc__tip-btn">15%</button>
-            <button class="calc__tip-btn">25%</button>
-            <button class="calc__tip-btn">50%</button>
-            <input type="number" class="calc__tip-field" id="custom-tip" placeholder="Custom" min="0">
+            <input type="radio" name="tip" id="tip-5" class="vh">
+            <label for="tip-5" class="calc__tip-btn">5%</label>
+            <input type="radio" name="tip" id="tip-10" class="vh">
+            <label for="tip-10" class="calc__tip-btn">10%</label>
+            <input type="radio" name="tip" id="tip-15" class="vh">
+            <label for="tip-15" class="calc__tip-btn">15%</label>
+            <input type="radio" name="tip" id="tip-25" class="vh">
+            <label for="tip-25" class="calc__tip-btn">25%</label>
+            <input type="radio" name="tip" id="tip-50" class="vh">
+            <label for="tip-50" class="calc__tip-btn">50%</label>
+            <form action="">
+              <input type="number" class="calc__tip-field" id="custom-tip" placeholder="Custom" min="0">
+              <p class="error"></p>
+            </form>
           </div>
         </div>
         <form action="">
           <label for="num-people" class="calc__label calc__label--in-theme">Number of People</label>
-          <input type="number" class="calc__in-num-pple" id="num-people" name="num-people" value="0">
+          <input type="number" class="calc__in-num-pple" id="num-people" name="num-people" placeholder="0">
+          <p></p>
         </form>
       </div>
       <div class="calc__output">
         <div class="calc__results">
           <div class="calc__results-cont">
             <p class="calc__label calc__label--out-theme">Tip Amount <br><span>/ person</span></p>
-            <p class="calc__result">$0.00</p>
+            <p class="calc__result" id="result-tip">$0.00</p>
           </div>
           <div class="calc__results-cont">
             <p class="calc__label calc__label--out-theme">Total <br><span>/ person</span></p>
-            <p class="calc__result">$0.00</p>
+            <p class="calc__result" id="result-total">$0.00</p>
           </div>
         </div>
-        <button class="calc__reset">Reset</button>
+        <button class="calc__reset" id="reset">Reset</button>
       </div>
     </div>
   </main>
@@ -66,6 +76,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -11,7 +11,8 @@ body {
 }
 
 input,
-button {
+button,
+input[type='radio'] + label {
     display: block;
     width: 100%;
     padding: 0.3rem 1rem;
@@ -34,7 +35,10 @@ input {
     }
 }
 
-button {
+button,
+input[type='radio'] + label {
+    transition: 0.3s ease-in-out;
+
     &:hover {
         @include btn-theme($primary-light);
     }
@@ -43,6 +47,10 @@ button {
     &:focus {
         @include btn-theme($primary-strong);
     }
+}
+
+input[type='radio']:checked + label {
+    @include btn-theme($primary-strong);
 }
 
 /* Used to change reset button colors when there is change in the fields */
@@ -104,6 +112,12 @@ button {
 
 .calc__tip-btn {
     @include btn-theme($neutral-dark-bg);
+}
+
+.calc__in-num-pple {
+    background-image: url('../images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: center left 1rem;
 }
 
 /* Calculator output part */
