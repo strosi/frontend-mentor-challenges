@@ -111,31 +111,19 @@ input {
 }
 input:hover, input:focus {
   outline: 2px solid #26c0ab;
+  cursor: pointer;
 }
 
-button,
 input[type=radio] + label {
   transition: 0.3s ease-in-out;
 }
-button:hover,
 input[type=radio] + label:hover {
   color: #00494d;
   background-color: #9de2d9;
-}
-button:active, button:focus,
-input[type=radio] + label:active,
-input[type=radio] + label:focus {
-  color: #00494d;
-  background-color: #26c0ab;
+  cursor: pointer;
 }
 
 input[type=radio]:checked + label {
-  color: #00494d;
-  background-color: #26c0ab;
-}
-
-/* Used to change reset button colors when there is change in the fields */
-.active-btn {
   color: #00494d;
   background-color: #26c0ab;
 }
@@ -241,6 +229,17 @@ input[type=radio]:checked + label {
   text-transform: uppercase;
   color: #00494d;
   background-color: #006166;
+}
+
+.calc__reset--active {
+  color: #00494d;
+  background-color: #26c0ab;
+  transition: 0.3s ease-in-out;
+}
+.calc__reset--active:hover {
+  color: #00494d;
+  background-color: #9de2d9;
+  cursor: pointer;
 }
 
 .attribution {

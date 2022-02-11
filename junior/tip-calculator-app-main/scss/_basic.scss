@@ -32,29 +32,20 @@ input {
     &:hover,
     &:focus {
         outline: 2px solid $primary-strong;
+        cursor: pointer;
     }
 }
 
-button,
 input[type='radio'] + label {
     transition: 0.3s ease-in-out;
 
     &:hover {
         @include btn-theme($primary-light);
-    }
-
-    &:active,
-    &:focus {
-        @include btn-theme($primary-strong);
+        cursor: pointer;
     }
 }
 
 input[type='radio']:checked + label {
-    @include btn-theme($primary-strong);
-}
-
-/* Used to change reset button colors when there is change in the fields */
-.active-btn {
     @include btn-theme($primary-strong);
 }
 
@@ -158,4 +149,14 @@ input[type='radio']:checked + label {
     font-size: 1.25rem;
     text-transform: uppercase;
     @include btn-theme($neutral-dark-bg-bright);
+}
+
+.calc__reset--active {
+    @include btn-theme($primary-strong);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        @include btn-theme($primary-light);
+        cursor: pointer;
+    }
 }

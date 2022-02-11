@@ -36,11 +36,10 @@ tipBtns.forEach(btn => {
 
         if(isBillValid && isTipValid && isPplNumValid) {
             const result = calculate(billValue, tipValue, pplNumValue);
-            console.log(result)
             printResult(result, resultTip, resultTotal);
         }
 
-        btnReset.classList.add('active-btn');
+        btnReset.classList.add('calc__reset--active');
     })
 });
 
@@ -64,13 +63,14 @@ inputs.forEach(inp => {
             printResult(result, resultTip, resultTotal);
         }
 
-        btnReset.classList.add('active-btn');
+        btnReset.classList.add('calc__reset--active');
     })
 });
 
 btnReset.addEventListener('click', (e) => {
-    resetCalculator(fields, resultTip, resultTotal);
-    e.target.classList.remove('active-btn');
+    resetCalculator(inputs, resultTip, resultTotal);
+    tipBtns.forEach(btn => btn.checked = false);
+    e.target.classList.remove('calc__reset--active');
 })
 
 // Function that is called when some of the tip buttons/field is clicked/pressed Enter
@@ -103,9 +103,6 @@ const checkIfPositive = (field) => {
 
 // Show calculation result
 const printResult = (result, elTip, elTotal) => {
-    console.log(result)
-    console.log(elTip)
-    console.log(elTotal)
     elTip.innerHTML = '$' + result[0];
     elTotal.innerHTML = '$' + result[1];
 }
@@ -116,9 +113,9 @@ const resetCalculator = (fields, elTip, elTotal) => {
     fields[2].value = 0;
     elTip.innerHTML = '$0.00';
     elTotal.innerHTML = '$0.00';
+    
 }
 
-// Helpers
 const showError = (field, errorMsg) => {
     const errorEl = field.parentNode.lastElementChild;
     errorEl.innerHTML = errorMsg;
