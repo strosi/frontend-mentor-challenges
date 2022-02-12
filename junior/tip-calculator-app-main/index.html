@@ -27,9 +27,9 @@
     <div class="calc">
       <div class="calc__input">
         <form action="">
+          <p class="error"></p>
           <label for="bill" class="calc__label calc__label--in-theme">Bill</label>
           <input type="number" class="calc__in-bill" id="bill" name="bill" placeholder="0">
-          <p class="error"></p>
         </form>
         <div class="calc__tips">
           <p class="calc__label calc__label--in-theme">Select Tip %</p>
@@ -45,15 +45,15 @@
             <input type="radio" name="tip" id="tip-50" class="vh">
             <label for="tip-50" class="calc__tip-btn">50%</label>
             <form action="">
-              <input type="number" class="calc__tip-field" id="custom-tip" placeholder="Custom" min="0">
               <p class="error"></p>
+              <input type="number" class="calc__tip-field" id="custom-tip" placeholder="Custom" min="0">
             </form>
           </div>
         </div>
         <form action="">
+          <p class="error"></p>
           <label for="num-people" class="calc__label calc__label--in-theme">Number of People</label>
           <input type="number" class="calc__in-num-pple" id="num-people" name="num-people" placeholder="0">
-          <p></p>
         </form>
       </div>
       <div class="calc__output">

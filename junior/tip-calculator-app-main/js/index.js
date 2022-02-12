@@ -45,6 +45,8 @@ tipBtns.forEach(btn => {
 
 inputs.forEach(inp => {
     inp.addEventListener('input', (e) => {
+        e.preventDefault();
+        e.target.parentNode.onsubmit = () => {return false;}
         const inputEl = e.target;
 
         if(inputEl.id === 'bill') {
@@ -117,13 +119,13 @@ const resetCalculator = (fields, elTip, elTotal) => {
 }
 
 const showError = (field, errorMsg) => {
-    const errorEl = field.parentNode.lastElementChild;
+    const errorEl = field.parentNode.querySelector('.error');
     errorEl.innerHTML = errorMsg;
     errorEl.classList.add('show-error');
 }
 
 const hideError = (field) => {
-    const errorEl = field.parentNode.lastElementChild;
+    const errorEl = field.parentNode.querySelector('.error');
     errorEl.innerHTML = '';
     errorEl.classList.remove('show-error');
 }

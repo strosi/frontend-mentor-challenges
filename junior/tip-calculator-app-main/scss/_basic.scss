@@ -10,6 +10,10 @@ body {
     background-color: $neutral-light;
 }
 
+form {
+    position: relative;
+}
+
 input,
 button,
 input[type='radio'] + label {
@@ -92,11 +96,18 @@ input[type='radio']:checked + label {
     background-image: url('../images/icon-dollar.svg');
     background-repeat: no-repeat;
     background-position: center left 1rem;
+
+    @include placehold-style;
+}
+
+.calc__tips {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .calc__tips-btns {
     display: grid;
-    padding: 1rem 0;
+    padding-top: 1rem;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
@@ -105,10 +116,18 @@ input[type='radio']:checked + label {
     @include btn-theme($neutral-dark-bg);
 }
 
+.calc__tip-field {
+    &::placeholder {
+        color: $neutral-dark-56;
+    }
+}
+
 .calc__in-num-pple {
     background-image: url('../images/icon-person.svg');
     background-repeat: no-repeat;
     background-position: center left 1rem;
+
+    @include placehold-style;
 }
 
 /* Calculator output part */

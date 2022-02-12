@@ -81,6 +81,9 @@ h6 {
 /* Font family */
 /* MEASURES */
 /* FUNCTIONS */
+/* Labels font color */
+/* Buttons font color */
+/* Placeholders styles */
 body {
   width: 100%;
   font-family: "Space Mono", sans-serif;
@@ -88,6 +91,10 @@ body {
   font-weight: 700;
   color: #5e7a7d;
   background-color: #c5e4e7;
+}
+
+form {
+  position: relative;
 }
 
 input,
@@ -172,10 +179,21 @@ input[type=radio]:checked + label {
   background-repeat: no-repeat;
   background-position: center left 1rem;
 }
+.calc__in-bill::placeholder {
+  color: #9cb3b4;
+}
+.calc__in-bill:focus::placeholder {
+  opacity: 0;
+}
+
+.calc__tips {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
 .calc__tips-btns {
   display: grid;
-  padding: 1rem 0;
+  padding-top: 1rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
@@ -185,10 +203,20 @@ input[type=radio]:checked + label {
   background-color: #00494d;
 }
 
+.calc__tip-field::placeholder {
+  color: #7f9c9f;
+}
+
 .calc__in-num-pple {
   background-image: url("../images/icon-person.svg");
   background-repeat: no-repeat;
   background-position: center left 1rem;
+}
+.calc__in-num-pple::placeholder {
+  color: #9cb3b4;
+}
+.calc__in-num-pple:focus::placeholder {
+  opacity: 0;
 }
 
 /* Calculator output part */
@@ -252,10 +280,17 @@ input[type=radio]:checked + label {
 }
 
 .error {
+  position: absolute;
+  top: 5.3rem;
+  right: 0;
   display: none;
+  font-size: 0.95rem;
   color: red;
 }
 
 .show-error {
   display: block;
+}
+.show-error ~ input[type=number] {
+  outline: 2px solid red;
 }

@@ -1,8 +1,18 @@
 .error {
+    position: absolute;
+    top: 5.3rem;
+    right: 0;
     display: none;
+    font-size: 0.95rem;
     color: red;
+
+    
 }
 
 .show-error {
     display: block;
+
+    & ~ input[type='number'] {
+        outline: 2px solid red;
+    }
 }
