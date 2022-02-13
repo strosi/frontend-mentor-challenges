@@ -64,6 +64,16 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 Used `form.onsubmit = () => {return false;}` to prevent field value disappear on press Enter.
 
+I wanted the Reset button to become unactive when all fields are empty and there's no tip button selected. For that I had to find out a condition checking if the field value:
+- is not '' (returned when field never been on focus and has no initial value);
+- is not NaN (returned when field content has been deleted);
+- if equal to 0 to be consider as digit (`0 || ''` is not of use because returns ''). So I came to this solution:
+```js
+if (value === 0 || ((value || '') !== '')) {
+  // some content...
+}
+```
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
@@ -95,7 +105,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Dynamic text color with Sass](https://www.kevinpowell.co/article/dynamic-text-color-with-sass/) - This helped me with the button theme function.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Turn Off Number Input Spinners](https://css-tricks.com/snippets/css/turn-off-number-input-spinners/) - I needed a way to hide the spinner/arrows from the number field and this idea worked great.
+- [JS - Detect when a user clears a field](https://stackoverflow.com/questions/31471575/js-detect-when-a-user-clears-a-field) - Came to this when I searching for solution to deactivate reset button on clearing all fields...
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

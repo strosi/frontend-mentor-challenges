@@ -16,7 +16,7 @@ form {
 
 input,
 button,
-input[type='radio'] + label {
+input[type="radio"] + label {
     display: block;
     width: 100%;
     padding: 0.3rem 1rem;
@@ -40,7 +40,7 @@ input {
     }
 }
 
-input[type='radio'] + label {
+input[type="radio"] + label {
     transition: 0.3s ease-in-out;
 
     &:hover {
@@ -49,8 +49,14 @@ input[type='radio'] + label {
     }
 }
 
-input[type='radio']:checked + label {
+input[type="radio"]:checked + label {
     @include btn-theme($primary-strong);
+}
+
+/* Turn off number input spinners */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 0;
 }
 
 /* Used to hide the calculator description title */
@@ -93,7 +99,7 @@ input[type='radio']:checked + label {
 }
 
 .calc__in-bill {
-    background-image: url('../images/icon-dollar.svg');
+    background-image: url("../images/icon-dollar.svg");
     background-repeat: no-repeat;
     background-position: center left 1rem;
 
@@ -117,13 +123,14 @@ input[type='radio']:checked + label {
 }
 
 .calc__tip-field {
+    @include placehold-style;
     &::placeholder {
         color: $neutral-dark-56;
     }
 }
 
 .calc__in-num-pple {
-    background-image: url('../images/icon-person.svg');
+    background-image: url("../images/icon-person.svg");
     background-repeat: no-repeat;
     background-position: center left 1rem;
 
