@@ -29,6 +29,9 @@ tipBtns.forEach(btn => {
         tipValue = tipBtnValue;
         isTipValid = true;
 
+        // Clear the custom tip when some of the tip buttons is selected
+        e.target.parentNode.querySelector('input').focus(inputCustom.value = '');
+
         if (isBillValid && isTipValid && isPplNumValid) {
             const result = calculate(billValue, tipValue, pplNumValue);
             printResult(result, resultTip, resultTotal);
@@ -72,7 +75,7 @@ inputs.forEach(inp => {
     })
 });
 
-inputCustom.addEventListener('click', (e) => {
+inputCustom.addEventListener('input', (e) => {
     clearTipBtns(tipBtns);
     tipValue = '';
 
@@ -128,8 +131,8 @@ const checkIfAllValuesEmpty = (values) => {
 }
 
 const printResult = (result, elTip, elTotal) => {
-    elTip.innerHTML = '$' + result[0];
-    elTotal.innerHTML = '$' + result[1];
+    elTip.innerHTML = '$' + result[0].toFixed(2);
+    elTotal.innerHTML = '$' + result[1].toFixed(2);
 }
 
 const clearTipBtns = (btns) => {
@@ -154,5 +157,5 @@ const resetCalculator = (fields, elTip, elTotal) => {
     fields[2].value = '';
     elTip.innerHTML = '$0.00';
     elTotal.innerHTML = '$0.00';
-    fields.forEach(f => { hideError(f) });
+    fields.forEach(f => { hideError(f); });
 }

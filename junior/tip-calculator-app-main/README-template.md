@@ -114,6 +114,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Dynamic text color with Sass](https://www.kevinpowell.co/article/dynamic-text-color-with-sass/) - This helped me with the button theme function.
 - [Turn Off Number Input Spinners](https://css-tricks.com/snippets/css/turn-off-number-input-spinners/) - I needed a way to hide the spinner/arrows from the number field and this idea worked great.
 - [JS - Detect when a user clears a field](https://stackoverflow.com/questions/31471575/js-detect-when-a-user-clears-a-field) - Came to this when I searching for solution to deactivate reset button on clearing all fields...
+- [Number.prototype.toFixed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) - Rounded the results of the calculation...
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
