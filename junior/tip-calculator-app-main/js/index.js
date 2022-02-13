@@ -119,7 +119,7 @@ const checkIfAllValuesEmpty = (values) => {
     let allEmpty = true;
 
     for (v of values) {
-        if (v === 0 || ((v || '') !== '')) {
+        if (v === 0 || v) {
             allEmpty = false;
             break;
         }
