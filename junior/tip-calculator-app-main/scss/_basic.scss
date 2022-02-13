@@ -19,7 +19,7 @@ button,
 input[type="radio"] + label {
     display: block;
     width: 100%;
-    padding: 0.36rem 1rem;
+    padding: 0.4rem 1rem;
     font-family: $ff;
     font-size: 1.5rem;
     font-weight: 700;
@@ -41,7 +41,7 @@ input {
 }
 
 input[type="radio"] + label {
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 
     &:hover {
         @include btn-theme($primary-light);
@@ -76,7 +76,7 @@ input[type=number]::-webkit-outer-spin-button {
 .title {
     width: 5.44rem;
     margin: 0 auto;
-    padding-top: 3.05rem;
+    padding-top: 3.1rem;
     padding-bottom: 2.5rem;
 }
 
@@ -100,8 +100,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .calc__label {
     display: block;
-    padding-top: 0.55rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.3rem;
     font-size: 0.98rem;
 }
 
@@ -129,7 +129,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .calc__tips {
     padding-top: 1.4rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.37rem;
 }
 
 .calc__tips-btns {
@@ -157,6 +157,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .calc__tip-btn {
     @include btn-theme($neutral-dark-bg);
+
+    @include respond-medium {
+        transition: transform 0.5s;
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
 }
 
 .calc__tip-field {
@@ -179,8 +187,8 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1.8rem 0;
-    padding: 1.3rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
     background-color: $neutral-dark-bg;
     border-radius: 1rem;
 
@@ -191,7 +199,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc__results {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
 }
 
 .calc__results-cont {
@@ -199,7 +207,7 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
 
     @include respond-tiny-width {
         flex-direction: column;
@@ -221,9 +229,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc__reset {
+    margin-top: 0.56rem;
+    padding: 0.6rem 1rem;
     font-size: 1.25rem;
     text-transform: uppercase;
     @include btn-theme($neutral-dark-bg-bright);
+    
+    @include respond-medium {
+        transition: all 0.7s;
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
 }
 
 .calc__reset--active {

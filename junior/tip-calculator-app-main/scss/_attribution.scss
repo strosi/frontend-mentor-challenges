@@ -1,10 +1,12 @@
 @use 'utilities' as *;
 
 .attribution {
+    padding: 1rem;
     font-size : 11px;
     text-align: center;
+    color: $neutral-dark-56;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: $neutral-dark-43;
 }
