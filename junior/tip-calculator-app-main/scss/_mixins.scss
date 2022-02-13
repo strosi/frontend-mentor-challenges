@@ -1,0 +1,17 @@
+@mixin respond-tiny-width {
+    @media only screen and (max-width: 330px) {
+        @content;
+    }
+}
+
+@mixin respond-tablet {
+    @media only screen and (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin respond-medium {
+    @media only screen and (min-width: 800px) {
+        @content;
+    }
+}

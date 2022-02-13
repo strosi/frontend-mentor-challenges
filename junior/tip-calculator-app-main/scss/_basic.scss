@@ -80,9 +80,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc {
+    margin: 0 auto;
     padding: 1.5rem 1.5rem;
+    width: 100%;
     background-color: $white;
     border-radius: 1.5rem;
+
+    @include respond-tablet {
+        width: 90%;
+    }
+
+    @include respond-medium {
+        display: flex;
+        flex-direction: row;
+        max-width: 57.5rem;
+    }
 }
 
 .calc__label {
@@ -92,6 +104,10 @@ input[type=number]::-webkit-outer-spin-button {
 /* Calculator input part */
 .calc__input {
     padding: 0 0.5rem;
+
+    @include respond-medium {
+        flex-basis: 50%;
+    }
 }
 
 .calc__label--in-theme {
@@ -116,6 +132,14 @@ input[type=number]::-webkit-outer-spin-button {
     padding-top: 1rem;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+
+    @include respond-tiny-width {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include respond-tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .calc__tip-btn {
@@ -143,6 +167,10 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 1.3rem;
     background-color: $neutral-dark-bg;
     border-radius: 1rem;
+
+    @include respond-medium {
+        flex-basis: 50%;
+    }
 }
 
 .calc__results {

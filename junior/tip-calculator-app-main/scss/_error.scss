@@ -1,12 +1,14 @@
 .error {
     position: absolute;
-    top: 5.3rem;
+    top: 5.2rem;
     right: 0;
     display: none;
     font-size: 0.95rem;
     color: red;
+}
 
-    
+.custom-tip-error {
+    top: 3rem;
 }
 
 .show-error {

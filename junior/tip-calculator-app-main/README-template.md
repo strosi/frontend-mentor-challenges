@@ -62,15 +62,21 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+Decided to use `input[type=radio]` for the tip buttons so they can be accessible from the keyboard.
+
 Used `form.onsubmit = () => {return false;}` to prevent field value disappear on press Enter.
 
-I wanted the Reset button to become unactive when all fields are empty and there's no tip button selected. For that I had to find out a condition checking if the field value:
+I wanted the Reset button to become active when at least one field/tip button is changed and to become unactive when all the fields are empty and no tip button selected. For that I had to find out a condition checking if the field value:
 - is not '' (returned when field never been on focus and has no initial value);
 - is not NaN (returned when field content has been deleted);
 - if equal to 0 to be consider as digit (`0 || ''` is not of use because returns ''). So I came to this solution:
 ```js
 if (value === 0 || ((value || '') !== '')) {
-  // some content...
+  // has some change that can be reset --> RESET button is active
+  return ture;
+} else {
+  // nothing to be reset --> RESET button is not active
+  return false;
 }
 ```
 
