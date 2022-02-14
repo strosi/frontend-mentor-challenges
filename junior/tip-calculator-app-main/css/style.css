@@ -67,10 +67,8 @@ h6 {
   *,
 *::before,
 *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -87,12 +85,18 @@ h6 {
 /* Buttons font color */
 /* Placeholders styles */
 body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   font-family: "Space Mono", sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #5e7a7d;
   background-color: #c5e4e7;
+}
+
+main {
+  margin-top: 7rem;
 }
 
 form {
@@ -161,7 +165,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 5.44rem;
   margin: 0 auto;
   padding-top: 3.1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: clamp(2.5rem, 7vw, 5.5rem);
 }
 
 .calc {
@@ -181,6 +185,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: row;
     max-width: 57.5rem;
+    padding: 0;
   }
 }
 
@@ -190,6 +195,11 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 0.3rem;
   font-size: 0.98rem;
 }
+@media only screen and (min-width: 800px) {
+  .calc__label {
+    padding-top: 0.9rem;
+  }
+}
 
 /* Calculator input part */
 .calc__input {
@@ -198,7 +208,9 @@ input[type=number]::-webkit-outer-spin-button {
 @media only screen and (min-width: 800px) {
   .calc__input {
     flex-basis: 50%;
-    padding: 1rem;
+    margin: 2rem;
+    margin-right: 0;
+    padding: 0 1rem 1rem 1rem;
   }
 }
 
@@ -211,33 +223,21 @@ input[type=number]::-webkit-outer-spin-button {
   background-repeat: no-repeat;
   background-position: center left 1rem;
 }
-.calc__in-bill::-moz-placeholder {
-  color: #9cb3b4;
-}
-.calc__in-bill:-ms-input-placeholder {
-  color: #9cb3b4;
-}
 .calc__in-bill::placeholder {
   color: #9cb3b4;
-}
-.calc__in-bill:focus::-moz-placeholder {
-  opacity: 0;
-}
-.calc__in-bill:focus:-ms-input-placeholder {
-  opacity: 0;
 }
 .calc__in-bill:focus::placeholder {
   opacity: 0;
 }
 
 .calc__tips {
-  padding-top: 1.4rem;
-  padding-bottom: 1.37rem;
+  padding-top: 1.66rem;
+  padding-bottom: 1.6rem;
 }
 
 .calc__tips-btns {
   display: grid;
-  padding-top: 0.52rem;
+  padding-top: 0.6rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
@@ -275,31 +275,14 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-.calc__tip-field::-moz-placeholder {
-  color: #9cb3b4;
+.calc__tip-field {
+  padding: 0.4rem 0.75rem;
 }
-
-.calc__tip-field:-ms-input-placeholder {
-  color: #9cb3b4;
-}
-
 .calc__tip-field::placeholder {
   color: #9cb3b4;
 }
-.calc__tip-field:focus::-moz-placeholder {
-  opacity: 0;
-}
-.calc__tip-field:focus:-ms-input-placeholder {
-  opacity: 0;
-}
 .calc__tip-field:focus::placeholder {
   opacity: 0;
-}
-.calc__tip-field::-moz-placeholder {
-  color: #7f9c9f;
-}
-.calc__tip-field:-ms-input-placeholder {
-  color: #7f9c9f;
 }
 .calc__tip-field::placeholder {
   color: #7f9c9f;
@@ -310,20 +293,8 @@ input[type=number]::-webkit-outer-spin-button {
   background-repeat: no-repeat;
   background-position: center left 1rem;
 }
-.calc__in-num-pple::-moz-placeholder {
-  color: #9cb3b4;
-}
-.calc__in-num-pple:-ms-input-placeholder {
-  color: #9cb3b4;
-}
 .calc__in-num-pple::placeholder {
   color: #9cb3b4;
-}
-.calc__in-num-pple:focus::-moz-placeholder {
-  opacity: 0;
-}
-.calc__in-num-pple:focus:-ms-input-placeholder {
-  opacity: 0;
 }
 .calc__in-num-pple:focus::placeholder {
   opacity: 0;
@@ -342,7 +313,8 @@ input[type=number]::-webkit-outer-spin-button {
 @media only screen and (min-width: 800px) {
   .calc__output {
     flex-basis: 50%;
-    margin: 0;
+    margin: 2rem;
+    padding: 2.25rem 2.5rem;
   }
 }
 
@@ -355,7 +327,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 @media only screen and (max-width: 330px) {
   .calc__results-cont {
@@ -372,7 +344,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc__result {
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 2.9rem);
   color: #26c0ab;
 }
 
@@ -407,6 +379,7 @@ input[type=number]::-webkit-outer-spin-button {
 .attribution {
   padding: 1rem;
   font-size: 11px;
+  font-weight: 300;
   text-align: center;
   color: #7f9c9f;
 }

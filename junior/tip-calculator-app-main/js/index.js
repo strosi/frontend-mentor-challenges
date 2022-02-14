@@ -30,7 +30,7 @@ tipBtns.forEach(btn => {
         isTipValid = true;
 
         // Clear the custom tip field when some of the tip buttons is selected
-        e.target.parentNode.querySelector('input').focus(inputCustom.value = '');
+        e.target.parentNode.querySelector('#custom-tip').focus(inputCustom.value = '');
 
         if (isBillValid && isTipValid && isPplNumValid) {
             const result = calculate(billValue, tipValue, pplNumValue);
