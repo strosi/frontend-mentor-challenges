@@ -30,7 +30,7 @@ tipBtns.forEach(btn => {
         isTipValid = true;
 
         // Clear the custom tip field when some of the tip buttons is selected
-        e.target.parentNode.querySelector('#custom-tip').focus(inputCustom.value = '');
+        inputCustom.value = '';
 
         if (isBillValid && isTipValid && isPplNumValid) {
             const result = calculate(billValue, tipValue, pplNumValue);
@@ -77,7 +77,7 @@ inputs.forEach(inp => {
 
 inputCustom.addEventListener('input', (e) => {
     clearTipBtns(tipBtns);
-    tipValue = '';
+    tipValue = parseInt(e.target.value);
 
     if (!checkIfAllValuesEmpty([billValue, tipValue, pplNumValue])) {
         btnReset.classList.add('calc__reset--active');
@@ -152,6 +152,12 @@ const hideError = (field) => {
 }
 
 const resetCalculator = (fields, elTip, elTotal) => {
+    billValue = 0;
+    tipValue = 0;
+    pplNumValue = 0;
+    isBillValid = false;
+    isTipValid = false;
+    isPplNumValid = false;
     fields[0].value = '';
     fields[1].value = '';
     fields[2].value = '';
