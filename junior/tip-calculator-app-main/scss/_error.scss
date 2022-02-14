@@ -14,10 +14,22 @@
 }
 
 .custom-tip-error {
-    top: 3.2rem;
+    top: 15.65rem;
+
+    @include respond-tiny-width {
+        top: 27.8rem;
+    }
+
+    @include respond-tablet {
+        top: 11.6rem;
+    }
 
     @include respond-medium {
-        top: 0;
+        top: 2.6rem;
+    }
+
+    @include respond-desktop {
+        top: 2.6rem;
     }
 }
 

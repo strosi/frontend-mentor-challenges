@@ -228,6 +228,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc__tips {
+  position: relative;
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
 }
@@ -409,11 +410,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .custom-tip-error {
-  top: 3.2rem;
+  top: 15.65rem;
+}
+@media only screen and (max-width: 330px) {
+  .custom-tip-error {
+    top: 27.8rem;
+  }
+}
+@media only screen and (min-width: 520px) {
+  .custom-tip-error {
+    top: 11.6rem;
+  }
 }
 @media only screen and (min-width: 800px) {
   .custom-tip-error {
-    top: 0;
+    top: 2.6rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .custom-tip-error {
+    top: 2.6rem;
   }
 }
 
