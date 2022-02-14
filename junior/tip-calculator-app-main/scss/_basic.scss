@@ -4,17 +4,13 @@
 body {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     width: 100%;
     font-family: $ff;
     font-size: $fs;
     font-weight: 700;
     color: $neutral-dark-43;
     background-color: $neutral-light;
-}
-
-main {
-    margin-top: 7rem;
 }
 
 form {
@@ -89,7 +85,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .calc {
     margin: 0 auto;
-    // padding: clamp(1.5rem, 4.5vw, 2rem);
     padding: 1.5rem;
     width: 100%;
     background-color: $white;
@@ -143,13 +138,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc__tips {
-    padding-top: 1.66rem;
-    padding-bottom: 1.6rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+
+    @include respond-medium {
+        padding-top: 1.66rem;
+        padding-bottom: 1.6rem;
+    }
 }
 
 .calc__tips-btns {
     display: grid;
-    padding-top: 0.6rem;
+    padding-top: 0.66rem;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 
@@ -163,6 +163,7 @@ input[type=number]::-webkit-outer-spin-button {
 
     @include respond-medium {
         grid-template-columns: repeat(2, 1fr);
+        padding-top: 0.6rem;
     }
 
     @include respond-desktop {
@@ -225,10 +226,14 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 
     @include respond-tiny-width {
         flex-direction: column;
+    }
+
+    @include respond-medium {
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -252,14 +257,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1.25rem;
     text-transform: uppercase;
     @include btn-theme($neutral-dark-bg-bright);
-    
-    @include respond-medium {
-        transition: all 0.7s;
-
-        &:active {
-            transform: scale(0.9);
-        }
-    }
 }
 
 .calc__reset--active {
@@ -269,5 +266,12 @@ input[type=number]::-webkit-outer-spin-button {
     &:hover {
         @include btn-theme($primary-light);
         cursor: pointer;
+    }
+    
+    @include respond-medium {
+
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }

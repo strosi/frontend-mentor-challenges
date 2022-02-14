@@ -1,14 +1,24 @@
+@use 'mixins' as *;
+
 .error {
     position: absolute;
-    top: 5.2rem;
+    top: 5.5rem;
     right: 0;
     display: none;
     font-size: 0.95rem;
     color: red;
+
+    @include respond-medium {
+        top: 1rem;
+    }
 }
 
 .custom-tip-error {
-    top: 3rem;
+    top: 3.2rem;
+
+    @include respond-medium {
+        top: 0;
+    }
 }
 
 .show-error {

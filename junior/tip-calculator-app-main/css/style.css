@@ -87,16 +87,13 @@ h6 {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   font-family: "Space Mono", sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #5e7a7d;
   background-color: #c5e4e7;
-}
-
-main {
-  margin-top: 7rem;
 }
 
 form {
@@ -231,13 +228,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .calc__tips {
-  padding-top: 1.66rem;
-  padding-bottom: 1.6rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+@media only screen and (min-width: 800px) {
+  .calc__tips {
+    padding-top: 1.66rem;
+    padding-bottom: 1.6rem;
+  }
 }
 
 .calc__tips-btns {
   display: grid;
-  padding-top: 0.6rem;
+  padding-top: 0.66rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
@@ -254,6 +257,7 @@ input[type=number]::-webkit-outer-spin-button {
 @media only screen and (min-width: 800px) {
   .calc__tips-btns {
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 0.6rem;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -327,11 +331,16 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 @media only screen and (max-width: 330px) {
   .calc__results-cont {
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .calc__results-cont {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -356,14 +365,6 @@ input[type=number]::-webkit-outer-spin-button {
   color: #00494d;
   background-color: #006166;
 }
-@media only screen and (min-width: 800px) {
-  .calc__reset {
-    transition: all 0.7s;
-  }
-  .calc__reset:active {
-    transform: scale(0.9);
-  }
-}
 
 .calc__reset--active {
   color: #00494d;
@@ -374,6 +375,11 @@ input[type=number]::-webkit-outer-spin-button {
   color: #00494d;
   background-color: #9de2d9;
   cursor: pointer;
+}
+@media only screen and (min-width: 800px) {
+  .calc__reset--active:active {
+    transform: scale(0.9);
+  }
 }
 
 .attribution {
@@ -390,15 +396,25 @@ input[type=number]::-webkit-outer-spin-button {
 
 .error {
   position: absolute;
-  top: 5.2rem;
+  top: 5.5rem;
   right: 0;
   display: none;
   font-size: 0.95rem;
   color: red;
 }
+@media only screen and (min-width: 800px) {
+  .error {
+    top: 1rem;
+  }
+}
 
 .custom-tip-error {
-  top: 3rem;
+  top: 3.2rem;
+}
+@media only screen and (min-width: 800px) {
+  .custom-tip-error {
+    top: 0;
+  }
 }
 
 .show-error {
