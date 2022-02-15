@@ -4,7 +4,8 @@ Below in the list are the links to my solutions.
   
 ### JUNIOR level  
 --01-- HTML | SASS | JS - [Time tracking dashboard](https://strosi.github.io/frontend-mentor-challenges/junior/time-tracking-dashboard-main) --> finished  
---02-- HTML | SASS | JS - [Tip calculator app](https://strosi.github.io/frontend-mentor-challenges/junior/tip-calculator-app-main) --> <em>in progress...</em>  
+--02-- HTML | SASS | JS - [Tip calculator app](https://strosi.github.io/frontend-mentor-challenges/junior/tip-calculator-app-main) --> finished  
+--03-- HTML | SASS | ... - [Sunnyside agency landing page](https://strosi.github.io/frontend-mentor-challenges/junior/sunnyside-agency-landing-page-main) --> <em>in progress...</em>  
   
 ### NEWBIE level  
 --01-- HTML | CSS ------- [NFT preview card component](https://strosi.github.io/frontend-mentor-challenges/nft-preview-card-component-main) --> finished  
