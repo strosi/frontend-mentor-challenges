@@ -57,9 +57,15 @@ input[type="radio"]:checked + label {
 }
 
 /* Turn off number input spinners */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
-  opacity: 0;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 /* Used to hide the calculator description title */
@@ -268,9 +274,8 @@ input[type=number]::-webkit-outer-spin-button {
         @include btn-theme($primary-light);
         cursor: pointer;
     }
-    
-    @include respond-medium {
 
+    @include respond-medium {
         &:active {
             transform: scale(0.9);
         }
