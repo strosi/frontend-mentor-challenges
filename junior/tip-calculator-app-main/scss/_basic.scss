@@ -1,5 +1,6 @@
-@use "utilities" as *;
-@use "mixins" as *;
+@use 'utilities' as *;
+@use 'mixins' as *;
+@use 'sass:color';
 
 body {
     display: flex;
@@ -57,13 +58,13 @@ input[type="radio"]:checked + label {
 }
 
 /* Turn off number input spinners */
-/* Chrome, Safari, Edge, Opera */
+/* -> for Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/* Firefox */
+/* -> for Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
 }
@@ -95,6 +96,7 @@ input[type="number"] {
     width: 100%;
     background-color: $white;
     border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 2rem 0 color.adjust($neutral-dark-43, $saturation: 20%, $alpha: -0.8);
 
     @include respond-tablet {
         width: 90%;
@@ -233,7 +235,7 @@ input[type="number"] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 
     @include respond-tiny-width {
         flex-direction: column;

@@ -139,14 +139,14 @@ input[type=radio]:checked + label {
 }
 
 /* Turn off number input spinners */
-/* Chrome, Safari, Edge, Opera */
+/* -> for Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
+/* -> for Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -178,6 +178,7 @@ input[type=number] {
   width: 100%;
   background-color: white;
   border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 2rem 0 rgba(72, 139, 147, 0.2);
 }
 @media only screen and (min-width: 520px) {
   .calc {
@@ -339,7 +340,7 @@ input[type=number] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 @media only screen and (max-width: 330px) {
   .calc__results-cont {
@@ -408,7 +409,7 @@ input[type=number] {
   right: 0;
   display: none;
   font-size: 0.95rem;
-  color: red;
+  color: #ff7a7a;
   overflow: hidden;
 }
 .error span {
@@ -451,7 +452,7 @@ input[type=number] {
   transition: 0.5s ease-in;
 }
 .show-error ~ input[type=number] {
-  outline: 2px solid red;
+  outline: 2px solid #ff7a7a;
 }
 .show-error span {
   animation: revealDig 0.3s cubic-bezier(0.77, 0, 0.175, 1);
