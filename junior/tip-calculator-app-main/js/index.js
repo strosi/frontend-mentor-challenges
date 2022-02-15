@@ -32,16 +32,7 @@ tipBtns.forEach(btn => {
         // Clear the custom tip field when some of the tip buttons is selected
         inputCustom.value = '';
 
-        if (isBillValid && isTipValid && isPplNumValid) {
-            const result = calculate(billValue, tipValue, pplNumValue);
-            printResult(result, resultTip, resultTotal);
-        }
-
-        if (!checkIfAllValuesEmpty([billValue, tipValue, pplNumValue])) {
-            btnReset.classList.add('calc__reset--active');
-        } else {
-            btnReset.classList.remove('calc__reset--active');
-        }
+        manageFieldsAndButnsState();
     })
 });
 
@@ -55,35 +46,16 @@ inputs.forEach(inp => {
             billValue = parseFloat(inputEl.value);
             isBillValid = checkIfPositive(inputEl);
         } else if (inputEl.id === 'custom-tip') {
-            tipValue = parseFloat(inputEl.value);
+            tipValue = parseInt(inputEl.value);
             isTipValid = checkIfPositive(inputEl);
+            clearTipBtns(tipBtns);
         } else {
             pplNumValue = parseFloat(inputEl.value);
             isPplNumValid = checkIfPositive(inputEl);
         }
 
-        if (isBillValid && isTipValid && isPplNumValid) {
-            const result = calculate(billValue, tipValue, pplNumValue);
-            printResult(result, resultTip, resultTotal);
-        }
-
-        if (!checkIfAllValuesEmpty([billValue, tipValue, pplNumValue])) {
-            btnReset.classList.add('calc__reset--active');
-        } else {
-            btnReset.classList.remove('calc__reset--active');
-        }
+        manageFieldsAndButnsState();
     })
-});
-
-inputCustom.addEventListener('input', (e) => {
-    clearTipBtns(tipBtns);
-    tipValue = parseInt(e.target.value);
-
-    if (!checkIfAllValuesEmpty([billValue, tipValue, pplNumValue])) {
-        btnReset.classList.add('calc__reset--active');
-    } else {
-        btnReset.classList.remove('calc__reset--active');
-    }
 });
 
 btnReset.addEventListener('click', (e) => {
@@ -92,7 +64,19 @@ btnReset.addEventListener('click', (e) => {
     e.target.classList.remove('calc__reset--active');
 });
 
-// Function that is called when some of the tip buttons/field is clicked/pressed Enter
+const manageFieldsAndButnsState = () => {
+    if (isBillValid && isTipValid && isPplNumValid) {
+        const result = calculate(billValue, tipValue, pplNumValue);
+        printResult(result, resultTip, resultTotal);
+    }
+
+    if (!checkIfAllValuesEmpty([billValue, tipValue, pplNumValue])) {
+        btnReset.classList.add('calc__reset--active');
+    } else {
+        btnReset.classList.remove('calc__reset--active');
+    }
+}
+
 const calculate = (bill, tip, numPpl) => {
     const calcTipAmount = ((bill * tip) / 100) / numPpl;
     const calcTotal = (bill / numPpl) + calcTipAmount;
@@ -140,8 +124,10 @@ const clearTipBtns = (btns) => {
 }
 
 const showError = (field, errorMsg) => {
+    const textHolder = document.createElement('span');
+    textHolder.appendChild(document.createTextNode(errorMsg));
     const errorEl = field.parentNode.querySelector('.error');
-    errorEl.innerHTML = errorMsg;
+    errorEl.appendChild(textHolder);
     errorEl.classList.add('show-error');
 }
 

@@ -7,6 +7,13 @@
     display: none;
     font-size: 0.95rem;
     color: red;
+    overflow: hidden;
+
+    & span {
+        display: inline-block;
+        transform: translateY(1rem);
+        opacity: 0;
+    }
 
     @include respond-medium {
         top: 1rem;
@@ -35,8 +42,29 @@
 
 .show-error {
     display: block;
+    transition: 0.5s ease-in;
+
 
     & ~ input[type='number'] {
         outline: 2px solid red;
+    }
+
+    & span {
+        animation: revealDig 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+        transform: translateY(0);
+        opacity: 1;
+    transition: 0.5s ease-in;
+
+    }
+}
+
+@keyframes revealDig {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
