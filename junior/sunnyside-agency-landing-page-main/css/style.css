@@ -1,36 +1,354 @@
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow percentage-based heights in the application.
+   (On adding height: 100% to the html selector the beginning of the page is cutted if justify-content: center is set.)
+*/
+body {
+  min-height: 100vh;
+}
+
+/* Typographic tweaks!
+   - Add accessible line-height
+   - Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* Remove built-in form typography styles. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll 
+   for people that prefer not to see them.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* COLORS */
 /* Primary */
 /* Neutral */
 /* FONTS */
 /* Font family */
 /* Font size (form inputs) */
+/* MEASURES */
+/* Padding to set equal left and right space 
+   in mobile view to all body's children */
 body {
   width: 100%;
   font-family: "Barlow", sans-serif;
   font-size: 18px;
+  text-align: center;
   color: #5a636c;
 }
 
 h1,
 h2,
-.intro__learn-more,
-.client__name {
+.about__learn-more,
+.client__info-name {
   font-family: "Fraunces", serif;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
   list-style: none;
 }
 
+/* --- HEADER ---*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2rem;
+  background-image: url("../images/mobile/image-header.jpg");
+}
+
+.header__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__title {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.header__arrow-btn {
+  width: 2rem;
+}
+
+/* --- INTRO ---*/
+.about__img {
+  width: 100%;
+  min-height: 19rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__img--transf {
+  background-image: url(../images/mobile/image-transform.jpg);
+}
+
+.about__img--stand-out {
+  background-image: url(../images/mobile/image-stand-out.jpg);
+}
+
+.about__content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.about__content-title {
+  font-size: 2rem;
+  color: #23303e;
+}
+
+.about__content-text {
+  padding: 2rem 0;
+}
+
+.about__learn-more {
+  position: relative;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #23303e;
+}
+.about__learn-more::after {
+  position: absolute;
+  left: 50%;
+  top: 0.7rem;
+  transform: translateX(-50%);
+  width: 115%;
+  height: 10px;
+  content: "";
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.about__learn-more--transf::after {
+  background-color: #fff3ad;
+}
+.about__learn-more--transf:hover::after {
+  background-color: #fad400;
+}
+
+.about__learn-more--stand-out::after {
+  background-color: #ffd2cc;
+}
+.about__learn-more--stand-out:hover::after {
+  background-color: #fe7867;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  min-height: 35rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top 0;
+}
+
+.service--design {
+  color: #25564b;
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+}
+
+.service--photogr {
+  color: #19536b;
+  background-image: url("../images/mobile/image-photography.jpg");
+}
+
+.service__text {
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* --- TESTIMONIALS ---*/
+.testimonials {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.testimon-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #a7abae;
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.client__avatar {
+  width: 3.5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.client__testimon {
+  padding: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.client__info-name {
+  color: #23303e;
+}
+
+.client__info-position {
+  padding-top: 0.7rem;
+  font-size: 0.8rem;
+  color: #a7abae;
+}
+
+/* --- GELLARY ---*/
+.gellary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gellary__item {
+  width: 100%;
+  height: 50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gellary__item--01 {
+  background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+}
+
+.gellary__item--02 {
+  background-image: url("../images/mobile/image-gallery-orange.jpg");
+}
+
+.gellary__item--03 {
+  background-image: url("../images/mobile/image-gallery-cone.jpg");
+}
+
+.gellary__item--04 {
+  background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+/* --- FOOTER ---*/
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #8bc6ba;
+}
+
+.footer__logo {
+  margin: 0 auto;
+  width: 10rem;
+}
+.footer__logo path {
+  fill: #2C7566;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2.5rem 0;
+}
+
+.footer__nav-item a {
+  color: #458c7e;
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem 0;
+  max-width: 10rem;
+}
+
+.footer__social-icon {
+  width: 1.2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: #458c7e;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #2C7566;
 }

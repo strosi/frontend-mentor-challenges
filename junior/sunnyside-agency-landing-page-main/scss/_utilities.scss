@@ -4,9 +4,13 @@
 /* Primary */
 $fc-dark-cyan: hsl(167, 40%, 24%);
 $fc-dark-blue: hsl(198, 62%, 26%);
+$svg-color: #2C7566;
 $bg-cyan: hsl(168, 34%, 41%);
+$bg-cyan-light: color.adjust($bg-cyan, $lightness: 25%);
 $yellow: hsl(51, 100%, 49%);
+$yellow-light: color.adjust($yellow, $lightness: 35%);
 $soft-red: hsl(7, 99%, 70%);
+$soft-red-light: color.adjust($soft-red, $lightness: 20%);
 
 /* Neutral */
 $fc-title-base: hsl(212, 27%, 19%);
@@ -22,3 +26,11 @@ $ff-title: 'Fraunces', serif;
 
 /* Font size (form inputs) */
 $fs: 18px;
+
+/* MEASURES */
+/* Padding to set equal left and right space 
+   in mobile view to all body's children */
+@mixin mob-space-lr {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;;
+}
