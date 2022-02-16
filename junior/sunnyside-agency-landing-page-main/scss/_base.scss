@@ -1,0 +1,24 @@
+@use "utilities" as *;
+@use "mixins" as *;
+
+body {
+    width: 100%;
+    font-family: $ff-paragraph;
+    font-size: $fs;
+    color: $fc-paragraph;
+}
+
+h1,
+h2,
+.intro__learn-more,
+.client__name {
+    font-family: $ff-title;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

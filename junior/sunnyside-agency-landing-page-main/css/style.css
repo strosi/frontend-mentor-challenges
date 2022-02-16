@@ -1,0 +1,36 @@
+/* COLORS */
+/* Primary */
+/* Neutral */
+/* FONTS */
+/* Font family */
+/* Font size (form inputs) */
+body {
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: #5a636c;
+}
+
+h1,
+h2,
+.intro__learn-more,
+.client__name {
+  font-family: "Fraunces", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}

@@ -1,0 +1,24 @@
+@use "sass:color";
+
+/* COLORS */
+/* Primary */
+$fc-dark-cyan: hsl(167, 40%, 24%);
+$fc-dark-blue: hsl(198, 62%, 26%);
+$bg-cyan: hsl(168, 34%, 41%);
+$yellow: hsl(51, 100%, 49%);
+$soft-red: hsl(7, 99%, 70%);
+
+/* Neutral */
+$fc-title-base: hsl(212, 27%, 19%);
+$fc-paragraph: hsl(213, 9%, 39%);
+$fc-neutral: hsl(232, 10%, 55%);
+$fc-neutral-light: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+/* FONTS */
+/* Font family */
+$ff-paragraph: 'Barlow', sans-serif;
+$ff-title: 'Fraunces', serif;
+
+/* Font size (form inputs) */
+$fs: 18px;

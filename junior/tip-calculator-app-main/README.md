@@ -72,6 +72,14 @@ const checkIfAllValuesEmpty = (values) => {
 - [JS - Detect when a user clears a field](https://stackoverflow.com/questions/31471575/js-detect-when-a-user-clears-a-field) - From here I came to the `NaN || ''` which returns empty string. Though I didn't use it in the final solution it was interesting to know that...
 - [Number.prototype.toFixed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) - Rounds the results of the calculation...
 
+### Time to complete
+
+- HTML -> 40 min (thinking of proper class names took some time...);
+- Sass -> 8 h (more of this time is for little adjustments);
+- JS -> 8 h (this include to think of how different parts work together - to decide when Reset button should be active, when to show end result, how to clear the selected tip button on entering new tip in the tip field, how to clear the tip field when tip button is selected, input validity and so on...).
+
+The overall time was about 17 h.
+
 ## Acknowledgments
 
 Always thankful to all smart people who share their work on the net (articles, solutions, videos, answers...)!
