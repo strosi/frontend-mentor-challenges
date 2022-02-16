@@ -108,6 +108,18 @@ li {
   list-style: none;
 }
 
+/* Used to hide checkbox and being accessible 
+   at the same time */
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* --- HEADER ---*/
 .header {
   display: flex;
@@ -124,6 +136,18 @@ li {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+.header__mob-nav-btn {
+  display: block;
+  width: 2rem;
+}
+.header__mob-nav-btn:hover {
+  cursor: pointer;
+}
+
+.header__nav-item a {
+  color: #818498;
 }
 
 .header__title {
@@ -329,6 +353,9 @@ li {
 .footer__nav-item a {
   color: #458c7e;
 }
+.footer__nav-item:hover a {
+  color: white;
+}
 
 .footer__socials {
   display: flex;
@@ -342,6 +369,9 @@ li {
 .footer__social-icon {
   width: 1.2rem;
 }
+.footer__social-icon:hover path {
+  fill: white;
+}
 
 .attribution {
   font-size: 11px;
@@ -351,4 +381,7 @@ li {
 
 .attribution a {
   color: #2C7566;
+}
+.attribution a:hover {
+  color: white;
 }

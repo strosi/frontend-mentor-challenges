@@ -27,6 +27,18 @@ li {
     list-style: none;
 }
 
+/* Used to hide checkbox and being accessible 
+   at the same time */
+   .vh {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
 /* --- HEADER ---*/
 .header {
     display: flex;
@@ -42,6 +54,21 @@ li {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.header__mob-nav-btn {
+    display: block;
+    width: 2rem;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header__nav-item {
+    a {
+        color: $fc-neutral;
+    }
 }
 
 .header__title {
@@ -252,6 +279,10 @@ li {
     a {
         color: $bg-cyan;
     }
+
+    &:hover a {
+        color: $white;
+    }
 }
 
 .footer__socials {
@@ -265,4 +296,8 @@ li {
 
 .footer__social-icon {
     width: 1.2rem;
+
+    &:hover path {
+        fill: $white;
+    }
 }

@@ -8,4 +8,8 @@
 
 .attribution a {
     color: $svg-color;
+
+    &:hover {
+        color: $white;
+    }
 }
