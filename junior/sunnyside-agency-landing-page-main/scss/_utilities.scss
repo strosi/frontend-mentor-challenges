@@ -6,7 +6,7 @@ $fc-dark-cyan: hsl(167, 40%, 24%);
 $fc-dark-blue: hsl(198, 62%, 26%);
 $svg-color: #2C7566;
 $bg-cyan: hsl(168, 34%, 41%);
-$bg-cyan-light: color.adjust($bg-cyan, $lightness: 25%);
+$bg-cyan-light: color.adjust(color.adjust($bg-cyan, $lightness: 25%), $saturation: 10%);
 $yellow: hsl(51, 100%, 49%);
 $yellow-light: color.adjust($yellow, $lightness: 35%);
 $soft-red: hsl(7, 99%, 70%);

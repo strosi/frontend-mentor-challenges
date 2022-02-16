@@ -12,7 +12,8 @@ body {
 h1,
 h2,
 .about__learn-more,
-.client__info-name {
+.client__info-name,
+.header__nav-item--contacts {
     font-family: $ff-title;
     font-weight: 900;
     line-height: 1.2;
@@ -46,38 +47,95 @@ li {
     align-items: center;
     @include mob-space-lr;
     padding-top: 2rem;
-    background-image: url("../images/mobile/image-header.jpg");
+    width: 100%;
+    min-height: 33rem;
+    background-image: url(../images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 }
 
 .header__top {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
+// .header__nav {
+// }
+
 .header__mob-nav-btn {
     display: block;
-    width: 2rem;
+    width: 1.5rem;
     
     &:hover {
         cursor: pointer;
     }
 }
 
+input[type='checkbox']:checked ~ .header__nav-list {
+    display: block;
+}
+
+.header__nav-list {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    padding: 1.5rem;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-1.5rem);
+        transform: rotate(90deg);
+        transform-origin: top right;
+        content: '';
+        border-right: 1.5rem solid white;
+        border-left: 1.5rem solid transparent;
+        border-bottom: 1.5rem solid transparent;
+    }
+}
+
 .header__nav-item {
+    padding: 0.8rem;
     a {
+        font-size: 1.2rem;
         color: $fc-neutral;
     }
 }
 
+.header__nav-item--contacts {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 55%;
+    background-color: $yellow;
+    border-radius: 2rem;
+
+    a {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $fc-title-base;
+    }
+}
+
 .header__title {
+    padding-top: 5rem;
+    font-size: 2.4rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
     color: white;
 }
 
 .header__arrow-btn {
+    position: relative;
+    top: 3.5rem;
     width: 2rem;
 }
 
@@ -87,6 +145,7 @@ li {
     min-height: 19rem;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top 0;
 }
 
 .about__img--transf {
@@ -98,8 +157,8 @@ li {
 }
 
 .about__content {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 3.8rem;
+    padding-bottom: 3.8rem;
     @include mob-space-lr;
 }
 
@@ -156,10 +215,10 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    // padding-top: 5rem;
+    padding-bottom: 4rem;
     @include mob-space-lr;
-    min-height: 35rem;
+    min-height: 36.5rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top 0;
@@ -175,20 +234,25 @@ li {
     background-image: url("../images/mobile/image-photography.jpg");
 }
 
+.service__title {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+}
+
 .service__text {
-    padding-top: 1.5rem;
-    font-size: 0.95rem;
+    padding-top: 1.6rem;
+    font-size: 0.99rem;
 }
 
 /* --- TESTIMONIALS ---*/
 .testimonials {
-    padding-top: 3rem;
-    padding-bottom: 5rem;
+    padding-top: 3.8rem;
+    padding-bottom: 3.8rem;
     @include mob-space-lr;
 }
 
 .testimon-title {
-    font-size: 0.85rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: $fc-neutral-light;
@@ -198,18 +262,18 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 4rem;
 }
 
 .client__avatar {
-    width: 3.5rem;
-    border-radius: 2rem;
+    width: 4.3rem;
+    border-radius: 3rem;
     overflow: hidden;
 }
 
 .client__testimon {
-    padding: 1.5rem 0;
-    font-size: 1.1rem;
+    padding: 2rem 0;
+    font-size: 1.11rem;
 }
 
 .client__info-name {
