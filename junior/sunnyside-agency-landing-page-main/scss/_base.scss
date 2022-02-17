@@ -1,5 +1,6 @@
 @use "utilities" as *;
 @use "mixins" as *;
+@use "sass:color";
 
 body {
     width: 100%;
@@ -30,7 +31,7 @@ li {
 
 /* Used to hide checkbox and being accessible 
    at the same time */
-   .vh {
+.vh {
     position: absolute !important;
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0 !important;
@@ -56,7 +57,7 @@ li {
     background-position: center bottom;
 
     @include respond-500 {
-        padding-top: 3rem;  
+        padding-top: 3rem;
         height: 100vh;
         background-image: url(../images/desktop/image-header.jpg);
     }
@@ -67,12 +68,13 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
 .header__logo {
     width: clamp(6rem, 33vw, 8rem);
-    
+
     @include respond-500 {
         width: clamp(8rem, 25vw, 10.62rem);
     }
@@ -84,14 +86,22 @@ li {
 .header__mob-nav-btn {
     display: block;
     width: 1.5rem;
-    
+
     &:hover {
         cursor: pointer;
     }
+
+    @include respond-800 {
+        display: none;
+    }
 }
 
-input[type='checkbox']:checked ~ .header__nav-list {
+input[type="checkbox"]:checked ~ .header__nav-list {
     display: block;
+
+    @include respond-800 {
+        display: flex;
+    }
 }
 
 .header__nav-list {
@@ -111,24 +121,69 @@ input[type='checkbox']:checked ~ .header__nav-list {
         transform: translateY(-1.5rem);
         transform: rotate(90deg);
         transform-origin: top right;
-        content: '';
+        content: "";
         border-right: 1.5rem solid white;
         border-left: 1.5rem solid transparent;
         border-bottom: 1.5rem solid transparent;
+    }
+
+    @include respond-800 {
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding: 0;
+        background: none;
+
+        &::before {
+            display: none;
+        }
     }
 }
 
 .header__nav-item {
     padding: 0.8rem;
+
     a {
         font-size: 1.2rem;
         color: $fc-neutral;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include respond-800 {
+        position: relative;
+        padding: 0 1.8rem;
+
+        a {
+            color: $white;
+        }
+
+        &:not(.header__nav-item--contacts)::after {
+            position: absolute;
+            left: 15%;
+            top: 2.2rem;
+            width: 70%;
+            height: 10px;
+            content: "";
+            transform: scaleX(0);
+            background-color: color.adjust($white, $alpha: -0.7);
+            border-radius: 1rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
     }
 }
 
 .header__nav-item--contacts {
     margin: 1rem auto;
-    padding: 1rem;
+    padding: 1.2rem 2rem;
     width: 55%;
     background-color: $yellow;
     border-radius: 2rem;
@@ -137,6 +192,21 @@ input[type='checkbox']:checked ~ .header__nav-list {
         font-size: 1rem;
         text-transform: uppercase;
         color: $fc-title-base;
+    }
+
+    @include respond-800 {
+        margin: 0 0 0 1.8rem;
+        background-color: $white;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: color.adjust($white, $alpha: -0.7%);
+            cursor: pointer;
+
+            a {
+                color: white;
+            }
+        }
     }
 }
 
@@ -186,7 +256,7 @@ input[type='checkbox']:checked ~ .header__nav-list {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top 0;
-    
+
     @include respond-800 {
         flex-basis: 50%;
         align-self: stretch;
@@ -209,7 +279,7 @@ input[type='checkbox']:checked ~ .header__nav-list {
 
 .about__img--stand-out {
     background-image: url(../images/mobile/image-stand-out.jpg);
-    
+
     @include respond-800 {
         background-image: url(../images/mobile/image-stand-out.jpg);
     }
@@ -302,19 +372,19 @@ input[type='checkbox']:checked ~ .header__nav-list {
 
 .service--design {
     color: $fc-dark-cyan;
-    background-image: url('../images/mobile/image-graphic-design.jpg');
+    background-image: url("../images/mobile/image-graphic-design.jpg");
 
     @include respond-500 {
-        background-image: url('../images/desktop/image-graphic-design.jpg');
+        background-image: url("../images/desktop/image-graphic-design.jpg");
     }
 }
 
 .service--photogr {
     color: $fc-dark-blue;
-    background-image: url('../images/mobile/image-photography.jpg');
+    background-image: url("../images/mobile/image-photography.jpg");
 
     @include respond-500 {
-        background-image: url('../images/desktop/image-photography.jpg');
+        background-image: url("../images/desktop/image-photography.jpg");
     }
 }
 
@@ -412,19 +482,19 @@ input[type='checkbox']:checked ~ .header__nav-list {
 }
 
 .gellary__item--01 {
-    background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
+    background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
 }
 
 .gellary__item--02 {
-    background-image: url('../images/mobile/image-gallery-orange.jpg');
+    background-image: url("../images/mobile/image-gallery-orange.jpg");
 }
 
 .gellary__item--03 {
-    background-image: url('../images/mobile/image-gallery-cone.jpg');
+    background-image: url("../images/mobile/image-gallery-cone.jpg");
 }
 
 .gellary__item--04 {
-    background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
+    background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
 }
 
 /* --- FOOTER ---*/

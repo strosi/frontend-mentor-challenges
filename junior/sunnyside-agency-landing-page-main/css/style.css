@@ -150,6 +150,7 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
@@ -169,9 +170,19 @@ li {
 .header__mob-nav-btn:hover {
   cursor: pointer;
 }
+@media only screen and (min-width: 800px) {
+  .header__mob-nav-btn {
+    display: none;
+  }
+}
 
 input[type=checkbox]:checked ~ .header__nav-list {
   display: block;
+}
+@media only screen and (min-width: 800px) {
+  input[type=checkbox]:checked ~ .header__nav-list {
+    display: flex;
+  }
 }
 
 .header__nav-list {
@@ -196,6 +207,20 @@ input[type=checkbox]:checked ~ .header__nav-list {
   border-left: 1.5rem solid transparent;
   border-bottom: 1.5rem solid transparent;
 }
+@media only screen and (min-width: 800px) {
+  .header__nav-list {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0;
+    background: none;
+  }
+  .header__nav-list::before {
+    display: none;
+  }
+}
 
 .header__nav-item {
   padding: 0.8rem;
@@ -204,10 +229,37 @@ input[type=checkbox]:checked ~ .header__nav-list {
   font-size: 1.2rem;
   color: #818498;
 }
+.header__nav-item:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 800px) {
+  .header__nav-item {
+    position: relative;
+    padding: 0 1.8rem;
+  }
+  .header__nav-item a {
+    color: white;
+  }
+  .header__nav-item:not(.header__nav-item--contacts)::after {
+    position: absolute;
+    left: 15%;
+    top: 2.2rem;
+    width: 70%;
+    height: 10px;
+    content: "";
+    transform: scaleX(0);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+  }
+  .header__nav-item:hover::after {
+    transform: scaleX(1);
+  }
+}
 
 .header__nav-item--contacts {
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 1.2rem 2rem;
   width: 55%;
   background-color: #fad400;
   border-radius: 2rem;
@@ -216,6 +268,20 @@ input[type=checkbox]:checked ~ .header__nav-list {
   font-size: 1rem;
   text-transform: uppercase;
   color: #23303e;
+}
+@media only screen and (min-width: 800px) {
+  .header__nav-item--contacts {
+    margin: 0 0 0 1.8rem;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+  }
+  .header__nav-item--contacts:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
+  .header__nav-item--contacts:hover a {
+    color: white;
+  }
 }
 
 .header__title {
