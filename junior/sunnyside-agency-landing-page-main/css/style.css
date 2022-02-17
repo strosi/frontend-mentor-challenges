@@ -367,7 +367,7 @@ input[type=checkbox]:checked ~ .header__nav-list {
 .service__item {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   padding-bottom: 4rem;
   padding-left: clamp(1.5rem, 6vw, 2.5rem);
   padding-right: clamp(1.5rem, 6vw, 2.5rem);

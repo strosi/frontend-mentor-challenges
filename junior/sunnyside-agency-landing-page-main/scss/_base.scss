@@ -286,7 +286,7 @@ input[type='checkbox']:checked ~ .header__nav-list {
 .service__item {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     // padding-top: 5rem;
     padding-bottom: 4rem;
     @include mob-space-lr;
