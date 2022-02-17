@@ -208,6 +208,12 @@ input[type=checkbox]:checked ~ .header__nav-list {
   border-left: 1.5rem solid transparent;
   border-bottom: 1.5rem solid transparent;
 }
+@media only screen and (max-width: 360px) {
+  .header__nav-list {
+    top: 3.5rem;
+    padding: 1.5rem 0.7rem;
+  }
+}
 @media only screen and (min-width: 800px) {
   .header__nav-list {
     position: relative;
@@ -233,12 +239,18 @@ input[type=checkbox]:checked ~ .header__nav-list {
 .header__nav-item:hover {
   cursor: pointer;
 }
+.header__nav-item:hover a {
+  color: #19536b;
+}
 @media only screen and (min-width: 800px) {
   .header__nav-item {
     position: relative;
-    padding: 0 1.8rem;
+    padding: 0 clamp(1.3rem, 2.5vw, 1.8rem);
   }
   .header__nav-item a {
+    color: white;
+  }
+  .header__nav-item:hover a {
     color: white;
   }
   .header__nav-item:not(.header__nav-item--contacts)::after {
@@ -264,17 +276,26 @@ input[type=checkbox]:checked ~ .header__nav-list {
   width: 55%;
   background-color: #fad400;
   border-radius: 2rem;
+  transition: 0.3s ease-in-out;
 }
 .header__nav-item--contacts a {
   font-size: 1rem;
   text-transform: uppercase;
   color: #23303e;
 }
+.header__nav-item--contacts:hover {
+  background-color: #fe7867;
+}
+@media only screen and (max-width: 360px) {
+  .header__nav-item--contacts {
+    padding: 1rem 1.5rem;
+    width: initial;
+  }
+}
 @media only screen and (min-width: 800px) {
   .header__nav-item--contacts {
     margin: 0 0 0 1.8rem;
     background-color: white;
-    transition: 0.3s ease-in-out;
   }
   .header__nav-item--contacts:hover {
     background-color: rgba(255, 255, 255, 0.3);
@@ -368,15 +389,16 @@ input[type=checkbox]:checked ~ .header__nav-list {
 }
 
 .about__content {
+  margin: 0 auto;
   padding-top: 3.8rem;
   padding-bottom: 3.8rem;
   padding-left: clamp(1.5rem, 6vw, 2.5rem);
   padding-right: clamp(1.5rem, 6vw, 2.5rem);
-  margin: 0 auto;
-  max-width: 37.5rem;
+  max-width: 35rem;
 }
 @media only screen and (min-width: 800px) {
   .about__content {
+    padding-left: 3rem;
     flex-basis: 50%;
     text-align: left;
   }
@@ -386,9 +408,20 @@ input[type=checkbox]:checked ~ .header__nav-list {
   font-size: 2rem;
   color: #23303e;
 }
+@media only screen and (min-width: 800px) {
+  .about__content-title {
+    font-size: clamp(2rem, 2.8vw, 3rem);
+  }
+}
 
 .about__content-text {
   padding: 2rem 0;
+  color: #818498;
+}
+@media only screen and (min-width: 800px) {
+  .about__content-text {
+    font-size: clamp(1.125rem, 1.3vw, 1.3rem);
+  }
 }
 
 .about__learn-more {
@@ -400,7 +433,7 @@ input[type=checkbox]:checked ~ .header__nav-list {
 .about__learn-more::after {
   position: absolute;
   left: 50%;
-  top: 0.7rem;
+  top: 0.8rem;
   transform: translateX(-50%);
   width: 115%;
   height: 10px;
@@ -475,10 +508,10 @@ input[type=checkbox]:checked ~ .header__nav-list {
 }
 
 .service__text {
+  margin: 0 auto;
+  max-width: 23rem;
   padding-top: 1.6rem;
   font-size: 0.99rem;
-  margin: 0 auto;
-  max-width: 37.5rem;
 }
 
 /* --- TESTIMONIALS ---*/
@@ -524,10 +557,10 @@ input[type=checkbox]:checked ~ .header__nav-list {
 }
 
 .client__testimon {
+  margin: 0 auto;
+  max-width: 23rem;
   padding: 2rem 0;
   font-size: 1.11rem;
-  margin: 0 auto;
-  max-width: 37.5rem;
 }
 @media only screen and (min-width: 800px) {
   .client__testimon {
@@ -610,12 +643,22 @@ input[type=checkbox]:checked ~ .header__nav-list {
   padding: 2.5rem 0;
   max-width: 32rem;
 }
+@media only screen and (max-width: 360px) {
+  .footer__nav {
+    flex-direction: column;
+  }
+}
 
 .footer__nav-item a {
   color: #458c7e;
 }
 .footer__nav-item:hover a {
   color: white;
+}
+@media only screen and (max-width: 360px) {
+  .footer__nav-item {
+    padding: 0.5rem 0;
+  }
 }
 
 .footer__socials {
