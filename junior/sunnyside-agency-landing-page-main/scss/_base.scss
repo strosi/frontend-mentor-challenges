@@ -59,6 +59,7 @@ li {
     @include respond-500 {
         padding-top: 3rem;
         height: 100vh;
+        min-height: 850px;
         background-image: url(../images/desktop/image-header.jpg);
     }
 }

@@ -141,6 +141,7 @@ li {
   .header {
     padding-top: 3rem;
     height: 100vh;
+    min-height: 850px;
     background-image: url(../images/desktop/image-header.jpg);
   }
 }
