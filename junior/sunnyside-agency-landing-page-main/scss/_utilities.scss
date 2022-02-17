@@ -6,7 +6,7 @@ $fc-dark-cyan: hsl(167, 40%, 24%);
 $fc-dark-blue: hsl(198, 62%, 26%);
 $svg-color: #2C7566;
 $bg-cyan: hsl(168, 34%, 41%);
-$bg-cyan-light: color.adjust(color.adjust($bg-cyan, $lightness: 25%), $saturation: 10%);
+$bg-cyan-light: color.adjust(color.adjust($bg-cyan, $lightness: 27%), $saturation: 10%);
 $yellow: hsl(51, 100%, 49%);
 $yellow-light: color.adjust($yellow, $lightness: 35%);
 $soft-red: hsl(7, 99%, 70%);
@@ -31,6 +31,11 @@ $fs: 18px;
 /* Padding to set equal left and right space 
    in mobile view to all body's children */
 @mixin mob-space-lr {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;;
+    padding-left: clamp(1.5rem, 6vw, 2.5rem);
+    padding-right: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+@mixin max-text-width-tablet {
+    margin: 0 auto;
+    max-width: 37.5rem;
 }

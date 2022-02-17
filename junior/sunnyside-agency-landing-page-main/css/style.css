@@ -123,18 +123,26 @@ li {
 
 /* --- HEADER ---*/
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: clamp(1.5rem, 6vw, 2.5rem);
+  padding-right: clamp(1.5rem, 6vw, 2.5rem);
   padding-top: 2rem;
   width: 100%;
-  min-height: 33rem;
+  height: 142vw;
   background-image: url(../images/mobile/image-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+}
+@media only screen and (min-width: 500px) {
+  .header {
+    padding-top: 3rem;
+    height: 100vh;
+    background-image: url(../images/desktop/image-header.jpg);
+  }
 }
 
 .header__top {
@@ -143,6 +151,15 @@ li {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+.header__logo {
+  width: clamp(6rem, 33vw, 8rem);
+}
+@media only screen and (min-width: 500px) {
+  .header__logo {
+    width: clamp(8rem, 25vw, 10.62rem);
+  }
 }
 
 .header__mob-nav-btn {
@@ -202,41 +219,100 @@ input[type=checkbox]:checked ~ .header__nav-list {
 }
 
 .header__title {
-  padding-top: 5rem;
-  font-size: 2.4rem;
+  padding-top: 24vw;
+  font-size: clamp(1rem, 10vw, 3.5rem);
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   color: white;
 }
+@media only screen and (max-width: 360px) {
+  .header__title {
+    letter-spacing: clamp(0.2rem, 1.5vw, 2.4rem);
+  }
+}
+@media only screen and (min-width: 500px) {
+  .header__title {
+    padding-top: 15vh;
+  }
+}
 
 .header__arrow-btn {
-  position: relative;
-  top: 3.5rem;
-  width: 2rem;
+  position: absolute;
+  top: 54%;
+  width: 2.2rem;
+}
+@media only screen and (max-width: 360px) {
+  .header__arrow-btn {
+    width: 10vw;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .header__arrow-btn {
+    top: 45%;
+  }
 }
 
 /* --- INTRO ---*/
+@media only screen and (min-width: 800px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 .about__img {
   width: 100%;
-  min-height: 19rem;
+  height: 83vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top 0;
+}
+@media only screen and (min-width: 800px) {
+  .about__img {
+    flex-basis: 50%;
+    align-self: stretch;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .about__img {
+    height: 42vw;
+  }
 }
 
 .about__img--transf {
   background-image: url(../images/mobile/image-transform.jpg);
 }
+@media only screen and (min-width: 800px) {
+  .about__img--transf {
+    order: 2;
+    background-image: url(../images/desktop/image-transform.jpg);
+  }
+}
 
 .about__img--stand-out {
   background-image: url(../images/mobile/image-stand-out.jpg);
+}
+@media only screen and (min-width: 800px) {
+  .about__img--stand-out {
+    background-image: url(../images/mobile/image-stand-out.jpg);
+  }
 }
 
 .about__content {
   padding-top: 3.8rem;
   padding-bottom: 3.8rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: clamp(1.5rem, 6vw, 2.5rem);
+  padding-right: clamp(1.5rem, 6vw, 2.5rem);
+  margin: 0 auto;
+  max-width: 37.5rem;
+}
+@media only screen and (min-width: 800px) {
+  .about__content {
+    flex-basis: 50%;
+    text-align: left;
+  }
 }
 
 .about__content-title {
@@ -281,27 +357,49 @@ input[type=checkbox]:checked ~ .header__nav-list {
   background-color: #fe7867;
 }
 
-.service {
+@media only screen and (min-width: 800px) {
+  .service {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.service__item {
   display: flex;
   flex-direction: column;
   justify-content: end;
   padding-bottom: 4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: clamp(1.5rem, 6vw, 2.5rem);
+  padding-right: clamp(1.5rem, 6vw, 2.5rem);
   min-height: 36.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top 0;
+}
+@media only screen and (min-width: 800px) {
+  .service__item {
+    flex-basis: 50%;
+  }
 }
 
 .service--design {
   color: #25564b;
   background-image: url("../images/mobile/image-graphic-design.jpg");
 }
+@media only screen and (min-width: 500px) {
+  .service--design {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+  }
+}
 
 .service--photogr {
   color: #19536b;
   background-image: url("../images/mobile/image-photography.jpg");
+}
+@media only screen and (min-width: 500px) {
+  .service--photogr {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
 }
 
 .service__title {
@@ -312,14 +410,16 @@ input[type=checkbox]:checked ~ .header__nav-list {
 .service__text {
   padding-top: 1.6rem;
   font-size: 0.99rem;
+  margin: 0 auto;
+  max-width: 37.5rem;
 }
 
 /* --- TESTIMONIALS ---*/
 .testimonials {
   padding-top: 3.8rem;
   padding-bottom: 3.8rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: clamp(1.5rem, 6vw, 2.5rem);
+  padding-right: clamp(1.5rem, 6vw, 2.5rem);
 }
 
 .testimon-title {
@@ -329,11 +429,25 @@ input[type=checkbox]:checked ~ .header__nav-list {
   color: #a7abae;
 }
 
+@media only screen and (min-width: 800px) {
+  .clients {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
 .client {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 4rem;
+}
+@media only screen and (min-width: 800px) {
+  .client {
+    max-width: 22rem;
+  }
 }
 
 .client__avatar {
@@ -345,6 +459,13 @@ input[type=checkbox]:checked ~ .header__nav-list {
 .client__testimon {
   padding: 2rem 0;
   font-size: 1.11rem;
+  margin: 0 auto;
+  max-width: 37.5rem;
+}
+@media only screen and (min-width: 800px) {
+  .client__testimon {
+    padding: 2rem 0.5rem;
+  }
 }
 
 .client__info-name {
@@ -362,12 +483,23 @@ input[type=checkbox]:checked ~ .header__nav-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media only screen and (min-width: 950px) {
+  .gellary {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 .gellary__item {
   width: 100%;
   height: 50vw;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+@media only screen and (min-width: 950px) {
+  .gellary__item {
+    height: 25vw;
+  }
 }
 
 .gellary__item--01 {
@@ -390,9 +522,9 @@ input[type=checkbox]:checked ~ .header__nav-list {
 .footer {
   padding-top: 3rem;
   padding-bottom: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  background-color: #82cebf;
+  padding-left: clamp(1.5rem, 6vw, 2.5rem);
+  padding-right: clamp(1.5rem, 6vw, 2.5rem);
+  background-color: #89d1c3;
 }
 
 .footer__logo {
@@ -407,7 +539,9 @@ input[type=checkbox]:checked ~ .header__nav-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 0 auto;
   padding: 2.5rem 0;
+  max-width: 32rem;
 }
 
 .footer__nav-item a {

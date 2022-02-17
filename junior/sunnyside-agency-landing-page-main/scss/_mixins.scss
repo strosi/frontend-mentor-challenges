@@ -1,0 +1,23 @@
+@mixin respond-tiny-width {
+    @media only screen and (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin respond-500 {
+    @media only screen and (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin respond-800 {
+    @media only screen and (min-width: 800px) {
+        @content;
+    }
+}
+
+@mixin respond-950 {
+    @media only screen and (min-width: 950px) {
+        @content;
+    }
+}
