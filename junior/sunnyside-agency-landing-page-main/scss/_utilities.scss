@@ -11,6 +11,7 @@ $yellow: hsl(51, 100%, 49%);
 $yellow-light: color.adjust($yellow, $lightness: 35%);
 $soft-red: hsl(7, 99%, 70%);
 $soft-red-light: color.adjust($soft-red, $lightness: 20%);
+$soft-red-lighter: color.adjust($soft-red, $lightness: 29%);
 
 /* Neutral */
 $fc-title-base: hsl(212, 27%, 19%);
@@ -36,9 +37,13 @@ $fs: 18px;
 $content-max-width: 1800px;
 
 @mixin mob-space-lr {
-    padding-left: clamp(1.5rem, 6vw, 2.5rem);
-    padding-right: clamp(1.5rem, 6vw, 2.5rem);
+    padding-left: clamp(1.5rem, 10vw, 8.5rem);
+    padding-right: clamp(1.5rem, 10vw, 8.5rem);
 }
+// @mixin mob-space-lr {
+//     padding-left: clamp(1.5rem, 6vw, 2.5rem);
+//     padding-right: clamp(1.5rem, 6vw, 2.5rem);
+// }
 
 @mixin max-text-width-tablet {
     margin: 0 auto;

@@ -89,6 +89,7 @@ body {
   font-size: 18px;
   text-align: center;
   color: #5a636c;
+  background-color: #fffbfa;
 }
 
 h1,
@@ -132,13 +133,13 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: clamp(1.5rem, 6vw, 2.5rem);
-  padding-right: clamp(1.5rem, 6vw, 2.5rem);
+  padding-left: clamp(1.5rem, 10vw, 8.5rem);
+  padding-right: clamp(1.5rem, 10vw, 8.5rem);
   margin: 0 auto;
   padding-top: 2rem;
   width: 100%;
   max-width: 1800px;
-  height: 142vw;
+  height: 143vw;
   background-image: url(../images/mobile/image-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +147,6 @@ li {
 }
 @media only screen and (min-width: 500px) {
   .header-inner-wrapper {
-    padding-top: 3rem;
     height: 100vh;
     max-height: 1024px;
     min-height: 850px;
@@ -203,7 +203,7 @@ li {
     top: 0;
     transform: scaleY(1);
     opacity: 1;
-    overflow: auto;
+    overflow: initial;
   }
 }
 
@@ -252,7 +252,7 @@ li {
   padding: 0.8rem;
 }
 .header__nav-item a {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #818498;
 }
 .header__nav-item:hover {
@@ -264,7 +264,7 @@ li {
 @media only screen and (min-width: 800px) {
   .header__nav-item {
     position: relative;
-    padding: 0 clamp(1.3rem, 2.5vw, 1.8rem);
+    padding: 0 clamp(1.3rem, 2vw, 1.5rem);
   }
   .header__nav-item a {
     color: white;
@@ -291,14 +291,14 @@ li {
 
 .header__nav-item--contacts {
   margin: 1rem auto;
-  padding: 1.2rem 2rem;
+  padding: 1.1rem 1.8rem;
   width: 55%;
   background-color: #fad400;
   border-radius: 2rem;
   transition: 0.3s ease-in-out;
 }
 .header__nav-item--contacts a {
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   color: #23303e;
 }
@@ -313,7 +313,7 @@ li {
 }
 @media only screen and (min-width: 800px) {
   .header__nav-item--contacts {
-    margin: 0 0 0 1.8rem;
+    margin: 0 0 0 1.5rem;
     background-color: white;
   }
   .header__nav-item--contacts:hover {
@@ -348,12 +348,13 @@ input[type=checkbox]:checked ~ .header__nav-holder > .header__nav-list {
 }
 @media only screen and (max-width: 360px) {
   .header__title {
-    letter-spacing: clamp(0.2rem, 1.5vw, 2.4rem);
+    letter-spacing: 0.2rem;
   }
 }
 @media only screen and (min-width: 500px) {
   .header__title {
-    padding-top: 15vh;
+    padding-top: 6.7rem;
+    letter-spacing: 0.6rem;
   }
 }
 
@@ -429,17 +430,17 @@ main {
 
 .about__content {
   margin: 0 auto;
-  padding-top: 3.8rem;
-  padding-bottom: 3.8rem;
-  padding-left: clamp(1.5rem, 6vw, 2.5rem);
-  padding-right: clamp(1.5rem, 6vw, 2.5rem);
-  max-width: 35rem;
+  padding-top: 4rem;
+  padding-bottom: 4.1rem;
+  padding-left: clamp(1.5rem, 10vw, 8.5rem);
+  padding-right: clamp(1.5rem, 10vw, 8.5rem);
+  max-width: 34rem;
 }
 @media only screen and (min-width: 800px) {
   .about__content {
-    padding-left: 3rem;
     flex-basis: 50%;
     text-align: left;
+    max-width: initial;
   }
 }
 
@@ -455,11 +456,12 @@ main {
 
 .about__content-text {
   padding: 2rem 0;
+  line-height: 1.65;
   color: #818498;
 }
 @media only screen and (min-width: 800px) {
   .about__content-text {
-    font-size: clamp(1.125rem, 1.3vw, 1.3rem);
+    font-size: clamp(1.125rem, 1.2vw, 1.3rem);
   }
 }
 
@@ -507,10 +509,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 4rem;
-  padding-left: clamp(1.5rem, 6vw, 2.5rem);
-  padding-right: clamp(1.5rem, 6vw, 2.5rem);
-  min-height: 36.5rem;
+  padding-bottom: 3.9rem;
+  padding-left: clamp(1.5rem, 10vw, 8.5rem);
+  padding-right: clamp(1.5rem, 10vw, 8.5rem);
+  min-height: 37.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top 0;
@@ -555,23 +557,37 @@ main {
 .service__text {
   margin: 0 auto;
   max-width: 23rem;
-  padding-top: 1.6rem;
+  padding-top: 1.7rem;
   font-size: 0.99rem;
+  line-height: 1.65;
 }
 
 /* --- TESTIMONIALS ---*/
 .testimonials {
-  padding-top: 3.8rem;
-  padding-bottom: 3.8rem;
-  padding-left: clamp(1.5rem, 6vw, 2.5rem);
-  padding-right: clamp(1.5rem, 6vw, 2.5rem);
+  padding-top: 4rem;
+  padding-bottom: 3.3rem;
+  padding-left: clamp(1.5rem, 10vw, 8.5rem);
+  padding-right: clamp(1.5rem, 10vw, 8.5rem);
+}
+@media only screen and (min-width: 800px) {
+  .testimonials {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .testimon-title {
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
+  padding-bottom: 2rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.22rem;
   text-transform: uppercase;
   color: #a7abae;
+}
+@media only screen and (min-width: 800px) {
+  .testimon-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.33rem;
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -587,16 +603,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2.2rem;
 }
 @media only screen and (min-width: 800px) {
   .client {
-    max-width: 22rem;
+    padding-top: 3rem;
+    max-width: 23rem;
   }
 }
 
 .client__avatar {
-  width: 4.3rem;
+  width: 4.5rem;
   border-radius: 3rem;
   overflow: hidden;
 }
@@ -606,10 +624,11 @@ main {
   max-width: 23rem;
   padding: 2rem 0;
   font-size: 1.11rem;
+  line-height: 1.8;
 }
 @media only screen and (min-width: 800px) {
   .client__testimon {
-    padding: 2rem 0.5rem;
+    padding: 3.7rem 0.5rem 4.5rem 0.5rem;
   }
 }
 
@@ -619,7 +638,7 @@ main {
 
 .client__info-position {
   padding-top: 0.7rem;
-  font-size: 0.8rem;
+  font-size: 0.87rem;
   color: #a7abae;
 }
 
@@ -643,38 +662,58 @@ main {
 }
 @media only screen and (min-width: 950px) {
   .gellary__item {
-    height: 25vw;
+    height: 30vw;
   }
 }
 
 .gellary__item--01 {
   background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
 }
+@media only screen and (min-width: 800px) {
+  .gellary__item--01 {
+    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+  }
+}
 
 .gellary__item--02 {
   background-image: url("../images/mobile/image-gallery-orange.jpg");
+}
+@media only screen and (min-width: 800px) {
+  .gellary__item--02 {
+    background-image: url("../images/desktop/image-gallery-orange.jpg");
+  }
 }
 
 .gellary__item--03 {
   background-image: url("../images/mobile/image-gallery-cone.jpg");
 }
+@media only screen and (min-width: 800px) {
+  .gellary__item--03 {
+    background-image: url("../images/desktop/image-gallery-cone.jpg");
+  }
+}
 
 .gellary__item--04 {
   background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
 }
+@media only screen and (min-width: 800px) {
+  .gellary__item--04 {
+    background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+  }
+}
 
 /* --- FOOTER ---*/
 .footer {
-  padding-top: 3rem;
+  padding-top: 4.5rem;
   padding-bottom: 1rem;
-  padding-left: clamp(1.5rem, 6vw, 2.5rem);
-  padding-right: clamp(1.5rem, 6vw, 2.5rem);
+  padding-left: clamp(1.5rem, 10vw, 8.5rem);
+  padding-right: clamp(1.5rem, 10vw, 8.5rem);
   background-color: #89d1c3;
 }
 
 .footer__logo {
   margin: 0 auto;
-  width: 10rem;
+  width: 10.5rem;
 }
 .footer__logo path {
   fill: #2C7566;
@@ -686,7 +725,7 @@ main {
   justify-content: space-around;
   margin: 0 auto;
   padding: 2.5rem 0;
-  max-width: 32rem;
+  max-width: 25rem;
 }
 @media only screen and (max-width: 360px) {
   .footer__nav {
@@ -711,7 +750,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
   max-width: 10rem;
 }
 
@@ -720,6 +760,12 @@ main {
 }
 .footer__social-icon:hover path {
   fill: white;
+}
+.footer__social-icon a {
+  display: block;
+}
+.footer__social-icon a[aria-label=Twitter] {
+  padding-top: 0.1rem;
 }
 
 .attribution {

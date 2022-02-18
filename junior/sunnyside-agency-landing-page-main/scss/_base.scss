@@ -8,6 +8,7 @@ body {
     font-size: $fs;
     text-align: center;
     color: $fc-paragraph;
+    background-color: $soft-red-lighter;
 }
 
 h1,
@@ -56,14 +57,13 @@ li {
     padding-top: 2rem;
     width: 100%;
     max-width: $content-max-width;
-    height: 142vw;
+    height: 143vw;
     background-image: url(../images/mobile/image-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
 
     @include respond-500 {
-        padding-top: 3rem;
         height: 100vh;
         max-height: 1024px;
         min-height: 850px;
@@ -121,7 +121,7 @@ li {
         top: 0;
         transform: scaleY(1);
         opacity: 1;
-        overflow: auto;
+        overflow: initial;
     }
 }
 
@@ -177,7 +177,7 @@ li {
     padding: 0.8rem;
 
     a {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         color: $fc-neutral;
     }
 
@@ -191,7 +191,7 @@ li {
 
     @include respond-800 {
         position: relative;
-        padding: 0 clamp(1.3rem, 2.5vw, 1.8rem);
+        padding: 0 clamp(1.3rem, 2vw, 1.5rem);
 
         a {
             color: $white;
@@ -222,14 +222,14 @@ li {
 
 .header__nav-item--contacts {
     margin: 1rem auto;
-    padding: 1.2rem 2rem;
+    padding: 1.1rem 1.8rem;
     width: 55%;
     background-color: $yellow;
     border-radius: 2rem;
     transition: 0.3s ease-in-out;
 
     a {
-        font-size: 1rem;
+        font-size: 0.95rem;
         text-transform: uppercase;
         color: $fc-title-base;
     }
@@ -244,7 +244,7 @@ li {
     }
 
     @include respond-800 {
-        margin: 0 0 0 1.8rem;
+        margin: 0 0 0 1.5rem;
         background-color: $white;
 
         &:hover {
@@ -280,11 +280,12 @@ input[type="checkbox"]:checked ~ .header__nav-holder > .header__nav-list {
     color: white;
 
     @include respond-tiny-width {
-        letter-spacing: clamp(0.2rem, 1.5vw, 2.4rem);
+        letter-spacing: 0.2rem;
     }
 
     @include respond-500 {
-        padding-top: 15vh;
+        padding-top: 6.7rem;
+        letter-spacing: 0.6rem;
     }
 }
 
@@ -354,15 +355,15 @@ main {
 
 .about__content {
     margin: 0 auto;
-    padding-top: 3.8rem;
-    padding-bottom: 3.8rem;
+    padding-top: 4rem;
+    padding-bottom: 4.1rem;
     @include mob-space-lr;
-    max-width: 35rem;
+    max-width: 34rem;
 
     @include respond-800 {
-        padding-left: 3rem;
         flex-basis: 50%;
         text-align: left;
+        max-width: initial;
     }
 }
 
@@ -376,11 +377,13 @@ main {
 }
 
 .about__content-text {
+
     padding: 2rem 0;
+    line-height: 1.65;
     color: $fc-neutral;
 
     @include respond-800 {
-        font-size: clamp(1.125rem, 1.3vw, 1.3rem);
+        font-size: clamp(1.125rem, 1.2vw, 1.3rem);
     }
 }
 
@@ -436,9 +439,9 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     // padding-top: 5rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3.9rem;
     @include mob-space-lr;
-    min-height: 36.5rem;
+    min-height: 37.5rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top 0;
@@ -478,22 +481,34 @@ main {
 
 .service__text {
     @include max-text-width-tablet;
-    padding-top: 1.6rem;
+    padding-top: 1.7rem;
     font-size: 0.99rem;
+    line-height: 1.65;
 }
 
 /* --- TESTIMONIALS ---*/
 .testimonials {
-    padding-top: 3.8rem;
-    padding-bottom: 3.8rem;
+    padding-top: 4rem;
+    padding-bottom: 3.3rem;
     @include mob-space-lr;
+
+    @include respond-800 {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+    }
 }
 
 .testimon-title {
-    font-size: 1rem;
-    letter-spacing: 0.2rem;
+    padding-bottom: 2rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.22rem;
     text-transform: uppercase;
     color: $fc-neutral-light;
+
+    @include respond-800 {
+        font-size: 1.25rem;
+        letter-spacing: 0.33rem;
+    }
 }
 
 .clients {
@@ -509,15 +524,17 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2.2rem;
 
     @include respond-800 {
-        max-width: 22rem;
+        padding-top: 3rem;
+        max-width: 23rem;
     }
 }
 
 .client__avatar {
-    width: 4.3rem;
+    width: 4.5rem;
     border-radius: 3rem;
     overflow: hidden;
 }
@@ -526,9 +543,10 @@ main {
     @include max-text-width-tablet;
     padding: 2rem 0;
     font-size: 1.11rem;
+    line-height: 1.8;
 
     @include respond-800 {
-        padding: 2rem 0.5rem;
+        padding: 3.7rem 0.5rem 4.5rem 0.5rem;
     }
 }
 
@@ -538,7 +556,7 @@ main {
 
 .client__info-position {
     padding-top: 0.7rem;
-    font-size: 0.8rem;
+    font-size: 0.87rem;
     color: $fc-neutral-light;
 }
 
@@ -560,29 +578,45 @@ main {
     background-position: center;
 
     @include respond-950 {
-        height: 25vw;
+        height: 30vw;
     }
 }
 
 .gellary__item--01 {
     background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+
+    @include respond-800 {
+        background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+    }
 }
 
 .gellary__item--02 {
     background-image: url("../images/mobile/image-gallery-orange.jpg");
+
+    @include respond-800 {
+    background-image: url("../images/desktop/image-gallery-orange.jpg");
+    }
 }
 
 .gellary__item--03 {
     background-image: url("../images/mobile/image-gallery-cone.jpg");
+
+    @include respond-800 {
+        background-image: url("../images/desktop/image-gallery-cone.jpg");
+    }
 }
 
 .gellary__item--04 {
     background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+
+    @include respond-800 {
+        background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+    }
 }
 
 /* --- FOOTER ---*/
 .footer {
-    padding-top: 3rem;
+    padding-top: 4.5rem;
     padding-bottom: 1rem;
     @include mob-space-lr;
     background-color: $bg-cyan-light;
@@ -590,7 +624,7 @@ main {
 
 .footer__logo {
     margin: 0 auto;
-    width: 10rem;
+    width: 10.5rem;
 
     path {
         fill: $svg-color;
@@ -603,7 +637,7 @@ main {
     justify-content: space-around;
     margin: 0 auto;
     padding: 2.5rem 0;
-    max-width: 32rem;
+    max-width: 25rem;
 
     @include respond-tiny-width {
         flex-direction: column;
@@ -629,7 +663,8 @@ main {
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
     max-width: 10rem;
 }
 
@@ -638,5 +673,13 @@ main {
 
     &:hover path {
         fill: $white;
+    }
+
+    a {
+        display: block;
+    }
+
+    a[aria-label="Twitter"] {
+        padding-top: 0.1rem;
     }
 }
