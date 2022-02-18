@@ -19,6 +19,9 @@ $fc-neutral: hsl(232, 10%, 55%);
 $fc-neutral-light: hsl(210, 4%, 67%);
 $white: hsl(0, 0%, 100%);
 
+/* Custom */
+$header-bg: hsl(200, 100%, 62%);
+
 /* FONTS */
 /* Font family */
 $ff-paragraph: 'Barlow', sans-serif;
@@ -30,6 +33,8 @@ $fs: 18px;
 /* MEASURES */
 /* Padding to set equal left and right space 
    in mobile view to all body's children */
+$content-max-width: 1800px;
+
 @mixin mob-space-lr {
     padding-left: clamp(1.5rem, 6vw, 2.5rem);
     padding-right: clamp(1.5rem, 6vw, 2.5rem);

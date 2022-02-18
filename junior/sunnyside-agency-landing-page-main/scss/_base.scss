@@ -43,13 +43,19 @@ li {
 
 /* --- HEADER ---*/
 .header {
+    background-color: $header-bg;
+}
+
+.header-inner-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     @include mob-space-lr;
+    margin: 0 auto;
     padding-top: 2rem;
     width: 100%;
+    max-width: $content-max-width;
     height: 142vw;
     background-image: url(../images/mobile/image-header.jpg);
     background-repeat: no-repeat;
@@ -59,6 +65,7 @@ li {
     @include respond-500 {
         padding-top: 3rem;
         height: 100vh;
+        max-height: 1024px;
         min-height: 850px;
         background-image: url(../images/desktop/image-header.jpg);
     }
@@ -97,49 +104,67 @@ li {
     }
 }
 
-input[type="checkbox"]:checked ~ .header__nav-list {
-    display: block;
+.header__nav-holder {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 10;
 
     @include respond-800 {
-        display: flex;
+        position: relative;
+        top: 0;
+        transform: scaleY(1);
+        opacity: 1;
+        overflow: auto;
     }
 }
 
 .header__nav-list {
-    display: none;
-    position: absolute;
-    top: 4.5rem;
-    left: 0;
+    position: relative;
+    top: 1.5rem;
+    // display: none;
+    // position: absolute;
+    // top: 4.5rem;
+    // left: 0;
     padding: 1.5rem;
     width: 100%;
+    transform-origin: bottom;
+    transform: scaleY(4);
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: white;
-    z-index: 10;
 
     &::before {
         position: absolute;
         top: 0;
         right: 0;
-        transform: translateY(-1.5rem);
+        // transform: translateY(-1.5rem);
         transform: rotate(90deg);
         transform-origin: top right;
-        content: "";
+        content: '';
         border-right: 1.5rem solid white;
         border-left: 1.5rem solid transparent;
         border-bottom: 1.5rem solid transparent;
     }
 
     @include respond-tiny-width {
-        top: 3.5rem;
+        // top: 3.5rem;
         padding: 1.5rem 0.7rem;
     }
 
     @include respond-800 {
-        position: relative;
+        // position: relative;
         top: 0;
         display: flex;
         flex-direction: row;
         align-items: baseline;
         padding: 0;
+        transform: scaleY(1);
         background: none;
 
         &::before {
@@ -233,6 +258,20 @@ input[type="checkbox"]:checked ~ .header__nav-list {
     }
 }
 
+input[type="checkbox"]:checked ~ .header__nav-holder {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked ~ .header__nav-holder > .header__nav-list {
+    // display: block;
+    transform: scaleY(1);
+
+    @include respond-800 {
+        display: flex;
+    }
+}
+
 .header__title {
     padding-top: 24vw;
     font-size: clamp(1rem, 10vw, 3.5rem);
@@ -264,6 +303,11 @@ input[type="checkbox"]:checked ~ .header__nav-list {
 }
 
 /* --- INTRO ---*/
+main {
+    margin: 0 auto;
+    max-width: $content-max-width;
+}
+
 .about {
     @include respond-800 {
         display: flex;
@@ -287,6 +331,7 @@ input[type="checkbox"]:checked ~ .header__nav-list {
 
     @include respond-950 {
         height: 42vw;
+        max-height: calc(#{$content-max-width} / 2);
     }
 }
 
@@ -400,6 +445,11 @@ input[type="checkbox"]:checked ~ .header__nav-list {
 
     @include respond-800 {
         flex-basis: 50%;
+    }
+
+    @include respond-950 {
+        height: 42vw;
+        max-height: calc(#{$content-max-width} / 2);
     }
 }
 
