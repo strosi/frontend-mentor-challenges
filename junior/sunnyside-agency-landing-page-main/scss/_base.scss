@@ -2,6 +2,10 @@
 @use "mixins" as *;
 @use "sass:color";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     font-family: $ff-paragraph;
@@ -274,7 +278,7 @@ input[type="checkbox"]:checked ~ .header__nav-holder > .header__nav-list {
 }
 
 .header__title {
-    padding-top: 24vw;
+    margin-top: 24vw;
     font-size: clamp(1rem, 10vw, 3.5rem);
     letter-spacing: 0.5rem;
     text-transform: uppercase;
@@ -285,7 +289,7 @@ input[type="checkbox"]:checked ~ .header__nav-holder > .header__nav-list {
     }
 
     @include respond-500 {
-        padding-top: 6.7rem;
+        margin-top: 6.7rem;
         letter-spacing: 0.6rem;
     }
 }
@@ -294,6 +298,7 @@ input[type="checkbox"]:checked ~ .header__nav-holder > .header__nav-list {
     position: absolute;
     top: 54%;
     width: 2.2rem;
+    cursor: pointer;
 
     @include respond-tiny-width {
         width: 10vw;

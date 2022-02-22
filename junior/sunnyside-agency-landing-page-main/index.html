@@ -24,6 +24,17 @@
     <!-- Added inner wrapper to constrain the header content with max-width 
          but still have background to the whole width... -->
     <div class="header-inner-wrapper">
+
+      <div class="header__lines-anim">
+        <div class="header__horizont-anim">
+          <div class="header__h-line header__line-left"></div>
+          <div class="header__h-line header__line-right"></div>
+        </div>
+        <div class="header__vertical-anim">
+          <div class="header__v-line"></div>
+        </div>
+      </div>
+
       <div class="header__top">
         <div class="header__logo">
           <img src="images/logo.svg" alt="Sunnyside agency">
@@ -34,24 +45,25 @@
           <!-- Add nav holder to make the opening effect... -->
           <div class="header__nav-holder">
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a href="#">About</a></li>
-              <li class="header__nav-item"><a href="#">Services</a></li>
-              <li class="header__nav-item"><a href="#">Projects</a></li>
+              <li class="header__nav-item"><a href="#about">About</a></li>
+              <li class="header__nav-item"><a href="#services">Services</a></li>
+              <li class="header__nav-item"><a href="#projects">Projects</a></li>
               <li class="header__nav-item header__nav-item--contacts"><a href="#">Contact</a></li>
             </ul>
           </div>
         </nav>
       </div>
-      <h1 class="header__title">We are creatives</h1>
+      <h1 class="header__title"><span class="header__title-text">We are creatives</span></h1>
       <div class="header__arrow-btn">
-        <img src="images/icon-arrow-down.svg" alt="">
+        <a href="#about" aria-label="Slide to first section"><img src="images/icon-arrow-down.svg" alt=""></a>
       </div>
     </div>
+
   </header>
 
   <main>
     <section class="intro">
-      <div class="about">
+      <div class="about" id="about">
         <div class="about__img about__img--transf"></div>
         <div class="about__content">
           <h2 class="about__content-title">Transform your brand</h2>
@@ -75,7 +87,7 @@
           <a href="#" class="about__learn-more about__learn-more--stand-out">Learn more</a>
         </div>
       </div>
-      <div class="service">
+      <div class="service" id="services">
         <div class="service__item service--design">
           <h2 class="service__title">Graphic design</h2>
           <p class="service__text">
@@ -137,7 +149,7 @@
         </div>
       </div>
     </section>
-    <section class="gellary">
+    <section class="gellary" id="projects">
       <div class="gellary__item gellary__item--01"></div>
       <div class="gellary__item gellary__item--02"></div>
       <div class="gellary__item gellary__item--03"></div>
@@ -154,9 +166,9 @@
       </svg>
     </div>
     <ul class="footer__nav">
-      <li class="footer__nav-item"><a href="#">About</a></li>
-      <li class="footer__nav-item"><a href="#">Services</a></li>
-      <li class="footer__nav-item"><a href="#">Projects</a></li>
+      <li class="footer__nav-item"><a href="#about">About</a></li>
+      <li class="footer__nav-item"><a href="#services">Services</a></li>
+      <li class="footer__nav-item"><a href="#projects">Projects</a></li>
     </ul>
     <div class="footer__socials">
       <div class="footer__social-icon">
@@ -203,6 +215,7 @@
     </div>
   </footer>
 
+  <script src="js/intro-anim.js"></script>
 </body>
 
 </html>
