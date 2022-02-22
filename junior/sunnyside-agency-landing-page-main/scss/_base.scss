@@ -69,8 +69,7 @@ li {
 
     @include respond-500 {
         padding: 2rem clamp(1.5rem, 2.8vw, 3rem);
-        // height: 100vh;
-        height: 800px;
+        height: 100vh;
         max-height: 1024px;
         min-height: 750px;
         background-image: url(../images/desktop/image-header.jpg);
