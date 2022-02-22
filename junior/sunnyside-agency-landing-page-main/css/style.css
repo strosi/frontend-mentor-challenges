@@ -479,6 +479,7 @@ main {
 
 .about__learn-more {
   position: relative;
+  display: inline-block;
   font-size: 1rem;
   text-transform: uppercase;
   color: #23303e;
@@ -677,12 +678,22 @@ main {
   }
 }
 
+.gellary__item-holder {
+  overflow: hidden;
+}
+
 .gellary__item {
   width: 100%;
   height: 50vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: 0.3s ease;
+}
+@media only screen and (min-width: 800px) {
+  .gellary__item:hover {
+    transform: scale(1.1);
+  }
 }
 @media only screen and (min-width: 950px) {
   .gellary__item {
@@ -850,7 +861,7 @@ main {
   }
 
   .header__h-line {
-    width: 50vw;
+    width: 49.5vw;
     height: 6px;
     background-color: white;
     transform: scaleX(0);
@@ -994,4 +1005,20 @@ main {
       -webkit-transform: translateY(-15px);
     }
   }
+}
+/* Show elements on entering the viewport - with JS */
+.about__content-title,
+.about__content-text,
+.about__learn-more,
+.service__title,
+.service__text,
+.client {
+  opacity: 0.1;
+  transform: translateY(5rem);
+  transition: 0.5s ease-in;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }

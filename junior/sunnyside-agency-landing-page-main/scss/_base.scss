@@ -399,6 +399,7 @@ main {
 
 .about__learn-more {
     position: relative;
+    display: inline-block;
     font-size: 1rem;
     text-transform: uppercase;
     color: $fc-title-base;
@@ -588,12 +589,23 @@ main {
     }
 }
 
+.gellary__item-holder {
+    overflow: hidden;
+}
+
 .gellary__item {
     width: 100%;
     height: 50vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: 0.3s ease;
+
+    @include respond-800 {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 
     @include respond-950 {
         height: 30vw;

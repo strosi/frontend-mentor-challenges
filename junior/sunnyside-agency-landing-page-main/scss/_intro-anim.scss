@@ -42,7 +42,7 @@
     }
 
     .header__h-line {
-        width: 50vw;
+        width: 49.5vw;
         height: 6px;
         background-color: white;
         transform: scaleX(0);
@@ -197,4 +197,21 @@
             -webkit-transform: translateY(-15px);
         }
     }
+}
+
+/* Show elements on entering the viewport - with JS */
+.about__content-title,
+.about__content-text,
+.about__learn-more,
+.service__title,
+.service__text,
+.client {
+    opacity: 0.1;
+    transform: translateY(5rem);
+    transition: 0.5s ease-in;
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateY(0);
 }
