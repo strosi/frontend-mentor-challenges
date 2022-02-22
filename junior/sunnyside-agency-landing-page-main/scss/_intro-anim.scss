@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "mqueries" as *;
 
 @include respond-1100 {
     /* Header logo and menu bottom fade in animation */
@@ -74,12 +74,12 @@
             transform: scaleX(0);
             opacity: 0;
         }
-        45% {
+        50% {
             transform-origin: left;
             transform: scaleX(1);
             opacity: 1;
         }
-        65% {
+        55% {
             transform-origin: right;
             transform: scaleX(1);
         }
@@ -95,12 +95,12 @@
             transform: scaleX(0);
             opacity: 0;
         }
-        45% {
+        50% {
             transform-origin: right;
             transform: scaleX(1);
             opacity: 1;
         }
-        65% {
+        55% {
             transform-origin: left;
             transform: scaleX(1);
         }
@@ -206,7 +206,7 @@
 .service__title,
 .service__text,
 .client {
-    opacity: 0.1;
+    opacity: 0;
     transform: translateY(5rem);
     transition: 0.5s ease-in;
 }
