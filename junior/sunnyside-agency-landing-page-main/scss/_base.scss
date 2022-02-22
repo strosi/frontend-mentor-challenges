@@ -52,8 +52,8 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include mob-space-lr;
     margin: 0 auto;
+    @include mob-space-lr;
     padding-top: 2rem;
     width: 100%;
     max-width: $content-max-width;
@@ -64,9 +64,10 @@ li {
     background-position: center bottom;
 
     @include respond-500 {
+        padding: 2rem clamp(1.5rem, 2.8vw, 3rem);
         height: 100vh;
         max-height: 1024px;
-        min-height: 850px;
+        min-height: 750px;
         background-image: url(../images/desktop/image-header.jpg);
     }
 }
@@ -330,7 +331,7 @@ main {
         height: auto;
     }
 
-    @include respond-950 {
+    @include respond-1100 {
         height: 42vw;
         max-height: calc(#{$content-max-width} / 2);
     }
@@ -359,6 +360,10 @@ main {
     padding-bottom: 4.1rem;
     @include mob-space-lr;
     max-width: 34rem;
+
+    @include respond-500 {
+        @include deskt-space-lr;
+    }
 
     @include respond-800 {
         flex-basis: 50%;
@@ -446,6 +451,10 @@ main {
     background-size: cover;
     background-position: center top 0;
 
+    @include respond-500 {
+        @include deskt-space-lr;
+    }
+
     @include respond-800 {
         flex-basis: 50%;
     }
@@ -491,6 +500,10 @@ main {
     padding-top: 4rem;
     padding-bottom: 3.3rem;
     @include mob-space-lr;
+
+    @include respond-500 {
+        @include deskt-space-lr;
+    }
 
     @include respond-800 {
         padding-top: 10rem;
@@ -620,6 +633,10 @@ main {
     padding-bottom: 1rem;
     @include mob-space-lr;
     background-color: $bg-cyan-light;
+
+    @include respond-500 {
+        @include deskt-space-lr;
+    }
 }
 
 .footer__logo {

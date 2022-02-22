@@ -37,13 +37,14 @@ $fs: 18px;
 $content-max-width: 1800px;
 
 @mixin mob-space-lr {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@mixin deskt-space-lr {
     padding-left: clamp(1.5rem, 10vw, 8.5rem);
     padding-right: clamp(1.5rem, 10vw, 8.5rem);
 }
-// @mixin mob-space-lr {
-//     padding-left: clamp(1.5rem, 6vw, 2.5rem);
-//     padding-right: clamp(1.5rem, 6vw, 2.5rem);
-// }
 
 @mixin max-text-width-tablet {
     margin: 0 auto;
