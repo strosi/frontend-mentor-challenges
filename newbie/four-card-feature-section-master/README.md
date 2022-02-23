@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Four card feature section solution](https://github.com/strosi/frontend-mentor-challenges/tree/main/four-card-feature-section-master)
-- Live Site URL: [Four card feature section live site](https://strosi.github.io/frontend-mentor-challenges/four-card-feature-section-master/)
+- Solution URL: [Four card feature section solution](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/four-card-feature-section-master)
+- Live Site URL: [Four card feature section live site](https://strosi.github.io/frontend-mentor-challenges/newbie/four-card-feature-section-master/)
 
 ## My process
 

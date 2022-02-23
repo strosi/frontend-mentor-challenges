@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View code here](https://github.com/strosi/frontend-mentor-challenges/tree/main/ping-coming-soon-page-master)
-- Live Site URL: [View solution in action](https://strosi.github.io/frontend-mentor-challenges/ping-coming-soon-page-master/)
+- Solution URL: [View code here](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/ping-coming-soon-page-master)
+- Live Site URL: [View solution in action](https://strosi.github.io/frontend-mentor-challenges/newbie/ping-coming-soon-page-master/)
 
 ## My process
 

@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View code here](https://github.com/strosi/frontend-mentor-challenges/tree/main/single-price-grid-component-master)
-- Live Site URL: [View solution in action here](https://strosi.github.io/frontend-mentor-challenges/single-price-grid-component-master/)
+- Solution URL: [View code here](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/single-price-grid-component-master)
+- Live Site URL: [View solution in action here](https://strosi.github.io/frontend-mentor-challenges/newbie/single-price-grid-component-master/)
 
 ## My process
 
