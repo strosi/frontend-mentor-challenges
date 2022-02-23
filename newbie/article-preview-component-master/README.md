@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/desktop-active-design-comparison.jpg" alt="" width="500" />
-<img src="./solution-screenshots/mobile-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/mobile-active-design-comparison.jpg" alt="" width="500" />
+<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/newbie/desktop-active-design-comparison.jpg" alt="" width="500" />
+<img src="./solution-screenshots/mobile-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/newbie/mobile-active-design-comparison.jpg" alt="" width="500" />
 
 ### Links
 
