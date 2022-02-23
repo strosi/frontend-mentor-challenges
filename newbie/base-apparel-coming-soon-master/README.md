@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Landing page for comming soon - code](https://github.com/strosi/frontend-mentor-challenges/tree/main/base-apparel-coming-soon-master)
-- Live Site URL: [Landing page for comming soon - live site](https://strosi.github.io/frontend-mentor-challenges/base-apparel-coming-soon-master/)
+- Solution URL: [Landing page for comming soon - code](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/base-apparel-coming-soon-master)
+- Live Site URL: [Landing page for comming soon - live site](https://strosi.github.io/frontend-mentor-challenges/newbie/base-apparel-coming-soon-master/)
 
 ## My process
 
