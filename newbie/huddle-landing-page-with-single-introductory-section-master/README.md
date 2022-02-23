@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View code here](https://github.com/strosi/frontend-mentor-challenges/tree/main/huddle-landing-page-with-single-introductory-section-master)
-- Live Site URL: [View solution in action](https://strosi.github.io/frontend-mentor-challenges/huddle-landing-page-with-single-introductory-section-master/)
+- Solution URL: [View code here](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/huddle-landing-page-with-single-introductory-section-master)
+- Live Site URL: [View solution in action](https://strosi.github.io/frontend-mentor-challenges/newbie/huddle-landing-page-with-single-introductory-section-master/)
 
 ## My process
 
