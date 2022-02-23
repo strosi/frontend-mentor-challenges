@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View Intro component with signup form - code](https://github.com/strosi/frontend-mentor-challenges/tree/main/intro-component-with-signup-form-master)
-- Live Site URL: [View Intro component with signup form - in action](https://strosi.github.io/frontend-mentor-challenges/intro-component-with-signup-form-master/)
+- Solution URL: [View Intro component with signup form - code](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/intro-component-with-signup-form-master)
+- Live Site URL: [View Intro component with signup form - in action](https://strosi.github.io/frontend-mentor-challenges/newbie/intro-component-with-signup-form-master/)
 
 ## My process
 
