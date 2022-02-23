@@ -24,13 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/newbie/desktop-active-design-comparison.jpg" alt="" width="500" />
-<img src="./solution-screenshots/mobile-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/newbie/mobile-active-design-comparison.jpg" alt="" width="500" />
+<img src="./solution-screenshots/desktop-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/desktop-active-design-comparison.jpg" alt="" width="500" />
+<img src="./solution-screenshots/mobile-design-comparison.jpg" alt="" width="500" /><img src="./solution-screenshots/mobile-active-design-comparison.jpg" alt="" width="500" />
 
 ### Links
 
-- Solution URL: [Article preview component code](https://github.com/strosi/frontend-mentor-challenges/tree/main/article-preview-component-master)
-- Live Site URL: [Article preview component live site](https://strosi.github.io/frontend-mentor-challenges/article-preview-component-master/)
+- Solution URL: [Article preview component code](https://github.com/strosi/frontend-mentor-challenges/tree/main/newbie/article-preview-component-master)
+- Live Site URL: [Article preview component live site](https://strosi.github.io/frontend-mentor-challenges/newbie/article-preview-component-master/)
 
 ## My process
 
