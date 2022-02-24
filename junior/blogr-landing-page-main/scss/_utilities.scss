@@ -1,0 +1,72 @@
+@use "sass:color";
+
+/* COLORS */
+/* Primary */
+$fc-btn-hover: hsl(356, 100%, 66%);
+$bg-btn-hover: hsl(355, 100%, 74%);
+$fc-h: hsl(208, 49%, 24%);
+
+/* Neutral */
+$fc-light: hsl(0, 0%, 100%);
+$fc-footer: hsl(240, 2%, 79%);
+$fc-p: hsl(207, 13%, 34%);
+$bg-main: color.adjust($fc-footer, $lightness: 15%);
+$bg-footer: hsl(240, 10%, 16%);
+
+/* Gradient */
+// Background gradient - Intro/CTA mobile nav:
+$bg-grad-header-from: hsl(13, 100%, 72%);
+$bg-grad-header-to: hsl(353, 100%, 62%);
+$bg-header: linear-gradient(135deg, $bg-grad-header-from, $bg-grad-header-to);
+
+// Background gradient - body:
+$bg-grad-section-from: hsl(237, 17%, 21%);
+$bg-grad-section-to: hsl(237, 23%, 32%);
+$bg-grad-dark: linear-gradient(135deg, $bg-grad-section-from, $bg-grad-section-to);
+
+/* FONTS */
+/* Font family */
+$ff-main: 'Overpass', sans-serif;
+$ff-links: 'Ubuntu', sans-serif;
+
+/* Font size (form inputs) */
+$fs: 16px;
+
+
+/* MEASURES */
+$mob-pad: 1.8rem;
+
+/* FUNCTIONS */
+/* Base color theme */
+@function fc($bg) {
+    @if (type_of($bg) == 'string' or opacity($bg) == 0) {
+        @return $fc-light;
+    } @else if ($bg == $bg-footer) {
+        @return $fc-footer;
+    } @else {
+        @return $fc-p;
+    }
+}
+
+@mixin color-theme($bg) {
+    color: fc($bg);
+    background: $bg;
+
+    a {
+        color: fc($bg);
+    }
+}
+
+/* Button color theme */
+@function btn-fc($bg) {
+    @if (opacity($bg) == 0 or $bg == $bg-btn-hover) {
+        @return $fc-light;
+    } @else if ($bg == white) {
+        @return $fc-btn-hover;
+    }
+}
+
+@mixin btn-color-theme($bg) {
+    color: btn-fc($bg);
+    background: $bg;
+}

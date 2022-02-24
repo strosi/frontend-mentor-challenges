@@ -7,20 +7,16 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Frontend Mentor | [Blogr]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .footer__attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
-    .footer__attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -31,40 +27,47 @@
         <img src="images/logo.svg" alt="Blogr application">
       </div>
       <div class="header-top__main">
-        <nav class="header-top__nav">
-          <ul class="header-top__nav-menu">
-            <li class="header-top__nav-menu-item">
-              Product
-              <ul class="header-top__submenu">
-                <li class="header-top__submenu-item">Overview</li>
-                <li class="header-top__submenu-item">Pricing</li>
-                <li class="header-top__submenu-item">Marketplace</li>
-                <li class="header-top__submenu-item">Features</li>
-                <li class="header-top__submenu-item">Integrations</li>
-              </ul>
-            </li>
-            <li class="header-top__nav-menu-item">
-              Company
-              <ul>
-                <li class="header-top__submenu-item">About</li>
-                <li class="header-top__submenu-item">Team</li>
-                <li class="header-top__submenu-item">Blog</li>
-                <li class="header-top__submenu-item">Careers</li>
-              </ul>
-            </li>
-            <li>
-              Connect
-              <ul>
-                <li class="header-top__submenu-item">Contact</li>
-                <li class="header-top__submenu-item">Newsletter</li>
-                <li class="header-top__submenu-item">LinkedIn</li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <div class="header-top__account-btns">
-          <button class="header-top__account-login">Login</button>
-          <button class="header-top__account-signup">Sign Up</button>
+        <input type="checkbox" id="mob-nav-btn" class="header-top__m-nav-btn-check vh" aria-label="navigation toggle">
+        <label for="mob-nav-btn" class="header-top__m-nav-btn-label">
+          <img src="images/icon-hamburger.svg" alt="" class="header-top__m-nav-open">
+          <img src="images/icon-close.svg" alt="" class="header-top__m-nav-close">
+        </label>
+        <div class="header-top__main-items">
+          <nav class="header-top__nav">
+            <ul class="header-top__nav-menu">
+              <li class="header-top__nav-menu-item">
+                Product
+                <ul class="header-top__submenu">
+                  <li class="header-top__submenu-item"><a href="#">Overview</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Pricing</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Marketplace</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Features</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Integrations</a></li>
+                </ul>
+              </li>
+              <li class="header-top__nav-menu-item">
+                Company
+                <ul class="header-top__submenu">
+                  <li class="header-top__submenu-item"><a href="#">About</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Team</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Blog</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li>
+                Connect
+                <ul class="header-top__submenu">
+                  <li class="header-top__submenu-item"><a href="#">Contact</a></li>
+                  <li class="header-top__submenu-item"><a href="#">Newsletter</a></li>
+                  <li class="header-top__submenu-item"><a href="#">LinkedIn</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-top__account-btns">
+            <button class="header-top__account-login">Login</button>
+            <button class="header-top__account-signup">Sign Up</button>
+          </div>
         </div>
       </div>
     </div>
@@ -83,7 +86,7 @@
     <section class="editor">
       <h2 class="editor__title">Designed for the future</h2>
       <div class="editor__illustr">
-        <img src="images/illustration-editor-mobile.svg" alt="">
+        <!-- <img src="images/illustration-editor-mobile.svg" alt=""> -->
       </div>
       <div class="editor__content">
         <div class="editor__content-item">
@@ -156,28 +159,28 @@
       <div class="footer__nav">
         <h4 class="footer__nav-title">Product</h4>
         <ul class="footer__nav-list">
-          <li>Overview</li>
-          <li>Pricing</li>
-          <li>Marketplace</li>
-          <li>Features</li>
-          <li>Integrations</li>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
         </ul>
       </div>
       <div class="footer__nav">
         <h4 class="footer__nav-title">Company</h4>
         <ul class="footer__nav-list">
-          <li>About</li>
-          <li>Team</li>
-          <li>Blog</li>
-          <li>Careers</li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
         </ul>
       </div>
       <div class="footer__nav">
         <h4 class="footer__nav-title">Connect</h4>
         <ul class="footer__nav-list">
-          <li>Contact</li>
-          <li>Newsletter</li>
-          <li>LinkedIn</li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
         </ul>
       </div>
     </div>

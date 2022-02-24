@@ -1,0 +1,371 @@
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow percentage-based heights in the application.
+   (On adding height: 100% to the html selector the beginning of the page is cutted if justify-content: center is set.)
+*/
+body {
+  min-height: 100vh;
+}
+
+/* Typographic tweaks!
+   - Add accessible line-height
+   - Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* Remove built-in form typography styles. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll 
+   for people that prefer not to see them.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* COLORS */
+/* Primary */
+/* Neutral */
+/* Gradient */
+/* FONTS */
+/* Font family */
+/* Font size (form inputs) */
+/* MEASURES */
+/* FUNCTIONS */
+/* Base color theme */
+/* Button color theme */
+body {
+  width: 100%;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #4b5862;
+  background: #efeff0;
+}
+body a {
+  color: #4b5862;
+}
+
+h2,
+h3 {
+  font-size: 1.73rem;
+  line-height: 1.2;
+  color: #1f3f5b;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+button,
+ul,
+li,
+a {
+  font-family: "Ubuntu", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+ul a {
+  text-decoration: none;
+}
+
+/* Used to hide checkbox and being accessible 
+   at the same time */
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* --- HEADER ---*/
+.header {
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(135deg, #ff8f70, #ff3d54);
+  background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(135deg, #ff8f70, #ff3d54);
+  background-repeat: no-repeat;
+  background-position: left -21rem top -15rem, center;
+  border-bottom-left-radius: 5rem;
+}
+.header a {
+  color: white;
+}
+
+.header-top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.header-top__logo {
+  width: 5rem;
+}
+
+.header-top__m-nav-btn-label {
+  display: block;
+  width: 2rem;
+}
+
+.header-top__m-nav-close {
+  display: none;
+}
+
+.header-top__m-nav-btn-check:checked ~ .header-top__m-nav-btn-label > .header-top__m-nav-close {
+  display: block;
+}
+.header-top__m-nav-btn-check:checked ~ .header-top__m-nav-btn-label > .header-top__m-nav-open {
+  display: none;
+}
+.header-top__m-nav-btn-check:checked ~ .header-top__main-items {
+  display: block;
+}
+
+.header-top__main-items {
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 100%;
+  color: #4b5862;
+  background: white;
+}
+.header-top__main-items a {
+  color: #4b5862;
+}
+
+.header-top__submenu {
+  color: #4b5862;
+  background: #efeff0;
+}
+.header-top__submenu a {
+  color: #4b5862;
+}
+
+.header-intro {
+  padding: 5rem 0;
+}
+
+.header-intro__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.header-intro__text {
+  padding: 0.7rem 0;
+  font-size: 1.19rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.header-intro__btns > button {
+  margin: 2.5rem 0.4rem;
+  padding: 0.7rem 1.1rem;
+  font-weight: 700;
+  border: 1px solid white;
+  border-radius: 2rem;
+}
+
+.header-intro__start-btn {
+  color: #ff525d;
+  background: white;
+}
+
+.header-intro__more-btn {
+  color: white;
+  background: transparent;
+}
+
+/* --- SECTIONS ---*/
+/* --- Editor ---*/
+.editor {
+  padding: 1.8rem;
+  padding-bottom: 17rem;
+}
+
+.editor__title {
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+}
+
+.editor__illustr {
+  height: 100vw;
+  padding: 2.1rem 0;
+  background-image: url("../images/illustration-editor-mobile.svg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.editor__content-item-title {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+/* --- Speed ---*/
+.speed {
+  position: relative;
+  padding: 1.8rem;
+  padding-bottom: 7rem;
+  font-weight: 200;
+  color: white;
+  background: linear-gradient(135deg, #2c2d3f, #3f4164);
+  background: url("../images/bg-pattern-circles.svg"), linear-gradient(135deg, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top -16rem, center;
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+.speed a {
+  color: white;
+}
+
+.speed__illustr {
+  height: 8rem;
+}
+.speed__illustr img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-11rem);
+}
+
+.speed__title {
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* --- Features ---*/
+.features {
+  padding-bottom: 4rem;
+}
+
+.features__illustr {
+  padding-top: 7rem;
+  padding-bottom: 1.7rem;
+  overflow: hidden;
+}
+.features__illustr img {
+  transform: scale(1.3);
+}
+
+.features__content {
+  padding: 1.8rem;
+}
+
+.features__content-item-title {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+/* --- FOOTER ---*/
+.footer {
+  color: #c8c8cb;
+  background: #25252d;
+  border-top-right-radius: 5rem;
+}
+.footer a {
+  color: #c8c8cb;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.footer__logo {
+  padding-bottom: 2rem;
+  width: 6rem;
+}
+
+.footer__nav {
+  padding-top: 1.3rem;
+  font-size: 1.1rem;
+}
+
+.footer__nav-title {
+  padding: 1.5rem 0;
+  color: white;
+}
+
+.footer__nav-list li {
+  padding-bottom: 0.5rem;
+}
+
+.footer__attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem;
+  color: #c8c8cb;
+}
+
+.footer__attribution a {
+  color: #c8c8cb;
+}

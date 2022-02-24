@@ -1,0 +1,12 @@
+@use 'utilities' as *;
+
+.footer__attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem;
+    color: $fc-footer;
+}
+
+.footer__attribution a {
+    color: $fc-footer;
+}
