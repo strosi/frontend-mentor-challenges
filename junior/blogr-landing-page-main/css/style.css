@@ -94,6 +94,10 @@ body {
   background: #efeff0;
 }
 
+h2 {
+  letter-spacing: -0.06rem;
+}
+
 h2,
 h3 {
   font-size: 1.73rem;
@@ -103,7 +107,7 @@ h3 {
 
 p {
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.67;
 }
 
 button,
@@ -142,7 +146,14 @@ ul a {
   background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(135deg, #ff8f70, #ff3d54);
   background-repeat: no-repeat;
   background-position: left -21rem top -15rem, center;
-  border-bottom-left-radius: 5rem;
+  border-bottom-left-radius: 6rem;
+}
+@media only screen and (min-width: 900px) {
+  .header {
+    padding-top: 0.1rem;
+    background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(135deg, #ff8f70, #ff3d54);
+    background-position: left -27rem top -84rem, center;
+  }
 }
 
 .header-top {
@@ -153,9 +164,15 @@ ul a {
   align-items: center;
   padding: 2rem 0;
 }
+@media only screen and (min-width: 900px) {
+  .header-top {
+    padding-top: 2.2rem;
+    padding-left: 0.2rem;
+  }
+}
 
 .header-top__logo {
-  width: 5rem;
+  width: clamp(5rem, 9vw, 6.25rem);
 }
 
 @media only screen and (min-width: 900px) {
@@ -221,6 +238,7 @@ ul a {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    padding: 1.6rem 0 1rem 2.7rem;
     background-color: transparent;
     box-shadow: none;
   }
@@ -246,13 +264,13 @@ ul a {
 }
 @media only screen and (min-width: 900px) {
   .header-top__nav-menu-item {
-    padding: 0 1rem;
+    padding: 0 1.04rem;
   }
 }
 
 .header-top__submenu-toggle {
   position: relative;
-  padding: 0.5rem 1rem 0.5rem 0;
+  padding: 0.5rem 1.2rem 0.5rem 0;
   font-size: 1.15rem;
   font-weight: 600;
   background-color: transparent;
@@ -260,13 +278,13 @@ ul a {
 }
 .header-top__submenu-toggle::before {
   position: absolute;
-  top: 19px;
+  top: 17px;
   right: 0;
   content: "";
   width: 0.45rem;
   height: 0.45rem;
   transform-origin: 0.15rem 0.15rem;
-  transform: rotate(45deg);
+  transform: rotate(225deg);
   border-top: 2px solid #ff525d;
   border-left: 2px solid #ff525d;
   transition: transform 0.3s ease;
@@ -297,7 +315,7 @@ ul a {
 }
 
 .header-top__submenu-toggle.active::before {
-  transform: rotate(225deg);
+  transform: rotate(45deg);
 }
 .header-top__submenu-toggle.active::after {
   transform: scaleX(1);
@@ -363,10 +381,10 @@ ul a {
 
 .header-top__account-signup {
   margin: 0.5rem auto;
-  padding: 0.7rem 1.1rem;
-  min-width: 8rem;
+  padding: 0.8rem 1.1rem 0.6rem 1.1rem;
+  min-width: 8.6rem;
   width: max-content;
-  font-weight: 500;
+  font-weight: 600;
   border: 1px solid white;
   border-radius: 2rem;
   color: white;
@@ -381,33 +399,48 @@ ul a {
 }
 
 .header-intro {
-  padding: 5rem 0;
+  padding: 5rem 0.5rem 7.7rem 0.5rem;
+}
+@media only screen and (min-width: 900px) {
+  .header-intro {
+    padding-top: 4.5rem;
+  }
 }
 
 .header-intro__title {
   font-size: clamp(2.2rem, 5vw, 3.9rem);
   font-weight: 500;
   line-height: 1.3;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.05rem;
+}
+@media only screen and (min-width: 900px) {
+  .header-intro__title {
+    letter-spacing: -0.1rem;
+  }
 }
 
 .header-intro__text {
-  padding: 0.7rem 0;
-  font-size: 1.19rem;
+  padding: 0.8rem 0;
+  font-size: 1.14rem;
   font-weight: 300;
   line-height: 1.3;
 }
 
 .header-intro__btns {
-  padding: 2.1rem 0;
+  padding: 1.6rem 0;
+}
+@media only screen and (min-width: 900px) {
+  .header-intro__btns {
+    padding: 1.8rem 0;
+  }
 }
 
 .header-intro__btns > button {
-  margin: 0.4rem;
-  padding: 0.7rem 1.1rem;
-  min-width: 8rem;
+  margin: 0.37rem;
+  padding: 0.8rem 1.1rem 0.6rem 1.1rem;
+  min-width: 8.6rem;
   width: max-content;
-  font-weight: 500;
+  font-weight: 600;
   border: 1px solid white;
   border-radius: 2rem;
 }
@@ -425,28 +458,30 @@ ul a {
 /* --- SECTIONS ---*/
 /* --- Editor ---*/
 .editor {
-  padding-bottom: 17rem;
+  padding-bottom: min(15.44rem, 66vw);
   background-image: url("../images/illustration-editor-mobile.svg");
   background-repeat: no-repeat;
-  background-position: center top 11rem;
-  background-size: min(450px, 110%);
+  background-position: center top 11.3rem;
+  background-size: min(450px, 108%);
 }
 @media only screen and (min-width: 900px) {
   .editor {
-    padding-bottom: 5rem;
+    padding-bottom: min(14.3rem, 16vw);
     background-image: url("../images/illustration-editor-desktop.svg");
-    background-position: right -17rem top 3rem;
-    background-size: 60%;
+    background-position: left 55vw top min(4.5rem, 5vw);
+    background-size: min(58rem, 72vw);
   }
 }
 
 .editor__title {
   padding: 1.8rem;
-  padding-top: 6rem;
-  padding-bottom: min(24rem, 95vw);
+  padding-top: 6.5rem;
+  padding-bottom: min(24rem, 94vw);
+  font-size: clamp(1.73rem, 5.5vw, 2.4rem);
 }
 @media only screen and (min-width: 900px) {
   .editor__title {
+    padding-top: min(9.8rem, 11vw);
     padding-bottom: 0;
   }
 }
@@ -459,15 +494,22 @@ ul a {
 @media only screen and (min-width: 900px) {
   .editor__content {
     margin: 0;
-    padding-left: 10rem;
-    max-width: 50vw;
+    padding-left: clamp(5rem, 15vw - 3rem, 11rem);
+    width: clamp(32rem, 50.65vw, 50rem);
+    max-width: initial;
     text-align: left;
   }
 }
 
 .editor__content-item-title {
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  padding-top: 2.7rem;
+  padding-bottom: 0.8rem;
+}
+@media only screen and (min-width: 900px) {
+  .editor__content-item-title {
+    padding-top: min(4.8rem, 5.5vw);
+    padding-bottom: 1.5rem;
+  }
 }
 
 /* --- Speed ---*/
@@ -482,8 +524,8 @@ ul a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top -16rem, center;
-  border-top-right-radius: 5rem;
-  border-bottom-left-radius: 5rem;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
 }
 @media only screen and (min-width: 900px) {
   .speed {
@@ -494,13 +536,14 @@ ul a {
 }
 
 .speed__illustr {
-  height: 8rem;
+  height: clamp(5rem, 34vw, 13rem);
 }
 .speed__illustr img {
   position: absolute;
   top: 0;
-  left: 0;
-  transform: translateY(-11rem);
+  left: 50%;
+  max-width: 28rem;
+  transform: translateX(-50%) translateY(-11.5rem);
 }
 @media only screen and (min-width: 900px) {
   .speed__illustr {
@@ -508,19 +551,25 @@ ul a {
   }
   .speed__illustr img {
     position: relative;
-    transform: translateY(-5rem);
+    left: 0;
+    transform: translateX(0) translateY(-5rem);
   }
 }
 
+.speed__content {
+  margin: 0 auto;
+  max-width: 620px;
+}
 @media only screen and (min-width: 900px) {
   .speed__content {
+    margin: 0;
     flex-basis: 50%;
     text-align: left;
   }
 }
 
 .speed__title {
-  padding-top: 5rem;
+  padding-top: min(4.5rem, 19vw);
   padding-bottom: 1.5rem;
   font-size: 2.4rem;
   font-weight: 500;
@@ -547,11 +596,14 @@ ul a {
 }
 
 .features__content {
+  margin: 0 auto;
   padding: 1.8rem;
   padding-top: min(28rem, 107vw);
+  max-width: 620px;
 }
 @media only screen and (min-width: 900px) {
   .features__content {
+    margin: 0;
     padding-top: 0;
     padding-right: 10rem;
     max-width: 50vw;
@@ -584,8 +636,8 @@ ul a {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 9.9rem;
+    padding-right: 9.9rem;
     text-align: left;
   }
 }
