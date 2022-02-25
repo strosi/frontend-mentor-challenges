@@ -25,7 +25,7 @@ button,
 ul,
 li,
 a {
-    font-family: $ff-links;
+    color: $fc-h;
 }
 
 ul {
@@ -67,10 +67,6 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
-
-    // @include respond-900 {
-    //     justify-content: flex-start;
-    // }
 }
 
 .header-top__logo {
@@ -105,6 +101,8 @@ ul {
 .header-top__m-nav-btn-check:checked {
     & ~ .header-top__m-nav-btn-label > .header-top__m-nav-close {
         display: block;
+        margin: 0 auto;
+        width: 1.6rem;
     }
     & ~ .header-top__m-nav-btn-label > .header-top__m-nav-open {
         display: none;
@@ -112,40 +110,64 @@ ul {
     & ~ .header-top__main-items {
         display: block;
     }
+
+    @include respond-900 {
+        & ~ .header-top__main-items {
+            display: flex;
+        }
+    }
 }
 
 .header-top__main-items {
     position: absolute;
+    top: 6.5rem;
     left: 0;
     display: none;
+    padding: 1.5rem;
     width: 100%;
     @include color-theme(white);
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 3rem -1rem hsl(0deg 0% 0% / 70%);
 
     @include respond-900 {
         position: relative;
+        top: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: baseline;
         background-color: transparent;
+        box-shadow: none;
     }
 }
 
 .header-top__nav-menu {
+    padding-bottom: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid $bg-main;
+
     @include respond-900 {
         display: flex;
         flex-direction: row;
         text-align: left;
+        padding-bottom: 0;
+        border: none;
     }
 }
 
 .header-top__nav-menu-item {
     position: relative;
-    padding: 0 1rem;
+
+    @include respond-900 {
+        padding: 0 1rem;
+    }
 }
 
 .header-top__submenu-toggle {
     position: relative;
     padding: 0.5rem 1rem 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 600;
     background-color: transparent;
     border: none;
 
@@ -164,6 +186,7 @@ ul {
     }
 
     @include respond-900 {
+        font-size: inherit;
         color: $fc-light;
 
         &::before {
@@ -204,7 +227,9 @@ ul {
 
 .header-top__submenu {
     display: none;
-    @include color-theme($bg-main);
+    padding: 1rem;
+    background-color: $bg-main;
+    border-radius: 0.3rem;
 
     @include respond-900 {
         position: absolute;
@@ -212,13 +237,52 @@ ul {
         left: -0.3rem;
         padding: 1.3rem 3.5rem 1.3rem 1.3rem;
         background-color: white;
-        border-radius: 0.3rem;
         box-shadow: 0 0.5rem 3rem -1rem hsl(0deg 0% 0% / 70%);
     }
 }
 
 .header-top__submenu-item {
-    padding: 0.3rem 0;
+    padding: 0.5rem 0;
+    & a {
+        color: $fc-h-light;
+    }
+
+    @include respond-900 {
+        padding: 0.3rem 0;
+    }
+}
+
+.header-top__account-btns {
+    margin-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-900 {
+        margin-top: 0;
+        flex-direction: row;
+    }
+}
+
+.header-top__account-login {
+    margin: 0.5rem 0;
+    background-color: transparent;
+    border: none;
+
+    @include respond-900 {
+        margin: 0 1.5rem;
+        @include btn-color-theme(transparent);
+    }
+}
+
+.header-top__account-signup {
+    margin: 0.5rem auto;
+    @include btn-style;
+    @include color-theme($bg-header);
+
+    @include respond-900 {
+        margin: 0;
+        @include btn-color-theme(white);
+    }
 }
 
 .header-intro {
@@ -245,10 +309,7 @@ ul {
 
 .header-intro__btns > button {
     margin: 0.4rem;
-    padding: 0.7rem 1.1rem;
-    font-weight: 700;
-    border: 1px solid white;
-    border-radius: 2rem;
+    @include btn-style;
 }
 
 .header-intro__start-btn {
@@ -263,11 +324,11 @@ ul {
 /* --- Editor ---*/
 
 .editor {
-    padding: $mob-pad;
     padding-bottom: 17rem;
 }
 
 .editor__title {
+    padding: $mob-pad;
     padding-top: 4.5rem;
     padding-bottom: 2rem;
 }
@@ -284,6 +345,10 @@ ul {
     // img {
     //     transform: scale(1.25);
     // }
+}
+
+.editor__content {
+    padding: $mob-pad;
 }
 
 .editor__content-item-title {
@@ -380,5 +445,8 @@ ul {
 .footer__nav-list {
     li {
         padding-bottom: 0.5rem;
+    }
+    a {
+        color: $fc-footer;
     }
 }

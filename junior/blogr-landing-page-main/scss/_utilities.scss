@@ -5,6 +5,7 @@
 $fc-btn-hover: hsl(356, 100%, 66%);
 $bg-btn-hover: hsl(355, 100%, 74%);
 $fc-h: hsl(208, 49%, 24%);
+$fc-h-light: color.adjust($fc-h, $lightness: 10%);
 
 /* Neutral */
 $fc-light: hsl(0, 0%, 100%);
@@ -52,10 +53,6 @@ $desk-pad: 10rem;
 @mixin color-theme($bg) {
     color: fc($bg);
     background: $bg;
-
-    a {
-        color: fc($bg);
-    }
 }
 
 /* Button color theme */
@@ -70,4 +67,14 @@ $desk-pad: 10rem;
 @mixin btn-color-theme($bg) {
     color: btn-fc($bg);
     background: $bg;
+}
+
+/* Button style - size and shape */
+@mixin btn-style {
+    padding: 0.7rem 1.1rem;
+    min-width: 8rem;
+    width: max-content;
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 2rem;
 }

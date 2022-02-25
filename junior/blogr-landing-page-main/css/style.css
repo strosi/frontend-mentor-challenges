@@ -84,6 +84,7 @@ h6 {
 /* FUNCTIONS */
 /* Base color theme */
 /* Button color theme */
+/* Button style - size and shape */
 body {
   width: 100%;
   font-family: "Overpass", sans-serif;
@@ -91,9 +92,6 @@ body {
   text-align: center;
   color: #4b5862;
   background: #efeff0;
-}
-body a {
-  color: #4b5862;
 }
 
 h2,
@@ -112,7 +110,7 @@ button,
 ul,
 li,
 a {
-  font-family: "Ubuntu", sans-serif;
+  color: #1f3f5b;
 }
 
 ul {
@@ -145,9 +143,6 @@ ul a {
   background-repeat: no-repeat;
   background-position: left -21rem top -15rem, center;
   border-bottom-left-radius: 5rem;
-}
-.header a {
-  color: white;
 }
 
 .header-top {
@@ -191,6 +186,8 @@ ul a {
 
 .header-top__m-nav-btn-check:checked ~ .header-top__m-nav-btn-label > .header-top__m-nav-close {
   display: block;
+  margin: 0 auto;
+  width: 1.6rem;
 }
 .header-top__m-nav-btn-check:checked ~ .header-top__m-nav-btn-label > .header-top__m-nav-open {
   display: none;
@@ -198,44 +195,66 @@ ul a {
 .header-top__m-nav-btn-check:checked ~ .header-top__main-items {
   display: block;
 }
+@media only screen and (min-width: 900px) {
+  .header-top__m-nav-btn-check:checked ~ .header-top__main-items {
+    display: flex;
+  }
+}
 
 .header-top__main-items {
   position: absolute;
+  top: 6.5rem;
   left: 0;
   display: none;
+  padding: 1.5rem;
   width: 100%;
   color: #4b5862;
   background: white;
-}
-.header-top__main-items a {
-  color: #4b5862;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 3rem -1rem rgba(0, 0, 0, 0.7);
 }
 @media only screen and (min-width: 900px) {
   .header-top__main-items {
     position: relative;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
     background-color: transparent;
+    box-shadow: none;
   }
 }
 
+.header-top__nav-menu {
+  padding-bottom: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #efeff0;
+}
 @media only screen and (min-width: 900px) {
   .header-top__nav-menu {
     display: flex;
     flex-direction: row;
     text-align: left;
+    padding-bottom: 0;
+    border: none;
   }
 }
 
 .header-top__nav-menu-item {
   position: relative;
-  padding: 0 1rem;
+}
+@media only screen and (min-width: 900px) {
+  .header-top__nav-menu-item {
+    padding: 0 1rem;
+  }
 }
 
 .header-top__submenu-toggle {
   position: relative;
   padding: 0.5rem 1rem 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
   background-color: transparent;
   border: none;
 }
@@ -254,6 +273,7 @@ ul a {
 }
 @media only screen and (min-width: 900px) {
   .header-top__submenu-toggle {
+    font-size: inherit;
     color: white;
   }
   .header-top__submenu-toggle::before {
@@ -289,11 +309,9 @@ ul a {
 
 .header-top__submenu {
   display: none;
-  color: #4b5862;
-  background: #efeff0;
-}
-.header-top__submenu a {
-  color: #4b5862;
+  padding: 1rem;
+  background-color: #efeff0;
+  border-radius: 0.3rem;
 }
 @media only screen and (min-width: 900px) {
   .header-top__submenu {
@@ -302,13 +320,64 @@ ul a {
     left: -0.3rem;
     padding: 1.3rem 3.5rem 1.3rem 1.3rem;
     background-color: white;
-    border-radius: 0.3rem;
     box-shadow: 0 0.5rem 3rem -1rem rgba(0, 0, 0, 0.7);
   }
 }
 
 .header-top__submenu-item {
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
+}
+.header-top__submenu-item a {
+  color: #2c5a81;
+}
+@media only screen and (min-width: 900px) {
+  .header-top__submenu-item {
+    padding: 0.3rem 0;
+  }
+}
+
+.header-top__account-btns {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 900px) {
+  .header-top__account-btns {
+    margin-top: 0;
+    flex-direction: row;
+  }
+}
+
+.header-top__account-login {
+  margin: 0.5rem 0;
+  background-color: transparent;
+  border: none;
+}
+@media only screen and (min-width: 900px) {
+  .header-top__account-login {
+    margin: 0 1.5rem;
+    color: white;
+    background: transparent;
+  }
+}
+
+.header-top__account-signup {
+  margin: 0.5rem auto;
+  padding: 0.7rem 1.1rem;
+  min-width: 8rem;
+  width: max-content;
+  font-weight: 500;
+  border: 1px solid white;
+  border-radius: 2rem;
+  color: white;
+  background: linear-gradient(135deg, #ff8f70, #ff3d54);
+}
+@media only screen and (min-width: 900px) {
+  .header-top__account-signup {
+    margin: 0;
+    color: #ff525d;
+    background: white;
+  }
 }
 
 .header-intro {
@@ -336,7 +405,9 @@ ul a {
 .header-intro__btns > button {
   margin: 0.4rem;
   padding: 0.7rem 1.1rem;
-  font-weight: 700;
+  min-width: 8rem;
+  width: max-content;
+  font-weight: 500;
   border: 1px solid white;
   border-radius: 2rem;
 }
@@ -354,11 +425,11 @@ ul a {
 /* --- SECTIONS ---*/
 /* --- Editor ---*/
 .editor {
-  padding: 1.8rem;
   padding-bottom: 17rem;
 }
 
 .editor__title {
+  padding: 1.8rem;
   padding-top: 4.5rem;
   padding-bottom: 2rem;
 }
@@ -370,6 +441,10 @@ ul a {
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.editor__content {
+  padding: 1.8rem;
 }
 
 .editor__content-item-title {
@@ -391,9 +466,6 @@ ul a {
   background-position: center top -16rem, center;
   border-top-right-radius: 5rem;
   border-bottom-left-radius: 5rem;
-}
-.speed a {
-  color: white;
 }
 
 .speed__illustr {
@@ -443,9 +515,6 @@ ul a {
   background: #25252d;
   border-top-right-radius: 5rem;
 }
-.footer a {
-  color: #c8c8cb;
-}
 
 .footer-main {
   display: flex;
@@ -473,6 +542,9 @@ ul a {
 
 .footer__nav-list li {
   padding-bottom: 0.5rem;
+}
+.footer__nav-list a {
+  color: #c8c8cb;
 }
 
 .footer__attribution {
