@@ -426,25 +426,43 @@ ul a {
 /* --- Editor ---*/
 .editor {
   padding-bottom: 17rem;
+  background-image: url("../images/illustration-editor-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top 11rem;
+  background-size: min(450px, 110%);
+}
+@media only screen and (min-width: 900px) {
+  .editor {
+    padding-bottom: 5rem;
+    background-image: url("../images/illustration-editor-desktop.svg");
+    background-position: right -17rem top 3rem;
+    background-size: 60%;
+  }
 }
 
 .editor__title {
   padding: 1.8rem;
-  padding-top: 4.5rem;
-  padding-bottom: 2rem;
+  padding-top: 6rem;
+  padding-bottom: min(24rem, 95vw);
 }
-
-.editor__illustr {
-  height: 100vw;
-  padding: 2.1rem 0;
-  background-image: url("../images/illustration-editor-mobile.svg");
-  background-size: 100vw;
-  background-repeat: no-repeat;
-  background-position: center;
+@media only screen and (min-width: 900px) {
+  .editor__title {
+    padding-bottom: 0;
+  }
 }
 
 .editor__content {
+  margin: 0 auto;
   padding: 1.8rem;
+  max-width: 620px;
+}
+@media only screen and (min-width: 900px) {
+  .editor__content {
+    margin: 0;
+    padding-left: 10rem;
+    max-width: 50vw;
+    text-align: left;
+  }
 }
 
 .editor__content-item-title {
@@ -467,6 +485,13 @@ ul a {
   border-top-right-radius: 5rem;
   border-bottom-left-radius: 5rem;
 }
+@media only screen and (min-width: 900px) {
+  .speed {
+    display: flex;
+    flex-direction: row;
+    background-position: left -15rem top -26rem, center;
+  }
+}
 
 .speed__illustr {
   height: 8rem;
@@ -476,6 +501,22 @@ ul a {
   top: 0;
   left: 0;
   transform: translateY(-11rem);
+}
+@media only screen and (min-width: 900px) {
+  .speed__illustr {
+    flex-basis: 50%;
+  }
+  .speed__illustr img {
+    position: relative;
+    transform: translateY(-5rem);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .speed__content {
+    flex-basis: 50%;
+    text-align: left;
+  }
 }
 
 .speed__title {
@@ -489,19 +530,33 @@ ul a {
 /* --- Features ---*/
 .features {
   padding-bottom: 4rem;
+  background-image: url("../images/illustration-laptop-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top 4rem;
+  background-size: min(580px, 130%);
 }
-
-.features__illustr {
-  padding-top: 7rem;
-  padding-bottom: 1.7rem;
-  overflow: hidden;
-}
-.features__illustr img {
-  transform: scale(1.3);
+@media only screen and (min-width: 900px) {
+  .features {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-image: url("../images/illustration-laptop-desktop.svg");
+    background-position: left -10rem top 4rem;
+    background-size: 60%;
+  }
 }
 
 .features__content {
   padding: 1.8rem;
+  padding-top: min(28rem, 107vw);
+}
+@media only screen and (min-width: 900px) {
+  .features__content {
+    padding-top: 0;
+    padding-right: 10rem;
+    max-width: 50vw;
+    text-align: left;
+  }
 }
 
 .features__content-item-title {
@@ -524,15 +579,35 @@ ul a {
   padding-top: 5rem;
   padding-bottom: 3rem;
 }
+@media only screen and (min-width: 900px) {
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    text-align: left;
+  }
+}
 
 .footer__logo {
   padding-bottom: 2rem;
   width: 6rem;
 }
+@media only screen and (min-width: 900px) {
+  .footer__logo {
+    padding-top: 0.7rem;
+  }
+}
 
 .footer__nav {
   padding-top: 1.3rem;
   font-size: 1.1rem;
+}
+@media only screen and (min-width: 900px) {
+  .footer__nav {
+    padding-top: 0;
+  }
 }
 
 .footer__nav-title {
