@@ -386,7 +386,6 @@ ul {
     @include respond-900 {
         margin: 0;
         padding-left: clamp(5rem, calc(15vw - 3rem), 11rem);
-        // width: 45.6rem;
         width: clamp(32rem, 50.65vw, 50rem);
         max-width: initial;
         text-align: left;
@@ -396,7 +395,7 @@ ul {
 .editor__content-item-title {
     padding-top: 2.7rem;
     padding-bottom: 0.8rem;
-    
+
     @include respond-900 {
         padding-top: min(4.8rem, 5.5vw);
         padding-bottom: 1.5rem;
@@ -420,12 +419,16 @@ ul {
     @include respond-900 {
         display: flex;
         flex-direction: row;
-        background-position: left -15rem top -26rem, center;
+        align-items: center;
+        padding-top: 2.8rem;
+        padding-bottom: 6.3rem;
+        background-position: left -13rem top -32rem, center;
+        background-size: auto;
     }
 }
 
 .speed__illustr {
-    height: clamp(5rem, 34vw, 13rem);
+    height: clamp(5rem, 34vw, 16rem);
 
     img {
         position: absolute;
@@ -436,11 +439,15 @@ ul {
     }
 
     @include respond-900 {
+        position: relative;
         flex-basis: 50%;
         img {
-            position: relative;
-            left: 0;
-            transform: translateX(0) translateY(-5rem);
+            // position: relative;
+            top: 68%;
+            left: 54%;
+            max-width: 34.5rem;
+            width: max(28rem, 39vw);
+            transform: translateX(-50%) translateY(-50%);
         }
     }
 }
@@ -451,6 +458,9 @@ ul {
 
     @include respond-900 {
         margin: 0;
+        max-width: initial;
+        padding-right: clamp(2rem, 13vw - 3rem, 8rem);
+        padding-left: max(1rem, 10rem - 10vw);
         flex-basis: 50%;
         text-align: left;
     }
@@ -486,7 +496,7 @@ ul {
 .features__content {
     margin: 0 auto;
     padding: $mob-pad;
-    padding-top: min(28rem, 107vw);
+    padding-top: min(28rem, 110vw);
     max-width: $mob-content-max-w;
 
     @include respond-900 {
@@ -506,7 +516,7 @@ ul {
 /* --- FOOTER ---*/
 .footer {
     @include color-theme($bg-footer);
-    border-top-right-radius: 5rem;
+    border-top-right-radius: $roundness-big;
 }
 
 .footer-main {
