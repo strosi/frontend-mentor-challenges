@@ -468,7 +468,6 @@ ul {
 
 .speed__title {
     padding-top: min(4.5rem, 19vw);
-    // padding-top: 5rem;
     padding-bottom: 1.5rem;
     font-size: $h2-desk;
     font-weight: 500;
@@ -488,9 +487,8 @@ ul {
         flex-direction: row;
         justify-content: flex-end;
         background-image: url("../images/illustration-laptop-desktop.svg");
-        background-position: left -17.5rem top min(8.5rem, 8vw);
+        background-position: right calc(57vw - 5rem) top clamp(4.5rem, 8vw, 8rem);
         background-size: clamp(50rem, 88vw, 61.2rem);
-        // background-size: min(61rem, 68vw);
     }
 }
 
@@ -504,7 +502,7 @@ ul {
         margin: 0;
         padding-top: min(14rem, 16vw);
         padding-bottom: min(15rem, 17vw);
-        padding-right: clamp(2rem, 14vw - 2rem, 11rem);
+        padding-right: clamp(2rem, 50% - 30rem, 11rem);
         padding-left: max(1rem, 10rem - 10vw);
         max-width: 50vw;
         text-align: left;
