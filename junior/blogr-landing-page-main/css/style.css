@@ -600,8 +600,8 @@ ul a {
     flex-direction: row;
     justify-content: flex-end;
     background-image: url("../images/illustration-laptop-desktop.svg");
-    background-position: left -10rem top 4rem;
-    background-size: 60%;
+    background-position: left -17.5rem top min(8.5rem, 8vw);
+    background-size: clamp(50rem, 88vw, 61.2rem);
   }
 }
 
@@ -614,8 +614,10 @@ ul a {
 @media only screen and (min-width: 900px) {
   .features__content {
     margin: 0;
-    padding-top: 0;
-    padding-right: 10rem;
+    padding-top: min(14rem, 16vw);
+    padding-bottom: min(15rem, 17vw);
+    padding-right: clamp(2rem, 14vw - 2rem, 11rem);
+    padding-left: max(1rem, 10rem - 10vw);
     max-width: 50vw;
     text-align: left;
   }
@@ -624,6 +626,11 @@ ul a {
 .features__content-item-title {
   padding-top: 3rem;
   padding-bottom: 1.5rem;
+}
+@media only screen and (min-width: 900px) {
+  .features__content-item-title {
+    padding-top: 5rem;
+  }
 }
 
 /* --- FOOTER ---*/
