@@ -645,7 +645,7 @@ ul a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 4.7rem;
   padding-bottom: 3rem;
 }
 @media only screen and (min-width: 900px) {
@@ -660,8 +660,8 @@ ul a {
 }
 
 .footer__logo {
-  padding-bottom: 2rem;
-  width: 6rem;
+  padding-bottom: 2.5rem;
+  width: 6.3rem;
 }
 @media only screen and (min-width: 900px) {
   .footer__logo {
@@ -670,7 +670,7 @@ ul a {
 }
 
 .footer__nav {
-  padding-top: 1.3rem;
+  padding-top: 0.9rem;
   font-size: 1.1rem;
 }
 @media only screen and (min-width: 900px) {

@@ -529,7 +529,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 4.7rem;
     padding-bottom: 3rem;
 
     @include respond-900 {
@@ -543,8 +543,8 @@ ul {
 }
 
 .footer__logo {
-    padding-bottom: 2rem;
-    width: 6rem;
+    padding-bottom: 2.5rem;
+    width: 6.3rem;
 
     @include respond-900 {
         padding-top: 0.7rem;
@@ -552,7 +552,7 @@ ul {
 }
 
 .footer__nav {
-    padding-top: 1.3rem;
+    padding-top: 0.9rem;
     font-size: 1.1rem;
 
     @include respond-900 {
