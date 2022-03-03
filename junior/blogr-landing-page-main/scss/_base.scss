@@ -536,8 +536,12 @@ ul {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        padding-left: $desk-pad;
-        padding-right: $desk-pad;
+        margin: 0 auto;
+        padding-top: 2.7rem;
+        padding-bottom: 1rem;
+        padding-left: 4rem;
+        padding-right: 9.9rem;
+        max-width: 68rem;
         text-align: left;
     }
 }
