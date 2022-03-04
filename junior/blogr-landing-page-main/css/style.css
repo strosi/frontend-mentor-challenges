@@ -675,8 +675,9 @@ ul a {
     margin: 0 auto;
     padding-top: 2.7rem;
     padding-bottom: 0.7rem;
-    padding-right: 9.9rem;
-    max-width: 69rem;
+    padding-left: 3rem;
+    padding-right: 12.9rem;
+    max-width: 75rem;
     text-align: left;
   }
 }
