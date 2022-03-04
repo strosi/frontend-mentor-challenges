@@ -1,10 +1,15 @@
 @use 'utilities' as *;
+@use 'queries' as *;
 
 .footer__attribution {
     font-size: 11px;
     text-align: center;
     padding: 1rem;
     color: $fc-footer;
+
+    @include respond-900 {
+        padding-bottom: 1.5rem;
+    }
 }
 
 .footer__attribution a {
