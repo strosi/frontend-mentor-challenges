@@ -32,6 +32,12 @@ a {
     color: $fc-h;
 }
 
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 ul {
     list-style: none;
 
@@ -211,22 +217,24 @@ ul {
             border-color: white;
         }
 
-        &::after {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            content: "";
-            width: 80%;
-            height: 2px;
-            transform-origin: left;
-            transform: scaleX(0);
-            background-color: white;
-            transition: transform 0.3s ease-in;
-        }
+        @include underline-eff(white);
 
-        &:hover::after {
-            transform: scaleX(1);
-        }
+        // &::after {
+        //     position: absolute;
+        //     bottom: 11px;
+        //     left: 0;
+        //     content: "";
+        //     width: 80%;
+        //     height: 2px;
+        //     transform-origin: left;
+        //     transform: scaleX(0);
+        //     background-color: white;
+        //     transition: transform 0.3s ease-in;
+        // }
+
+        // &:hover::after {
+        //     transform: scaleX(1);
+        // }
     }
 }
 
@@ -234,9 +242,9 @@ ul {
     &::before {
         transform: rotate(45deg);
     }
-    &::after {
-        transform: scaleX(1);
-    }
+    // &::after {
+    //     transform: scaleX(1);
+    // }
 }
 
 .header-top__submenu-toggle.active ~ .header-top__submenu {
@@ -253,7 +261,8 @@ ul {
         position: absolute;
         top: 53px;
         left: -0.3rem;
-        padding: 1.3rem 3.5rem 1.3rem 1.3rem;
+        padding: 1.3rem;
+        min-width: 10rem;
         background-color: white;
         box-shadow: 0 0.5rem 3rem -1rem hsl(0deg 0% 0% / 70%);
     }
@@ -261,8 +270,14 @@ ul {
 
 .header-top__submenu-item {
     padding: 0.5rem 0;
+
     & a {
         color: $fc-h-light;
+    }
+
+    & a:hover {
+        font-weight: 600;
+        color: black;
     }
 
     @include respond-900 {
@@ -296,6 +311,12 @@ ul {
     margin: 0.5rem auto;
     @include btn-style;
     @include color-theme($bg-header);
+    transition: 0.3s ease;
+    
+    &:hover {
+        @include btn-color-theme($bg-btn-hover);
+        border-color: $bg-btn-hover;
+    }
 
     @include respond-900 {
         margin: 0;
@@ -344,10 +365,22 @@ ul {
 
 .header-intro__start-btn {
     @include btn-color-theme(white);
+    transition: 0.3s ease;
+    
+    &:hover {
+        @include btn-color-theme($bg-btn-hover);
+        border-color: $bg-btn-hover;
+    }
 }
 
 .header-intro__more-btn {
     @include btn-color-theme(transparent);
+    transition: 0.3s ease;
+
+    &:hover {
+        @include btn-color-theme(white);
+        // border-color: $bg-btn-hover;
+    }
 }
 
 /* --- SECTIONS ---*/
@@ -605,6 +638,8 @@ ul {
     @include respond-900 {
         li {
             padding-bottom: 0.55rem;
+
+            @include underline-eff($fc-footer);
         }
     }
 }

@@ -82,3 +82,23 @@ $desk-content-max-w: 1845px;
     border: 1px solid white;
     border-radius: 2rem;
 }
+
+@mixin underline-eff($line-color) {
+    &::after {
+        position: absolute;
+        bottom: 11px;
+        left: 0;
+        content: "";
+        width: 80%;
+        height: 2px;
+        transform-origin: left;
+        transform: scaleX(0);
+        background-color: $line-color;
+        transition: transform 0.3s ease-in;
+    }
+
+    &:hover::after,
+    &.active::after {
+        transform: scaleX(1);
+    }
+}

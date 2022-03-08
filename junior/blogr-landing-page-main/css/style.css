@@ -117,6 +117,10 @@ a {
   color: #1f3f5b;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
 }
@@ -301,7 +305,7 @@ ul a {
   }
   .header-top__submenu-toggle::after {
     position: absolute;
-    bottom: 10px;
+    bottom: 11px;
     left: 0;
     content: "";
     width: 80%;
@@ -311,16 +315,13 @@ ul a {
     background-color: white;
     transition: transform 0.3s ease-in;
   }
-  .header-top__submenu-toggle:hover::after {
+  .header-top__submenu-toggle:hover::after, .header-top__submenu-toggle.active::after {
     transform: scaleX(1);
   }
 }
 
 .header-top__submenu-toggle.active::before {
   transform: rotate(45deg);
-}
-.header-top__submenu-toggle.active::after {
-  transform: scaleX(1);
 }
 
 .header-top__submenu-toggle.active ~ .header-top__submenu {
@@ -338,7 +339,8 @@ ul a {
     position: absolute;
     top: 53px;
     left: -0.3rem;
-    padding: 1.3rem 3.5rem 1.3rem 1.3rem;
+    padding: 1.3rem;
+    min-width: 10rem;
     background-color: white;
     box-shadow: 0 0.5rem 3rem -1rem rgba(0, 0, 0, 0.7);
   }
@@ -349,6 +351,10 @@ ul a {
 }
 .header-top__submenu-item a {
   color: #2c5a81;
+}
+.header-top__submenu-item a:hover {
+  font-weight: 600;
+  color: black;
 }
 @media only screen and (min-width: 900px) {
   .header-top__submenu-item {
@@ -391,6 +397,12 @@ ul a {
   border-radius: 2rem;
   color: white;
   background: linear-gradient(135deg, #ff8f70, #ff3d54);
+  transition: 0.3s ease;
+}
+.header-top__account-signup:hover {
+  color: white;
+  background: #ff7a85;
+  border-color: #ff7a85;
 }
 @media only screen and (min-width: 900px) {
   .header-top__account-signup {
@@ -450,11 +462,22 @@ ul a {
 .header-intro__start-btn {
   color: #ff525d;
   background: white;
+  transition: 0.3s ease;
+}
+.header-intro__start-btn:hover {
+  color: white;
+  background: #ff7a85;
+  border-color: #ff7a85;
 }
 
 .header-intro__more-btn {
   color: white;
   background: transparent;
+  transition: 0.3s ease;
+}
+.header-intro__more-btn:hover {
+  color: #ff525d;
+  background: white;
 }
 
 /* --- SECTIONS ---*/
@@ -722,6 +745,21 @@ ul a {
 @media only screen and (min-width: 900px) {
   .footer__nav-list li {
     padding-bottom: 0.55rem;
+  }
+  .footer__nav-list li::after {
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    content: "";
+    width: 80%;
+    height: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    background-color: #c8c8cb;
+    transition: transform 0.3s ease-in;
+  }
+  .footer__nav-list li:hover::after, .footer__nav-list li.active::after {
+    transform: scaleX(1);
   }
 }
 
