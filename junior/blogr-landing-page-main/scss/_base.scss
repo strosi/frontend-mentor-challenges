@@ -217,7 +217,7 @@ ul {
             border-color: white;
         }
 
-        @include underline-eff(white);
+        @include underline-eff(white, 80%);
 
         // &::after {
         //     position: absolute;
@@ -636,10 +636,10 @@ ul {
     }
 
     @include respond-900 {
-        li {
-            padding-bottom: 0.55rem;
-
-            @include underline-eff($fc-footer);
+        a {
+            position: relative;
+            padding-bottom: 0.6rem;
+            @include underline-eff($fc-footer, 100%);
         }
     }
 }

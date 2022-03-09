@@ -743,22 +743,23 @@ ul a {
   color: #c8c8cb;
 }
 @media only screen and (min-width: 900px) {
-  .footer__nav-list li {
-    padding-bottom: 0.55rem;
+  .footer__nav-list a {
+    position: relative;
+    padding-bottom: 0.6rem;
   }
-  .footer__nav-list li::after {
+  .footer__nav-list a::after {
     position: absolute;
     bottom: 11px;
     left: 0;
     content: "";
-    width: 80%;
+    width: 100%;
     height: 2px;
     transform-origin: left;
     transform: scaleX(0);
     background-color: #c8c8cb;
     transition: transform 0.3s ease-in;
   }
-  .footer__nav-list li:hover::after, .footer__nav-list li.active::after {
+  .footer__nav-list a:hover::after, .footer__nav-list a.active::after {
     transform: scaleX(1);
   }
 }

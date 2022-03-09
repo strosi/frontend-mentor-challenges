@@ -83,13 +83,13 @@ $desk-content-max-w: 1845px;
     border-radius: 2rem;
 }
 
-@mixin underline-eff($line-color) {
+@mixin underline-eff($line-color, $length) {
     &::after {
         position: absolute;
         bottom: 11px;
         left: 0;
         content: "";
-        width: 80%;
+        width: $length;
         height: 2px;
         transform-origin: left;
         transform: scaleX(0);
