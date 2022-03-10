@@ -1,0 +1,114 @@
+@use "utilities" as *;
+@use "sass:color";
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: $ff;
+    text-align: center;
+    color: $light-cyan;
+    background-color: $dark-blue;
+}
+
+/* Used to hide checkbox and being accessible 
+   at the same time */
+.vh {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    margin: 1rem;
+    padding: 0 clamp(1.5rem, 5vw, 2.5rem);
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    max-width: 33.75rem;
+    background-color: $dark-grayish-blue;
+    border-radius: 0.5rem;
+
+    @media only screen and (min-width: $desktop) {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        border-radius: 1rem;
+    }
+}
+
+/*--- root styles ---*/
+.advice__id {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    letter-spacing: 0.23rem;
+    text-transform: uppercase;
+    color: $neon-green;
+
+    @media only screen and (min-width: $desktop) {
+        letter-spacing: 0.28rem;
+    }
+}
+
+.advice__text-holder {
+    display: flex;
+    align-items: center;
+    min-height: 10rem;
+}
+
+.advice__text {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
+    font-weight: 800;
+    line-height: 1.35;
+
+    @media only screen and (min-width: $desktop) {
+        padding-bottom: 2.1rem;
+    }
+}
+/*--- end of root styles ---*/
+
+.divider {
+    width: 100%;
+    height: 2rem;
+    background-image: url("../images/pattern-divider-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media only screen and (min-width: $desktop) {
+        background-image: url("../images/pattern-divider-desktop.svg");
+    }
+}
+
+.dice-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    padding: 1.2rem;
+    background-color: $neon-green;
+    border: none;
+    border-radius: 2rem;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 1.5rem 0.5rem hsla(150, 100%, 66%, 0.3);
+    }
+}
+
+.footer__attr {
+    padding-top: 3rem;
+    font-size: 11px;
+    text-align: center;
+    color: color.adjust($dark-grayish-blue, $lightness: 20%);
+
+    & a {
+        color: color.adjust($dark-grayish-blue, $lightness: 20%);
+    }
+}

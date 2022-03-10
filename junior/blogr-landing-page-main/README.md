@@ -41,6 +41,14 @@ Users should be able to:
 
 The new for me in this challenge was the creation of submenus and checking if menu button is clicked with the `isEqualNode()` method of the Node interface.
 
+### Time to complete
+
+It took more than 15 hours... That includes:
+- setting up the HTML and thinking of proper class names (about an hour).
+- mobile view styles (4 hours).
+- creating mobile menu and transform it to desktop menu on resize (about 3 hours).
+- adjusting the layout to match the provided design (7 hours).
+
 ## Acknowledgments
 
 Always thankful to all smart people who share their work on the net (articles, solutions, videos, answers...)!
