@@ -23,6 +23,7 @@ function App() {
         }
     };
     const [advice, setAdvice] = React.useState(initAdvice);
+    const [isBtnClicked, setIsBtnClicked] = React.useState(false);
 
     const generateAdvice = (e) => {
         e.preventDefault();
@@ -35,6 +36,14 @@ function App() {
             .catch(err => {
                 console.log(err);
             });
+
+        setIsBtnClicked(true);
+
+        const timeoutId = setTimeout(() => {
+            setIsBtnClicked(false);
+        }, 1000);
+
+        return () => clearTimeout(timeoutId);
     }
 
     return (
@@ -45,7 +54,7 @@ function App() {
             </div>
             <div className="divider"></div>
             <button className="dice-btn" onClick={generateAdvice}>
-                <img src="images/icon-dice.svg" alt="Generate advice" />
+                <img src="images/icon-dice.svg" alt="Generate advice" className={isBtnClicked ? "roll-dice" : ""} />
             </button>
         </div>
     )

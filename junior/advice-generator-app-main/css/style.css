@@ -181,11 +181,35 @@ main {
   border-radius: 2rem;
   transition: 0.2s ease-in-out;
 }
+.dice-btn img {
+  transition: 0.2s ease-in;
+}
 .dice-btn:hover {
   cursor: pointer;
   box-shadow: 0 0 1.5rem 0.5rem rgba(82, 255, 168, 0.3);
 }
+.dice-btn:active {
+  transform: translateX(-50%) translateY(50%) scale(0.95);
+}
+.dice-btn:hover img {
+  transform: scale(1.1);
+}
 
+.roll-dice {
+  animation: rollDice 1s ease;
+}
+
+@keyframes rollDice {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.6) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(540deg);
+  }
+}
 .footer__attr {
   padding-top: 3rem;
   font-size: 11px;
