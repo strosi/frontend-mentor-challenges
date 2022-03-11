@@ -73,7 +73,27 @@ main {
         padding-bottom: 2.1rem;
     }
 }
-/*--- end of root styles ---*/
+
+.advice-transition {
+    &-enter {
+        opacity: 0;
+        transform: scale(0.8) translateY(2rem);
+    }
+    &-enter-active {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        transition: opacity 2.5s, transform 1s;
+    }
+    &-exit {
+        opacity: 0;
+        transform: scale(0.8) translateY(2rem);
+    }
+    &-exit-active {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        transition: opacity 2.5s, transform 1s;
+    }
+}
 
 .divider {
     width: 100%;
@@ -110,7 +130,7 @@ main {
     &:active {
         transform: translateX(-50%) translateY(50%) scale(0.95);
     }
-    
+
     &:hover img {
         transform: scale(1.1);
     }
@@ -131,6 +151,7 @@ main {
         transform: scale(1) rotate(540deg);
     }
 }
+/*--- end of root styles ---*/
 
 .footer__attr {
     padding-top: 3rem;

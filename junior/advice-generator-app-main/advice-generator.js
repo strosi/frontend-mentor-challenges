@@ -1,3 +1,10 @@
+const transitionStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 1 },
+    exiting: { opacity: 1 },
+    exited: { opacity: 0 },
+};
+
 function AdviceId({ id }) {
     return (
         <p className="advice__id">Advice #<span>{id}</span></p>
@@ -24,6 +31,7 @@ function App() {
     };
     const [advice, setAdvice] = React.useState(initAdvice);
     const [isBtnClicked, setIsBtnClicked] = React.useState(false);
+    const [inProp, setInProp] = React.useState(false);
 
     const generateAdvice = (e) => {
         e.preventDefault();
@@ -38,6 +46,7 @@ function App() {
             });
 
         setIsBtnClicked(true);
+        setInProp(!inProp);
 
         const timeoutId = setTimeout(() => {
             setIsBtnClicked(false);
@@ -50,7 +59,12 @@ function App() {
         <div>
             <div className="advice">
                 <AdviceId id={advice.slip.id} />
-                <AdviceText text={advice.slip.advice} />
+                <ReactTransitionGroup.CSSTransition
+                    in={inProp}
+                    timeout={2500}
+                    classNames="advice-transition">
+                    <AdviceText text={advice.slip.advice} />
+                </ReactTransitionGroup.CSSTransition>
             </div>
             <div className="divider"></div>
             <button className="dice-btn" onClick={generateAdvice}>

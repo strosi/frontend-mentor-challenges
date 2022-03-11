@@ -156,7 +156,25 @@ main {
   }
 }
 
-/*--- end of root styles ---*/
+.advice-transition-enter {
+  opacity: 0;
+  transform: scale(0.8) translateY(2rem);
+}
+.advice-transition-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity 2.5s, transform 1s;
+}
+.advice-transition-exit {
+  opacity: 0;
+  transform: scale(0.8) translateY(2rem);
+}
+.advice-transition-exit-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity 2.5s, transform 1s;
+}
+
 .divider {
   width: 100%;
   height: 2rem;
@@ -210,6 +228,7 @@ main {
     transform: scale(1) rotate(540deg);
   }
 }
+/*--- end of root styles ---*/
 .footer__attr {
   padding-top: 3rem;
   font-size: 11px;
