@@ -59,6 +59,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 This simple app is great for practising React. Here is my first use of React Transition Group and fetching data from an API.
 
 Embeded React in existing HTML document without `creat-react-app`.
+Used the React Transition Group library to add transition effect to some elements.
 
 To see how you can add code snippets, see below:
 
@@ -90,6 +91,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) - Include React in existing page.
 - [How to Add Animations with React Transition Group](https://blog.openreplay.com/how-to-add-animations-with-react-transition-group) - React Transition Group introduction.
+- [React Transition Group](https://reactcommunity.org/react-transition-group/) - Setting up CSSTransition, added the link in the HTML to use the library externally.
 
 
 ## Author

@@ -1,10 +1,3 @@
-const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 1 },
-    exited: { opacity: 0 },
-};
-
 function AdviceId({ id }) {
     return (
         <p className="advice__id">Advice #<span>{id}</span></p>
@@ -25,7 +18,7 @@ function App() {
     const adviceAPIurl = "https://api.adviceslip.com/advice";
     const initAdvice = {
         "slip": {
-            "slip_id": "117",
+            "id": "117",
             "advice": "It is easy to sit up and take notice, what's difficult is getting up and taking action."
         }
     };
@@ -58,12 +51,22 @@ function App() {
     return (
         <div>
             <div className="advice">
-                <AdviceId id={advice.slip.id} />
                 <ReactTransitionGroup.CSSTransition
                     in={inProp}
-                    timeout={2500}
+                    timeout={2000}
+                    classNames="id-transition">
+
+                    <AdviceId id={advice.slip.id} />
+
+                </ReactTransitionGroup.CSSTransition>
+
+                <ReactTransitionGroup.CSSTransition
+                    in={inProp}
+                    timeout={2000}
                     classNames="advice-transition">
+                
                     <AdviceText text={advice.slip.advice} />
+
                 </ReactTransitionGroup.CSSTransition>
             </div>
             <div className="divider"></div>

@@ -55,6 +55,23 @@ main {
     }
 }
 
+.id-transition {
+    &-enter {
+        opacity: 0;
+    }
+    &-enter-active {
+        opacity: 1;
+        transition: opacity 2s;
+    }
+    &-exit {
+        opacity: 0;
+    }
+    &-exit-active {
+        opacity: 1;
+        transition: opacity 2s;
+    }
+}
+
 .advice__text-holder {
     display: flex;
     align-items: center;
@@ -82,7 +99,7 @@ main {
     &-enter-active {
         opacity: 1;
         transform: scale(1) translateY(0);
-        transition: opacity 2.5s, transform 1s;
+        transition: opacity 2s, transform 1s;
     }
     &-exit {
         opacity: 0;
@@ -91,7 +108,7 @@ main {
     &-exit-active {
         opacity: 1;
         transform: scale(1) translateY(0);
-        transition: opacity 2.5s, transform 1s;
+        transition: opacity 2s, transform 1s;
     }
 }
 

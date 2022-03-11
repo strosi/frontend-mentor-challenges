@@ -136,6 +136,21 @@ main {
   }
 }
 
+.id-transition-enter {
+  opacity: 0;
+}
+.id-transition-enter-active {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.id-transition-exit {
+  opacity: 0;
+}
+.id-transition-exit-active {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
 .advice__text-holder {
   display: flex;
   align-items: center;
@@ -163,7 +178,7 @@ main {
 .advice-transition-enter-active {
   opacity: 1;
   transform: scale(1) translateY(0);
-  transition: opacity 2.5s, transform 1s;
+  transition: opacity 2s, transform 1s;
 }
 .advice-transition-exit {
   opacity: 0;
@@ -172,7 +187,7 @@ main {
 .advice-transition-exit-active {
   opacity: 1;
   transform: scale(1) translateY(0);
-  transition: opacity 2.5s, transform 1s;
+  transition: opacity 2s, transform 1s;
 }
 
 .divider {
