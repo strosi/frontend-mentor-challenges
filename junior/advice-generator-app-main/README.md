@@ -51,9 +51,9 @@ I learned to:
 
 ### Useful resources
 
-- [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) - Include React in existing page.
-- [How to Add Animations with React Transition Group](https://blog.openreplay.com/how-to-add-animations-with-react-transition-group) - React Transition Group introduction.
-- [React Transition Group](https://reactcommunity.org/react-transition-group/) - Setting up CSSTransition, added the link in the HTML to use the library externally.
+- [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) - Here I found how to include React in existing page.
+- [How to Add Animations with React Transition Group](https://blog.openreplay.com/how-to-add-animations-with-react-transition-group) - Useful React Transition Group introduction.
+- [React Transition Group](https://reactcommunity.org/react-transition-group/) - This helped me setting up CSSTransition and used the link in the HTML to access the library externally.
 
 
 ### Time to complete
