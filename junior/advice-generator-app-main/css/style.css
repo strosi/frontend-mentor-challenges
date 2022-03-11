@@ -118,6 +118,7 @@ main {
   main {
     padding-top: 3rem;
     padding-bottom: 4rem;
+    width: 100%;
     border-radius: 1rem;
   }
 }
@@ -150,6 +151,7 @@ main {
 }
 @media only screen and (min-width: 600px) {
   .advice__text {
+    margin: 0 auto;
     padding-bottom: 2.1rem;
   }
 }

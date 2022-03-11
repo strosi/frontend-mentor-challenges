@@ -38,6 +38,7 @@ main {
     @media only screen and (min-width: $desktop) {
         padding-top: 3rem;
         padding-bottom: 4rem;
+        width: 100%;
         border-radius: 1rem;
     }
 }
@@ -68,6 +69,7 @@ main {
     line-height: 1.35;
 
     @media only screen and (min-width: $desktop) {
+        margin: 0 auto;
         padding-bottom: 2.1rem;
     }
 }

@@ -20,28 +20,28 @@
 <body>
   <main>
     <h1 class="vh">Advice generator</h1>
-    <div id="root">
-      <!-- 
-        Content from React:
-        Advice #ID
-        Advice text "..."
-       -->
-
-      <!-- Example content -->
-      <div class="advice">
-        <p class="advice__id">Advice #<span>117</span></p>
+    <div id="generator">
+      <!-- <div class="advice"> -->
+        <!-- 
+          Content from React:
+          Advice #ID
+          Advice text "..."
+         -->
+  
+        <!-- Example content -->
+        <!-- <p class="advice__id">Advice #<span>117</span></p>
         <div class="advice__text-holder">
           <p class="advice__text">
             <q>It is easy to sit up and take notice, what's difficult is getting up and taking
-            action.</q>
+              action.</q>
           </p>
         </div>
       </div>
+      <div class="divider"></div>
+      <button class="dice-btn">
+        <img src="images/icon-dice.svg" alt="Generate advice">
+      </button> -->
     </div>
-    <div class="divider"></div>
-    <button class="dice-btn">
-      <img src="images/icon-dice.svg" alt="Generate advice">
-    </button>
   </main>
 
   <footer class="footer">
@@ -50,6 +50,16 @@
       Coded by <a href="#">Rosi</a>.
     </div>
   </footer>
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- <script src="https://unpkg.com/create-react-class@15.6.2/create-react-class.min.js" crossorigin></script> -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Load React component. -->
+  <script type="text/babel" src="advice-generator.js"></script>
 </body>
 
 </html>
