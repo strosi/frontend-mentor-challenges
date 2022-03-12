@@ -15,24 +15,24 @@ function AdviceText({ text }) {
 }
 
 function App() {
-    const adviceAPIurl = "https://api.adviceslip.com/advice";
-    const initAdvice = {
+    const adviceSlipAPIurl = "https://api.adviceslip.com/advice";
+    const initSlip = {
         "slip": {
             "id": "117",
             "advice": "It is easy to sit up and take notice, what's difficult is getting up and taking action."
         }
     };
-    const [advice, setAdvice] = React.useState(initAdvice);
+    const [slip, setSlip] = React.useState(initSlip);
     const [isBtnClicked, setIsBtnClicked] = React.useState(false);
     const [inProp, setInProp] = React.useState(false);
 
     const generateAdvice = (e) => {
         e.preventDefault();
 
-        fetch(adviceAPIurl)
+        fetch(adviceSlipAPIurl, {cache: "no-cache"})
             .then(res => res.json())
-            .then(advice => {
-                setAdvice(advice);
+            .then(newSlip => {
+                setSlip(newSlip);
             })
             .catch(err => {
                 console.log(err);
@@ -56,7 +56,7 @@ function App() {
                     timeout={2000}
                     classNames="id-transition">
 
-                    <AdviceId id={advice.slip.id} />
+                    <AdviceId id={slip.slip.id} />
 
                 </ReactTransitionGroup.CSSTransition>
 
@@ -64,8 +64,8 @@ function App() {
                     in={inProp}
                     timeout={2000}
                     classNames="advice-transition">
-                
-                    <AdviceText text={advice.slip.advice} />
+
+                    <AdviceText text={slip.slip.advice} />
 
                 </ReactTransitionGroup.CSSTransition>
             </div>

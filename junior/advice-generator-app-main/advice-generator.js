@@ -34,18 +34,18 @@ function AdviceText(_ref2) {
 }
 
 function App() {
-    var adviceAPIurl = "https://api.adviceslip.com/advice";
-    var initAdvice = {
+    var adviceSlipAPIurl = "https://api.adviceslip.com/advice";
+    var initSlip = {
         "slip": {
             "id": "117",
             "advice": "It is easy to sit up and take notice, what's difficult is getting up and taking action."
         }
     };
 
-    var _React$useState = React.useState(initAdvice),
+    var _React$useState = React.useState(initSlip),
         _React$useState2 = _slicedToArray(_React$useState, 2),
-        advice = _React$useState2[0],
-        setAdvice = _React$useState2[1];
+        slip = _React$useState2[0],
+        setSlip = _React$useState2[1];
 
     var _React$useState3 = React.useState(false),
         _React$useState4 = _slicedToArray(_React$useState3, 2),
@@ -60,10 +60,10 @@ function App() {
     var generateAdvice = function generateAdvice(e) {
         e.preventDefault();
 
-        fetch(adviceAPIurl).then(function (res) {
+        fetch(adviceSlipAPIurl, { cache: "no-cache" }).then(function (res) {
             return res.json();
-        }).then(function (advice) {
-            setAdvice(advice);
+        }).then(function (newSlip) {
+            setSlip(newSlip);
         }).catch(function (err) {
             console.log(err);
         });
@@ -92,7 +92,7 @@ function App() {
                     "in": inProp,
                     timeout: 2000,
                     classNames: "id-transition" },
-                React.createElement(AdviceId, { id: advice.slip.id })
+                React.createElement(AdviceId, { id: slip.slip.id })
             ),
             React.createElement(
                 ReactTransitionGroup.CSSTransition,
@@ -100,7 +100,7 @@ function App() {
                     "in": inProp,
                     timeout: 2000,
                     classNames: "advice-transition" },
-                React.createElement(AdviceText, { text: advice.slip.advice })
+                React.createElement(AdviceText, { text: slip.slip.advice })
             )
         ),
         React.createElement("div", { className: "divider" }),
