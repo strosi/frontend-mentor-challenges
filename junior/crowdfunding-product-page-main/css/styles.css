@@ -1,0 +1,292 @@
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow percentage-based heights in the application.
+   (On adding height: 100% to the html selector the beginning of the page is cutted if justify-content: center is set.)
+*/
+body {
+  min-height: 100vh;
+}
+
+/* Typographic tweaks!
+   - Add accessible line-height
+   - Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* Remove built-in form typography styles. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll 
+   for people that prefer not to see them.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* COLORS */
+/* FONTS */
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  background-color: whitesmoke;
+}
+
+.container {
+  margin: 0 auto;
+  width: 88%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0.7rem 2rem;
+  font-weight: 500;
+  color: white;
+  background-color: #3cb4ac;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+/* Used to hide checkbox and being accessible 
+   at the same time */
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.crowdfund__modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-6.5%);
+  display: none;
+  width: 115%;
+  height: 100vh;
+  background: linear-gradient(black, transparent);
+}
+
+/* HEADER */
+.crowdfund {
+  min-height: 18.75rem;
+  background-image: url("../images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.crowdfund__content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.crowdfund__logo {
+  position: relative;
+  width: 8rem;
+  z-index: 100;
+}
+
+.crowdfund__menu {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.crowdfund__menu label {
+  position: relative;
+  display: block;
+  width: 1rem;
+  z-index: 100;
+}
+
+.crowdfund__menu--closed {
+  display: block;
+}
+
+.crowdfund__menu--opened {
+  display: none;
+}
+
+.crowdfund__toggle:checked ~ label > .crowdfund__menu--closed {
+  display: none;
+}
+.crowdfund__toggle:checked ~ label > .crowdfund__menu--opened {
+  display: block;
+}
+.crowdfund__toggle:checked ~ .crowdfund__nav {
+  display: block;
+}
+
+.crowdfund__nav {
+  position: absolute;
+  top: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 87vw;
+  background-color: white;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+.crowdfund__nav-item {
+  padding: 1.4rem 1.5rem;
+}
+.crowdfund__nav-item:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* MAIN */
+.product-container {
+  margin-top: 1.5rem;
+  padding: 1.4rem;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 0.5rem;
+}
+
+.mastercraft {
+  text-align: center;
+}
+
+.mastercraft__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.campaign {
+  text-align: center;
+}
+
+.campaign__stat-item {
+  position: relative;
+  padding-bottom: 2.2rem;
+}
+.campaign__stat-item:not(:last-child)::after {
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  content: "";
+  margin-top: 1.2rem;
+  transform: translateX(-50%);
+  background-color: #dbdbdb;
+}
+
+.campaign__amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+
+.project__descr {
+  padding: 1rem 0;
+}
+
+.card {
+  margin: 1.5rem 0;
+  padding: 1.4rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.5rem;
+}
+
+.card__title {
+  font-size: 0.9rem;
+}
+
+.card__pledge-amount {
+  font-weight: 500;
+  color: #3cb4ac;
+}
+
+.card__descr {
+  padding: 1.5rem 0;
+}
+
+.card__count-info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.card__count-info > span {
+  padding-right: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  transform: translateY(-0.1rem);
+  color: black;
+}
+
+.attribution {
+  padding-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}

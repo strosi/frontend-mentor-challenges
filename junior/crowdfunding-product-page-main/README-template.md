@@ -95,7 +95,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [The Truth About Multiple H1 Tags And SEO](https://www.greenlanemarketing.com/resources/articles/seo-101-seo-and-multiple-h1-tags/#:~:text=The%20Truth%20About%20Multiple%20H1%20Tags%20and%20SEO&text=Our%20conclusion%20is%20that%20while,the%20structure%20of%20the%20page.) - Whether or not to use multiple `h1` heading...
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
