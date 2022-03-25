@@ -1,0 +1,203 @@
+@use "utilities" as *;
+@use "queries" as *;
+
+/* MAIN */
+.product-container {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    padding: min(7%, 2rem) min(7%, 3rem);
+    max-width: 45.625rem;
+    background-color: white;
+    border: 1px solid $light-gray;
+    border-radius: 0.5rem;
+}
+
+.mastercraft {
+    position: relative;
+    text-align: center;
+}
+
+.mastercraft__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 3.5rem;
+}
+
+.mastercraft__title {
+    padding-top: 1.7rem;
+    font-size: 1.32rem;
+
+    @include respond-tablet {
+        font-size: 1.7rem;
+    }
+}
+
+.mastercraft__descr {
+    padding: 1rem 0;
+}
+
+.mastercraft__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+
+    @include respond-tiny-screen {
+        flex-direction: column;
+    }
+}
+
+.mastercraft__btn {
+    width: 77%;
+    max-width: 12rem;
+    padding: 1.05rem 1rem;
+    font-size: 0.95rem;
+}
+
+.mastercraft__bookmark {
+    cursor: pointer;
+
+    & svg circle,
+    & svg path {
+        transition: 0.15s ease-in-out;
+    }
+
+    & input:checked {
+        ~ svg circle {
+            fill: $mod-cyan;
+        }
+        ~ svg path {
+            fill: white;
+        }
+    }
+
+    &:hover {
+        input ~ svg circle {
+            fill: $dark-cyan;
+        }
+        svg path {
+            fill: white;
+        }
+    }
+
+    .mastercraft__bookmark-text,
+    .mastercraft__bookmark-text-checked {
+        display: none;
+    }
+
+    @include respond-tiny-screen {
+        margin-top: 0.5rem;
+    }
+
+    @include respond-tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $lighter-gray;
+        border-radius: 2rem;
+
+        .mastercraft__bookmark-text {
+            display: block;
+        }
+
+        & input:checked {
+            ~ .mastercraft__bookmark-text {
+                display: none;
+            }
+            ~ .mastercraft__bookmark-text-checked {
+                display: block;
+                color: $mod-cyan;
+            }
+        }
+
+        &:hover {
+            input ~ .mastercraft__bookmark-text,
+            input ~ .mastercraft__bookmark-text-checked {
+                color: $dark-cyan;
+            }
+        }
+    }
+}
+
+.mastercraft__bookmark-text,
+.mastercraft__bookmark-text-checked {
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    font-weight: 700;
+}
+
+.campaign {
+    text-align: center;
+}
+
+.campaign__statistic {
+    @include respond-tablet {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.campaign__stat-item {
+    position: relative;
+
+    &:not(:last-child) {
+        padding-bottom: 2.2rem;
+
+        &::after {
+            position: absolute;
+            width: 5rem;
+            height: 1px;
+            content: '';
+            margin-top: 1.2rem;
+            transform: translateX(-50%);
+            background-color: $mod-gray;
+        }
+    }
+
+    @include respond-tablet {
+        flex-basis: 33.3%;
+
+        &:not(:first-child) {
+            padding-left: 3rem;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 0;
+            border-right: 1px solid $mod-gray;
+    
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.campaign__amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $black;
+}
+
+.campaign__progress {
+    margin-top: 1.7rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 0.75rem;
+    background-color: $light-gray;
+    border-radius: 1rem;
+}
+
+.campaign__progress-bar {
+    width: 89.9%;
+    height: 100%;
+    background-color: $mod-cyan;
+    border-radius: 1rem;
+}
+
+.project__descr {
+    padding: 1rem 0;
+}

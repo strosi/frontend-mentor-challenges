@@ -141,7 +141,7 @@ button[disabled] {
   overflow: hidden;
 }
 
-.crowdfund__modal-bg {
+.modal-bg {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,0 +1,112 @@
+@use "utilities" as *;
+@use "queries" as *;
+
+/* HEADER */
+.crowdfund {
+    min-height: 18.75rem;
+    background-image: url("../images/image-hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include respond-tablet {
+        background-image: url('../images/image-hero-desktop.jpg');
+    }
+}
+
+.crowdfund__content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 2rem;
+    max-width: 1110px;
+}
+
+.crowdfund__logo {
+    position: relative;
+    width: 8rem;
+    z-index: 100;
+}
+
+.crowdfund__menu {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    label {
+        position: relative;
+        display: block;
+        width: 1rem;
+        z-index: 100;
+    }
+
+    @include respond-tablet {
+        label,
+        input[type=checkbox] {
+            display: none;
+        }
+    }
+}
+
+.crowdfund__menu--closed {
+    display: block;
+}
+
+.crowdfund__menu--opened {
+    display: none;
+}
+
+.crowdfund__toggle:checked {
+    & ~ label > .crowdfund__menu--closed {
+        display: none;
+    }
+    & ~ label > .crowdfund__menu--opened {
+        display: block;
+    }
+
+    ~ .crowdfund__nav {
+        display: block;
+    }
+}
+
+.crowdfund__nav {
+    position: absolute;
+    top: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    z-index: 100;
+
+    @include respond-tablet {
+        position: static;
+        transform: translateX(0);
+        display: block;
+        color: white;
+        background-color: transparent;
+
+        ul {
+            display: flex;
+        }
+    }
+}
+
+.crowdfund__nav-item {
+    padding: 1.4rem 1.5rem;
+    
+    &:not(:last-child) {
+        border-bottom: 1px solid $light-gray;
+    }
+    
+    @include respond-tablet {
+        padding: 0 0 0 2rem;
+        
+        &:not(:last-child) {
+            border: none;
+        }
+    }
+}
