@@ -43,13 +43,17 @@
   </header>
   <main class="container">
     <header class="mastercraft product-container">
+      <div class="mastercraft__logo">
+        <img src="images/logo-mastercraft.svg" alt="">
+      </div>
       <h1 class="mastercraft__title">Mastercraft Bamboo Monitor Riser</h1>
       <p class="mastercraft__descr">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="mastercraft__bottom">
         <button class="mastercraft__btn">Back this project</button>
         <label for="bookmark" class="mastercraft__bookmark">
-          <input type="checkbox" id="bookmark">
-          Bookmark
+          <input type="checkbox" id="bookmark" class="vh" aria-label="bookmark toggle">
+          <img src="images/icon-bookmark.svg" alt="">
+          <!-- Bookmark -->
         </label>
       </div>
     </header>
@@ -69,7 +73,9 @@
           <p>days left</p>
         </div>
       </div>
-      <div class="campaign__progress"></div>
+      <div class="campaign__progress">
+        <div class="campaign__progress-bar"></div>
+      </div>
     </section>
     <section class="project product-container">
       <h2 class="project__title">About this project</h2>
@@ -110,7 +116,7 @@
           <button class="card__btn">Select Reward</button>
         </div>
       </div>
-      <div class="card">
+      <div class="card out-of-stock">
         <div class="card__header">
           <h3 class="card__title">Mahogany Special Edition</h3>
           <p class="card__pledge-amount">Pledge $200 or more</p>
@@ -121,7 +127,7 @@
         </p>
         <div class="card__bottom">
           <p class="card__count-info"><span>0</span> left</p>
-          <button class="card__btn">Out of Stock</button>
+          <button class="card__btn" disabled>Out of Stock</button>
         </div>
       </div>
     </section>

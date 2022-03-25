@@ -7,6 +7,10 @@ body {
     background-color: $lighter-gray;
 }
 
+main {
+    transform: translateY(-5rem);
+}
+
 .container {
     margin: 0 auto;
     width: 88%;
@@ -24,12 +28,24 @@ li {
 }
 
 button {
-    padding: 0.7rem 2rem;
+    padding: 0.9rem 1rem;
+    width: 100%;
+    max-width: 10rem;
     font-weight: 500;
+    line-height: 1.4;
     color: white;
-    background-color: $mod-cyan;
+    background-color: #3cb4ac;
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
+
+    &:hover {
+        background-color: $dark-cyan;
+    }
+
+    &[disabled] {
+        background-color: $dark-gray;
+        opacity: 0.8;
+    }
 }
 
 /* Used to hide checkbox and being accessible 
@@ -118,7 +134,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    width: 87vw;
+    width: 100%;
     background-color: white;
     border-radius: 0.5rem;
     z-index: 100;
@@ -142,12 +158,44 @@ button {
 }
 
 .mastercraft {
+    position: relative;
     text-align: center;
+}
+
+.mastercraft__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 3.5rem;
+}
+
+.mastercraft__title {
+    padding-top: 1.7rem;
+    font-size: 1.32rem;
+}
+
+.mastercraft__descr {
+    padding: 1rem 0;
 }
 
 .mastercraft__bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.mastercraft__btn {
+    width: 77%;
+    max-width: 14rem;
+    padding: 1.05rem 1rem;
+    font-size: 0.95rem;
+}
+
+.mastercraft__bookmark {
+    
 }
 
 .campaign {
@@ -156,16 +204,19 @@ button {
 
 .campaign__stat-item {
     position: relative;
-    padding-bottom: 2.2rem;
+    
+    &:not(:last-child) {
+        padding-bottom: 2.2rem;
 
-    &:not(:last-child)::after {
-        position: absolute;
-        width: 5rem;
-        height: 1px;
-        content: '';
-        margin-top: 1.2rem;
-        transform: translateX(-50%);
-        background-color: $mod-gray;
+        &::after {
+            position: absolute;
+            width: 5rem;
+            height: 1px;
+            content: '';
+            margin-top: 1.2rem;
+            transform: translateX(-50%);
+            background-color: $mod-gray;
+        }
     }
 }
 
@@ -173,6 +224,22 @@ button {
     font-size: 2rem;
     font-weight: 700;
     color: $black;
+}
+
+.campaign__progress {
+    margin-top: 1.7rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 0.75rem;
+    background-color: $light-gray;
+    border-radius: 1rem;
+}
+
+.campaign__progress-bar {
+    width: 89.9%;
+    height: 100%;
+    background-color: $mod-cyan;
+    border-radius: 1rem;
 }
 
 .project__descr {

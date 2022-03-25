@@ -82,6 +82,10 @@ body {
   background-color: whitesmoke;
 }
 
+main {
+  transform: translateY(-5rem);
+}
+
 .container {
   margin: 0 auto;
   width: 88%;
@@ -99,12 +103,22 @@ li {
 }
 
 button {
-  padding: 0.7rem 2rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 10rem;
   font-weight: 500;
+  line-height: 1.4;
   color: white;
   background-color: #3cb4ac;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
+}
+button:hover {
+  background-color: #147b74;
+}
+button[disabled] {
+  background-color: #7a7a7a;
+  opacity: 0.8;
 }
 
 /* Used to hide checkbox and being accessible 
@@ -189,7 +203,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 87vw;
+  width: 100%;
   background-color: white;
   border-radius: 0.5rem;
   z-index: 100;
@@ -212,12 +226,40 @@ button {
 }
 
 .mastercraft {
+  position: relative;
   text-align: center;
+}
+
+.mastercraft__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 3.5rem;
+}
+
+.mastercraft__title {
+  padding-top: 1.7rem;
+  font-size: 1.32rem;
+}
+
+.mastercraft__descr {
+  padding: 1rem 0;
 }
 
 .mastercraft__bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.mastercraft__btn {
+  width: 77%;
+  max-width: 14rem;
+  padding: 1.05rem 1rem;
+  font-size: 0.95rem;
 }
 
 .campaign {
@@ -226,6 +268,8 @@ button {
 
 .campaign__stat-item {
   position: relative;
+}
+.campaign__stat-item:not(:last-child) {
   padding-bottom: 2.2rem;
 }
 .campaign__stat-item:not(:last-child)::after {
@@ -244,8 +288,28 @@ button {
   color: black;
 }
 
+.campaign__progress {
+  margin-top: 1.7rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 0.75rem;
+  background-color: #e8e8e8;
+  border-radius: 1rem;
+}
+
+.campaign__progress-bar {
+  width: 89.9%;
+  height: 100%;
+  background-color: #3cb4ac;
+  border-radius: 1rem;
+}
+
 .project__descr {
   padding: 1rem 0;
+}
+
+.out-of-stock {
+  opacity: 0.5;
 }
 
 .card {
@@ -282,9 +346,9 @@ button {
 }
 
 .attribution {
-  padding-top: 1rem;
   font-size: 11px;
   text-align: center;
+  transform: translateY(-1.2rem);
 }
 
 .attribution a {

@@ -1,5 +1,9 @@
 @use 'utilities' as *;
 
+.out-of-stock {
+    opacity: 0.5;
+}
+
 .card {
     margin: 1.5rem 0;
     padding: 1.4rem;
