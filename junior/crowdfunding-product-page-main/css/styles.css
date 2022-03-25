@@ -218,8 +218,10 @@ button[disabled] {
 
 /* MAIN */
 .product-container {
+  margin: 0 auto;
   margin-top: 1.5rem;
-  padding: 1.4rem;
+  padding: min(7%, 3rem);
+  max-width: 45.625rem;
   background-color: white;
   border: 1px solid #e8e8e8;
   border-radius: 0.5rem;
@@ -257,7 +259,7 @@ button[disabled] {
 
 .mastercraft__btn {
   width: 77%;
-  max-width: 14rem;
+  max-width: 12rem;
   padding: 1.05rem 1rem;
   font-size: 0.95rem;
 }
@@ -319,12 +321,21 @@ button[disabled] {
   border-radius: 0.5rem;
 }
 
+.card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .card__title {
+  padding-bottom: 0.4rem;
   font-size: 0.9rem;
 }
 
 .card__pledge-amount {
   font-weight: 500;
+  line-height: 1.2;
   color: #3cb4ac;
 }
 
@@ -332,7 +343,16 @@ button[disabled] {
   padding: 1.5rem 0;
 }
 
+.card__bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .card__count-info {
+  flex-basis: 50%;
   display: flex;
   align-items: center;
   padding-bottom: 1rem;

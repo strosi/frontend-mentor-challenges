@@ -150,8 +150,10 @@ button {
 
 /* MAIN */
 .product-container {
+    margin: 0 auto;
     margin-top: 1.5rem;
-    padding: 1.4rem;
+    padding: min(7%, 3rem);
+    max-width: 45.625rem;
     background-color: white;
     border: 1px solid $light-gray;
     border-radius: 0.5rem;
@@ -189,7 +191,7 @@ button {
 
 .mastercraft__btn {
     width: 77%;
-    max-width: 14rem;
+    max-width: 12rem;
     padding: 1.05rem 1rem;
     font-size: 0.95rem;
 }
