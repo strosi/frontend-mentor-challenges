@@ -112,6 +112,8 @@ button {
   background-color: #3cb4ac;
   border: none;
   border-radius: 2rem;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
 }
 button:hover {
   background-color: #147b74;
@@ -119,6 +121,7 @@ button:hover {
 button[disabled] {
   background-color: #7a7a7a;
   opacity: 0.8;
+  cursor: initial;
 }
 
 /* Used to hide checkbox and being accessible 
@@ -152,6 +155,11 @@ button[disabled] {
   background-size: cover;
   background-position: center;
 }
+@media (min-width: 680px) {
+  .crowdfund {
+    background-image: url("../images/image-hero-desktop.jpg");
+  }
+}
 
 .crowdfund__content {
   position: relative;
@@ -177,6 +185,12 @@ button[disabled] {
   display: block;
   width: 1rem;
   z-index: 100;
+}
+@media (min-width: 680px) {
+  .crowdfund__menu label,
+.crowdfund__menu input[type=checkbox] {
+    display: none;
+  }
 }
 
 .crowdfund__menu--closed {
@@ -208,6 +222,18 @@ button[disabled] {
   border-radius: 0.5rem;
   z-index: 100;
 }
+@media (min-width: 680px) {
+  .crowdfund__nav {
+    position: static;
+    transform: translateX(0);
+    display: block;
+    color: white;
+    background-color: transparent;
+  }
+  .crowdfund__nav ul {
+    display: flex;
+  }
+}
 
 .crowdfund__nav-item {
   padding: 1.4rem 1.5rem;
@@ -215,12 +241,20 @@ button[disabled] {
 .crowdfund__nav-item:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
 }
+@media (min-width: 680px) {
+  .crowdfund__nav-item {
+    padding: 0 0 0 2rem;
+  }
+  .crowdfund__nav-item:not(:last-child) {
+    border: none;
+  }
+}
 
 /* MAIN */
 .product-container {
   margin: 0 auto;
   margin-top: 1.5rem;
-  padding: min(7%, 3rem);
+  padding: min(7%, 2rem) min(7%, 3rem);
   max-width: 45.625rem;
   background-color: white;
   border: 1px solid #e8e8e8;
@@ -264,8 +298,69 @@ button[disabled] {
   font-size: 0.95rem;
 }
 
+.mastercraft__bookmark {
+  cursor: pointer;
+}
+.mastercraft__bookmark svg circle, .mastercraft__bookmark svg path {
+  transition: 0.15s ease-in-out;
+}
+.mastercraft__bookmark input:checked ~ svg circle {
+  fill: #3cb4ac;
+}
+.mastercraft__bookmark input:checked ~ svg path {
+  fill: white;
+}
+.mastercraft__bookmark:hover input ~ svg circle {
+  fill: #147b74;
+}
+.mastercraft__bookmark:hover svg path {
+  fill: white;
+}
+.mastercraft__bookmark .mastercraft__bookmark-text,
+.mastercraft__bookmark .mastercraft__bookmark-text-checked {
+  display: none;
+}
+@media (min-width: 680px) {
+  .mastercraft__bookmark {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+  }
+  .mastercraft__bookmark .mastercraft__bookmark-text {
+    display: block;
+  }
+  .mastercraft__bookmark input:checked ~ .mastercraft__bookmark-text {
+    display: none;
+  }
+  .mastercraft__bookmark input:checked ~ .mastercraft__bookmark-text-checked {
+    display: block;
+    color: #3cb4ac;
+  }
+  .mastercraft__bookmark:hover input ~ .mastercraft__bookmark-text,
+.mastercraft__bookmark:hover input ~ .mastercraft__bookmark-text-checked {
+    color: #147b74;
+  }
+}
+
+.mastercraft__bookmark-text,
+.mastercraft__bookmark-text-checked {
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  font-weight: 700;
+}
+
 .campaign {
   text-align: center;
+}
+
+@media (min-width: 680px) {
+  .campaign__statistic {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
 }
 
 .campaign__stat-item {
@@ -282,6 +377,21 @@ button[disabled] {
   margin-top: 1.2rem;
   transform: translateX(-50%);
   background-color: #dbdbdb;
+}
+@media (min-width: 680px) {
+  .campaign__stat-item {
+    flex-basis: 33.3%;
+  }
+  .campaign__stat-item:not(:first-child) {
+    padding-left: 3rem;
+  }
+  .campaign__stat-item:not(:last-child) {
+    padding-bottom: 0;
+    border-right: 1px solid #dbdbdb;
+  }
+  .campaign__stat-item:not(:last-child)::after {
+    display: none;
+  }
 }
 
 .campaign__amount {
@@ -321,11 +431,13 @@ button[disabled] {
   border-radius: 0.5rem;
 }
 
-.card__header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: baseline;
+@media (min-width: 680px) {
+  .card__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .card__title {

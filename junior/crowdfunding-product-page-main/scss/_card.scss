@@ -1,4 +1,5 @@
 @use 'utilities' as *;
+@use 'queries' as *;
 
 .out-of-stock {
     opacity: 0.5;
@@ -11,11 +12,13 @@
     border-radius: 0.5rem;
 }
 
-.card__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
+.card__header {    
+    @include respond-tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
 }
 
 .card__title {

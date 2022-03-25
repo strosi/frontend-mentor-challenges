@@ -52,14 +52,20 @@
         <button class="mastercraft__btn">Back this project</button>
         <label for="bookmark" class="mastercraft__bookmark">
           <input type="checkbox" id="bookmark" class="vh" aria-label="bookmark toggle">
-          <img src="images/icon-bookmark.svg" alt="">
-          <!-- Bookmark -->
+          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+              <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+            </g>
+          </svg>
+          <span class="mastercraft__bookmark-text">Bookmark</span>
+          <sapn class="mastercraft__bookmark-text-checked">Bookmarked</span>
         </label>
       </div>
     </header>
     <section class="campaign product-container">
       <h2 class="vh">Campaign progress</h2>
-      <div>
+      <div class="campaign__statistic">
         <div class="campaign__stat-item">
           <p class="campaign__amount">$89,914</p>
           <p>of $100,000 backed</p>

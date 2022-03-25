@@ -1,0 +1,11 @@
+@mixin respond-tablet {
+    @media (min-width: 680px) {
+        @content;
+    }
+}
+
+// @mixin respond-laptop {
+//     @media (min-width: 680px) {
+//         @content;
+//     }
+// }
