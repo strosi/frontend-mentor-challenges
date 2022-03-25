@@ -24,6 +24,10 @@
 .card__title {
     padding-bottom: 0.4rem;
     font-size: 0.9rem;
+
+    @include respond-tablet {
+        font-size: 1.2rem;
+    }
 }
 
 .card__pledge-amount {

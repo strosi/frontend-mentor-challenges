@@ -81,6 +81,11 @@ body {
   color: #7a7a7a;
   background-color: whitesmoke;
 }
+@media (min-width: 680px) {
+  body {
+    font-size: 1rem;
+  }
+}
 
 main {
   transform: translateY(-5rem);
@@ -167,7 +172,9 @@ button[disabled] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   padding-top: 2rem;
+  max-width: 1110px;
 }
 
 .crowdfund__logo {
@@ -278,6 +285,11 @@ button[disabled] {
   padding-top: 1.7rem;
   font-size: 1.32rem;
 }
+@media (min-width: 680px) {
+  .mastercraft__title {
+    font-size: 1.7rem;
+  }
+}
 
 .mastercraft__descr {
   padding: 1rem 0;
@@ -289,6 +301,11 @@ button[disabled] {
   align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
+}
+@media (max-width: 330px) {
+  .mastercraft__bottom {
+    flex-direction: column;
+  }
 }
 
 .mastercraft__btn {
@@ -319,6 +336,11 @@ button[disabled] {
 .mastercraft__bookmark .mastercraft__bookmark-text,
 .mastercraft__bookmark .mastercraft__bookmark-text-checked {
   display: none;
+}
+@media (max-width: 330px) {
+  .mastercraft__bookmark {
+    margin-top: 0.5rem;
+  }
 }
 @media (min-width: 680px) {
   .mastercraft__bookmark {
@@ -443,6 +465,11 @@ button[disabled] {
 .card__title {
   padding-bottom: 0.4rem;
   font-size: 0.9rem;
+}
+@media (min-width: 680px) {
+  .card__title {
+    font-size: 1.2rem;
+  }
 }
 
 .card__pledge-amount {

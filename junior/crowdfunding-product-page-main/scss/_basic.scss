@@ -6,6 +6,10 @@ body {
     font-size: $fs;
     color: $dark-gray;
     background-color: $lighter-gray;
+
+    @include respond-tablet {
+        font-size: $fs-deskt;
+    }
 }
 
 main {
@@ -94,7 +98,9 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     padding-top: 2rem;
+    max-width: 1110px;
 }
 
 .crowdfund__logo {
@@ -210,6 +216,10 @@ button {
 .mastercraft__title {
     padding-top: 1.7rem;
     font-size: 1.32rem;
+
+    @include respond-tablet {
+        font-size: 1.7rem;
+    }
 }
 
 .mastercraft__descr {
@@ -222,6 +232,10 @@ button {
     align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
+
+    @include respond-tiny-screen {
+        flex-direction: column;
+    }
 }
 
 .mastercraft__btn {
@@ -260,6 +274,10 @@ button {
     .mastercraft__bookmark-text,
     .mastercraft__bookmark-text-checked {
         display: none;
+    }
+
+    @include respond-tiny-screen {
+        margin-top: 0.5rem;
     }
 
     @include respond-tablet {

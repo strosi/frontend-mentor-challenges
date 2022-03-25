@@ -1,3 +1,9 @@
+@mixin respond-tiny-screen {
+    @media (max-width: 330px) {
+        @content;
+    }
+}
+
 @mixin respond-tablet {
     @media (min-width: 680px) {
         @content;
