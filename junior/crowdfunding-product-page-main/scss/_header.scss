@@ -24,6 +24,7 @@
     margin: 0 auto;
     padding-top: 2rem;
     max-width: 1110px;
+    z-index: 100;
 
     @include respond-tablet {
         padding-top: 3rem;
@@ -31,9 +32,7 @@
 }
 
 .crowdfund__logo {
-    position: relative;
     width: 8rem;
-    z-index: 100;
 }
 
 .crowdfund__menu {

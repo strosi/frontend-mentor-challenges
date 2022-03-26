@@ -77,13 +77,21 @@ button {
     overflow: hidden;
 }
 
-.modal-bg {
+.dark-bg {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(-6.5%);
-    display: none;
-    width: 115%;
-    height: 100vh;
+    width: 100%;
+    height: 7rem;
+    opacity: 0.5;
     background: linear-gradient(black, transparent);
+    transition: 0.2s ease-in-out;
+}
+
+.dark-bg-exp {
+    height: 100vh;
+
+    @include respond-tablet {
+        background: black;
+    }
 }
