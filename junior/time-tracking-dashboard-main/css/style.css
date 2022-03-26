@@ -95,7 +95,7 @@ body {
 
 .report {
   display: grid;
-  column-gap: clamp(1.5rem, 5rem, 1.875rem);
+  column-gap: 1.875rem;
   row-gap: clamp(1.5rem, 5vw, 1.75rem);
   margin: 1.5rem auto;
   margin-top: 4.5rem;

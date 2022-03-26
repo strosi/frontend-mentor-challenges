@@ -1,0 +1,101 @@
+@use "utilities" as *;
+@use "queries" as *;
+
+body {
+    font-family: $ff;
+    font-size: $fs;
+    color: $dark-gray;
+    background-color: $lighter-gray;
+
+    @include respond-tablet {
+        font-size: $fs-deskt;
+    }
+}
+
+main {
+    transform: translateY(-5rem);
+    
+    @include respond-tablet {
+        transform: translateY(-7.2rem);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 87%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: $black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    padding: 0.9rem 1rem;
+    width: 100%;
+    max-width: 10rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: white;
+    background-color: #3cb4ac;
+    border: none;
+    border-radius: 2rem;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $dark-cyan;
+    }
+
+    &[disabled] {
+        background-color: $dark-gray;
+        opacity: 0.8;
+        cursor: initial;
+    }
+
+    @include respond-tablet {
+        padding: 0.9rem 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Used to hide checkbox and being accessible 
+   at the same time */
+.vh {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.dark-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    opacity: 0.5;
+    background: linear-gradient(black, transparent);
+    transition: 0.2s ease-in-out;
+}
+
+.dark-bg-exp {
+    height: 100vh;
+
+    @include respond-tablet {
+        background: black;
+    }
+}
