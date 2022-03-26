@@ -10,6 +10,7 @@
     background-position: center;
 
     @include respond-tablet {
+        min-height: 25rem;
         background-image: url('../images/image-hero-desktop.jpg');
     }
 }
@@ -23,6 +24,10 @@
     margin: 0 auto;
     padding-top: 2rem;
     max-width: 1110px;
+
+    @include respond-tablet {
+        padding-top: 3rem;
+    }
 }
 
 .crowdfund__logo {
@@ -43,6 +48,7 @@
     }
 
     @include respond-tablet {
+        font-size: 0.85rem;
         label,
         input[type=checkbox] {
             display: none;

@@ -77,7 +77,7 @@ h6 {
 /* FONTS */
 body {
   font-family: "Commissioner", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #7a7a7a;
   background-color: whitesmoke;
 }
@@ -90,10 +90,15 @@ body {
 main {
   transform: translateY(-5rem);
 }
+@media (min-width: 680px) {
+  main {
+    transform: translateY(-7.2rem);
+  }
+}
 
 .container {
   margin: 0 auto;
-  width: 88%;
+  width: 87%;
 }
 
 h1,
@@ -127,6 +132,12 @@ button[disabled] {
   background-color: #7a7a7a;
   opacity: 0.8;
   cursor: initial;
+}
+@media (min-width: 680px) {
+  button {
+    padding: 0.9rem 0.7rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Used to hide checkbox and being accessible 
@@ -162,6 +173,7 @@ button[disabled] {
 }
 @media (min-width: 680px) {
   .crowdfund {
+    min-height: 25rem;
     background-image: url("../images/image-hero-desktop.jpg");
   }
 }
@@ -175,6 +187,11 @@ button[disabled] {
   margin: 0 auto;
   padding-top: 2rem;
   max-width: 1110px;
+}
+@media (min-width: 680px) {
+  .crowdfund__content {
+    padding-top: 3rem;
+  }
 }
 
 .crowdfund__logo {
@@ -194,6 +211,9 @@ button[disabled] {
   z-index: 100;
 }
 @media (min-width: 680px) {
+  .crowdfund__menu {
+    font-size: 0.85rem;
+  }
   .crowdfund__menu label,
 .crowdfund__menu input[type=checkbox] {
     display: none;
@@ -258,6 +278,7 @@ button[disabled] {
 }
 
 /* MAIN */
+/* header */
 .product-container {
   margin: 0 auto;
   margin-top: 1.5rem;
@@ -266,6 +287,11 @@ button[disabled] {
   background-color: white;
   border: 1px solid #e8e8e8;
   border-radius: 0.5rem;
+}
+@media (min-width: 680px) {
+  .product-container {
+    padding: min(7%, 2.8rem) min(7%, 3rem);
+  }
 }
 
 .mastercraft {
@@ -283,16 +309,23 @@ button[disabled] {
 
 .mastercraft__title {
   padding-top: 1.7rem;
-  font-size: 1.32rem;
+  font-size: 1.3rem;
 }
 @media (min-width: 680px) {
   .mastercraft__title {
-    font-size: 1.7rem;
+    padding-top: 0.8rem;
+    font-size: 1.75rem;
   }
 }
 
 .mastercraft__descr {
   padding: 1rem 0;
+}
+@media (min-width: 680px) {
+  .mastercraft__descr {
+    padding-top: 0.7rem;
+    padding-bottom: 1.7rem;
+  }
 }
 
 .mastercraft__bottom {
@@ -307,12 +340,22 @@ button[disabled] {
     flex-direction: column;
   }
 }
+@media (min-width: 680px) {
+  .mastercraft__bottom {
+    padding-bottom: 0;
+  }
+}
 
 .mastercraft__btn {
   width: 77%;
-  max-width: 12rem;
+  max-width: 14rem;
   padding: 1.05rem 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
+}
+@media (min-width: 680px) {
+  .mastercraft__btn {
+    max-width: 13rem;
+  }
 }
 
 .mastercraft__bookmark {
@@ -373,6 +416,7 @@ button[disabled] {
   font-weight: 700;
 }
 
+/* section - compaign */
 .campaign {
   text-align: center;
 }
@@ -387,6 +431,9 @@ button[disabled] {
 
 .campaign__stat-item {
   position: relative;
+}
+.campaign__stat-item:not(:first-child) {
+  padding-top: 0.1rem;
 }
 .campaign__stat-item:not(:last-child) {
   padding-bottom: 2.2rem;
@@ -405,6 +452,7 @@ button[disabled] {
     flex-basis: 33.3%;
   }
   .campaign__stat-item:not(:first-child) {
+    padding-top: 0;
     padding-left: 3rem;
   }
   .campaign__stat-item:not(:last-child) {
@@ -421,6 +469,11 @@ button[disabled] {
   font-weight: 700;
   color: black;
 }
+@media (min-width: 680px) {
+  .campaign__amount {
+    line-height: 1.4;
+  }
+}
 
 .campaign__progress {
   margin-top: 1.7rem;
@@ -430,6 +483,12 @@ button[disabled] {
   background-color: #e8e8e8;
   border-radius: 1rem;
 }
+@media (min-width: 680px) {
+  .campaign__progress {
+    margin-top: 2.1rem;
+    margin-bottom: 0.2rem;
+  }
+}
 
 .campaign__progress-bar {
   width: 89.9%;
@@ -438,8 +497,33 @@ button[disabled] {
   border-radius: 1rem;
 }
 
+/* section - project */
+@media (min-width: 680px) {
+  .project {
+    line-height: 1.87;
+  }
+}
+
+.project__title {
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.15rem;
+}
+@media (min-width: 680px) {
+  .project__title {
+    padding-top: 0;
+    padding-bottom: 1.37rem;
+    font-size: 1.25rem;
+  }
+}
+
 .project__descr {
-  padding: 1rem 0;
+  padding: 0.8rem 0;
+}
+@media (min-width: 680px) {
+  .project__descr {
+    padding: 0.95rem 0;
+  }
 }
 
 .out-of-stock {
@@ -447,10 +531,16 @@ button[disabled] {
 }
 
 .card {
-  margin: 1.5rem 0;
+  margin: 1.35rem 0;
   padding: 1.4rem;
   border: 1px solid #dbdbdb;
   border-radius: 0.5rem;
+}
+@media (min-width: 680px) {
+  .card {
+    margin: 1.5rem 0;
+    padding: 2.4rem 1.85rem 1.2rem 1.85rem;
+  }
 }
 
 @media (min-width: 680px) {
@@ -468,18 +558,30 @@ button[disabled] {
 }
 @media (min-width: 680px) {
   .card__title {
-    font-size: 1.2rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.1rem;
   }
 }
 
 .card__pledge-amount {
+  padding: 0.2rem 0;
   font-weight: 500;
   line-height: 1.2;
   color: #3cb4ac;
 }
+@media (min-width: 680px) {
+  .card__pledge-amount {
+    font-size: 0.95rem;
+  }
+}
 
 .card__descr {
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
+}
+@media (min-width: 680px) {
+  .card__descr {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .card__bottom {
@@ -498,10 +600,16 @@ button[disabled] {
 }
 .card__count-info > span {
   padding-right: 0.5rem;
+  padding-bottom: 0;
   font-size: 2rem;
   font-weight: 700;
   transform: translateY(-0.1rem);
   color: black;
+}
+@media (min-width: 680px) {
+  .card__count-info {
+    padding-bottom: 0;
+  }
 }
 
 .attribution {

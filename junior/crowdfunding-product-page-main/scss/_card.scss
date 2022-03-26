@@ -6,10 +6,15 @@
 }
 
 .card {
-    margin: 1.5rem 0;
+    margin: 1.35rem 0;
     padding: 1.4rem;
     border: 1px solid $mod-gray;
     border-radius: 0.5rem;
+
+    @include respond-tablet {
+        margin: 1.5rem 0;
+        padding: 2.4rem 1.85rem 1.2rem 1.85rem;
+    }
 }
 
 .card__header {    
@@ -26,18 +31,28 @@
     font-size: 0.9rem;
 
     @include respond-tablet {
-        font-size: 1.2rem;
+        padding-bottom: 0.3rem;
+        font-size: 1.1rem;
     }
 }
 
 .card__pledge-amount {
+    padding: 0.2rem 0;
     font-weight: 500;
     line-height: 1.2;
     color: $mod-cyan;
+
+    @include respond-tablet {
+        font-size: 0.95rem;
+    }
 }
 
 .card__descr {
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
+
+    @include respond-tablet {
+        padding-bottom: 1.5rem;
+    }
 }
 
 .card__bottom {
@@ -56,9 +71,14 @@
 
     & > span {
         padding-right: 0.5rem;
+        padding-bottom: 0;
         font-size: 2rem;
         font-weight: 700;
         transform: translateY(-0.1rem);
         color: $black;
+    }
+
+    @include respond-tablet {
+        padding-bottom: 0;
     }
 }

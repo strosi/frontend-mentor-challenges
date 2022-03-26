@@ -2,6 +2,7 @@
 @use "queries" as *;
 
 /* MAIN */
+/* header */
 .product-container {
     margin: 0 auto;
     margin-top: 1.5rem;
@@ -10,6 +11,10 @@
     background-color: white;
     border: 1px solid $light-gray;
     border-radius: 0.5rem;
+
+    @include respond-tablet {
+        padding: min(7%, 2.8rem) min(7%, 3rem);
+    }
 }
 
 .mastercraft {
@@ -27,15 +32,22 @@
 
 .mastercraft__title {
     padding-top: 1.7rem;
-    font-size: 1.32rem;
+    font-size: 1.3rem;
 
     @include respond-tablet {
-        font-size: 1.7rem;
+        // padding-top: 1.6rem;
+        padding-top: 0.8rem;
+        font-size: 1.75rem;
     }
 }
 
 .mastercraft__descr {
     padding: 1rem 0;
+
+    @include respond-tablet {
+        padding-top: 0.7rem;
+        padding-bottom: 1.7rem;
+    }
 }
 
 .mastercraft__bottom {
@@ -48,13 +60,21 @@
     @include respond-tiny-screen {
         flex-direction: column;
     }
+
+    @include respond-tablet {
+        padding-bottom: 0;
+    }
 }
 
 .mastercraft__btn {
     width: 77%;
-    max-width: 12rem;
+    max-width: 14rem;
     padding: 1.05rem 1rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
+
+    @include respond-tablet {
+        max-width: 13rem;
+    }
 }
 
 .mastercraft__bookmark {
@@ -129,6 +149,7 @@
     font-weight: 700;
 }
 
+/* section - compaign */
 .campaign {
     text-align: center;
 }
@@ -144,6 +165,10 @@
 .campaign__stat-item {
     position: relative;
 
+    &:not(:first-child) {
+        padding-top: 0.1rem;
+    }
+
     &:not(:last-child) {
         padding-bottom: 2.2rem;
 
@@ -151,7 +176,7 @@
             position: absolute;
             width: 5rem;
             height: 1px;
-            content: '';
+            content: "";
             margin-top: 1.2rem;
             transform: translateX(-50%);
             background-color: $mod-gray;
@@ -162,13 +187,14 @@
         flex-basis: 33.3%;
 
         &:not(:first-child) {
+            padding-top: 0;
             padding-left: 3rem;
         }
 
         &:not(:last-child) {
             padding-bottom: 0;
             border-right: 1px solid $mod-gray;
-    
+
             &::after {
                 display: none;
             }
@@ -180,6 +206,10 @@
     font-size: 2rem;
     font-weight: 700;
     color: $black;
+
+    @include respond-tablet {
+        line-height: 1.4;
+    }
 }
 
 .campaign__progress {
@@ -189,6 +219,11 @@
     height: 0.75rem;
     background-color: $light-gray;
     border-radius: 1rem;
+
+    @include respond-tablet {
+        margin-top: 2.1rem;
+        margin-bottom: 0.2rem;
+    }
 }
 
 .campaign__progress-bar {
@@ -198,6 +233,29 @@
     border-radius: 1rem;
 }
 
+/* section - project */
+.project {
+    @include respond-tablet {
+        line-height: 1.87;
+    }
+}
+
+.project__title {
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.15rem;
+
+    @include respond-tablet {
+        padding-top: 0;
+        padding-bottom: 1.37rem;
+        font-size: 1.25rem;
+    }
+}
+
 .project__descr {
-    padding: 1rem 0;
+    padding: 0.8rem 0;
+
+    @include respond-tablet {
+        padding: 0.95rem 0;
+    }
 }

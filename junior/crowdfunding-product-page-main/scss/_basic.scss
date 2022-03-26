@@ -14,11 +14,15 @@ body {
 
 main {
     transform: translateY(-5rem);
+    
+    @include respond-tablet {
+        transform: translateY(-7.2rem);
+    }
 }
 
 .container {
     margin: 0 auto;
-    width: 88%;
+    width: 87%;
 }
 
 h1,
@@ -53,6 +57,11 @@ button {
         background-color: $dark-gray;
         opacity: 0.8;
         cursor: initial;
+    }
+
+    @include respond-tablet {
+        padding: 0.9rem 0.7rem;
+        font-size: 0.9rem;
     }
 }
 
