@@ -378,12 +378,6 @@ button[disabled] {
 .mastercraft__bookmark input:checked ~ svg path {
   fill: white;
 }
-.mastercraft__bookmark:hover input ~ svg circle {
-  fill: #147b74;
-}
-.mastercraft__bookmark:hover svg path {
-  fill: white;
-}
 .mastercraft__bookmark .mastercraft__bookmark-text,
 .mastercraft__bookmark .mastercraft__bookmark-text-checked {
   display: none;
@@ -411,8 +405,23 @@ button[disabled] {
     display: block;
     color: #3cb4ac;
   }
+  .mastercraft__bookmark:hover input ~ svg circle {
+    opacity: 0.8;
+  }
   .mastercraft__bookmark:hover input ~ .mastercraft__bookmark-text,
 .mastercraft__bookmark:hover input ~ .mastercraft__bookmark-text-checked {
+    opacity: 0.8;
+  }
+  .mastercraft__bookmark:hover input:checked ~ svg circle {
+    opacity: 1;
+    fill: #147b74;
+  }
+  .mastercraft__bookmark:hover input:checked ~ svg path {
+    fill: white;
+  }
+  .mastercraft__bookmark:hover input:checked ~ .mastercraft__bookmark-text,
+.mastercraft__bookmark:hover input:checked ~ .mastercraft__bookmark-text-checked {
+    opacity: 1;
     color: #147b74;
   }
 }

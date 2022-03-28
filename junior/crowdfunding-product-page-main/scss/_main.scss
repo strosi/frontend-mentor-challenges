@@ -94,15 +94,6 @@
         }
     }
 
-    &:hover {
-        input ~ svg circle {
-            fill: $dark-cyan;
-        }
-        svg path {
-            fill: white;
-        }
-    }
-
     .mastercraft__bookmark-text,
     .mastercraft__bookmark-text-checked {
         display: none;
@@ -134,8 +125,26 @@
         }
 
         &:hover {
+            input ~ svg circle {
+                opacity: 0.8;
+            }
             input ~ .mastercraft__bookmark-text,
             input ~ .mastercraft__bookmark-text-checked {
+                opacity: 0.8;
+            }
+        }
+
+        &:hover {
+            input:checked ~ svg circle {
+                opacity: 1;
+                fill: $dark-cyan;
+            }
+            input:checked ~ svg path {
+                fill: white;
+            }
+            input:checked ~ .mastercraft__bookmark-text,
+            input:checked ~ .mastercraft__bookmark-text-checked {
+                opacity: 1;
                 color: $dark-cyan;
             }
         }
