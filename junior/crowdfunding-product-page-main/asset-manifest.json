@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89d9c72f.css",
+    "main.js": "/static/js/main.9e55ca01.js",
+    "static/js/787.cf0eae37.chunk.js": "/static/js/787.cf0eae37.chunk.js",
+    "static/media/image-hero-desktop.jpg": "/static/media/image-hero-desktop.631209c1fe8e34fb78c2.jpg",
+    "static/media/image-hero-mobile.jpg": "/static/media/image-hero-mobile.d4f477d4cd11ac3a012f.jpg",
+    "static/media/logo.svg": "/static/media/logo.e6f12bc6bbf5e5c65ded26ce3d2904c7.svg",
+    "static/media/logo-mastercraft.svg": "/static/media/logo-mastercraft.dca2a8312b376716a2e0b7dfb8828b86.svg",
+    "index.html": "/index.html",
+    "static/media/icon-close-menu.svg": "/static/media/icon-close-menu.32169d313e5fa6171811fd73fe1e3568.svg",
+    "static/media/icon-hamburger.svg": "/static/media/icon-hamburger.f8a9f0cf12d419a7d18556f98d81a47e.svg",
+    "main.89d9c72f.css.map": "/static/css/main.89d9c72f.css.map",
+    "main.9e55ca01.js.map": "/static/js/main.9e55ca01.js.map",
+    "787.cf0eae37.chunk.js.map": "/static/js/787.cf0eae37.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89d9c72f.css",
+    "static/js/main.9e55ca01.js"
+  ]
+}
